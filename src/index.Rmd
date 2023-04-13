@@ -1,0 +1,24 @@
+---
+title: "Visual acuity project"
+author: "Rick Gilmore, Andrea Seisler"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# About
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, fig.align='center', echo=FALSE, out.width="50%"}
+knitr::include_graphics("include/img/GilmoreLabLogo.png")
+```
+
+## The investigators
+
+*Rick Gilmore* is Professor of Psychology at Penn State. He directs the lab.
+
+*Andrea Seisler* is the lab manager. She also serves as the Authorizations and Support Specialist for [Databrary](https://databrary.org). Andrea compiled much of the information in the first version of this protocol document.
+
+
