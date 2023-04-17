@@ -1,0 +1,7 @@
+# Convert .docx to .md
+
+pandoc -i HRP-509\ -\ Study\ Team\ Member\ Qualification\ Template.docx -o HRP_509_Study_Team_Member_Qualification_Template.md
+
+pandoc -i HRP-580\ -\ HRPP\ Consent\ Form\ Template.docx -o HRP_580_HRPP_Consent_Form_Template.md
+
+pandoc -i HRP-591\ -\ Protocol\ for\ Human\ Subject\ Research.docx -o HRP_591_Protocol_for_Human_Subject_Research.md

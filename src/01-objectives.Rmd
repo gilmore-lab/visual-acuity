@@ -1,0 +1,41 @@
+# Objectives
+
+## Study Objectives
+
+::: {.instr_box}
+
+Describe the purpose, specific aims, or objectives.
+
+:::
+
+The purpose of this study is to capture and describe the state of knowledge about how visual acuity, as measured by the Teller Acuity Card procedure, develops in children.
+Our specific aims are as follows:
+
+1. Survey the published literature and capture the main effects in a database that will be openly shared with the research community. 
+2. Query authors of published and unpublished research using the procedure and ask them to contribute individual-level data to a database. Curate those data and share them with the research community.
+3. Conduct study-level, and if possible, individual participant-level analyses of the data to determine trajectories of development in visual acuity, as measured by this particular procedure.
+
+## Primary Study Endpoints
+
+::: {.instr_box}
+
+State the primary endpoints to be measured in the study.
+
+Research typically has a primary objective or endpoint. 
+Additional objectives and endpoints are secondary. 
+The endpoints (or outcomes), determined for each study subject, are the quantitative measurements required by the objectives. 
+Measuring the selected endpoints is the goal of a trial (examples: response rate and survival).
+
+:::
+
+> [Type protocol text here or indicate as not applicable]
+
+## Secondary Study Endpoints
+
+::: {.instr_box}
+
+State the secondary endpoints to be measured in the study.
+
+:::
+
+> [Type protocol text here or indicate as not applicable]

@@ -8,3 +8,12 @@ The goal of the project is to aggregate data about performance on the Teller Vis
 
 - `src/`: Source code for the protocol and analysis.
 - `docs/`: Root directory for the rendered website for the project. Once there are materials to render, the site will be found at <https://gilmore-lab.github.io/visual-acuity/>.
+- `R/`: Code used for site-wide purposes. 
+
+## Rendering the site
+
+- Clone the repo.
+- Install `renv` via `install.packages('renv')`.
+- Install dependencies via `renv::restore()`.
+- Source project helper functions via `source('R/functions.R')`.
+- Execute `render_view()` to render the report and open it in your default browser.
