@@ -35,7 +35,12 @@ Provide a step by step description of all research procedures being conducted (b
 2. The total number of research participants reported in the study will be recorded in the Google Sheet for each paper.
 3. The age range (youngest age to oldest age) captured in the dataset will be recorded in the Google Sheet for each paper.
 4. Developmental/clinical characteristics of the participants (e.g., typically developing, amblyopia, strabismus) will be recorded in the Google Sheet for each paper.
-3. The email address or addresses of the author(s) will be recorded in the Google Sheet.
+
+### Phase 2: Contacting researchers
+
+1. The email address or addresses of the author(s) will be recorded in the Google Sheet.
+2. Using Penn State's email server, an email will be sent to all author(s). See the specific text [here](include/txt/email-to-authors.txt).
+3. An announcement will be sent via the Visionscience and Child Vision Research Society (CVRS) mailing lists seeking unpublished individual-level TAC datasets. See the specific text of that email [here](link/to/announcement-email.txt).
 
 ###	Visit 2 or Day 2 or Post-test, etc. (If applicable)
 

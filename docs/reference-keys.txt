@@ -63,6 +63,7 @@ study-design-and-procedures
 study-design
 study-procedures
 phase-1-literature-search
+phase-2-contacting-researchers
 visit-2-or-day-2-or-post-test-etc.-if-applicable
 duration-of-participation
 number-of-subjects-and-statistical-plan

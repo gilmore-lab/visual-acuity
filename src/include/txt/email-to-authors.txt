@@ -1,0 +1,24 @@
+Dear <author>:
+
+We are researchers at the Pennsylvania State University who are creating a database of results from the use of the Teller Acuity Card (TAC) procedure.
+We are contacting you because you are an author on the following paper:
+
+<citation>
+
+Our goal is to create a unified, openly shared database of TAC results so that researchers may plan future studies and identify trends.
+One product will be an aggregate data file combining results across studies.
+A second product will be an aggregate file combining results from individual research participants, including not-personally-identifiable demographic or health-related variables linked to them.
+
+If you have available individual-level TAC data from your published paper or from another source and have authorization to share those individual-level data with other researchers, please complete this Google Form:
+
+<link-to-Google-Form>
+
+All researchers who provide data will be added to the list of co-authors for the scholarly paper we plan to publish releasing these data.
+
+If you have any questions about this project, please contact me at rog1@psu.edu.
+
+Yours truly,
+
+Rick Gilmore
+Professor of Psychology
+The Pennsylvania State University
