@@ -2,7 +2,7 @@
 
 ## Study Objectives
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the purpose, specific aims, or objectives.
 
@@ -11,13 +11,12 @@ Describe the purpose, specific aims, or objectives.
 The purpose of this study is to capture and describe the state of knowledge about how visual acuity, as measured by the Teller Acuity Card procedure, develops in children.
 Our specific aims are as follows:
 
-1. Survey the published literature and capture the main effects in a database that will be openly shared with the research community. 
-2. Query authors of published and unpublished research using the procedure and ask them to contribute individual-level data to a database. Curate those data and share them with the research community.
-3. Conduct study-level, and if possible, individual participant-level analyses of the data to determine trajectories of development in visual acuity, as measured by this particular procedure.
+1. Survey the published literature on the use of Teller Acuity Cards (TAC) and capture the main effects found in that literature in an open database that will be shared with the research community for meta-analyses and related scholarship.</br>
+2. Create and share openly a database of individual participant-level TAC data contributed by authors of published and unpublished research using the TAC. The combined data would eliminate all personally identifying information but would select, curate, organize and share other data about individual participant differences that may be useful for future research, such as participant ethnicity, sex/gender, clinical condition, geographic region (no smaller than county), etc. 
 
 ## Primary Study Endpoints
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 State the primary endpoints to be measured in the study.
 
@@ -28,14 +27,17 @@ Measuring the selected endpoints is the goal of a trial (examples: response rate
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+The primary study endpoints are as follows:
+
+1. The creation and publication of the study-level dataset.</br>
+2. The creation and publication of the participant-level dataset.
 
 ## Secondary Study Endpoints
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 State the secondary endpoints to be measured in the study.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable.

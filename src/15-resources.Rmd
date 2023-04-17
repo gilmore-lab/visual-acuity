@@ -15,7 +15,8 @@ at these locations and familiarity with local culture.
 
 :::
 
-
+The survey will be conducted online using Penn State’s email servers, a Google Form, and Google Sheets.
+In addition, project staff may make use of Penn State-administered computers located in Rick Gilmore's laboratory in 513 Moore Building.
 
 ## Feasibility of recruiting the required number of subjects
 
@@ -27,7 +28,7 @@ recruitment.
 
 :::
 
-> [Type protocol text here]
+Not applicable. There is no minimum number of potential subjects.
 
 ## PI Time devoted to conducting the research
 
@@ -42,17 +43,19 @@ team members.
 
 :::
 
-> [Type protocol text here]
+The PI is a tenured professor with a 2:1 teaching load.
+He will carry out the research as part of his normal research duties.
 
 ## Availability of medical or psychological resources
 
 ::: {.instr_box}
+
 Describe the availability of medical or psychological resources that
 subjects might need as a result of their participation in the study.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable.
 
 ## Process for informing Study Team
 
@@ -60,8 +63,6 @@ subjects might need as a result of their participation in the study.
 
 Describe the training plans to ensure members of the research team are informed about the protocol and their duties.
 
-[Type protocol text here or indicate as not applicable if the principal investigator is the only study team member listed on the CATS IRB submission]
-
 :::
 
-> [Type protocol text here or indicate as not applicable if the principal investigator is the only study team member listed on the CATS IRB submission]
+Not applicable.

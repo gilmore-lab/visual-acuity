@@ -2,7 +2,7 @@
 
 ## Reporting Adverse Reactions and Unanticipated Problems to the Responsible IRB
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 By submitting this study for review, you agree to the following
 statement -- DO NOT ALTER OR DELETE:

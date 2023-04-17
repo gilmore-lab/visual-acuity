@@ -14,7 +14,12 @@ procedure is available to patient without taking part in the study.
 
 :::
  
-> [Type protocol text here]
+The Teller Acuity Card (TAC) procedure is a non-invasive technique for measuring a form of visual acuity in non-verbal participants, especially human infants and young children [@Teller1983-br].
+The TAC is one of the most widely used measures of visual acuity.
+A Google Scholar search[^2] for the term "teller acuity cards" on 2023-04-17 yielded more than 6,000 results.
+And yet, to our knowledge, there is no single database of TAC results that is available to the research community.
+
+[^2]: URL: <https://scholar.google.com/scholar?as_vis=1&q=teller+acuity+cards&hl=en&as_sdt=0,39>
  
 ## Previous Data
 
@@ -24,7 +29,8 @@ Describe any relevant preliminary data.
 
 :::
 
-> [Type protocol text here]
+Rick Gilmore has collected TAC data in his research on visual development in infants and children.
+In looking through our records, we have found TAC data from some X children tested between X and X as part of a separate series of studies on motion perception.
 
 ## Study Rationale
 
@@ -34,4 +40,4 @@ Provide the scientific rationale for the research.
 
 :::
 
-> [Type protocol text here]
+The widespread use of a similar measurement across diverse populations represents a unique scientific opportunity to capture what is known about a fundamental property of human vision: How precisely can children see high contrast details at different ages?

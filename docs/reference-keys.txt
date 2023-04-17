@@ -62,7 +62,7 @@ waiver-or-alteration-of-authorization-statements-of-agreement
 study-design-and-procedures
 study-design
 study-procedures
-visit-1-or-day-1-or-pre-test-etc.
+phase-1-literature-search
 visit-2-or-day-2-or-post-test-etc.-if-applicable
 duration-of-participation
 number-of-subjects-and-statistical-plan

@@ -2,18 +2,18 @@
 
 ## Costs
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe any costs that subjects may be responsible for because of
 participation in the research.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable.
 
 ## Compensation for research-related injury
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 **If the research involves more than Minimal Risk to subjects,
 describe the available compensation in the event of research related
@@ -44,4 +44,4 @@ and explained in the consent form.
 
 :::
 
-> [Enter protocol text as outlined in the instructions here or indicate as not applicable]
+Not applicable.

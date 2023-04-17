@@ -1,6 +1,6 @@
 #	Study Design and Procedures
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Data collection materials that will be seen or used by subjects in your study must be uploaded to CATS IRB (http://irb.psu.edu).   DO NOT include any actual data collection materials in this protocol (e.g., actual survey or interview questions)
 
@@ -10,7 +10,7 @@ Data collection materials that will be seen or used by subjects in your study mu
 
 ## Study Design
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe and explain the study design.
 
@@ -21,7 +21,7 @@ Describe and explain the study design.
 
 ## Study Procedures
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Provide a step by step description of all research procedures being conducted (broken down by visit, if applicable) including such information as below (where and when applicable); describe the following:
 -	HOW: (e.g., data collection via interviews, focus groups, forms such as surveys and questionnaires, medical/school records, audio/video/digital recordings, photographs, EKG procedures, MRI, mobile devices such as electronic tablets/cell phones, observations, collection of specimens, experimental drug/device testing, manipulation of behavior/use of deception, computer games, etc.)
@@ -29,12 +29,13 @@ Provide a step by step description of all research procedures being conducted (b
 
 :::
 
-> [Type protocol text here]
+### Phase 1: Literature search
 
-
-### Visit 1 or Day 1 or Pre-test, etc. 
-
-> [Type protocol text here]
+1. Results of all papers matching the search term "Teller Acuity Cards" will be collected and stored in a Google Sheet: <https://docs.google.com/spreadsheets/d/1etFFmfE9e-Hjz7B19tFXT2NQKNV6RLuO1gFOCpGACEk/edit?usp=sharing>. Specifically, we will record the paper's title, authors, journal, abstract, and citation information.
+2. The total number of research participants reported in the study will be recorded in the Google Sheet for each paper.
+3. The age range (youngest age to oldest age) captured in the dataset will be recorded in the Google Sheet for each paper.
+4. Developmental/clinical characteristics of the participants (e.g., typically developing, amblyopia, strabismus) will be recorded in the Google Sheet for each paper.
+3. The email address or addresses of the author(s) will be recorded in the Google Sheet.
 
 ###	Visit 2 or Day 2 or Post-test, etc. (If applicable)
 

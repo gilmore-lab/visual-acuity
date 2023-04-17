@@ -1,16 +1,16 @@
 # Multi-Site Study
 
-::: {.instr_box
+::: {.instr_box .rmdnote
 
 If this is a multi-site study (i.e., a study in which two or more institutions coordinate, with each institution completing all research activities outlined in a specific protocol) and the Penn State PI is the lead investigator, describe the processes to ensure communication among sites in the sections below.
 
 :::
 
-> [Do not type here]
+Not applicable.
 
 ## Other sites
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 List the name and location of all other participating sites. Provide
 the name, qualifications and contact information for the principal
@@ -19,11 +19,11 @@ study at each site.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable.
 
 ## Communication Plans
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the plan for regular communication between the overall study
 director and the other sites to ensure that all sites have the most
@@ -36,11 +36,11 @@ research, interim results, and closure of the study.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable.
 
 ## Data Submission and Security Plan
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the process and schedule for data submission and provide the
 data security plan for data collected from other sites. Describe the
@@ -49,22 +49,22 @@ as required by local information security policies.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable
 
 ## Subject Enrollment
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the procedures for coordination of subject enrollment and
 randomization for the overall project.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable.
 
 ## Reporting of Adverse Events and New Information
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe how adverse events and other information will be reported
 from the clinical sites to the overall study director. Provide the
@@ -72,11 +72,11 @@ timeframe for this reporting.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable.
 
 ## Audit and Monitoring Plans
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the process to ensure all local site investigators conduct
 the study appropriately. Describe any on-site auditing and monitoring
@@ -84,4 +84,4 @@ plans for the study.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable.

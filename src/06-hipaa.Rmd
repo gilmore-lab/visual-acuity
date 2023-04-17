@@ -1,6 +1,6 @@
 # HIPAA Research Authorization and/or Waiver or Alteration of Authorization
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 This section is about the access, use or disclosure of Protected Health Information (PHI).
 PHI is individually identifiable health information (i.e., health information containing one or more 18 identifiers) that is transmitted or maintained in any form or medium by a Covered Entity or its Business Associate. 
@@ -16,7 +16,7 @@ If requesting a waiver/alteration of HIPAA authorization, complete sections 6.2 
 
 ## Authorization and/or Waiver or Alteration of Authorization for the Uses and Disclosures of PHI
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Check all that apply:
 
@@ -38,7 +38,7 @@ Check all that apply:
 
 #### Plan to protect PHI from improper use or disclosure
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Include the following statement as written – DO NOT ALTER OR DELETE unless this section is not applicable because the research does not involve a waiver of authorization. If the section is not applicable, remove the statement and indicate as not applicable.
 
@@ -46,7 +46,7 @@ Include the following statement as written – DO NOT ALTER OR DELETE unless thi
 
 #### Plan to destroy identifiers or a justification for retaining identifiers 
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the plan to destroy the identifiers at the earliest opportunity consistent with the conduct of the research. Include when and how identifiers will be destroyed. If identifiers will be retained, provide the legal, health or research justification for retaining the identifiers.
 
@@ -56,7 +56,7 @@ Describe the plan to destroy the identifiers at the earliest opportunity consist
 
 ### Explanation for why the research could not practicably be conducted without access to and use of PHI
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Provide reasons why this research could not practicably be carried out without access to and use of PHI.
 
@@ -66,7 +66,7 @@ Provide reasons why this research could not practicably be carried out without a
 
 ### Explanation for why the research could not practicably be conducted without the waiver or alteration of authorization
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Provide reasons why this research could not practicably be carried out without the waiver or alternation of authorization.
 
@@ -76,7 +76,7 @@ Provide reasons why this research could not practicably be carried out without t
 
 ## Waiver or alteration of authorization statements of agreement
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 By submitting this study for review with a waiver of authorization, you agree to the following statement – DO NOT ALTER OR DELETE unless this section is not applicable because the research does not involve a waiver or alteration of authorization. If the section is not applicable, remove the statement and indicate as **not applicable**.
 

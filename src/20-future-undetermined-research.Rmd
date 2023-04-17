@@ -24,7 +24,9 @@ Identify what data and/or specimens will be stored, and the data associated with
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+For the study-level dataset, data concerning age-, gender-, and  clinical-condition-related group acuity values (mean, standard deviation, median, inter-quartile range) will be stored along with publication-related data (journal, publication date, authors, aggregate sample sizes, etc.).
+
+For the individual-level dataset, participant data concerning exact age at test, the year of the test (for future research on cohort effects), and the acuity score will be stored. Other individual-level data, if available, may also be stored, including ethnicity, gender, and clinical condition. Individual-level data will be linked to the researcher who provided it, and if appropriate, the published study with which the data are associated. 
 
 ## Location of storage
 
@@ -34,7 +36,7 @@ Identify the location where the data and/or specimens will be stored.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+During the project, data will be stored in Google Drive.
 
 
 ## Duration of storage
@@ -46,12 +48,12 @@ and/or specimens will be stored indefinitely, indicate such.
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Data will be stored in Google Drive until the end of the project then transferred to a data repository for long-term storage.
 
 ## Access to data and/or specimens
 
-
 ::: {.instr_box}
+
 Identify who will have access to the data and/or specimens.
 
 :::

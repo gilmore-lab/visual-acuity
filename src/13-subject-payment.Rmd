@@ -1,6 +1,6 @@
 # Subject Payment and/or Travel Reimbursements
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the amount, type (cash, check, gift card, other) and timing of any subject payment or travel reimbursement. 
 If there is **no** subject payment or travel reimbursement, indicate as not applicable.
@@ -12,5 +12,4 @@ Approved Subject Pool: Indicate which approved subject pool will be used; includ
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
-
+Not applicable.

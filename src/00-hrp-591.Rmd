@@ -37,7 +37,7 @@ time this document is submitted to the IRB office with revisions. DO NOT
 revise the version date in the footer of this document.
 :::
 
-20220417
+`r Sys.Date() |> stringr::str_remove_all("-")`
 
 **Clinicaltrials.gov Registration #:**
 

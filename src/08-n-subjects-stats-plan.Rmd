@@ -2,7 +2,7 @@
 
 ## Number of Subjects
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Indicate the maximum number of subjects to be accrued/enrolled. Distinguish between the number of subjects who are expected to be enrolled and screened, and the number of subjects needed to complete the research procedures if applicable (i.e., numbers of subjects excluding screen failures.)
 
@@ -12,7 +12,7 @@ Indicate the maximum number of subjects to be accrued/enrolled. Distinguish betw
 
 ## Sample Size Determination
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 If applicable, provide a justification of the sample size outlined in section 8.1  to include reflections on, or calculations of, the power of the study.
 
@@ -22,7 +22,7 @@ If applicable, provide a justification of the sample size outlined in section 8.
 
 ## Statistical or Analytic Methods
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the statistical methods (or non-statistical methods of analysis) that will be employed.
 

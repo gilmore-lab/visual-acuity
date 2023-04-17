@@ -1,6 +1,6 @@
 # Data and Safety Monitoring Plan
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 **This section is required when research involves more than Minimal
 Risk to subjects as defined in "HRP-001 SOP- Definitions."**
@@ -17,7 +17,7 @@ than minimal risk to subjects or indicate not applicable.**
 
 ## Periodic evaluation of data
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the plan to periodically evaluate the data collected regarding both harms and benefits to determine whether subjects remain safe.
 
@@ -27,7 +27,7 @@ Describe the plan to periodically evaluate the data collected regarding both har
 
 ## Data that are reviewed
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the data that are reviewed, including safety data, untoward events, and efficacy data.
 
@@ -37,7 +37,7 @@ Describe the data that are reviewed, including safety data, untoward events, and
 
 ## Method of collection of safety information
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the method by which the safety information will be collected (e.g., with case report forms, at study visits, by telephone calls and with subjects).
 
@@ -47,7 +47,7 @@ Describe the method by which the safety information will be collected (e.g., wit
 
 ## Frequency of data collection
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the frequency of data collection, including when safety data collection starts.
 
@@ -57,7 +57,7 @@ Describe the frequency of data collection, including when safety data collection
 
 ## Individuals reviewing the data
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Identify the individuals who will review the data. The plan might include establishing a data and safety monitoring committee and a plan for reporting data monitoring committee findings to the IRB and the sponsor.
 
@@ -67,7 +67,7 @@ Identify the individuals who will review the data. The plan might include establ
 
 ## Frequency of review of cumulative data
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the frequency or periodicity of review of cumulative data.
 
@@ -77,7 +77,7 @@ Describe the frequency or periodicity of review of cumulative data.
 
 ## Statistical tests
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe the statistical tests for analyzing the safety data to determine whether harms are occurring.
 
@@ -87,7 +87,7 @@ Describe the statistical tests for analyzing the safety data to determine whethe
 
 ## Suspension of research
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Describe any conditions that trigger an immediate suspension of research.
 

@@ -6,4 +6,5 @@ Describe whether results (study results or individual subject results, such as r
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+No results will be shared with research participants directly.
+However, we will share fully study-level, and participant-level datasets publicly and will announce the datasets availability in scientific publications.

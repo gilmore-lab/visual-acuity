@@ -1,6 +1,6 @@
 # References
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 List relevant references in the literature which highlight methods,
 controversies, and study outcomes.

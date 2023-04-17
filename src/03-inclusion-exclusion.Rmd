@@ -1,6 +1,6 @@
 # Inclusion and Exclusion Criteria
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Create a numbered list below in sections \@ref(inclusion-criteria) and \@ref(exclusion-criteria) of criteria subjects must meet to be eligible for study enrollment (e.g., age, gender, diagnosis, etc.).
 
@@ -25,48 +25,51 @@ The checklists referenced below outline the determinations to be made by the IRB
 
 ## Inclusion Criteria
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Create a numbered list of the inclusion criteria that define who will be included in your final study sample (e.g., age, gender, condition, etc.)
 
 :::
 
-> [Type protocol text here]
+1. Authors of published scientific articles that have used the TAC procedure.</br>
+2. Individual child participants who underwent a TAC testing procedure.
 
 ### Does this research involve collecting data from individuals residing outside of the US?
 
 [ ] No</br>
-[ ] Yes -- identify the countries where data collection will take place
+[X] Yes -- identify the countries where data collection will take place
 
-> [Type protocol text here]
+Some authors may reside outside the U.S., but we will not know in advance of conducting the study which ones.
+Some individual participants may have resided outside the U.S. at the time of testing, but we will not know which countries until we seek data from authors.
 
 ## Exclusion Criteria
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Create a numbered list of the exclusion criteria that define who will be excluded in your study.
 
 :::
 
-> [Type protocol text here]
+No authors will be excluded.
+No individual child data will be excluded.
 
 ## Early Withdrawal of Subjects {#early-withdrawal}
 
 ### Criteria for removal from study
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 
 Insert subject withdrawal criteria (e.g., safety reasons, failure of subject to adhere to protocol requirements, subject consent withdrawal, disease progression, etc.).
 
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable.
 
 
 ### Follow-up for withdrawn subjects
 
-::: {.instr_box}
+::: {.instr_box .rmdnote}
 Describe when and how to withdraw subjects from the study; the type and timing of the data to be collected for withdrawal of subjects; whether and how subjects are to be replaced; the follow-up for subjects withdrawn from investigational treatment.
 :::
 
-> [Type protocol text here or indicate as not applicable]
+Not applicable.
