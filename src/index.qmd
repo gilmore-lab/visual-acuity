@@ -1,8 +1,6 @@
 ---
-title: "The development of visual acuity"
-author: "Rick Gilmore, Andrea Seisler"
+title: "Legacy Project: Visual acuity"
 date: "`r Sys.Date()`"
-output: html_document
 bibliography: ['include/bib/teller-acuity-cards.bib']
 params:
   pi_name: Rick Gilmore

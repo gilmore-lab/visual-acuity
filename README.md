@@ -15,5 +15,5 @@ The goal of the project is to aggregate data about performance on the Teller Vis
 - Clone the repo.
 - Install `renv` via `install.packages('renv')`.
 - Install dependencies via `renv::restore()`.
-- Source project helper functions via `source('R/functions.R')`.
-- Execute `render_view()` to render the report and open it in your default browser.
+- From a terminal, execute `quarto render src`.
+- View the rendered site in your browser by opening `docs/index.html`.

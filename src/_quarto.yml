@@ -1,0 +1,38 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "irb/*.qmd"
+  output-dir: "../docs"
+
+website:
+  title: "Legacy Project: Visual Acuity"
+  comments: 
+    hypothesis:
+      theme: clean
+  navbar:
+    left:
+      - href: index.qmd
+        text: home
+      - href: about.qmd
+        text: about
+      - href: protocol.qmd
+        text: protocol
+      - href: data.qmd
+        text: data
+      - href: data-management-plan.qmd
+        text: 'data mgmt'
+
+format:
+  html:
+    theme: cosmo
+    css: include/css/styles.css
+    toc: true
+    number-sections: false
+    citations-hover: true
+    footnotes-hover: true
+    bibliography: [include/bib/teller-acuity-cards.bib]
+    csl: include/bib/apa.csl
+
+editor: source
+    

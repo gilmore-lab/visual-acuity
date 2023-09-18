@@ -1,3 +1,7 @@
+---
+title: Data Management Plan
+---
+
 # Data Management and Sharing Plan {#data-mgmt-plan -}
 
 ::: {.rmdnote}
@@ -17,7 +21,6 @@ Note that the following contains some URLs provided by the user. These are prohi
 ### A. Types and amount of scientific data expected to be generated in the project: {-}
 
 *Summarize the types and estimated amount of scientific data expected to be generated in the project.*
-
 
 ### B. Scientific data that will be preserved and shared, and the rationale for doing so: {-}
 

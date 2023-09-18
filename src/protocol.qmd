@@ -1,0 +1,17 @@
+---
+title: Protocol
+---
+
+## Overview
+
+This page describes the protocol for collecting, capturing, and cleaning data associated with the project.
+
+## Literature search
+
+### Data entry
+
+### Contacting authors
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdp6HK0FldL5awoT8LTXnr8Sqe7QbDxGc-gjhOpVJ452GLlqA/viewform?embedded=true" width="640" height="1370" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+

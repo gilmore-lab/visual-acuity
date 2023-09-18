@@ -1,0 +1,119 @@
+---
+title: data
+params:
+  data_dir: "data/csv"
+  update_data: TRUE
+  use_sysenv_creds: TRUE
+  google_data_fn: "Legacy Project Acuity Data: By Paper"
+---
+
+## Overview
+
+This page describes the process of data gathering, cleaning, and visualization.
+
+## Gathering
+
+We use a Google Sheet to store the by-study data:
+
+<https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing>
+
+::: {.callout-note}
+
+**Note**: There is no identifiable data here at the moment, so Google Sheets are a viable option.
+
+Later on, we start contacting authors, we will need to restrict access to that information for privacy reasons.
+
+:::
+
+::: {.callout-important}
+
+We need a process for managing who has edit access.
+
+:::
+
+The [`googledrive`](https://cran.r-project.org/web/packages/googledrive/index.html) package provides a convenient way to access documents stored on Google.
+
+### Download from Google as CSV
+
+```{r}
+if (!dir.exists(params$data_dir)) {
+  message("Creating missing ",  params$data_dir, ".")
+  dir.create(params$data_dir)
+}
+
+if (params$update_data) {
+  if (params$use_sysenv_creds) {
+    google_creds <- Sys.getenv("GMAIL_SURVEY")
+    if (google_creds != "") {
+      options(gargle_oauth_email = google_creds)
+      googledrive::drive_auth()
+    } else {
+      message("No Google account information stored in `.Renviron`.")
+      message("Add authorized Google account name to `.Renviron` using `usethist::edit_r_environ()`.")
+    }
+  }
+
+  googledrive::drive_download(
+    params$google_data_fn,
+    path = file.path(params$data_dir, "by-paper.csv"),
+    type = "csv",
+    overwrite = TRUE
+  )
+  message("Data updated.")
+} else {
+  message("Using stored data.")
+}
+```
+
+The data file has been saved as a comma-separated value (CSV) format data file in a special directory called `csv/`.
+
+
+### Open CSV
+
+Next we load the data file.
+
+```{r, message=FALSE, echo=TRUE}
+acuity_df <-
+  readr::read_csv(file.path(params$data_dir, "by-paper.csv"), show_col_types = FALSE)
+```
+
+We'll show the column (variable names) since these will be part of our data dictionary.
+
+```{r}
+acuity_cols <- names(acuity_df)
+acuity_cols
+```
+
+### Create data dictionary
+
+We'll start by creating a data dictionary so that we can refer to it later in our cleaning and data analysis.
+We do this by creating a data frame or 'tibble' because this is a convenient format for manipulating the information.
+
+```{r}
+acuity_data_dict <- tibble::tibble(col_name = names(acuity_df))
+```
+
+Now, we write a short description of each variable in the data file.
+
+```{r}
+acuity_data_dict <- acuity_data_dict |>
+  dplyr::mutate(col_desc = c("Last name of 1st author",
+                             "Full APA format citation",
+                             "Paper publication year",
+                             "Source in paper",
+                             "Reported age range in mos",
+                             "Participants tested monocularly or binocularly",
+                             "Number of participants in group",
+                             "Testing distance in cm",
+                             "Starting card in cyc/deg",
+                             "Mean (group) acuity in cyc/deg",
+                             "Estimated lower limit of acuity in cyc/deg",
+                             "Teller Acuity Card closest equivalent to this lower limit",
+                             "Estimated upper limit of acuity in cyc/deg",
+                             "Country where data were collected"))
+
+acuity_data_dict |>
+  knitr::kable(format = 'html') |>
+  kableExtra::kable_classic()
+```
+

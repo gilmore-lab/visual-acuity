@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Legacy Project: Visual Acuity - Data Management Plan</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean"
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+
+
+<link rel="stylesheet" href="include/css/styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Legacy Project: Visual Acuity</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./protocol.html" rel="" target="">
+ <span class="menu-text">protocol</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data.html" rel="" target="">
+ <span class="menu-text">data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./data-management-plan.html" rel="" target="" aria-current="page">
+ <span class="menu-text">data mgmt</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-mgmt-plan" id="toc-data-mgmt-plan" class="nav-link active" data-scroll-target="#data-mgmt-plan">Data Management and Sharing Plan</a>
+  <ul class="collapse">
+  <li><a href="#element-1-data-type" id="toc-element-1-data-type" class="nav-link" data-scroll-target="#element-1-data-type">Element 1: Data Type</a>
+  <ul class="collapse">
+  <li><a href="#a.-types-and-amount-of-scientific-data-expected-to-be-generated-in-the-project" id="toc-a.-types-and-amount-of-scientific-data-expected-to-be-generated-in-the-project" class="nav-link" data-scroll-target="#a.-types-and-amount-of-scientific-data-expected-to-be-generated-in-the-project">A. Types and amount of scientific data expected to be generated in the project:</a></li>
+  <li><a href="#b.-scientific-data-that-will-be-preserved-and-shared-and-the-rationale-for-doing-so" id="toc-b.-scientific-data-that-will-be-preserved-and-shared-and-the-rationale-for-doing-so" class="nav-link" data-scroll-target="#b.-scientific-data-that-will-be-preserved-and-shared-and-the-rationale-for-doing-so">B. Scientific data that will be preserved and shared, and the rationale for doing so:</a></li>
+  <li><a href="#c.-metadata-other-relevant-data-and-associated-documentation" id="toc-c.-metadata-other-relevant-data-and-associated-documentation" class="nav-link" data-scroll-target="#c.-metadata-other-relevant-data-and-associated-documentation">C. Metadata, other relevant data, and associated documentation:</a></li>
+  </ul></li>
+  <li><a href="#element-2-related-tools-software-andor-code" id="toc-element-2-related-tools-software-andor-code" class="nav-link" data-scroll-target="#element-2-related-tools-software-andor-code">Element 2: Related Tools, Software and/or Code:</a></li>
+  <li><a href="#element-3-standards" id="toc-element-3-standards" class="nav-link" data-scroll-target="#element-3-standards">Element 3: Standards</a></li>
+  <li><a href="#element-4-data-preservation-access-and-associated-timelines" id="toc-element-4-data-preservation-access-and-associated-timelines" class="nav-link" data-scroll-target="#element-4-data-preservation-access-and-associated-timelines">Element 4: Data Preservation, Access, and Associated Timelines</a>
+  <ul class="collapse">
+  <li><a href="#a.-repository-where-scientific-data-and-metadata-will-be-archived" id="toc-a.-repository-where-scientific-data-and-metadata-will-be-archived" class="nav-link" data-scroll-target="#a.-repository-where-scientific-data-and-metadata-will-be-archived">A. Repository where scientific data and metadata will be archived:</a></li>
+  <li><a href="#b.-how-scientific-data-will-be-findable-and-identifiable" id="toc-b.-how-scientific-data-will-be-findable-and-identifiable" class="nav-link" data-scroll-target="#b.-how-scientific-data-will-be-findable-and-identifiable">B. How scientific data will be findable and identifiable:</a></li>
+  <li><a href="#c.-when-and-how-long-the-scientific-data-will-be-made-available" id="toc-c.-when-and-how-long-the-scientific-data-will-be-made-available" class="nav-link" data-scroll-target="#c.-when-and-how-long-the-scientific-data-will-be-made-available">C. When and how long the scientific data will be made available:</a></li>
+  </ul></li>
+  <li><a href="#element-5-access-distribution-or-reuse-considerations" id="toc-element-5-access-distribution-or-reuse-considerations" class="nav-link" data-scroll-target="#element-5-access-distribution-or-reuse-considerations">Element 5: Access, Distribution, or Reuse Considerations:</a>
+  <ul class="collapse">
+  <li><a href="#a.-factors-affecting-subsequent-access-distribution-or-reuse-of-scientific-data" id="toc-a.-factors-affecting-subsequent-access-distribution-or-reuse-of-scientific-data" class="nav-link" data-scroll-target="#a.-factors-affecting-subsequent-access-distribution-or-reuse-of-scientific-data">A. Factors affecting subsequent access, distribution, or reuse of scientific data:</a></li>
+  <li><a href="#b.-whether-access-to-scientific-data-will-be-controlled" id="toc-b.-whether-access-to-scientific-data-will-be-controlled" class="nav-link" data-scroll-target="#b.-whether-access-to-scientific-data-will-be-controlled">B. Whether access to scientific data will be controlled:</a></li>
+  <li><a href="#c.-protections-for-privacy-rights-and-confidentiality-of-human-research-participants" id="toc-c.-protections-for-privacy-rights-and-confidentiality-of-human-research-participants" class="nav-link" data-scroll-target="#c.-protections-for-privacy-rights-and-confidentiality-of-human-research-participants">C. Protections for privacy, rights, and confidentiality of human research participants:</a></li>
+  </ul></li>
+  <li><a href="#element-6-oversight-of-data-management-and-sharing" id="toc-element-6-oversight-of-data-management-and-sharing" class="nav-link" data-scroll-target="#element-6-oversight-of-data-management-and-sharing">Element 6: Oversight of Data Management and Sharing:</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Management Plan</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="data-mgmt-plan" class="level1 unnumbered">
+<h1 class="unnumbered">Data Management and Sharing Plan</h1>
+<div class="rmdnote">
+<p>The following was updated on 2023-03-01. It is based on document OMB No.&nbsp;0925-0001 and 0925-0002 (Rev.&nbsp;07/2022 Approved Through TBD).</p>
+<p>Note that the following contains some URLs provided by the user. These are prohibited in a document submitted to NIH. Since this document is not part of an NIH study, we provide them here for transparency.</p>
+</div>
+<p><em>If any of the proposed research in the application involves the generation of scientific data, this application is subject to the NIH Policy for Data Management and Sharing and requires submission of a Data Management and Sharing Plan. If the proposed research in the application will generate large-scale genomic data, the Genomic Data Sharing Policy also applies and should be addressed in this Plan. Refer to the detailed instructions in the application guide for developing this plan as well as to additional guidance on <a href="https://sharing.nih.gov" class="uri">https://sharing.nih.gov</a>. The Plan is recommended not to exceed two pages. Text in italics should be deleted. There is no “form page” for the Data Management and Sharing Plan. The DMS Plan may be provided in the format shown below.</em></p>
+<p><em>Public reporting burden for this collection of information is estimated to average 2 hours per response, including the time for reviewing instructions, searching existing data sources, gathering, and maintaining the data needed, and completing and reviewing the collection of information. An agency may not conduct or sponsor, and a person is not required to respond to, a collection of information unless it displays a currently valid OMB control number. Send comments regarding this burden estimate or any other aspect of this collection of information, including suggestions for reducing this burden, to: NIH, Project Clearance Branch, 6705 Rockledge Drive, MSC 7974, Bethesda, MD 20892-7974, ATTN: PRA (0925-0001 and 0925-0002). Do not return the completed form to this address.</em></p>
+<section id="element-1-data-type" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="element-1-data-type">Element 1: Data Type</h2>
+<section id="a.-types-and-amount-of-scientific-data-expected-to-be-generated-in-the-project" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="a.-types-and-amount-of-scientific-data-expected-to-be-generated-in-the-project">A. Types and amount of scientific data expected to be generated in the project:</h3>
+<p><em>Summarize the types and estimated amount of scientific data expected to be generated in the project.</em></p>
+</section>
+<section id="b.-scientific-data-that-will-be-preserved-and-shared-and-the-rationale-for-doing-so" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="b.-scientific-data-that-will-be-preserved-and-shared-and-the-rationale-for-doing-so">B. Scientific data that will be preserved and shared, and the rationale for doing so:</h3>
+<p><em>Describe which scientific data from the project will be preserved and shared and provide the rationale for this decision.</em></p>
+</section>
+<section id="c.-metadata-other-relevant-data-and-associated-documentation" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="c.-metadata-other-relevant-data-and-associated-documentation">C. Metadata, other relevant data, and associated documentation:</h3>
+<p><em>Briefly list the metadata, other relevant data, and any associated documentation (e.g., study protocols and data collection instruments) that will be made accessible to facilitate interpretation of the scientific data.</em></p>
+<p>The full protocol, including survey questions is shared publicly via a website on the code/documentation sharing website, GitHub.</p>
+</section>
+</section>
+<section id="element-2-related-tools-software-andor-code" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="element-2-related-tools-software-andor-code">Element 2: Related Tools, Software and/or Code:</h2>
+<p><em>State whether specialized tools, software, and/or code are needed to access or manipulate shared scientific data, and if so, provide the name(s) of the needed tool(s) and software and specify how they can be accessed.</em></p>
+</section>
+<section id="element-3-standards" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="element-3-standards">Element 3: Standards</h2>
+<p><em>State what common data standards will be applied to the scientific data and associated metadata to enable interoperability of datasets and resources, and provide the name(s) of the data standards that will be applied and describe how these data standards will be applied to the scientific data generated by the research proposed in this project. If applicable, indicate that no consensus standards exist.</em></p>
+<p>There are no consensus standards that apply to these data to our knowledge. However, our publicly shared data cleaning code documents that ways that we modified the original dataset to make it more human-readable. CSV text files are considered to be interoperable.</p>
+</section>
+<section id="element-4-data-preservation-access-and-associated-timelines" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="element-4-data-preservation-access-and-associated-timelines">Element 4: Data Preservation, Access, and Associated Timelines</h2>
+<section id="a.-repository-where-scientific-data-and-metadata-will-be-archived" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="a.-repository-where-scientific-data-and-metadata-will-be-archived">A. Repository where scientific data and metadata will be archived:</h3>
+<p><em>Provide the name of the repository(ies) where scientific data and metadata arising from the project will be archived; see <a href="https://sharing.nih.gov/data-management-and-sharing-policy/sharing-scientific-data/selecting-a-data-repository">Selecting a Data Repository</a>.</em></p>
+<p>When the project is complete and we receive permission to do so, the data may be archived on Databrary (<a href="https://databrary.org" class="uri">https://databrary.org</a>). Metadata and summary data/visualizations will be archived on GitHub, <a href="https://gilmore-lab.github.io/visual-acuity/" class="uri">https://gilmore-lab.github.io/visual-acuity/</a>.</p>
+</section>
+<section id="b.-how-scientific-data-will-be-findable-and-identifiable" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="b.-how-scientific-data-will-be-findable-and-identifiable">B. How scientific data will be findable and identifiable:</h3>
+<p><em>Describe how the scientific data will be findable and identifiable, i.e., via a persistent unique identifier or other standard indexing tools.</em></p>
+<p>If the project data are shared publicly, Databrary will create a persistent identifier (e.g., DOI).</p>
+</section>
+<section id="c.-when-and-how-long-the-scientific-data-will-be-made-available" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="c.-when-and-how-long-the-scientific-data-will-be-made-available">C. When and how long the scientific data will be made available:</h3>
+<p><em>Describe when the scientific data will be made available to other users (i.e., no later than time of an associated publication or end of the performance period, whichever comes first) and for how long data will be available.</em></p>
+</section>
+</section>
+<section id="element-5-access-distribution-or-reuse-considerations" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="element-5-access-distribution-or-reuse-considerations">Element 5: Access, Distribution, or Reuse Considerations:</h2>
+<section id="a.-factors-affecting-subsequent-access-distribution-or-reuse-of-scientific-data" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="a.-factors-affecting-subsequent-access-distribution-or-reuse-of-scientific-data">A. Factors affecting subsequent access, distribution, or reuse of scientific data:</h3>
+<p><em>NIH expects that in drafting Plans, researchers maximize the appropriate sharing of scientific data. Describe and justify any applicable factors or data use limitations affecting subsequent access, distribution, or reuse of scientific data related to informed consent, privacy and confidentiality protections, and any other considerations that may limit the extent of data sharing. See <a href="https://sharing.nih.gov/faqs#/data-management-and-sharing-policy.htm">Frequently Asked Questions</a> for examples of justifiable reasons for limiting sharing of data.</em></p>
+</section>
+<section id="b.-whether-access-to-scientific-data-will-be-controlled" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="b.-whether-access-to-scientific-data-will-be-controlled">B. Whether access to scientific data will be controlled:</h3>
+<p><em>State whether access to the scientific data will be controlled (i.e., made available by a data repository only after approval).</em></p>
+<p>Databrary does not approve data shared by researchers. Authorization to upload and share data is governed by a formal <a href="https://databrary.org/about/agreement.html">Databrary Access Agreement</a> that binds Databrary and New York University with a researcher’s home institution. The DAA gives institutionally authorized researchers the right to share data and materials with Databrary consistent with the policies of their institution, ethics board approvals, and the permission of research participants. Similarly, while researchers can share data on Databrary and control or approve individual access themselves, Databrary does not require it.</p>
+<p>Once shared, data from this project will be available to anyone.</p>
+</section>
+<section id="c.-protections-for-privacy-rights-and-confidentiality-of-human-research-participants" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="c.-protections-for-privacy-rights-and-confidentiality-of-human-research-participants">C. Protections for privacy, rights, and confidentiality of human research participants:</h3>
+<p><em>If generating scientific data derived from humans, describe how the privacy, rights, and confidentiality of human research participants will be protected (e.g., through de-identification, Certificates of Confidentiality, and other protective measures).</em></p>
+</section>
+</section>
+<section id="element-6-oversight-of-data-management-and-sharing" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="element-6-oversight-of-data-management-and-sharing">Element 6: Oversight of Data Management and Sharing:</h2>
+<p><em>Describe how compliance with this Plan will be monitored and managed, frequency of oversight, and by whom at your institution (e.g., titles, roles).</em></p>
+<p>The PIs on the project will manage these provisions.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
