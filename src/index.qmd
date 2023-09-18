@@ -11,15 +11,22 @@ params:
   irb_long_name: "The Legacy Project: The development of visual acuity"
 ---
 
-# About {-}
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## The investigators {-}
+![](data_files/figure-html/fig-teller-acuity-across-age-1.png)
+
+## Investigators {-}
 
 *Rick Gilmore* is Professor of Psychology at Penn State.
 
-*Andrea Seisler* is the lab manager. She also serves as the Authorizations and Support Specialist for [Databrary](https://databrary.org). Andrea compiled much of the information in the first version of this protocol document.
+*Andrea Seisler* is the lab manager. She also serves as the Authorizations and Support Specialist for [Databrary](https://databrary.org).
+
+<!-- *Brianna Beamer* is an undergraduate research assistant. -->
+
+<!-- *Julia DiFulvio* is an undergraduate research assistant. -->
+
+<!-- *Peter Huang* is an undergraduate research assistant. -->
+
 
