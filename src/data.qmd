@@ -254,4 +254,8 @@ gilmore_archival_df |>
   theme(legend.position = "bottom", legend.title = element_blank()) 
 ```
 
-Ok, I'm going to stop here for now.
+::: {.callout-note}
+
+Before I stop, I'm going to add the by-participant data file to a `.gitignore` file, just to be extra careful.
+
+:::
