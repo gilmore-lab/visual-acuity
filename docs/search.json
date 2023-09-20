@@ -46,7 +46,7 @@
     "href": "data.html#data-visualization",
     "title": "data",
     "section": "Data visualization",
-    "text": "Data visualization\n\n\n\n\n\n\nImportant\n\n\n\nRick Gilmore decided to take the mean of the age range reported in the (Xiang et al., 2021) data and create a new variable strictly for visualization purposes, age_grp_rog.\n\n\nWe are still in the early phases of the project (as of 2023-09-20 10:42:55.965922), but it is good to start sketching the the data visualizations we will eventually want to see.\n\nlibrary(ggplot2)\nacuity_df |&gt;\n  ggplot() +\n  aes(x = age_grp_rog, y = mean_acuity_cyc_deg, color = country) +\n  geom_point() +\n  geom_smooth() +\n  facet_grid(cols = vars(binoc_monoc))\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\nFigure 1: Developmental time course of mean acuity as assessed by Teller Acuity Cards"
+    "text": "Data visualization\n\n\n\n\n\n\nImportant\n\n\n\nRick Gilmore decided to take the mean of the age range reported in the (Xiang et al., 2021) data and create a new variable strictly for visualization purposes, age_grp_rog.\n\n\nWe are still in the early phases of the project (as of 2023-09-20 10:44:29.917877), but it is good to start sketching the the data visualizations we will eventually want to see.\n\nlibrary(ggplot2)\nacuity_df |&gt;\n  ggplot() +\n  aes(x = age_grp_rog, y = mean_acuity_cyc_deg, color = country) +\n  geom_point() +\n  geom_smooth() +\n  facet_grid(cols = vars(binoc_monoc))\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\nFigure 1: Developmental time course of mean acuity as assessed by Teller Acuity Cards"
   },
   {
     "objectID": "data.html#by-individual-data",
@@ -116,6 +116,6 @@
     "href": "index.html#investigators",
     "title": "Legacy Project: Visual acuity",
     "section": "Investigators",
-    "text": "Investigators\nRick Gilmore is Professor of Psychology at Penn State.\nAndrea Seisler is the lab manager. She also serves as the Authorizations and Support Specialist for Databrary."
+    "text": "Investigators\nRick Gilmore is Professor of Psychology at Penn State.\nAndrea Seisler is the lab manager. She also serves as the Authorizations and Support Specialist for Databrary.\nBrianna Beamer is an undergraduate research assistant.\nNicole Cruz is an undergraduate research assistant.\nJulia DiFulvio is an undergraduate research assistant.\nPeter Huang is an undergraduate research assistant."
   }
 ]

@@ -23,10 +23,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 *Andrea Seisler* is the lab manager. She also serves as the Authorizations and Support Specialist for [Databrary](https://databrary.org).
 
-<!-- *Brianna Beamer* is an undergraduate research assistant. -->
+*Brianna Beamer* is an undergraduate research assistant.
 
-<!-- *Julia DiFulvio* is an undergraduate research assistant. -->
+*Nicole Cruz* is an undergraduate research assistant.
 
-<!-- *Peter Huang* is an undergraduate research assistant. -->
+*Julia DiFulvio* is an undergraduate research assistant.
+
+*Peter Huang* is an undergraduate research assistant.
 
 
