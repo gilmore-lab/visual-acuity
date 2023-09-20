@@ -135,8 +135,123 @@ library(ggplot2)
 acuity_df |>
   ggplot() +
   aes(x = age_grp_rog, y = mean_acuity_cyc_deg, color = country) +
-  geom_point() + 
+  geom_point() +
   geom_smooth() +
   facet_grid(cols = vars(binoc_monoc))
 ```
 
+## By-individual data
+
+The Gilmore lab has some archival data that we can potentially use in this project.
+The following represents Rick Gilmore's work to gather, clean, and visualize these data.
+
+### Gathering
+
+The de-identified archival data are stored in a Google sheet accessed by the lab Google account.
+
+First, we must authenticate to Google to access the relevant file and download it.
+
+```{r}
+options(gargle_oauth_email = "psubrainlab@gmail.com")
+googledrive::drive_auth()
+```
+
+Then we download the relevant file.
+
+```{r}
+googledrive::drive_download(
+  "vep-session-log",
+  path = file.path(params$data_dir, "by-participant.csv"),
+  type = "csv",
+  overwrite = TRUE
+)
+```
+
+Unlike the Google sheet newly created for the by-study data, this one requires a lot of cleaning.
+
+```{r}
+gilmore_archival_df <-
+  readr::read_csv(file.path(params$data_dir, "by-participant.csv"),
+                  show_col_types = FALSE)
+names(gilmore_archival_df)
+```
+
+We'll keep `Date`, `Time`, `Sex`, `DOB`, `Teller Acuity Cards`, `Age at test`.
+
+```{r}
+gilmore_archival_df <- gilmore_archival_df |>
+  dplyr::select(Date, Time, Sex, DOB, `Teller Acuity Cards`, `Age at test`)
+```
+
+Then, let's filter those where we have TAC data.
+
+```{r}
+with(gilmore_archival_df, unique(`Teller Acuity Cards`))
+```
+```{r}
+gilmore_archival_df <- gilmore_archival_df |>
+  dplyr::filter(!is.na(`Teller Acuity Cards`),
+                `Teller Acuity Cards` != "not interested")
+
+dim(gilmore_archival_df)
+```
+
+::: {.callout-note}
+
+This file illustrates how making data FAIR from the outset can save work.
+
+This one is not too terribly hard to parse, but it could have been better planned.
+
+:::
+
+We'll extract the viewing distance with a regular expression.
+
+```{r}
+gilmore_archival_df <- gilmore_archival_df |>
+  dplyr::mutate(view_dist_cm = stringr::str_extract(`Teller Acuity Cards`, "[0-9]{2}cm")) |>
+  dplyr::mutate(view_dist_cm = stringr::str_remove(view_dist_cm, "cm")) # remove 'cm'
+gilmore_archival_df$view_dist_cm
+```
+
+Similarly, we'll extract the acuity in cyc/deg using a regular expression.
+
+```{r}
+gilmore_archival_df <- gilmore_archival_df |>
+  # add 'cyc' to separate cyc/deg from Snellen acuity
+  dplyr::mutate(acuity_cyc_deg = stringr::str_extract(`Teller Acuity Cards`, "[0-9]{1}[\\./]{1}[0-9]+ cyc")) |>
+  dplyr::mutate(acuity_cyc_deg = stringr::str_remove(acuity_cyc_deg, " cyc")) |>
+  dplyr::mutate(acuity_cyc_deg = stringr::str_replace(acuity_cyc_deg, "/", "."))
+
+gilmore_archival_df$acuity_cyc_deg
+```
+
+Now, let's look at the age at test.
+
+```{r}
+gilmore_archival_df$`Age at test`
+```
+Instead, let's see what it looks like to compute age at test from the dates.
+
+```{r}
+gilmore_archival_df <- gilmore_archival_df |>
+  dplyr::mutate(age_at_test_days = lubridate::mdy(Date) - lubridate::mdy(DOB))
+
+gilmore_archival_df$age_at_test_days
+```
+
+That seems reasonable for now.
+
+Let's see if we can plot these data.
+
+```{r fig-gilmore-lab-archival, fig.cap="Individual participant Teller Acuity Card thresholds from archival Gilmore lab data"}
+gilmore_archival_df |>
+  dplyr::mutate(acuity_cyc_deg = as.numeric(acuity_cyc_deg)) |>
+  ggplot() +
+  aes(x = age_at_test_days, y = acuity_cyc_deg, color = Sex) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  #theme_classic() +
+  theme(legend.position = "bottom", legend.title = element_blank()) 
+```
+
+Ok, I'm going to stop here for now.
