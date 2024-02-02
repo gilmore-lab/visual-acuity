@@ -8,10 +8,65 @@ This page describes the protocol for collecting, capturing, and cleaning data as
 
 ## Literature search
 
-### Data entry
+### Goals
+
+1. Capture the published literature that reports data on using Teller Acuity Cards.
+2. Create a database of that literature.
+
+### Phase I: Search
+
+::: {.callout-note}
+
+Here are some preparatory steps that need to be completed prior to doing literature search tasks.
+
+1. Open Google Chrome from a lab computer.
+2. Log into psubrainlab’s google account (psubrainlab@gmail.com ask Dr. Gilmore or Andrea for password)
+2. Search “paperpile chrome extension” and install the paperpile chrome extension
+3. On the paperpile website click ‘log in”. Choose the “log in with google” option
+
+:::
+
+#### Search terms
+
+`teller acuity cards`
+`visual acuity cards`
+`teller cards`
+
+#### Google Scholar
+
+1. Visit Google Scholar: <https://scholar.google.com/>
+2. Enter the search term
+3. Make sure to select 'Sort by relevance', 'Any type', and *do not* check 'include patents' or 'include citations'
+
+For example, this URL uses `teller acuity cards`:
+
+<https://scholar.google.com/scholar?hl=en&as_sdt=0,39&as_vis=1&q=%22teller+acuity+cards%22>
+
+When looking for sources on Google Scholar, look for the Paperpile box and ensure it is gray. Gray sources are sources we do not currently have in paperpile. Green sources indicate we already have collected them in paperpile. An example of both can be seen below.
+
+### Phase II: Data entry
 
 ### Contacting authors
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdp6HK0FldL5awoT8LTXnr8Sqe7QbDxGc-gjhOpVJ452GLlqA/viewform?embedded=true" width="640" height="1370" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+## Literature evaluation
+
+### Goals
+
+1. To evaluate which of the papers captured in the literature search have group or individual level data that can be extracted.
+
+### Evaluation
+
+## Data extraction
+
+### Goals
+
+1. To extract group-level data from each paper identified in the prior phase.
+2. Enter group-level data into a common database.
+
+### Data extraction
+
+### Qualty Assurance
 
 
