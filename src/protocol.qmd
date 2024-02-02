@@ -6,6 +6,10 @@ title: Protocol
 
 This page describes the protocol for collecting, capturing, and cleaning data associated with the project.
 
+The text here is adapted from a working draft document written in Google Docs that is hosted here:
+
+<https://docs.google.com/document/d/1-ZKrNflBO7UIq5I0pJ8U5K-rtoiads12Zf_OQq_S65Q/edit>
+
 ## Literature search
 
 ### Goals
@@ -42,7 +46,21 @@ For example, this URL uses `teller acuity cards`:
 
 <https://scholar.google.com/scholar?hl=en&as_sdt=0,39&as_vis=1&q=%22teller+acuity+cards%22>
 
-When looking for sources on Google Scholar, look for the Paperpile box and ensure it is gray. Gray sources are sources we do not currently have in paperpile. Green sources indicate we already have collected them in paperpile. An example of both can be seen below.
+When looking for sources on Google Scholar, look for the Paperpile box and ensure it is gray. Gray sources are sources we do not currently have in Paperpile. Green sources indicate we already have collected them in Paperpile. An example of both can be seen below.
+
+INSERT FIGURES FROM GOOGLE DOC
+
+4. After you have retrieved a page of entries, switch to the Paperpile tab to add the `TAC` tag to these entries. Use shift-click to select multiple entries in Paperpile.
+
+::: {.callout-note}
+
+It is possible to export the Paperpile references with the `TAC` tag directly to Github.
+Rick tested this workflow on 2024-02-02.
+What is yet unclear is whether the reference file automatically updates.
+
+There appear to be some R packages that can read *.bib files and convert them to data frames, see <https://rdrr.io/cran/revtools/> and <https://docs.ropensci.org/bib2df/>.
+
+:::
 
 ### Phase II: Data entry
 

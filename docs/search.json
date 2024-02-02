@@ -4,21 +4,21 @@
     "href": "protocol.html",
     "title": "Protocol",
     "section": "",
-    "text": "This page describes the protocol for collecting, capturing, and cleaning data associated with the project."
+    "text": "This page describes the protocol for collecting, capturing, and cleaning data associated with the project.\nThe text here is adapted from a working draft document written in Google Docs that is hosted here:\nhttps://docs.google.com/document/d/1-ZKrNflBO7UIq5I0pJ8U5K-rtoiads12Zf_OQq_S65Q/edit"
   },
   {
     "objectID": "protocol.html#overview",
     "href": "protocol.html#overview",
     "title": "Protocol",
     "section": "",
-    "text": "This page describes the protocol for collecting, capturing, and cleaning data associated with the project."
+    "text": "This page describes the protocol for collecting, capturing, and cleaning data associated with the project.\nThe text here is adapted from a working draft document written in Google Docs that is hosted here:\nhttps://docs.google.com/document/d/1-ZKrNflBO7UIq5I0pJ8U5K-rtoiads12Zf_OQq_S65Q/edit"
   },
   {
     "objectID": "protocol.html#literature-search",
     "href": "protocol.html#literature-search",
     "title": "Protocol",
     "section": "Literature search",
-    "text": "Literature search\n\nGoals\n\nCapture the published literature that reports data on using Teller Acuity Cards.\nCreate a database of that literature.\n\n\n\nPhase I: Search\n\n\n\n\n\n\nNote\n\n\n\nHere are some preparatory steps that need to be completed prior to doing literature search tasks.\n\nOpen Google Chrome from a lab computer.\nLog into psubrainlab’s google account (psubrainlab@gmail.com ask Dr. Gilmore or Andrea for password)\nSearch “paperpile chrome extension” and install the paperpile chrome extension\nOn the paperpile website click ’log in”. Choose the “log in with google” option\n\n\n\n\nSearch terms\nteller acuity cards visual acuity cards teller cards\n\n\nGoogle Scholar\n\nVisit Google Scholar: https://scholar.google.com/\nEnter the search term\nMake sure to select ‘Sort by relevance’, ‘Any type’, and do not check ‘include patents’ or ‘include citations’\n\nFor example, this URL uses teller acuity cards:\nhttps://scholar.google.com/scholar?hl=en&as_sdt=0,39&as_vis=1&q=%22teller+acuity+cards%22\nWhen looking for sources on Google Scholar, look for the Paperpile box and ensure it is gray. Gray sources are sources we do not currently have in paperpile. Green sources indicate we already have collected them in paperpile. An example of both can be seen below.\n\n\n\nPhase II: Data entry\n\n\nContacting authors\n\nLoading…"
+    "text": "Literature search\n\nGoals\n\nCapture the published literature that reports data on using Teller Acuity Cards.\nCreate a database of that literature.\n\n\n\nPhase I: Search\n\n\n\n\n\n\nNote\n\n\n\nHere are some preparatory steps that need to be completed prior to doing literature search tasks.\n\nOpen Google Chrome from a lab computer.\nLog into psubrainlab’s google account (psubrainlab@gmail.com ask Dr. Gilmore or Andrea for password)\nSearch “paperpile chrome extension” and install the paperpile chrome extension\nOn the paperpile website click ’log in”. Choose the “log in with google” option\n\n\n\n\nSearch terms\nteller acuity cards visual acuity cards teller cards\n\n\nGoogle Scholar\n\nVisit Google Scholar: https://scholar.google.com/\nEnter the search term\nMake sure to select ‘Sort by relevance’, ‘Any type’, and do not check ‘include patents’ or ‘include citations’\n\nFor example, this URL uses teller acuity cards:\nhttps://scholar.google.com/scholar?hl=en&as_sdt=0,39&as_vis=1&q=%22teller+acuity+cards%22\nWhen looking for sources on Google Scholar, look for the Paperpile box and ensure it is gray. Gray sources are sources we do not currently have in Paperpile. Green sources indicate we already have collected them in Paperpile. An example of both can be seen below.\nINSERT FIGURES FROM GOOGLE DOC\n\nAfter you have retrieved a page of entries, switch to the Paperpile tab to add the TAC tag to these entries. Use shift-click to select multiple entries in Paperpile.\n\n\n\n\n\n\n\nNote\n\n\n\nIt is possible to export the Paperpile references with the TAC tag directly to Github. Rick tested this workflow on 2024-02-02. What is yet unclear is whether the reference file automatically updates.\nThere appear to be some R packages that can read *.bib files and convert them to data frames, see https://rdrr.io/cran/revtools/ and https://docs.ropensci.org/bib2df/.\n\n\n\n\n\nPhase II: Data entry\n\n\nContacting authors\n\nLoading…"
   },
   {
     "objectID": "protocol.html#literature-evaluation",
