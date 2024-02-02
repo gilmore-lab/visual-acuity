@@ -1,41 +1,39 @@
-@ARTICLE{Hartnett2003-ph,
-  title     = "Long-term vision results measured with Teller Acuity Cards and a
-               new Light {Perception/Projection} Scale after management of late
-               stages of retinopathy of prematurity",
-  author    = "Hartnett, M Elizabeth and Rodier, Dorothy W and McColm, Janet R
-               and Thompson, Hilary W",
-  journal   = "Archives of ophthalmology",
-  publisher = "jamanetwork.com",
-  volume    =  121,
-  number    =  7,
-  pages     = "991--996",
-  month     =  jul,
-  year      =  2003,
-  url       = "http://dx.doi.org/10.1001/archopht.121.7.991",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0003-9950",
-  pmid      = "12860803",
-  doi       = "10.1001/archopht.121.7.991"
+@ARTICLE{Xiang2021-ry,
+  title    = "Study to establish visual acuity norms with Teller Acuity Cards
+              {II} for infants from southern China",
+  author   = "Xiang, Yifan and Long, Erping and Liu, Zhenzhen and Li, Xiaoyan
+              and Lin, Zhuoling and Zhu, Yi and Chen, Chuan and Lin, Haotian",
+  journal  = "Eye",
+  volume   =  35,
+  number   =  10,
+  pages    = "2787--2792",
+  month    =  oct,
+  year     =  2021,
+  url      = "http://dx.doi.org/10.1038/s41433-020-01314-y",
+  keywords = "TAC",
+  language = "en",
+  issn     = "0950-222X, 1476-5454",
+  pmid     = "33235349",
+  doi      = "10.1038/s41433-020-01314-y",
+  pmc      = "PMC8452650"
 }
 
-@ARTICLE{Kushner1994-vl,
-  title     = "Grating acuity tests should not be used for social service
-               purposes in preliterate children",
-  author    = "Kushner, B J",
-  journal   = "Archives of ophthalmology",
-  publisher = "jamanetwork.com",
-  volume    =  112,
-  number    =  8,
-  pages     = "1030--1031",
-  month     =  aug,
-  year      =  1994,
-  url       = "http://dx.doi.org/10.1001/archopht.1994.01090200036017",
+@ARTICLE{Trueb1992-oc,
+  title     = "Assessing Visual Acuity of Visually Impaired Children Using the
+               Teller Acuity Card Procedure",
+  author    = "Trueb, Laura and Evans, Janice and Hammel, Annette and
+               Bartholomew, Patricia and Dobson, Velma",
+  journal   = "The American orthoptic journal",
+  publisher = "Taylor \& Francis",
+  volume    =  42,
+  number    =  1,
+  pages     = "149--154",
+  month     =  jan,
+  year      =  1992,
+  url       = "https://doi.org/10.1080/0065955X.1992.11981911",
   keywords  = "TAC",
-  language  = "en",
-  issn      = "0003-9950",
-  pmid      = "8053814",
-  doi       = "10.1001/archopht.1994.01090200036017"
+  issn      = "0065-955X",
+  doi       = "10.1080/0065955X.1992.11981911"
 }
 
 @ARTICLE{Kushner_BJ1995-ui,
@@ -52,333 +50,6 @@
   keywords = "deficit;TAC",
   issn     = "0093-0326, 0003-9950",
   doi      = "10.1001/archopht.1995.01100040107035"
-}
-
-@ARTICLE{Kushner1995-ti,
-  title     = "Grating visual acuity with Teller cards compared with Snellen
-               visual acuity in literate patients",
-  author    = "Kushner, B J and Lucchese, N J and Morton, G V",
-  journal   = "Archives of ophthalmology",
-  publisher = "jamanetwork.com",
-  volume    =  113,
-  number    =  4,
-  pages     = "485--493",
-  month     =  apr,
-  year      =  1995,
-  url       = "http://dx.doi.org/10.1001/archopht.1995.01100040107035",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0003-9950",
-  pmid      = "7710400",
-  doi       = "10.1001/archopht.1995.01100040107035"
-}
-
-@ARTICLE{Hargadon_DD2010-pa,
-  title    = "Recognition acuity, grating acuity, contrast sensitivity, and
-              visual fields in 6-year-old children",
-  author   = "{Hargadon DD} and {Wood J} and {Twelker J} and {Harvey EM} and
-              {Dobson V}",
-  journal  = "Archives of ophthalmology",
-  volume   =  128,
-  number   =  1,
-  pages    = "70--74",
-  month    =  jan,
-  year     =  2010,
-  url      = "http://dx.doi.org/10.1001/archophthalmol.2009.343",
-  keywords = "grating-plaid-motion;TAC",
-  issn     = "0093-0326, 0003-9950",
-  doi      = "10.1001/archophthalmol.2009.343"
-}
-
-@ARTICLE{Hargadon2010-kh,
-  title     = "Recognition acuity, grating acuity, contrast sensitivity, and
-               visual fields in 6-year-old children",
-  author    = "Hargadon, Deborah D and Wood, Jeffrey and Twelker, J Daniel and
-               Harvey, Erin M and Dobson, Velma",
-  journal   = "Archives of ophthalmology",
-  publisher = "jamanetwork.com",
-  volume    =  128,
-  number    =  1,
-  pages     = "70--74",
-  month     =  jan,
-  year      =  2010,
-  url       = "http://dx.doi.org/10.1001/archophthalmol.2009.343",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0003-9950, 1538-3601",
-  pmid      = "20065220",
-  doi       = "10.1001/archophthalmol.2009.343"
-}
-
-@ARTICLE{Jasani2017-pe,
-  title    = "Long chain polyunsaturated fatty acid supplementation in infants
-              born at term",
-  author   = "Jasani, Bonny and Simmer, Karen and Patole, Sanjay K and Rao,
-              Shripada C",
-  journal  = "Cochrane database of systematic reviews",
-  volume   =  3,
-  number   =  3,
-  pages    = "CD000376",
-  month    =  mar,
-  year     =  2017,
-  url      = "http://dx.doi.org/10.1002/14651858.CD000376.pub4",
-  keywords = "TAC",
-  language = "en",
-  issn     = "1469-493X, 1361-6137",
-  pmid     = "28281303",
-  doi      = "10.1002/14651858.CD000376.pub4",
-  pmc      = "PMC6464574"
-}
-
-@INCOLLECTION{Chandna1990-jp,
-  title     = "Observations on Grating Acuity Measures of Children in Clinical
-               Practice Using Teller Acuity Cards",
-  booktitle = "Strabismus and Ocular Motility Disorders: Proceedings of the
-               Sixth Meeting of the International Strabismological Association
-               Surfers Paradise, Australia, 1990",
-  author    = "Chandna, A and Doran, R M L",
-  editor    = "Campos, Emilio C",
-  publisher = "Macmillan Education UK",
-  pages     = "85--94",
-  year      =  1990,
-  url       = "https://doi.org/10.1007/978-1-349-11188-6_11",
-  address   = "London",
-  keywords  = "TAC",
-  isbn      = "9781349111886",
-  doi       = "10.1007/978-1-349-11188-6\_11"
-}
-
-@INCOLLECTION{Mohn1986-yh,
-  title     = "Rapid Assessment of Visual Acuity in Infants and Children in a
-               Clinical Setting, Using Acuity Cards",
-  booktitle = "Detection and Measurement of Visual Impairment in {Pre-Verbal}
-               Children: Proceedings of a workshop held at the Institute of
-               Ophthalmology, London on April 1--3, 1985, sponsored by the
-               Commission of the European Communities as advised by the
-               Committed on Medical Research",
-  author    = "Mohn, Gesine and van Hof-van Duin, Jackie",
-  editor    = "Jay, Barrie",
-  publisher = "Springer Netherlands",
-  pages     = "363--371",
-  year      =  1986,
-  url       = "https://doi.org/10.1007/978-94-009-4263-9_54",
-  address   = "Dordrecht",
-  keywords  = "TAC",
-  isbn      = "9789400942639",
-  doi       = "10.1007/978-94-009-4263-9\_54"
-}
-
-@ARTICLE{Teller1974-tu,
-  title     = "Visual acuity for vertical and diagonal gratings in human
-               infants",
-  author    = "Teller, D Y and Morse, R and Borton, R and Regal, D",
-  journal   = "Vision research",
-  publisher = "Elsevier",
-  volume    =  14,
-  number    =  12,
-  pages     = "1433--1439",
-  month     =  dec,
-  year      =  1974,
-  url       = "http://dx.doi.org/10.1016/0042-6989(74)90018-2",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0042-6989",
-  pmid      = "4446373",
-  doi       = "10.1016/0042-6989(74)90018-2"
-}
-
-@ARTICLE{Mash1995-bo,
-  title     = "Interobserver agreement for measurement of grating acuity and
-               interocular acuity differences with the teller acuity card
-               procedure",
-  author    = "Mash, C and Dobson, V and Carpenter, N",
-  journal   = "Vision research",
-  publisher = "Elsevier",
-  volume    =  35,
-  number    =  2,
-  pages     = "303--312",
-  month     =  jan,
-  year      =  1995,
-  url       = "http://dx.doi.org/10.1016/0042-6989(94)00113-z",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0042-6989",
-  pmid      = "7839625",
-  doi       = "10.1016/0042-6989(94)00113-z"
-}
-
-@ARTICLE{Teller1983-br,
-  title     = "Measurement of visual acuity in human and monkey infants: the
-               interface between laboratory and clinic",
-  author    = "Teller, D Y",
-  journal   = "Behavioural brain research",
-  publisher = "Elsevier",
-  volume    =  10,
-  number    =  1,
-  pages     = "15--23",
-  month     =  oct,
-  year      =  1983,
-  url       = "http://dx.doi.org/10.1016/0166-4328(83)90146-8",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0166-4328",
-  pmid      = "6639722",
-  doi       = "10.1016/0166-4328(83)90146-8"
-}
-
-@ARTICLE{Ipata1994-ax,
-  title     = "Acuity card testing in children with cerebral palsy related to
-               magnetic resonance images, mental levels and motor abilities",
-  author    = "Ipata, A E and Cioni, G and Bottai, P and Fazzi, B and
-               Canapicchi, R and Van Hof-Van Duin, J",
-  journal   = "Brain \& development",
-  publisher = "Elsevier",
-  volume    =  16,
-  number    =  3,
-  pages     = "195--203",
-  year      =  1994,
-  url       = "http://dx.doi.org/10.1016/0387-7604(94)90069-8",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0387-7604",
-  pmid      = "7943603",
-  doi       = "10.1016/0387-7604(94)90069-8"
-}
-
-@INCOLLECTION{Mayer1997-xk,
-  title     = "- Grating Acuity Cards: Validity and Reliability in Studies of
-               Human Visual Development",
-  booktitle = "Developing Brain Behaviour",
-  author    = "Mayer, D Luisa and Dobson, Velma",
-  editor    = "Dobbing, John",
-  publisher = "Academic Press",
-  pages     = "253--292",
-  month     =  jan,
-  year      =  1997,
-  url       = "https://www.sciencedirect.com/science/article/pii/B9780122188701500087",
-  address   = "London",
-  keywords  = "TAC",
-  isbn      = "9780122188701",
-  doi       = "10.1016/B978-012218870-1/50008-7"
-}
-
-@ARTICLE{Hall2000-xb,
-  title    = "The predictive utility of the Teller acuity cards for assessing
-              visual outcome in children with preterm birth and associated
-              perinatal risks",
-  author   = "Hall, Heather L and Courage, Mary L and Adams, Russell J",
-  journal  = "Vision research",
-  volume   =  40,
-  number   =  15,
-  pages    = "2067--2076",
-  month    =  jul,
-  year     =  2000,
-  url      = "http://www.sciencedirect.com/science/article/pii/S004269890000064X",
-  keywords = "Acuity cards; Children; Infants; Perinatal complications;
-              Predictive value;grating-plaid-motion;TAC",
-  issn     = "0042-6989",
-  doi      = "10.1016/S0042-6989(00)00064-X"
-}
-
-@ARTICLE{Spierer1999-op,
-  title     = "Vision screening of preverbal children with Teller acuity cards",
-  author    = "Spierer, A and Royzman, Z and Chetrit, A and Novikov, I and
-               Barkay, A",
-  journal   = "Ophthalmology",
-  publisher = "Elsevier",
-  volume    =  106,
-  number    =  4,
-  pages     = "849--854",
-  month     =  apr,
-  year      =  1999,
-  url       = "http://dx.doi.org/10.1016/S0161-6420(99)90176-8",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0161-6420",
-  pmid      = "10201612",
-  doi       = "10.1016/S0161-6420(99)90176-8"
-}
-
-@ARTICLE{Chang2023-vb,
-  title     = "Comparison of eye tracking and Teller acuity cards for visual
-               acuity assessment in pediatric cortical/cerebral visual
-               impairment ({CVI})",
-  author    = "Chang, Melinda Y and Borchert, Mark S",
-  journal   = "American journal of ophthalmology",
-  publisher = "Elsevier",
-  month     =  dec,
-  year      =  2023,
-  url       = "https://www.sciencedirect.com/science/article/pii/S0002939423005007",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0002-9394, 1879-1891",
-  pmid      = "38065248",
-  doi       = "10.1016/j.ajo.2023.11.024"
-}
-
-@ARTICLE{Wang2023-qa,
-  title     = "Association between prenatal exposure to trace elements mixture
-               and visual acuity in infants: A prospective birth cohort study",
-  author    = "Wang, Zijin and Dou, Yuanyan and Guo, Wenhui and Lin, Yuan and
-               Jiang, Yangqian and Jiang, Tao and Qin, Rui and Lv, Hong and Lu,
-               Qun and Jin, Guangfu and Ma, Hongxia and Hu, Zhibin and Liu, Hu
-               and Du, Jiangbo and {China National Birth Cohort (CNBC Study
-               Group)}",
-  journal   = "Chemosphere",
-  publisher = "Elsevier",
-  volume    =  333,
-  pages     = "138905",
-  month     =  aug,
-  year      =  2023,
-  url       = "http://dx.doi.org/10.1016/j.chemosphere.2023.138905",
-  keywords  = "Bayesian kernel machine regression (BKMR); Mixed exposure;
-               Molybdenum; Nickel; Trace element; Visual acuity;TAC",
-  language  = "en",
-  issn      = "0045-6535, 1879-1298",
-  pmid      = "37187369",
-  doi       = "10.1016/j.chemosphere.2023.138905"
-}
-
-@ARTICLE{Clifford2005-bs,
-  title     = "Are norms based on the original Teller Acuity Cards appropriate
-               for use with the new Teller Acuity Cards {II}?",
-  author    = "Clifford, Candice E and Haynes, Breann M and Dobson, Velma",
-  journal   = "Journal of AAPOS: the official publication of the American
-               Association for Pediatric Ophthalmology and Strabismus /
-               American Association for Pediatric Ophthalmology and Strabismus",
-  publisher = "Elsevier",
-  volume    =  9,
-  number    =  5,
-  pages     = "475--479",
-  month     =  oct,
-  year      =  2005,
-  url       = "http://dx.doi.org/10.1016/j.jaapos.2005.04.011",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "1091-8531",
-  pmid      = "16213399",
-  doi       = "10.1016/j.jaapos.2005.04.011"
-}
-
-@ARTICLE{Clifford2005-ei,
-  title     = "Are norms based on the original Teller Acuity Cards appropriate
-               for use with the new Teller Acuity Cards {II}?",
-  author    = "Clifford, Candice E and Haynes, Breann M and Dobson, Velma",
-  journal   = "Journal of AAPOS: the official publication of the American
-               Association for Pediatric Ophthalmology and Strabismus /
-               American Association for Pediatric Ophthalmology and Strabismus",
-  publisher = "Elsevier",
-  volume    =  9,
-  number    =  5,
-  pages     = "475--479",
-  month     =  oct,
-  year      =  2005,
-  url       = "http://dx.doi.org/10.1016/j.jaapos.2005.04.011",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "1091-8531",
-  pmid      = "16213399",
-  doi       = "10.1016/j.jaapos.2005.04.011"
 }
 
 @ARTICLE{Clifford-Donaldson2006-cf,
@@ -403,409 +74,43 @@
   doi      = "10.1016/j.jaapos.2006.02.007"
 }
 
-@ARTICLE{Mash1998-sg,
-  title     = "Long-term reliability and predictive validity of the Teller
-               Acuity Card procedure",
-  author    = "Mash, C and Dobson, V",
-  journal   = "Vision research",
-  publisher = "Elsevier",
-  volume    =  38,
-  number    =  4,
-  pages     = "619--626",
-  month     =  feb,
-  year      =  1998,
-  url       = "http://dx.doi.org/10.1016/s0042-6989(97)88335-6",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0042-6989",
-  pmid      = "9536384",
-  doi       = "10.1016/s0042-6989(97)88335-6"
+@ARTICLE{Salomao1995-pg,
+  title    = "Large sample population age norms for visual acuities obtained
+              with {Vistech-Teller} Acuity Cards",
+  author   = "Salom{\~a}o, S R and Ventura, D F",
+  journal  = "Investigative ophthalmology \& visual science",
+  volume   =  36,
+  number   =  3,
+  pages    = "657--670",
+  month    =  mar,
+  year     =  1995,
+  url      = "https://www.ncbi.nlm.nih.gov/pubmed/7890496",
+  keywords = "Aging; Brazil; Child, Preschool; Ethnic Groups; Female; Humans;
+              Infant; Male; Population; Reference Values; Vision, Binocular;
+              Vision Tests; Visual Acuity;grating-plaid-motion;TAC",
+  language = "eng",
+  issn     = "0146-0404",
+  pmid     = "7890496"
 }
 
-@ARTICLE{Preston1987-jj,
-  title     = "Validation of the acuity card procedure for assessment of
-               infants with ocular disorders",
-  author    = "Preston, K L and McDonald, M and Sebris, S L and Dobson, V and
-               Teller, D Y",
-  journal   = "Ophthalmology",
-  publisher = "Elsevier",
-  volume    =  94,
-  number    =  6,
-  pages     = "644--653",
-  month     =  jun,
-  year      =  1987,
-  url       = "http://dx.doi.org/10.1016/s0161-6420(87)33398-6",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0161-6420",
-  pmid      = "3627713",
-  doi       = "10.1016/s0161-6420(87)33398-6"
-}
-
-@ARTICLE{Ellis1988-fg,
-  title     = "Teller acuity cards versus clinical judgment in the diagnosis of
-               amblyopia with strabismus",
-  author    = "Ellis, Jr, G S and Hartmann, E E and Love, A and May, J G and
-               Morgan, K S",
-  journal   = "Ophthalmology",
-  publisher = "Elsevier",
-  volume    =  95,
-  number    =  6,
-  pages     = "788--791",
-  month     =  jun,
-  year      =  1988,
-  url       = "http://dx.doi.org/10.1016/s0161-6420(88)33105-2",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0161-6420",
-  pmid      = "3062530",
-  doi       = "10.1016/s0161-6420(88)33105-2"
-}
-
-@ARTICLE{Droste1991-mg,
-  title     = "Measurement of low vision in children and infants",
-  author    = "Droste, P J and Archer, S M and Helveston, E M",
-  journal   = "Ophthalmology",
-  publisher = "Elsevier",
-  volume    =  98,
-  number    =  10,
-  pages     = "1513--1518",
-  month     =  oct,
-  year      =  1991,
-  url       = "http://dx.doi.org/10.1016/s0161-6420(91)32096-7",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0161-6420",
-  pmid      = "1961636",
-  doi       = "10.1016/s0161-6420(91)32096-7"
-}
-
-@ARTICLE{Quinn1993-bz,
-  title    = "The Teller acuity card procedure. Three testers in a clinical
-              setting",
-  author   = "Quinn, G E and Berlin, J A and James, M",
-  journal  = "Ophthalmology",
-  volume   =  100,
-  number   =  4,
-  pages    = "488--494",
-  month    =  apr,
-  year     =  1993,
-  url      = "http://dx.doi.org/10.1016/s0161-6420(93)31617-9",
+@ARTICLE{Joo2020-ek,
+  title    = "Clinical usefulness of the teller acuity cards test in
+              preliterate children and its correlation with optotype test: A
+              retrospective study",
+  author   = "Joo, Hye Jun and Yi, Ho Chul and Choi, Dong Gyu",
+  journal  = "PloS one",
+  volume   =  15,
+  number   =  6,
+  pages    = "e0235290",
+  month    =  jun,
+  year     =  2020,
+  url      = "http://dx.doi.org/10.1371/journal.pone.0235290",
   keywords = "TAC",
   language = "en",
-  issn     = "0161-6420",
-  pmid     = "8479705",
-  doi      = "10.1016/s0161-6420(93)31617-9"
-}
-
-@ARTICLE{Vital-Durand1992-ec,
-  title     = "Acuity card procedures and the linearity of grating resolution
-               development during the first year of human infants",
-  author    = "Vital-Durand, F",
-  journal   = "Behavioural brain research",
-  publisher = "Elsevier",
-  volume    =  49,
-  number    =  1,
-  pages     = "99--106",
-  month     =  jul,
-  year      =  1992,
-  url       = "http://dx.doi.org/10.1016/s0166-4328(05)80199-8",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0166-4328",
-  pmid      = "1388807",
-  doi       = "10.1016/s0166-4328(05)80199-8"
-}
-
-@ARTICLE{Xiang2021-ry,
-  title    = "Study to establish visual acuity norms with Teller Acuity Cards
-              {II} for infants from southern China",
-  author   = "Xiang, Yifan and Long, Erping and Liu, Zhenzhen and Li, Xiaoyan
-              and Lin, Zhuoling and Zhu, Yi and Chen, Chuan and Lin, Haotian",
-  journal  = "Eye",
-  volume   =  35,
-  number   =  10,
-  pages    = "2787--2792",
-  month    =  oct,
-  year     =  2021,
-  url      = "http://dx.doi.org/10.1038/s41433-020-01314-y",
-  keywords = "TAC",
-  language = "en",
-  issn     = "0950-222X, 1476-5454",
-  pmid     = "33235349",
-  doi      = "10.1038/s41433-020-01314-y",
-  pmc      = "PMC8452650"
-}
-
-@ARTICLE{Zubcov2002-fp,
-  title     = "Zum prognostischen Stellenwert der Gittersehsch{\"a}rfe bei
-               Fr{\"u}hgeborenen mit und ohne Retinopathia praematurorum
-               ({RPM}) im Lebensalter von 6 Monaten nach errechnetem
-               Geburtstermin",
-  author    = "Zubcov, Alina A and Rossillion, Beatrice M and Kacer, Borislav
-               and St{\"a}rk, Norbert and Schl{\"o}sser, Rolf and Vanselow,
-               Karoline",
-  journal   = "Klinische Monatsblatter fur Augenheilkunde",
-  publisher = "Georg Thieme Verlag KG",
-  volume    =  219,
-  number    =  10,
-  pages     = "722--727",
-  month     =  oct,
-  year      =  2002,
-  url       = "https://europepmc.org/article/med/12447716",
-  keywords  = "TAC",
-  language  = "de",
-  issn      = "0023-2165, 1439-3999",
-  pmid      = "12447716",
-  doi       = "10.1055/s-2002-35699"
-}
-
-@ARTICLE{Grunewald1997-om,
-  title     = "Ausgangswerte zur Visusentwicklung von S{\"a}uglingen bei
-               klinischer Anwendung der {Teller-Acuity-Cards}",
-  author    = "Grunewald, S M and Mayer, U M",
-  journal   = "Klinische Monatsblatter fur Augenheilkunde",
-  publisher = "Georg Thieme Verlag KG",
-  volume    =  210,
-  number    =  6,
-  pages     = "376--383",
-  month     =  jun,
-  year      =  1997,
-  url       = "https://europepmc.org/article/med/9333664",
-  keywords  = "TAC",
-  language  = "de",
-  issn      = "0023-2165, 1439-3999",
-  pmid      = "9333664",
-  doi       = "10.1055/s-2008-1035078"
-}
-
-@ARTICLE{Katz1989-wj,
-  title     = "Der {Teller-Acuity-Card-Test}: M{\"o}glichkeiten und Grenzen der
-               klinischen Anwendung",
-  author    = "Katz, B and Sireteanu, R",
-  journal   = "Klinische Monatsblatter fur Augenheilkunde",
-  publisher = "Georg Thieme Verlag KG",
-  volume    =  195,
-  number    =  1,
-  pages     = "17--22",
-  month     =  jul,
-  year      =  1989,
-  url       = "https://europepmc.org/article/med/2796227",
-  keywords  = "TAC",
-  language  = "de",
-  issn      = "0023-2165, 1439-3999",
-  pmid      = "2796227",
-  doi       = "10.1055/s-2008-1046406"
-}
-
-@ARTICLE{Westall2000-ga,
-  title     = "Which ocular and neurologic conditions cause disparate results
-               in visual acuity scores recorded with visually evoked potential
-               and teller acuity cards?",
-  author    = "Westall, C A and Ainsworth, J R and Buncic, J R",
-  journal   = "Journal of AAPOS: the official publication of the American
-               Association for Pediatric Ophthalmology and Strabismus /
-               American Association for Pediatric Ophthalmology and Strabismus",
-  publisher = "Elsevier",
-  volume    =  4,
-  number    =  5,
-  pages     = "295--301",
-  month     =  oct,
-  year      =  2000,
-  url       = "http://dx.doi.org/10.1067/mpa.2000.107898",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "1091-8531",
-  pmid      = "11040480",
-  doi       = "10.1067/mpa.2000.107898"
-}
-
-@ARTICLE{Mahon1987-rc,
-  title     = "Preferential Looking and Acuity Card Testing in the Private
-               Practitioner's Office",
-  author    = "Mahon, Kathy",
-  journal   = "The American orthoptic journal",
-  publisher = "Taylor \& Francis",
-  volume    =  37,
-  number    =  1,
-  pages     = "86--94",
-  month     =  jan,
-  year      =  1987,
-  url       = "https://doi.org/10.1080/0065955X.1987.11981740",
-  keywords  = "TAC",
-  issn      = "0065-955X",
-  doi       = "10.1080/0065955X.1987.11981740"
-}
-
-@ARTICLE{Preston1988-jr,
-  title     = "The Teller Acuity Card Procedure: An Acuity Screening Technique
-               for {Pre-Verbal} Children",
-  author    = "Preston, Karen L and Freedman, Howard L",
-  journal   = "The American orthoptic journal",
-  publisher = "Taylor \& Francis",
-  volume    =  38,
-  number    =  1,
-  pages     = "24--32",
-  month     =  jan,
-  year      =  1988,
-  url       = "https://doi.org/10.1080/0065955X.1988.11981765",
-  keywords  = "TAC",
-  issn      = "0065-955X",
-  doi       = "10.1080/0065955X.1988.11981765"
-}
-
-@ARTICLE{Tomlinson1988-px,
-  title     = "The Measurement of Visual Acuity: Comparison of Teller Acuity
-               Cards with Snellen and {MBL} Results",
-  author    = "Tomlinson, Evelyn and Martinez, Diana",
-  journal   = "The American orthoptic journal",
-  publisher = "Taylor \& Francis",
-  volume    =  38,
-  number    =  1,
-  pages     = "130--134",
-  month     =  jan,
-  year      =  1988,
-  url       = "https://doi.org/10.1080/0065955X.1988.11981782",
-  keywords  = "TAC",
-  issn      = "0065-955X",
-  doi       = "10.1080/0065955X.1988.11981782"
-}
-
-@ARTICLE{Trueb1992-oc,
-  title     = "Assessing Visual Acuity of Visually Impaired Children Using the
-               Teller Acuity Card Procedure",
-  author    = "Trueb, Laura and Evans, Janice and Hammel, Annette and
-               Bartholomew, Patricia and Dobson, Velma",
-  journal   = "The American orthoptic journal",
-  publisher = "Taylor \& Francis",
-  volume    =  42,
-  number    =  1,
-  pages     = "149--154",
-  month     =  jan,
-  year      =  1992,
-  url       = "https://doi.org/10.1080/0065955X.1992.11981911",
-  keywords  = "TAC",
-  issn      = "0065-955X",
-  doi       = "10.1080/0065955X.1992.11981911"
-}
-
-@ARTICLE{Bartholomew1996-bn,
-  title     = "{Acceptance/Use} of the Teller Acuity Card Procedure in the
-               Clinic",
-  author    = "Bartholomew, Patrica A and Chao, Jeanne and Evans, Janice L and
-               Hammel, Nan and Trueb, Laura A and Verness, Jane L and Quinn,
-               Graham E and Dobson, Velma",
-  journal   = "The American orthoptic journal",
-  publisher = "Taylor \& Francis",
-  volume    =  46,
-  number    =  1,
-  pages     = "99--105",
-  month     =  jan,
-  year      =  1996,
-  url       = "https://doi.org/10.1080/0065955X.1996.11982078",
-  keywords  = "TAC",
-  issn      = "0065-955X",
-  doi       = "10.1080/0065955X.1996.11982078"
-}
-
-@ARTICLE{Sumalini2023-ly,
-  title     = "Grating acuity tests for infants, young children and individuals
-               with disabilities: A review of recent advances",
-  author    = "Sumalini, Rebecca and Satgunam, Premnandhini",
-  journal   = "Seminars in ophthalmology",
-  publisher = "Taylor \& Francis",
-  volume    =  38,
-  number    =  1,
-  pages     = "76--84",
-  month     =  jan,
-  year      =  2023,
-  url       = "http://dx.doi.org/10.1080/08820538.2022.2116987",
-  keywords  = "Grating acuity; Infant vision; Pediatric visual acuity; Vision
-               in individuals with developmental delays and disabilities;
-               Vision in pre- or non-verbal children;TAC",
-  language  = "en",
-  issn      = "0882-0538, 1744-5205",
-  pmid      = "36073743",
-  doi       = "10.1080/08820538.2022.2116987"
-}
-
-@ARTICLE{Carlson1993-mt,
-  title     = "Visual-acuity development in healthy preterm infants: effect of
-               marine-oil supplementation",
-  author    = "Carlson, S E and Werkman, S H and Rhodes, P G and Tolley, E A",
-  journal   = "The American journal of clinical nutrition",
-  publisher = "Elsevier",
-  volume    =  58,
-  number    =  1,
-  pages     = "35--42",
-  month     =  jul,
-  year      =  1993,
-  url       = "https://www.sciencedirect.com/science/article/pii/S0002916523196468",
-  keywords  = "Linolenic acid; docosahexaenoic acid; marime oil; preterm
-               infants; visual acuity; infancy; Teller acuity cards;TAC",
-  issn      = "0002-9165",
-  doi       = "10.1093/ajcn/58.1.35"
-}
-
-@ARTICLE{Courage1990-xe,
-  title     = "Visual acuity assessment from birth to three years using the
-               acuity card procedure: cross-sectional and longitudinal samples",
-  author    = "Courage, M L and Adams, R J",
-  journal   = "Optometry and vision science: official publication of the
-               American Academy of Optometry",
-  publisher = "journals.lww.com",
-  volume    =  67,
-  number    =  9,
-  pages     = "713--718",
-  month     =  sep,
-  year      =  1990,
-  url       = "http://dx.doi.org/10.1097/00006324-199009000-00011",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "1040-5488",
-  pmid      = "2234832",
-  doi       = "10.1097/00006324-199009000-00011"
-}
-
-@ARTICLE{Riddell1997-cs,
-  title     = "Comparison of measures of visual acuity in infants: Teller
-               acuity cards and sweep visual evoked potentials",
-  author    = "Riddell, P M and Ladenheim, B and Mast, J and Catalano, T and
-               Nobile, R and Hainline, L",
-  journal   = "Optometry and vision science: official publication of the
-               American Academy of Optometry",
-  publisher = "journals.lww.com",
-  volume    =  74,
-  number    =  9,
-  pages     = "702--707",
-  month     =  sep,
-  year      =  1997,
-  url       = "http://dx.doi.org/10.1097/00006324-199709000-00017",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "1040-5488",
-  pmid      = "9380367",
-  doi       = "10.1097/00006324-199709000-00017"
-}
-
-@ARTICLE{Mash2005-kp,
-  title     = "Intraobserver reliability of the Teller Acuity Card procedure in
-               infants with perinatal complications",
-  author    = "Mash, Clay and Dobson, Velma",
-  journal   = "Optometry and vision science: official publication of the
-               American Academy of Optometry",
-  publisher = "journals.lww.com",
-  volume    =  82,
-  number    =  9,
-  pages     = "817--822",
-  month     =  sep,
-  year      =  2005,
-  url       = "http://dx.doi.org/10.1097/01.opx.0000177809.75080.41",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "1040-5488",
-  pmid      = "16189491",
-  doi       = "10.1097/01.opx.0000177809.75080.41"
+  issn     = "1932-6203",
+  pmid     = "32598392",
+  doi      = "10.1371/journal.pone.0235290",
+  pmc      = "PMC7323984"
 }
 
 @ARTICLE{Osman2021-ws,
@@ -829,68 +134,22 @@
   pmc       = "PMC8833034"
 }
 
-@ARTICLE{Johnson2009-ql,
-  title     = "Teller {II} and Cardiff Acuity testing in a school-age deafblind
-               population",
-  author    = "Johnson, Catherine and Kran, Barry S and Deng, Li and Mayer, D
-               Luisa",
-  journal   = "Optometry and vision science: official publication of the
-               American Academy of Optometry",
-  publisher = "journals.lww.com",
-  volume    =  86,
-  number    =  3,
-  pages     = "188--195",
-  month     =  mar,
-  year      =  2009,
-  url       = "http://dx.doi.org/10.1097/OPX.0b013e318196bd35",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "1040-5488, 1538-9235",
-  pmid      = "19214131",
-  doi       = "10.1097/OPX.0b013e318196bd35"
-}
-
-@ARTICLE{Drover2009-gf,
-  title     = "The teller acuity cards are effective in detecting amblyopia",
-  author    = "Drover, James R and Wyatt, Lauren M and Stager, David R and
-               Birch, Eileen E",
-  journal   = "Optometry and vision science: official publication of the
-               American Academy of Optometry",
-  publisher = "ncbi.nlm.nih.gov",
-  volume    =  86,
-  number    =  6,
-  pages     = "755--759",
+@ARTICLE{Ambrosio2020-jx,
+  title     = "Teller Cards and Freiburg Acuity Visual Evoked Potential in
+               Children with Poor Visual Behavior",
+  author    = "Ambrosio, Lucia and Hansen, Ronald M and Akula, James D and De
+               Bruyn, Hanna and Peterson, Bridget and Baglieri, Anna Maria and
+               Fulton, Anne B",
+  journal   = "Investigative ophthalmology \& visual science",
+  publisher = "The Association for Research in Vision and Ophthalmology",
+  volume    =  61,
+  number    =  7,
+  pages     = "3371--3371",
   month     =  jun,
-  year      =  2009,
-  url       = "http://dx.doi.org/10.1097/OPX.0b013e3181a523a3",
+  year      =  2020,
+  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2768023",
   keywords  = "TAC",
-  language  = "en",
-  issn      = "1040-5488, 1538-9235",
-  pmid      = "19390474",
-  doi       = "10.1097/OPX.0b013e3181a523a3",
-  pmc       = "PMC2869287"
-}
-
-@ARTICLE{Drover2010-gj,
-  title     = "Vernier acuity cards: examination of development and screening
-               validity",
-  author    = "Drover, James R and Morale, Sarah E and Wang, Yi-Zhong and
-               Stager, Sr, David R and Birch, Eileen E",
-  journal   = "Optometry and vision science: official publication of the
-               American Academy of Optometry",
-  publisher = "ncbi.nlm.nih.gov",
-  volume    =  87,
-  number    =  11,
-  pages     = "E806--12",
-  month     =  nov,
-  year      =  2010,
-  url       = "http://dx.doi.org/10.1097/OPX.0b013e3181f6fb5e",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "1040-5488, 1538-9235",
-  pmid      = "20871472",
-  doi       = "10.1097/OPX.0b013e3181f6fb5e",
-  pmc       = "PMC8559153"
+  issn      = "0146-0404, 1552-5783"
 }
 
 @ARTICLE{Welinder2020-op,
@@ -933,22 +192,517 @@
   doi      = "10.1111/j.1469-8749.1986.tb03932.x"
 }
 
-@ARTICLE{Dobson1987-cs,
-  title     = "Binocular visual acuity of neonates: the acuity card procedure",
-  author    = "Dobson, V and Schwartz, T L and Sandstrom, D J and Michel, L",
-  journal   = "Developmental medicine and child neurology",
-  publisher = "Wiley Online Library",
-  volume    =  29,
+@ARTICLE{Katz1989-wj,
+  title     = "Der {Teller-Acuity-Card-Test}: M{\"o}glichkeiten und Grenzen der
+               klinischen Anwendung",
+  author    = "Katz, B and Sireteanu, R",
+  journal   = "Klinische Monatsblatter fur Augenheilkunde",
+  publisher = "Georg Thieme Verlag KG",
+  volume    =  195,
+  number    =  1,
+  pages     = "17--22",
+  month     =  jul,
+  year      =  1989,
+  url       = "https://europepmc.org/article/med/2796227",
+  keywords  = "TAC",
+  language  = "de",
+  issn      = "0023-2165, 1439-3999",
+  pmid      = "2796227",
+  doi       = "10.1055/s-2008-1046406"
+}
+
+@ARTICLE{Jasani2017-pe,
+  title    = "Long chain polyunsaturated fatty acid supplementation in infants
+              born at term",
+  author   = "Jasani, Bonny and Simmer, Karen and Patole, Sanjay K and Rao,
+              Shripada C",
+  journal  = "Cochrane database of systematic reviews",
+  volume   =  3,
+  number   =  3,
+  pages    = "CD000376",
+  month    =  mar,
+  year     =  2017,
+  url      = "http://dx.doi.org/10.1002/14651858.CD000376.pub4",
+  keywords = "TAC",
+  language = "en",
+  issn     = "1469-493X, 1361-6137",
+  pmid     = "28281303",
+  doi      = "10.1002/14651858.CD000376.pub4",
+  pmc      = "PMC6464574"
+}
+
+@ARTICLE{Mash1995-bo,
+  title     = "Interobserver agreement for measurement of grating acuity and
+               interocular acuity differences with the teller acuity card
+               procedure",
+  author    = "Mash, C and Dobson, V and Carpenter, N",
+  journal   = "Vision research",
+  publisher = "Elsevier",
+  volume    =  35,
   number    =  2,
-  pages     = "199--206",
-  month     =  apr,
-  year      =  1987,
-  url       = "http://dx.doi.org/10.1111/j.1469-8749.1987.tb02136.x",
+  pages     = "303--312",
+  month     =  jan,
+  year      =  1995,
+  url       = "http://dx.doi.org/10.1016/0042-6989(94)00113-z",
   keywords  = "TAC",
   language  = "en",
-  issn      = "0012-1622",
-  pmid      = "3582789",
-  doi       = "10.1111/j.1469-8749.1987.tb02136.x"
+  issn      = "0042-6989",
+  pmid      = "7839625",
+  doi       = "10.1016/0042-6989(94)00113-z"
+}
+
+@ARTICLE{Westall2000-ga,
+  title     = "Which ocular and neurologic conditions cause disparate results
+               in visual acuity scores recorded with visually evoked potential
+               and teller acuity cards?",
+  author    = "Westall, C A and Ainsworth, J R and Buncic, J R",
+  journal   = "Journal of AAPOS: the official publication of the American
+               Association for Pediatric Ophthalmology and Strabismus /
+               American Association for Pediatric Ophthalmology and Strabismus",
+  publisher = "Elsevier",
+  volume    =  4,
+  number    =  5,
+  pages     = "295--301",
+  month     =  oct,
+  year      =  2000,
+  url       = "http://dx.doi.org/10.1067/mpa.2000.107898",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "1091-8531",
+  pmid      = "11040480",
+  doi       = "10.1067/mpa.2000.107898"
+}
+
+@ARTICLE{Hartnett2003-ph,
+  title     = "Long-term vision results measured with Teller Acuity Cards and a
+               new Light {Perception/Projection} Scale after management of late
+               stages of retinopathy of prematurity",
+  author    = "Hartnett, M Elizabeth and Rodier, Dorothy W and McColm, Janet R
+               and Thompson, Hilary W",
+  journal   = "Archives of ophthalmology",
+  publisher = "jamanetwork.com",
+  volume    =  121,
+  number    =  7,
+  pages     = "991--996",
+  month     =  jul,
+  year      =  2003,
+  url       = "http://dx.doi.org/10.1001/archopht.121.7.991",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0003-9950",
+  pmid      = "12860803",
+  doi       = "10.1001/archopht.121.7.991"
+}
+
+@ARTICLE{Courage1990-xe,
+  title     = "Visual acuity assessment from birth to three years using the
+               acuity card procedure: cross-sectional and longitudinal samples",
+  author    = "Courage, M L and Adams, R J",
+  journal   = "Optometry and vision science: official publication of the
+               American Academy of Optometry",
+  publisher = "journals.lww.com",
+  volume    =  67,
+  number    =  9,
+  pages     = "713--718",
+  month     =  sep,
+  year      =  1990,
+  url       = "http://dx.doi.org/10.1097/00006324-199009000-00011",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "1040-5488",
+  pmid      = "2234832",
+  doi       = "10.1097/00006324-199009000-00011"
+}
+
+@ARTICLE{McDonald1985-vb,
+  title    = "The acuity card procedure: a rapid test of infant acuity",
+  author   = "McDonald, M A and Dobson, V and Sebris, S L and Baitch, L and
+              Varner, D and Teller, D Y",
+  journal  = "Investigative ophthalmology \& visual science",
+  volume   =  26,
+  number   =  8,
+  pages    = "1158--1162",
+  month    =  aug,
+  year     =  1985,
+  url      = "https://www.ncbi.nlm.nih.gov/pubmed/4019107",
+  keywords = "TAC",
+  language = "en",
+  issn     = "0146-0404",
+  pmid     = "4019107"
+}
+
+@ARTICLE{Mash2005-kp,
+  title     = "Intraobserver reliability of the Teller Acuity Card procedure in
+               infants with perinatal complications",
+  author    = "Mash, Clay and Dobson, Velma",
+  journal   = "Optometry and vision science: official publication of the
+               American Academy of Optometry",
+  publisher = "journals.lww.com",
+  volume    =  82,
+  number    =  9,
+  pages     = "817--822",
+  month     =  sep,
+  year      =  2005,
+  url       = "http://dx.doi.org/10.1097/01.opx.0000177809.75080.41",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "1040-5488",
+  pmid      = "16189491",
+  doi       = "10.1097/01.opx.0000177809.75080.41"
+}
+
+@ARTICLE{Ellis1988-fg,
+  title     = "Teller acuity cards versus clinical judgment in the diagnosis of
+               amblyopia with strabismus",
+  author    = "Ellis, Jr, G S and Hartmann, E E and Love, A and May, J G and
+               Morgan, K S",
+  journal   = "Ophthalmology",
+  publisher = "Elsevier",
+  volume    =  95,
+  number    =  6,
+  pages     = "788--791",
+  month     =  jun,
+  year      =  1988,
+  url       = "http://dx.doi.org/10.1016/s0161-6420(88)33105-2",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0161-6420",
+  pmid      = "3062530",
+  doi       = "10.1016/s0161-6420(88)33105-2"
+}
+
+@ARTICLE{Zimmermann2015-gq,
+  title     = "Teller test with functional vision evaluation in children with
+               low vision",
+  author    = "Zimmermann, Anita and Silva, Sarah Vieira da and Zimmermann,
+               Sara Martins Vieira and Lira, Rodrigo Pessoa Cavalcanti and
+               Carvalho, Keila Miriam Monteiro de",
+  journal   = "Revista Brasileira de Oftalmologia",
+  publisher = "Sociedade Brasileira de Oftalmologia",
+  volume    =  74,
+  number    =  6,
+  pages     = "362--365",
+  year      =  2015,
+  url       = "https://www.scielo.br/j/rbof/a/7bbcZJdzVqkTMKZngnC7kgm/?lang=en&format=html",
+  keywords  = "Visual acuity; Low vision; Vision; Child development; Vision
+               disorders;TAC",
+  language  = "en",
+  issn      = "0034-7280, 1982-8551",
+  doi       = "10.5935/0034-7280.20150076"
+}
+
+@ARTICLE{Linden2001-rm,
+  title     = "An evaluation of infant visual acuity using Lea Grating paddles
+               and Teller Acuity Cards",
+  author    = "Linden, M and Maeda, J and Verma, Neeru",
+  publisher = "core.ac.uk",
+  year      =  2001,
+  url       = "https://core.ac.uk/download/pdf/212801430.pdf",
+  keywords  = "TAC"
+}
+
+@INCOLLECTION{Mayer1997-xk,
+  title     = "- Grating Acuity Cards: Validity and Reliability in Studies of
+               Human Visual Development",
+  booktitle = "Developing Brain Behaviour",
+  author    = "Mayer, D Luisa and Dobson, Velma",
+  editor    = "Dobbing, John",
+  publisher = "Academic Press",
+  pages     = "253--292",
+  month     =  jan,
+  year      =  1997,
+  url       = "https://www.sciencedirect.com/science/article/pii/B9780122188701500087",
+  address   = "London",
+  keywords  = "TAC",
+  isbn      = "9780122188701",
+  doi       = "10.1016/B978-012218870-1/50008-7"
+}
+
+@MISC{Faulkner2013-ax,
+  title        = "Comparison of the pacific acuity test to the gold standard
+                  teller acuity card",
+  author       = "Faulkner, Leslie and Meyer-Borel, Rachel and Proctor, Alissa
+                  and Figures:, Body Word Count:",
+  publisher    = "dashboard.digitallibrary.nsuok.edu",
+  year         =  2013,
+  url          = "https://dashboard.digitallibrary.nsuok.edu/downloads/a580bbdd-2ccf-4962-9842-08b88059a2f8",
+  howpublished = "\url{https://dashboard.digitallibrary.nsuok.edu/downloads/a580bbdd-2ccf-4962-9842-08b88059a2f8}",
+  note         = "Accessed: 2024-2-2",
+  keywords     = "TAC"
+}
+
+@ARTICLE{Dobson1990-so,
+  title     = "Grating acuity in infants: Prototype vs teller acuity cards",
+  author    = "Dobson, V and Luna, B",
+  journal   = "Noninvasive Assessment of the Visual System",
+  publisher = "opg.optica.org",
+  year      =  1990,
+  url       = "https://opg.optica.org/abstract.cfm?uri=NAVS-1990-MA3",
+  keywords  = "TAC",
+  doi       = "10.1364/navs.1990.ma3"
+}
+
+@ARTICLE{Preston1987-jj,
+  title     = "Validation of the acuity card procedure for assessment of
+               infants with ocular disorders",
+  author    = "Preston, K L and McDonald, M and Sebris, S L and Dobson, V and
+               Teller, D Y",
+  journal   = "Ophthalmology",
+  publisher = "Elsevier",
+  volume    =  94,
+  number    =  6,
+  pages     = "644--653",
+  month     =  jun,
+  year      =  1987,
+  url       = "http://dx.doi.org/10.1016/s0161-6420(87)33398-6",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0161-6420",
+  pmid      = "3627713",
+  doi       = "10.1016/s0161-6420(87)33398-6"
+}
+
+@ARTICLE{Bartholomew1996-bn,
+  title     = "{Acceptance/Use} of the Teller Acuity Card Procedure in the
+               Clinic",
+  author    = "Bartholomew, Patrica A and Chao, Jeanne and Evans, Janice L and
+               Hammel, Nan and Trueb, Laura A and Verness, Jane L and Quinn,
+               Graham E and Dobson, Velma",
+  journal   = "The American orthoptic journal",
+  publisher = "Taylor \& Francis",
+  volume    =  46,
+  number    =  1,
+  pages     = "99--105",
+  month     =  jan,
+  year      =  1996,
+  url       = "https://doi.org/10.1080/0065955X.1996.11982078",
+  keywords  = "TAC",
+  issn      = "0065-955X",
+  doi       = "10.1080/0065955X.1996.11982078"
+}
+
+@ARTICLE{Kushner1995-ti,
+  title     = "Grating visual acuity with Teller cards compared with Snellen
+               visual acuity in literate patients",
+  author    = "Kushner, B J and Lucchese, N J and Morton, G V",
+  journal   = "Archives of ophthalmology",
+  publisher = "jamanetwork.com",
+  volume    =  113,
+  number    =  4,
+  pages     = "485--493",
+  month     =  apr,
+  year      =  1995,
+  url       = "http://dx.doi.org/10.1001/archopht.1995.01100040107035",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0003-9950",
+  pmid      = "7710400",
+  doi       = "10.1001/archopht.1995.01100040107035"
+}
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@ARTICLE{Kasugai2006-wc,
+  title     = "Comparison between Teller Acuity Cards™ and Teller Acuity Cards
+               {II™}",
+  author    = "Kasugai, Megumi and Asano, Noriko and Hori, Humiko and Sakurai,
+               Hiroko and Kawase, Yoshikatsu",
+  journal   = "JAPANESE ORTHOPTIC JOURNAL",
+  publisher = "JAPANESE ASSOCIATION OF CERTIFIED ORTHOPTISTS",
+  volume    =  35,
+  pages     = "141--146",
+  year      =  2006,
+  url       = "https://www.jstage.jst.go.jp/article/jorthoptic1977/35/0/35_0_141/_article/-char/ja/",
+  keywords  = "TAC"
+}
+
+@ARTICLE{Sharma2003-lx,
+  title     = "Comparative evaluation of Teller and Cardiff acuity tests in
+               normals and unilateral amblyopes in under-two-year-olds",
+  author    = "Sharma, Pradeep and Bairagi, Debasis and Sachdeva, Murli M and
+               Kaur, Kulwant and Khokhar, Sudarshan and Saxena, Rohit",
+  journal   = "Indian journal of ophthalmology",
+  publisher = "journals.lww.com",
+  volume    =  51,
+  number    =  4,
+  pages     = "341--345",
+  month     =  dec,
+  year      =  2003,
+  url       = "https://www.ncbi.nlm.nih.gov/pubmed/14750623",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0301-4738",
+  pmid      = "14750623"
+}
+
+@ARTICLE{Neu1997-mj,
+  title     = "Monocular acuity in preschool children: Assessment with the
+               Teller and Keeler acuity cards in comparison to the C-test",
+  author    = "Neu, B and Sireteanu, R",
+  journal   = "Strabismus",
+  publisher = "Taylor \& Francis",
+  volume    =  5,
+  number    =  4,
+  pages     = "185--202",
+  year      =  1997,
+  url       = "http://dx.doi.org/10.3109/09273979709044534",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0927-3972",
+  pmid      = "21314372",
+  doi       = "10.3109/09273979709044534"
+}
+
+@ARTICLE{Tomlinson1988-px,
+  title     = "The Measurement of Visual Acuity: Comparison of Teller Acuity
+               Cards with Snellen and {MBL} Results",
+  author    = "Tomlinson, Evelyn and Martinez, Diana",
+  journal   = "The American orthoptic journal",
+  publisher = "Taylor \& Francis",
+  volume    =  38,
+  number    =  1,
+  pages     = "130--134",
+  month     =  jan,
+  year      =  1988,
+  url       = "https://doi.org/10.1080/0065955X.1988.11981782",
+  keywords  = "TAC",
+  issn      = "0065-955X",
+  doi       = "10.1080/0065955X.1988.11981782"
+}
+
+@ARTICLE{Johnson2009-ql,
+  title     = "Teller {II} and Cardiff Acuity testing in a school-age deafblind
+               population",
+  author    = "Johnson, Catherine and Kran, Barry S and Deng, Li and Mayer, D
+               Luisa",
+  journal   = "Optometry and vision science: official publication of the
+               American Academy of Optometry",
+  publisher = "journals.lww.com",
+  volume    =  86,
+  number    =  3,
+  pages     = "188--195",
+  month     =  mar,
+  year      =  2009,
+  url       = "http://dx.doi.org/10.1097/OPX.0b013e318196bd35",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "1040-5488, 1538-9235",
+  pmid      = "19214131",
+  doi       = "10.1097/OPX.0b013e318196bd35"
+}
+
+@ARTICLE{Raina1998-yt,
+  title     = "A comparison of Wright card with Teller card for detection of
+               amblyopia",
+  author    = "Raina, J",
+  journal   = "Journal of pediatric ophthalmology and strabismus",
+  publisher = "journals.healio.com",
+  volume    =  35,
+  number    =  1,
+  pages     = "17--21",
+  year      =  1998,
+  url       = "http://dx.doi.org/10.3928/0191-3913-19980101-08",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0191-3913",
+  pmid      = "9503310",
+  doi       = "10.3928/0191-3913-19980101-08"
+}
+
+@ARTICLE{Mohan2016-ov,
+  title     = "Assessment of Grating Acuity in Infants and Toddlers Using an
+               Electronic Acuity Card: The Dobson Card",
+  author    = "Mohan, Kathleen M and Miller, Joseph M and Harvey, Erin M and
+               Gerhart, Kimberly D and Apple, Howard P and Apple, Deborah and
+               Smith, Jordana M and Davis, Amy L and Leonard-Green, Tina and
+               Campus, Irene and Dennis, Leslie K",
+  journal   = "Journal of pediatric ophthalmology and strabismus",
+  publisher = "journals.healio.com",
+  volume    =  53,
+  number    =  1,
+  pages     = "56--59",
+  year      =  2016,
+  url       = "http://dx.doi.org/10.3928/01913913-20160113-09",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0191-3913, 1938-2405",
+  pmid      = "26836005",
+  doi       = "10.3928/01913913-20160113-09"
+}
+
+@ARTICLE{Chang2023-vb,
+  title     = "Comparison of eye tracking and Teller acuity cards for visual
+               acuity assessment in pediatric cortical/cerebral visual
+               impairment ({CVI})",
+  author    = "Chang, Melinda Y and Borchert, Mark S",
+  journal   = "American journal of ophthalmology",
+  publisher = "Elsevier",
+  month     =  dec,
+  year      =  2023,
+  url       = "https://www.sciencedirect.com/science/article/pii/S0002939423005007",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0002-9394, 1879-1891",
+  pmid      = "38065248",
+  doi       = "10.1016/j.ajo.2023.11.024"
+}
+
+@ARTICLE{Drover2010-gj,
+  title     = "Vernier acuity cards: examination of development and screening
+               validity",
+  author    = "Drover, James R and Morale, Sarah E and Wang, Yi-Zhong and
+               Stager, Sr, David R and Birch, Eileen E",
+  journal   = "Optometry and vision science: official publication of the
+               American Academy of Optometry",
+  publisher = "ncbi.nlm.nih.gov",
+  volume    =  87,
+  number    =  11,
+  pages     = "E806--12",
+  month     =  nov,
+  year      =  2010,
+  url       = "http://dx.doi.org/10.1097/OPX.0b013e3181f6fb5e",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "1040-5488, 1538-9235",
+  pmid      = "20871472",
+  doi       = "10.1097/OPX.0b013e3181f6fb5e",
+  pmc       = "PMC8559153"
+}
+
+@ARTICLE{Haynes2004-hz,
+  title     = "Are Teller Acuity Card Norms Based on the Original Vistech
+               Acuity Cards Appropriate for Use with the New Stereo Optical
+               Acuity Cards?",
+  author    = "Haynes, B M and Clifford, C E and Dobson, V",
+  journal   = "Investigative ophthalmology \& visual science",
+  publisher = "The Association for Research in Vision and Ophthalmology",
+  volume    =  45,
+  number    =  13,
+  pages     = "4308--4308",
+  month     =  may,
+  year      =  2004,
+  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2409842",
+  keywords  = "TAC",
+  issn      = "0146-0404, 1552-5783"
+}
+
+@ARTICLE{Vital-Durand1992-ec,
+  title     = "Acuity card procedures and the linearity of grating resolution
+               development during the first year of human infants",
+  author    = "Vital-Durand, F",
+  journal   = "Behavioural brain research",
+  publisher = "Elsevier",
+  volume    =  49,
+  number    =  1,
+  pages     = "99--106",
+  month     =  jul,
+  year      =  1992,
+  url       = "http://dx.doi.org/10.1016/s0166-4328(05)80199-8",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0166-4328",
+  pmid      = "1388807",
+  doi       = "10.1016/s0166-4328(05)80199-8"
 }
 
 @ARTICLE{Mohn1988-qb,
@@ -972,83 +726,300 @@
   doi       = "10.1111/j.1469-8749.1988.tb04756.x"
 }
 
-@ARTICLE{Courage1994-hm,
-  title     = "Visual acuity in infants and children with Down syndrome",
-  author    = "Courage, M L and Adams, R J and Reyno, S and Kwa, P G",
-  journal   = "Developmental medicine and child neurology",
-  publisher = "Wiley Online Library",
-  volume    =  36,
-  number    =  7,
-  pages     = "586--593",
-  month     =  jul,
-  year      =  1994,
-  url       = "http://dx.doi.org/10.1111/j.1469-8749.1994.tb11895.x",
+@ARTICLE{Teller1974-tu,
+  title     = "Visual acuity for vertical and diagonal gratings in human
+               infants",
+  author    = "Teller, D Y and Morse, R and Borton, R and Regal, D",
+  journal   = "Vision research",
+  publisher = "Elsevier",
+  volume    =  14,
+  number    =  12,
+  pages     = "1433--1439",
+  month     =  dec,
+  year      =  1974,
+  url       = "http://dx.doi.org/10.1016/0042-6989(74)90018-2",
   keywords  = "TAC",
   language  = "en",
-  issn      = "0012-1622",
-  pmid      = "8034120",
-  doi       = "10.1111/j.1469-8749.1994.tb11895.x"
+  issn      = "0042-6989",
+  pmid      = "4446373",
+  doi       = "10.1016/0042-6989(74)90018-2"
 }
 
-@ARTICLE{Mackie1996-uq,
-  title     = "Visual acuity assessment of children with neurological
-               impairment using grating and vanishing optotype acuity cards",
-  author    = "Mackie, R T and Saunders, K J and Day, R E and Dutton, G N and
-               McCulloch, D L",
-  journal   = "Acta ophthalmologica Scandinavica",
-  publisher = "Wiley Online Library",
-  volume    =  74,
-  number    =  5,
-  pages     = "483--487",
-  month     =  oct,
-  year      =  1996,
-  url       = "http://dx.doi.org/10.1111/j.1600-0420.1996.tb00604.x",
+@ARTICLE{Kaiwa1990-dw,
+  title     = "Teller acuity cards and assessment of visual acuity in children",
+  author    = "Kaiwa, Izumi and Okuyama, Shigeyoshi and Kimpara, Yoko and
+               Shimizu, Takako",
+  journal   = "JAPANESE ORTHOPTIC JOURNAL",
+  publisher = "JAPANESE ASSOCIATION OF CERTIFIED ORTHOPTISTS",
+  volume    =  18,
+  pages     = "67--71",
+  year      =  1990,
+  url       = "https://www.jstage.jst.go.jp/article/jorthoptic1977/18/0/18_0_67/_article/-char/ja/",
+  keywords  = "TAC"
+}
+
+@ARTICLE{Preston1988-jr,
+  title     = "The Teller Acuity Card Procedure: An Acuity Screening Technique
+               for {Pre-Verbal} Children",
+  author    = "Preston, Karen L and Freedman, Howard L",
+  journal   = "The American orthoptic journal",
+  publisher = "Taylor \& Francis",
+  volume    =  38,
+  number    =  1,
+  pages     = "24--32",
+  month     =  jan,
+  year      =  1988,
+  url       = "https://doi.org/10.1080/0065955X.1988.11981765",
   keywords  = "TAC",
-  language  = "en",
-  issn      = "1395-3907",
-  pmid      = "8950399",
-  doi       = "10.1111/j.1600-0420.1996.tb00604.x"
+  issn      = "0065-955X",
+  doi       = "10.1080/0065955X.1988.11981765"
 }
 
-@ARTICLE{Spierer2004-mn,
-  title     = "Visual acuity in premature infants",
-  author    = "Spierer, Abraham and Royzman, Zana and Kuint, Jacob",
-  journal   = "Ophthalmologica. Journal international d'ophtalmologie.
-               International journal of ophthalmology. Zeitschrift fur
-               Augenheilkunde",
-  publisher = "karger.com",
-  volume    =  218,
-  number    =  6,
-  pages     = "397--401",
+@ARTICLE{Yudcovitch2004-td,
+  title     = "An Evaluation of Infant Visual Acuity Using Lea Grating Paddles
+               and Teller Acuity Cards",
+  author    = "Yudcovitch, Lorne and Linden, Emily and Maeda, Jennifer and
+               Shore, Neeru",
+  journal   = "Journal of Optometric Vision Development",
+  publisher = "search.ebscohost.com",
+  volume    =  35,
   year      =  2004,
-  url       = "http://dx.doi.org/10.1159/000080943",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0030-3755",
-  pmid      = "15564758",
-  doi       = "10.1159/000080943"
+  url       = "https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=0149886X&asa=Y&AN=17668964&h=FQJLtHuIVhyH3%2F0oA6iYv49ZFt87YhaORWKCzyluOo1YTRIHYaFYjzizOMPXkMDx5NWmsRU5ZCjj0h6jrqXVXw%3D%3D&crl=c",
+  keywords  = "TAC"
 }
 
-@ARTICLE{Kelly2021-mr,
-  title     = "Cerebral Visual Impairment Characterized by Abnormal Visual
-               Orienting Behavior With Preserved Visual Cortical Activation",
-  author    = "Kelly, John P and Phillips, James O and Saneto, Russell P and
-               Khalatbari, Hedieh and Poliakov, Andrew and Tarczy-Hornoch,
-               Kristina and Weiss, Avery H",
+@ARTICLE{Clifford2004-zi,
+  title     = "Are Teller Acuity Card Norms Obtained with the Teller Stage
+               Appropriate for Use When Testing is Conducted without the Stage?",
+  author    = "Clifford, C E and Haynes, B M and Dobson, V",
   journal   = "Investigative ophthalmology \& visual science",
-  publisher = "arvojournals.org",
-  volume    =  62,
-  number    =  6,
-  pages     = "15",
+  publisher = "The Association for Research in Vision and Ophthalmology",
+  volume    =  45,
+  number    =  13,
+  pages     = "4309--4309",
   month     =  may,
-  year      =  2021,
-  url       = "http://dx.doi.org/10.1167/iovs.62.6.15",
+  year      =  2004,
+  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2409843",
+  keywords  = "TAC",
+  issn      = "0146-0404, 1552-5783"
+}
+
+@ARTICLE{Suzuki1995-nh,
+  title     = "Studies on development of visual acuity in infants measured by
+               the Teller Acuity Cards",
+  author    = "Suzuki, Y and Awaya, S",
+  journal   = "Japanese journal of ophthalmology",
+  publisher = "europepmc.org",
+  volume    =  39,
+  number    =  2,
+  pages     = "166--171",
+  year      =  1995,
+  url       = "https://www.ncbi.nlm.nih.gov/pubmed/8538073",
   keywords  = "TAC",
   language  = "en",
-  issn      = "0146-0404, 1552-5783",
-  pmid      = "33984120",
-  doi       = "10.1167/iovs.62.6.15",
-  pmc       = "PMC8132015"
+  issn      = "0021-5155",
+  pmid      = "8538073"
+}
+
+@ARTICLE{Holmes1993-lu,
+  title     = "Vernier acuity cards: a practical method for measuring vernier
+               acuity in infants",
+  author    = "Holmes, J M and Archer, S M",
+  journal   = "Journal of pediatric ophthalmology and strabismus",
+  publisher = "journals.healio.com",
+  volume    =  30,
+  number    =  5,
+  pages     = "312--314",
+  year      =  1993,
+  url       = "http://dx.doi.org/10.3928/0191-3913-19930901-10",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0191-3913",
+  pmid      = "8254447",
+  doi       = "10.3928/0191-3913-19930901-10"
+}
+
+@ARTICLE{Park1990-um,
+  title     = "Sensitivity, specificity and efficiency of Teller acuity cards
+               for detecting amblyopia",
+  author    = "Park, Mee-Gyeoung and Kim, Jung-Woo and Tchah, Hung-Won and Jin,
+               Yang-Han and Kim, Yang-J",
+  journal   = "Journal of the Korean Ophthalmological Society",
+  publisher = "pesquisa.bvsalud.org",
+  pages     = "697--701",
+  year      =  1990,
+  url       = "https://pesquisa.bvsalud.org/portal/resource/pt/wpr-131687",
+  keywords  = "TAC"
+}
+
+@ARTICLE{Paik2001-ge,
+  title     = "The clinical interpretation of Teller Acuity Card Test in the
+               diagnosis of amblyopia",
+  author    = "Paik, Hae-Jung and Shin, Min-Kyung",
+  journal   = "Journal of the Korean Ophthalmological Society",
+  publisher = "pesquisa.bvsalud.org",
+  pages     = "1030--1036",
+  year      =  2001,
+  url       = "https://pesquisa.bvsalud.org/portal/resource/pt/wpr-224156",
+  keywords  = "TAC"
+}
+
+@ARTICLE{Bowman2009-gz,
+  title     = "The 'mirror test'for estimating visual acuity in infants",
+  author    = "Bowman, R J C and Law, E and Hutchinson, K and {others}",
+  journal   = "British Journal of",
+  publisher = "bjo.bmj.com",
+  year      =  2009,
+  url       = "https://bjo.bmj.com/content/bjophthalmol/early/2009/11/29/bjo.2009.162750.full.pdf",
+  keywords  = "TAC"
+}
+
+@ARTICLE{Zubcov2002-fp,
+  title     = "Zum prognostischen Stellenwert der Gittersehsch{\"a}rfe bei
+               Fr{\"u}hgeborenen mit und ohne Retinopathia praematurorum
+               ({RPM}) im Lebensalter von 6 Monaten nach errechnetem
+               Geburtstermin",
+  author    = "Zubcov, Alina A and Rossillion, Beatrice M and Kacer, Borislav
+               and St{\"a}rk, Norbert and Schl{\"o}sser, Rolf and Vanselow,
+               Karoline",
+  journal   = "Klinische Monatsblatter fur Augenheilkunde",
+  publisher = "Georg Thieme Verlag KG",
+  volume    =  219,
+  number    =  10,
+  pages     = "722--727",
+  month     =  oct,
+  year      =  2002,
+  url       = "https://europepmc.org/article/med/12447716",
+  keywords  = "TAC",
+  language  = "de",
+  issn      = "0023-2165, 1439-3999",
+  pmid      = "12447716",
+  doi       = "10.1055/s-2002-35699"
+}
+
+@ARTICLE{Kushner1994-vl,
+  title     = "Grating acuity tests should not be used for social service
+               purposes in preliterate children",
+  author    = "Kushner, B J",
+  journal   = "Archives of ophthalmology",
+  publisher = "jamanetwork.com",
+  volume    =  112,
+  number    =  8,
+  pages     = "1030--1031",
+  month     =  aug,
+  year      =  1994,
+  url       = "http://dx.doi.org/10.1001/archopht.1994.01090200036017",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0003-9950",
+  pmid      = "8053814",
+  doi       = "10.1001/archopht.1994.01090200036017"
+}
+
+@ARTICLE{Green2013-al,
+  title     = "Comparison of Diopsys Pattern Reversal Visual Evoked Potential
+               Responses and Grating Acuity Measurements using the Teller
+               Acuity Card Procedure",
+  author    = "Green, Tina and Twelker, John and Kramer, Theresa and Mercer,
+               Diane and Ober, Charis and Donaldson, Candice and Miller, Hugh
+               and Miller, Joseph and Harvey, Erin",
+  journal   = "Investigative ophthalmology \& visual science",
+  publisher = "The Association for Research in Vision and Ophthalmology",
+  volume    =  54,
+  number    =  15,
+  pages     = "4377--4377",
+  month     =  jun,
+  year      =  2013,
+  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2149232",
+  keywords  = "TAC",
+  issn      = "0146-0404, 1552-5783"
+}
+
+@ARTICLE{Vital-Durand1996-nu,
+  title     = "An acuity cards cookbook",
+  author    = "Vital-Durand, F",
+  journal   = "Strabismus",
+  publisher = "Taylor \& Francis",
+  volume    =  4,
+  number    =  2,
+  pages     = "89--97",
+  year      =  1996,
+  url       = "http://dx.doi.org/10.3109/09273979609055044",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0927-3972",
+  pmid      = "21314406",
+  doi       = "10.3109/09273979609055044"
+}
+
+@ARTICLE{Hargadon2010-kh,
+  title     = "Recognition acuity, grating acuity, contrast sensitivity, and
+               visual fields in 6-year-old children",
+  author    = "Hargadon, Deborah D and Wood, Jeffrey and Twelker, J Daniel and
+               Harvey, Erin M and Dobson, Velma",
+  journal   = "Archives of ophthalmology",
+  publisher = "jamanetwork.com",
+  volume    =  128,
+  number    =  1,
+  pages     = "70--74",
+  month     =  jan,
+  year      =  2010,
+  url       = "http://dx.doi.org/10.1001/archophthalmol.2009.343",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0003-9950, 1538-3601",
+  pmid      = "20065220",
+  doi       = "10.1001/archophthalmol.2009.343"
+}
+
+@ARTICLE{Jonnazarov2023-mu,
+  title     = "Visual acuity assessment in deaf-mute children: Identification
+               of shortcomings and search for solutions in the Russian
+               Federation and some countries formerly part of the Soviet Union
+               -- A narrative review",
+  author    = "Jonnazarov, Eldor and Avetisov, Sergey Eduardovich and
+               Cervatiuc, M and Duong, Pham Thai and El Khoury, Antoine",
+  journal   = "Pakistan Journal of Ophthalmology",
+  publisher = "pjo.org.pk",
+  month     =  dec,
+  year      =  2023,
+  url       = "https://www.pjo.org.pk/index.php/pjo/article/view/1762",
+  keywords  = "TAC",
+  issn      = "0886-3067",
+  doi       = "10.36351/pjo.v40i1.1762"
+}
+
+@ARTICLE{Hartmann1990-wq,
+  title     = "The acuity card procedure: longitudinal assessments",
+  author    = "Hartmann, E E and Ellis, Jr, G S and Morgan, K S and Love, A and
+               May, J G",
+  journal   = "Journal of pediatric ophthalmology and strabismus",
+  publisher = "journals.healio.com",
+  volume    =  27,
+  number    =  4,
+  pages     = "178--184",
+  year      =  1990,
+  url       = "http://dx.doi.org/10.3928/0191-3913-19900701-04",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0191-3913",
+  pmid      = "2391618",
+  doi       = "10.3928/0191-3913-19900701-04"
+}
+
+@PHDTHESIS{Rideout2023-ij,
+  title     = "A comparison of behavioural procedures for measuring Vernier
+               acuity and grating acuity",
+  author    = "Rideout, Rebecca",
+  publisher = "Memorial University of Newfoundland",
+  month     =  sep,
+  year      =  2023,
+  url       = "http://research.library.mun.ca/id/eprint/16175",
+  school    = "Memorial University of Newfoundland",
+  keywords  = "grating acuity, vernier acuity, Teller Acuity Cards, Vernier
+               Acuity Cards, 4/4 procedure, staircase procedure, Teller Acuity
+               Card procedure;TAC",
+  language  = "en"
 }
 
 @ARTICLE{Opoku-Yamoah2023-hx,
@@ -1072,6 +1043,178 @@
   pmid      = "37733350",
   doi       = "10.1167/tvst.12.9.13",
   pmc       = "PMC10517421"
+}
+
+@ARTICLE{Sumalini2023-lc,
+  title     = "{Parent-Reported} Visual Concerns in Children with Cerebral
+               Visual Impairment Presenting to a Pediatric Neurology Clinic",
+  author    = "Sumalini, Rebecca and Errolla, Premalatha and Lingappa, Lokesh
+               and Conway, Miriam and Subramanian, Ahalya and Satgunam,
+               Premnandhini",
+  journal   = "Clinical optometry",
+  publisher = "Taylor \& Francis",
+  volume    =  15,
+  pages     = "147--158",
+  month     =  jul,
+  year      =  2023,
+  url       = "http://dx.doi.org/10.2147/OPTO.S410903",
+  keywords  = "CVI range; Ohio contrast cards; Teller acuity cards-II;
+               functional vision; neurological visual impairment;TAC",
+  language  = "en",
+  issn      = "1179-2752",
+  pmid      = "37497463",
+  doi       = "10.2147/OPTO.S410903",
+  pmc       = "PMC10368111"
+}
+
+@ARTICLE{Wen2023-fh,
+  title     = "An Automated Method for Assessing Visual Acuity in Infants and
+               Toddlers Using an {Eye-Tracking} System",
+  author    = "Wen, Jing and Yang, Bikun and Cui, Jinshi and Wang, Li and Li,
+               Xiaoqing",
+  journal   = "Journal of visualized experiments: JoVE",
+  publisher = "jove.com",
+  number    =  193,
+  month     =  mar,
+  year      =  2023,
+  url       = "http://dx.doi.org/10.3791/65274",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "1940-087X",
+  pmid      = "37010307",
+  doi       = "10.3791/65274"
+}
+
+@ARTICLE{Wang2023-qa,
+  title     = "Association between prenatal exposure to trace elements mixture
+               and visual acuity in infants: A prospective birth cohort study",
+  author    = "Wang, Zijin and Dou, Yuanyan and Guo, Wenhui and Lin, Yuan and
+               Jiang, Yangqian and Jiang, Tao and Qin, Rui and Lv, Hong and Lu,
+               Qun and Jin, Guangfu and Ma, Hongxia and Hu, Zhibin and Liu, Hu
+               and Du, Jiangbo and {China National Birth Cohort (CNBC Study
+               Group)}",
+  journal   = "Chemosphere",
+  publisher = "Elsevier",
+  volume    =  333,
+  pages     = "138905",
+  month     =  aug,
+  year      =  2023,
+  url       = "http://dx.doi.org/10.1016/j.chemosphere.2023.138905",
+  keywords  = "Bayesian kernel machine regression (BKMR); Mixed exposure;
+               Molybdenum; Nickel; Trace element; Visual acuity;TAC",
+  language  = "en",
+  issn      = "0045-6535, 1879-1298",
+  pmid      = "37187369",
+  doi       = "10.1016/j.chemosphere.2023.138905"
+}
+
+@ARTICLE{Grunewald1997-om,
+  title     = "Ausgangswerte zur Visusentwicklung von S{\"a}uglingen bei
+               klinischer Anwendung der {Teller-Acuity-Cards}",
+  author    = "Grunewald, S M and Mayer, U M",
+  journal   = "Klinische Monatsblatter fur Augenheilkunde",
+  publisher = "Georg Thieme Verlag KG",
+  volume    =  210,
+  number    =  6,
+  pages     = "376--383",
+  month     =  jun,
+  year      =  1997,
+  url       = "https://europepmc.org/article/med/9333664",
+  keywords  = "TAC",
+  language  = "de",
+  issn      = "0023-2165, 1439-3999",
+  pmid      = "9333664",
+  doi       = "10.1055/s-2008-1035078"
+}
+
+@INCOLLECTION{Chandna1990-jp,
+  title     = "Observations on Grating Acuity Measures of Children in Clinical
+               Practice Using Teller Acuity Cards",
+  booktitle = "Strabismus and Ocular Motility Disorders: Proceedings of the
+               Sixth Meeting of the International Strabismological Association
+               Surfers Paradise, Australia, 1990",
+  author    = "Chandna, A and Doran, R M L",
+  editor    = "Campos, Emilio C",
+  publisher = "Macmillan Education UK",
+  pages     = "85--94",
+  year      =  1990,
+  url       = "https://doi.org/10.1007/978-1-349-11188-6_11",
+  address   = "London",
+  keywords  = "TAC",
+  isbn      = "9781349111886",
+  doi       = "10.1007/978-1-349-11188-6\_11"
+}
+
+@ARTICLE{Clifford2005-bs,
+  title     = "Are norms based on the original Teller Acuity Cards appropriate
+               for use with the new Teller Acuity Cards {II}?",
+  author    = "Clifford, Candice E and Haynes, Breann M and Dobson, Velma",
+  journal   = "Journal of AAPOS: the official publication of the American
+               Association for Pediatric Ophthalmology and Strabismus /
+               American Association for Pediatric Ophthalmology and Strabismus",
+  publisher = "Elsevier",
+  volume    =  9,
+  number    =  5,
+  pages     = "475--479",
+  month     =  oct,
+  year      =  2005,
+  url       = "http://dx.doi.org/10.1016/j.jaapos.2005.04.011",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "1091-8531",
+  pmid      = "16213399",
+  doi       = "10.1016/j.jaapos.2005.04.011"
+}
+
+@ARTICLE{McDonald1985-ch,
+  title     = "The acuity card procedure: a rapid test of infant acuity",
+  author    = "McDonald, M A and Dobson, V and Sebris, S L and Baitch, L and
+               Varner, D and Teller, D Y",
+  journal   = "Investigative ophthalmology \& visual science",
+  publisher = "The Association for Research in Vision and Ophthalmology",
+  volume    =  26,
+  number    =  8,
+  pages     = "1158--1162",
+  year      =  1985,
+  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2159823",
+  keywords  = "TAC",
+  issn      = "0146-0404"
+}
+
+@ARTICLE{Friedman2002-jf,
+  title     = "Grating visual acuity using the preferential-looking method in
+               elderly nursing home residents",
+  author    = "Friedman, David S and Munoz, Beatriz and Massof, Robert W and
+               Bandeen-Roche, Karen and West, Sheila K",
+  journal   = "Investigative ophthalmology \& visual science",
+  publisher = "jov.arvojournals.org",
+  volume    =  43,
+  number    =  8,
+  pages     = "2572--2578",
+  month     =  aug,
+  year      =  2002,
+  url       = "https://www.ncbi.nlm.nih.gov/pubmed/12147587",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0146-0404",
+  pmid      = "12147587"
+}
+
+@ARTICLE{Mahon1987-rc,
+  title     = "Preferential Looking and Acuity Card Testing in the Private
+               Practitioner's Office",
+  author    = "Mahon, Kathy",
+  journal   = "The American orthoptic journal",
+  publisher = "Taylor \& Francis",
+  volume    =  37,
+  number    =  1,
+  pages     = "86--94",
+  month     =  jan,
+  year      =  1987,
+  url       = "https://doi.org/10.1080/0065955X.1987.11981740",
+  keywords  = "TAC",
+  issn      = "0065-955X",
+  doi       = "10.1080/0065955X.1987.11981740"
 }
 
 @ARTICLE{Vivas-Mateos2020-yx,
@@ -1114,93 +1257,101 @@
   doi       = "10.1177/0145482X0409800907"
 }
 
-@ARTICLE{Geruschat1992-ux,
-  title     = "Using the Acuity Card Procedure to Assess Visual Acuity in
-               Children with Severe and Multiple Impairments",
-  author    = "Geruschat, D R",
-  journal   = "Journal of visual impairment \& blindness",
-  publisher = "SAGE Publications Inc",
-  volume    =  86,
-  number    =  1,
-  pages     = "25--27",
-  month     =  jan,
-  year      =  1992,
-  url       = "https://doi.org/10.1177/0145482X9208600114",
-  keywords  = "TAC",
-  issn      = "0145-482X",
-  doi       = "10.1177/0145482X9208600114"
-}
-
-@ARTICLE{Jacobsen2001-fb,
-  title     = "Assessment of visual acuity in relation to central nervous
-               system activation in children with mental retardation",
-  author    = "Jacobsen, K and Gr{\o}ttland, H and Flaten, M A",
-  journal   = "American journal of mental retardation: AJMR",
-  publisher = "meridian.allenpress.com",
-  volume    =  106,
+@ARTICLE{Vital-Durand1990-vo,
+  title     = "500 visual acuity tests in infants with Teller acuity cards",
+  author    = "Vital-Durand, F and Hullo, A",
+  journal   = "Ophtalmologie: organe de la Societe francaise d'ophtalmologie",
+  publisher = "europepmc.org",
+  volume    =  4,
   number    =  2,
-  pages     = "145--150",
+  pages     = "208--211",
   month     =  mar,
-  year      =  2001,
-  url       = "http://dx.doi.org/10.1352/0895-8017(2001)106<0145:AOVAIR>2.0.CO;2",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0895-8017",
-  pmid      = "11321605",
-  doi       = "10.1352/0895-8017(2001)106<0145:AOVAIR>2.0.CO;2"
-}
-
-@ARTICLE{Dobson1990-so,
-  title     = "Grating acuity in infants: Prototype vs teller acuity cards",
-  author    = "Dobson, V and Luna, B",
-  journal   = "Noninvasive Assessment of the Visual System",
-  publisher = "opg.optica.org",
   year      =  1990,
-  url       = "https://opg.optica.org/abstract.cfm?uri=NAVS-1990-MA3",
+  url       = "https://europepmc.org/article/med/2235017",
   keywords  = "TAC",
-  doi       = "10.1364/navs.1990.ma3"
+  language  = "fr",
+  issn      = "0989-3105",
+  pmid      = "2235017"
 }
 
-@ARTICLE{Joo2020-ek,
-  title    = "Clinical usefulness of the teller acuity cards test in
-              preliterate children and its correlation with optotype test: A
-              retrospective study",
-  author   = "Joo, Hye Jun and Yi, Ho Chul and Choi, Dong Gyu",
-  journal  = "PloS one",
-  volume   =  15,
-  number   =  6,
-  pages    = "e0235290",
-  month    =  jun,
-  year     =  2020,
-  url      = "http://dx.doi.org/10.1371/journal.pone.0235290",
-  keywords = "TAC",
-  language = "en",
-  issn     = "1932-6203",
-  pmid     = "32598392",
-  doi      = "10.1371/journal.pone.0235290",
-  pmc      = "PMC7323984"
+@ARTICLE{Miller2015-cu,
+  title     = "The Dobson Card: An electronic display for forced-choice
+               preferential looking ({FPL}) assessment of infant and toddler
+               visual acuity",
+  author    = "Miller, Joseph M and Apple, Howard P and Green, Tina K and
+               Apple, Deborah and Harvey, Erin M",
+  journal   = "Investigative ophthalmology \& visual science",
+  publisher = "The Association for Research in Vision and Ophthalmology",
+  volume    =  56,
+  number    =  7,
+  pages     = "2921--2921",
+  month     =  jun,
+  year      =  2015,
+  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2332740",
+  keywords  = "TAC",
+  issn      = "0146-0404, 1552-5783"
 }
 
-@ARTICLE{Sumalini2023-lc,
-  title     = "{Parent-Reported} Visual Concerns in Children with Cerebral
-               Visual Impairment Presenting to a Pediatric Neurology Clinic",
-  author    = "Sumalini, Rebecca and Errolla, Premalatha and Lingappa, Lokesh
-               and Conway, Miriam and Subramanian, Ahalya and Satgunam,
-               Premnandhini",
-  journal   = "Clinical optometry",
-  publisher = "Taylor \& Francis",
-  volume    =  15,
-  pages     = "147--158",
-  month     =  jul,
-  year      =  2023,
-  url       = "http://dx.doi.org/10.2147/OPTO.S410903",
-  keywords  = "CVI range; Ohio contrast cards; Teller acuity cards-II;
-               functional vision; neurological visual impairment;TAC",
+@MISC{Osman2020-kk,
+  title        = "Contrast Sensitivity and Visual Acuity among the Elderly",
+  author       = "Osman, M",
+  publisher    = "rave.ohiolink.edu",
+  year         =  2020,
+  url          = "https://rave.ohiolink.edu/etdc/view?acc_num=osu1586874623985066",
+  howpublished = "\url{https://rave.ohiolink.edu/etdc/view?acc_num=osu1586874623985066}",
+  note         = "Accessed: 2024-2-2",
+  keywords     = "TAC"
+}
+
+@ARTICLE{Mackie1996-uq,
+  title     = "Visual acuity assessment of children with neurological
+               impairment using grating and vanishing optotype acuity cards",
+  author    = "Mackie, R T and Saunders, K J and Day, R E and Dutton, G N and
+               McCulloch, D L",
+  journal   = "Acta ophthalmologica Scandinavica",
+  publisher = "Wiley Online Library",
+  volume    =  74,
+  number    =  5,
+  pages     = "483--487",
+  month     =  oct,
+  year      =  1996,
+  url       = "http://dx.doi.org/10.1111/j.1600-0420.1996.tb00604.x",
+  keywords  = "TAC",
   language  = "en",
-  issn      = "1179-2752",
-  pmid      = "37497463",
-  doi       = "10.2147/OPTO.S410903",
-  pmc       = "PMC10368111"
+  issn      = "1395-3907",
+  pmid      = "8950399",
+  doi       = "10.1111/j.1600-0420.1996.tb00604.x"
+}
+
+@ARTICLE{Spierer2004-mn,
+  title     = "Visual acuity in premature infants",
+  author    = "Spierer, Abraham and Royzman, Zana and Kuint, Jacob",
+  journal   = "Ophthalmologica. Journal international d'ophtalmologie.
+               International journal of ophthalmology. Zeitschrift fur
+               Augenheilkunde",
+  publisher = "karger.com",
+  volume    =  218,
+  number    =  6,
+  pages     = "397--401",
+  year      =  2004,
+  url       = "http://dx.doi.org/10.1159/000080943",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0030-3755",
+  pmid      = "15564758",
+  doi       = "10.1159/000080943"
+}
+
+@ARTICLE{Chung2005-db,
+  title     = "The Clinical Usefulness of the Teller Acuity Cards Test in
+               Preverbal Children",
+  author    = "Chung, Mi-Ran and Choi, Dong-Gyu",
+  journal   = "Journal of the Korean Ophthalmological Society",
+  publisher = "pesquisa.bvsalud.org",
+  pages     = "330--335",
+  year      =  2005,
+  url       = "https://pesquisa.bvsalud.org/portal/resource/pt/wpr-168181",
+  keywords  = "TAC"
 }
 
 @ARTICLE{Sumalini2022-fh,
@@ -1225,75 +1376,227 @@
   pmc       = "PMC9075052"
 }
 
-@ARTICLE{Ciocler_Froiman2013-xr,
-  title     = "Assessment of visual acuity in patients with dementia using
-               teller acuity cards",
-  author    = "Ciocler Froiman, Priscila and Dantas, Paulo Elias Correa",
-  journal   = "Strabismus",
+@ARTICLE{Sumalini2023-ly,
+  title     = "Grating acuity tests for infants, young children and individuals
+               with disabilities: A review of recent advances",
+  author    = "Sumalini, Rebecca and Satgunam, Premnandhini",
+  journal   = "Seminars in ophthalmology",
   publisher = "Taylor \& Francis",
-  volume    =  21,
-  number    =  2,
-  pages     = "93--97",
-  month     =  jun,
-  year      =  2013,
-  url       = "http://dx.doi.org/10.3109/09273972.2013.787634",
-  keywords  = "TAC",
+  volume    =  38,
+  number    =  1,
+  pages     = "76--84",
+  month     =  jan,
+  year      =  2023,
+  url       = "http://dx.doi.org/10.1080/08820538.2022.2116987",
+  keywords  = "Grating acuity; Infant vision; Pediatric visual acuity; Vision
+               in individuals with developmental delays and disabilities;
+               Vision in pre- or non-verbal children;TAC",
   language  = "en",
-  issn      = "0927-3972, 1744-5132",
-  pmid      = "23713929",
-  doi       = "10.3109/09273972.2013.787634"
+  issn      = "0882-0538, 1744-5205",
+  pmid      = "36073743",
+  doi       = "10.1080/08820538.2022.2116987"
 }
 
-@ARTICLE{Vital-Durand1996-nu,
-  title     = "An acuity cards cookbook",
-  author    = "Vital-Durand, F",
-  journal   = "Strabismus",
-  publisher = "Taylor \& Francis",
-  volume    =  4,
-  number    =  2,
-  pages     = "89--97",
-  year      =  1996,
-  url       = "http://dx.doi.org/10.3109/09273979609055044",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0927-3972",
-  pmid      = "21314406",
-  doi       = "10.3109/09273979609055044"
-}
-
-@ARTICLE{Neu1997-mj,
-  title     = "Monocular acuity in preschool children: Assessment with the
-               Teller and Keeler acuity cards in comparison to the C-test",
-  author    = "Neu, B and Sireteanu, R",
-  journal   = "Strabismus",
-  publisher = "Taylor \& Francis",
-  volume    =  5,
-  number    =  4,
-  pages     = "185--202",
-  year      =  1997,
-  url       = "http://dx.doi.org/10.3109/09273979709044534",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0927-3972",
-  pmid      = "21314372",
-  doi       = "10.3109/09273979709044534"
-}
-
-@ARTICLE{Holmes1994-mx,
-  title     = "Assessment of visual acuity in children with trisomy 18",
-  author    = "Holmes, J M and Coates, C M",
-  journal   = "Ophthalmic genetics",
-  publisher = "Taylor \& Francis",
-  volume    =  15,
-  number    = "3-4",
-  pages     = "115--120",
+@ARTICLE{Courage1994-hm,
+  title     = "Visual acuity in infants and children with Down syndrome",
+  author    = "Courage, M L and Adams, R J and Reyno, S and Kwa, P G",
+  journal   = "Developmental medicine and child neurology",
+  publisher = "Wiley Online Library",
+  volume    =  36,
+  number    =  7,
+  pages     = "586--593",
+  month     =  jul,
   year      =  1994,
-  url       = "http://dx.doi.org/10.3109/13816819409057837",
+  url       = "http://dx.doi.org/10.1111/j.1469-8749.1994.tb11895.x",
   keywords  = "TAC",
   language  = "en",
-  issn      = "1381-6810",
-  pmid      = "7749664",
-  doi       = "10.3109/13816819409057837"
+  issn      = "0012-1622",
+  pmid      = "8034120",
+  doi       = "10.1111/j.1469-8749.1994.tb11895.x"
+}
+
+@ARTICLE{Dobson1987-cs,
+  title     = "Binocular visual acuity of neonates: the acuity card procedure",
+  author    = "Dobson, V and Schwartz, T L and Sandstrom, D J and Michel, L",
+  journal   = "Developmental medicine and child neurology",
+  publisher = "Wiley Online Library",
+  volume    =  29,
+  number    =  2,
+  pages     = "199--206",
+  month     =  apr,
+  year      =  1987,
+  url       = "http://dx.doi.org/10.1111/j.1469-8749.1987.tb02136.x",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0012-1622",
+  pmid      = "3582789",
+  doi       = "10.1111/j.1469-8749.1987.tb02136.x"
+}
+
+@ARTICLE{Marx1990-dn,
+  title     = "Visual acuity estimates in noncommunicative elderly persons",
+  author    = "Marx, M S and Werner, P and Cohen-Mansfield, J and Hartmann, E E",
+  journal   = "Investigative ophthalmology \& visual science",
+  publisher = "iovs.arvojournals.org",
+  volume    =  31,
+  number    =  3,
+  pages     = "593--596",
+  month     =  mar,
+  year      =  1990,
+  url       = "https://www.ncbi.nlm.nih.gov/pubmed/2318597",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0146-0404",
+  pmid      = "2318597"
+}
+
+@ARTICLE{Ipata1994-ax,
+  title     = "Acuity card testing in children with cerebral palsy related to
+               magnetic resonance images, mental levels and motor abilities",
+  author    = "Ipata, A E and Cioni, G and Bottai, P and Fazzi, B and
+               Canapicchi, R and Van Hof-Van Duin, J",
+  journal   = "Brain \& development",
+  publisher = "Elsevier",
+  volume    =  16,
+  number    =  3,
+  pages     = "195--203",
+  year      =  1994,
+  url       = "http://dx.doi.org/10.1016/0387-7604(94)90069-8",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0387-7604",
+  pmid      = "7943603",
+  doi       = "10.1016/0387-7604(94)90069-8"
+}
+
+@ARTICLE{Droste1991-mg,
+  title     = "Measurement of low vision in children and infants",
+  author    = "Droste, P J and Archer, S M and Helveston, E M",
+  journal   = "Ophthalmology",
+  publisher = "Elsevier",
+  volume    =  98,
+  number    =  10,
+  pages     = "1513--1518",
+  month     =  oct,
+  year      =  1991,
+  url       = "http://dx.doi.org/10.1016/s0161-6420(91)32096-7",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0161-6420",
+  pmid      = "1961636",
+  doi       = "10.1016/s0161-6420(91)32096-7"
+}
+
+@ARTICLE{Carlson1993-mt,
+  title     = "Visual-acuity development in healthy preterm infants: effect of
+               marine-oil supplementation",
+  author    = "Carlson, S E and Werkman, S H and Rhodes, P G and Tolley, E A",
+  journal   = "The American journal of clinical nutrition",
+  publisher = "Elsevier",
+  volume    =  58,
+  number    =  1,
+  pages     = "35--42",
+  month     =  jul,
+  year      =  1993,
+  url       = "https://www.sciencedirect.com/science/article/pii/S0002916523196468",
+  keywords  = "Linolenic acid; docosahexaenoic acid; marime oil; preterm
+               infants; visual acuity; infancy; Teller acuity cards;TAC",
+  issn      = "0002-9165",
+  doi       = "10.1093/ajcn/58.1.35"
+}
+
+@ARTICLE{Bass1995-up,
+  title     = "A clinical comparison of visual acuity between the Cardiff
+               acuity test and the Teller acuity and Snellen acuity tests in an
+               adult population",
+  author    = "Bass, J L and Ramsey, C S and Robertson, B D",
+  publisher = "core.ac.uk",
+  year      =  1995,
+  url       = "https://core.ac.uk/download/pdf/212801046.pdf",
+  keywords  = "TAC"
+}
+
+@ARTICLE{Morale2012-ju,
+  title     = "Visual acuity assessment of children with special needs",
+  author    = "Morale, Sarah E and Hughbanks-Wheaton, Dianna K and Cheng,
+               Christina and Subramanian, Vidhya and O'Connor, Anna R and
+               Birch, Eileen E",
+  journal   = "The American orthoptic journal",
+  publisher = "Taylor \& Francis",
+  volume    =  62,
+  pages     = "90--98",
+  year      =  2012,
+  url       = "http://dx.doi.org/10.3368/aoj.62.1.90",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0065-955X",
+  pmid      = "22848117",
+  doi       = "10.3368/aoj.62.1.90"
+}
+
+@ARTICLE{Bowman1995-sd,
+  title     = "Comparison of the new Cardiff Acuity Test with the Teller Acuity
+               Test in toddlers 12 to 36 months of age",
+  author    = "Bowman, Edith G and Preston, P",
+  publisher = "core.ac.uk",
+  year      =  1995,
+  url       = "https://core.ac.uk/download/pdf/212801053.pdf",
+  keywords  = "TAC"
+}
+
+@INCOLLECTION{Mohn1986-yh,
+  title     = "Rapid Assessment of Visual Acuity in Infants and Children in a
+               Clinical Setting, Using Acuity Cards",
+  booktitle = "Detection and Measurement of Visual Impairment in {Pre-Verbal}
+               Children: Proceedings of a workshop held at the Institute of
+               Ophthalmology, London on April 1--3, 1985, sponsored by the
+               Commission of the European Communities as advised by the
+               Committed on Medical Research",
+  author    = "Mohn, Gesine and van Hof-van Duin, Jackie",
+  editor    = "Jay, Barrie",
+  publisher = "Springer Netherlands",
+  pages     = "363--371",
+  year      =  1986,
+  url       = "https://doi.org/10.1007/978-94-009-4263-9_54",
+  address   = "Dordrecht",
+  keywords  = "TAC",
+  isbn      = "9789400942639",
+  doi       = "10.1007/978-94-009-4263-9\_54"
+}
+
+@ARTICLE{Adams1990-vt,
+  title     = "Assessment of visual acuity in children with severe neurological
+               impairments",
+  author    = "Adams, R J and Courage, M L",
+  journal   = "Journal of pediatric ophthalmology and strabismus",
+  publisher = "journals.healio.com",
+  volume    =  27,
+  number    =  4,
+  pages     = "185--189",
+  year      =  1990,
+  url       = "http://dx.doi.org/10.3928/0191-3913-19900701-05",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0191-3913",
+  pmid      = "2391619",
+  doi       = "10.3928/0191-3913-19900701-05"
+}
+
+@ARTICLE{Geruschat1992-ux,
+  title     = "Using the Acuity Card Procedure to Assess Visual Acuity in
+               Children with Severe and Multiple Impairments",
+  author    = "Geruschat, D R",
+  journal   = "Journal of visual impairment \& blindness",
+  publisher = "SAGE Publications Inc",
+  volume    =  86,
+  number    =  1,
+  pages     = "25--27",
+  month     =  jan,
+  year      =  1992,
+  url       = "https://doi.org/10.1177/0145482X9208600114",
+  keywords  = "TAC",
+  issn      = "0145-482X",
+  doi       = "10.1177/0145482X9208600114"
 }
 
 @ARTICLE{Shin2013-tm,
@@ -1317,335 +1620,262 @@
   pmc       = "PMC3663062"
 }
 
-@ARTICLE{Morale2012-ju,
-  title     = "Visual acuity assessment of children with special needs",
-  author    = "Morale, Sarah E and Hughbanks-Wheaton, Dianna K and Cheng,
-               Christina and Subramanian, Vidhya and O'Connor, Anna R and
-               Birch, Eileen E",
-  journal   = "The American orthoptic journal",
-  publisher = "Taylor \& Francis",
-  volume    =  62,
-  pages     = "90--98",
-  year      =  2012,
-  url       = "http://dx.doi.org/10.3368/aoj.62.1.90",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0065-955X",
-  pmid      = "22848117",
-  doi       = "10.3368/aoj.62.1.90"
-}
-
-@ARTICLE{Jonnazarov2023-mu,
-  title     = "Visual acuity assessment in deaf-mute children: Identification
-               of shortcomings and search for solutions in the Russian
-               Federation and some countries formerly part of the Soviet Union
-               -- A narrative review",
-  author    = "Jonnazarov, Eldor and Avetisov, Sergey Eduardovich and
-               Cervatiuc, M and Duong, Pham Thai and El Khoury, Antoine",
-  journal   = "Pakistan Journal of Ophthalmology",
-  publisher = "pjo.org.pk",
-  month     =  dec,
-  year      =  2023,
-  url       = "https://www.pjo.org.pk/index.php/pjo/article/view/1762",
-  keywords  = "TAC",
-  issn      = "0886-3067",
-  doi       = "10.36351/pjo.v40i1.1762"
-}
-
-@ARTICLE{Wen2023-fh,
-  title     = "An Automated Method for Assessing Visual Acuity in Infants and
-               Toddlers Using an {Eye-Tracking} System",
-  author    = "Wen, Jing and Yang, Bikun and Cui, Jinshi and Wang, Li and Li,
-               Xiaoqing",
-  journal   = "Journal of visualized experiments: JoVE",
-  publisher = "jove.com",
-  number    =  193,
-  month     =  mar,
-  year      =  2023,
-  url       = "http://dx.doi.org/10.3791/65274",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "1940-087X",
-  pmid      = "37010307",
-  doi       = "10.3791/65274"
-}
-
-@ARTICLE{Hartmann1990-wq,
-  title     = "The acuity card procedure: longitudinal assessments",
-  author    = "Hartmann, E E and Ellis, Jr, G S and Morgan, K S and Love, A and
-               May, J G",
-  journal   = "Journal of pediatric ophthalmology and strabismus",
-  publisher = "journals.healio.com",
-  volume    =  27,
-  number    =  4,
-  pages     = "178--184",
-  year      =  1990,
-  url       = "http://dx.doi.org/10.3928/0191-3913-19900701-04",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0191-3913",
-  pmid      = "2391618",
-  doi       = "10.3928/0191-3913-19900701-04"
-}
-
-@ARTICLE{Adams1990-vt,
-  title     = "Assessment of visual acuity in children with severe neurological
-               impairments",
-  author    = "Adams, R J and Courage, M L",
-  journal   = "Journal of pediatric ophthalmology and strabismus",
-  publisher = "journals.healio.com",
-  volume    =  27,
-  number    =  4,
-  pages     = "185--189",
-  year      =  1990,
-  url       = "http://dx.doi.org/10.3928/0191-3913-19900701-05",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0191-3913",
-  pmid      = "2391619",
-  doi       = "10.3928/0191-3913-19900701-05"
-}
-
-@ARTICLE{Holmes1993-lu,
-  title     = "Vernier acuity cards: a practical method for measuring vernier
-               acuity in infants",
-  author    = "Holmes, J M and Archer, S M",
-  journal   = "Journal of pediatric ophthalmology and strabismus",
-  publisher = "journals.healio.com",
-  volume    =  30,
-  number    =  5,
-  pages     = "312--314",
-  year      =  1993,
-  url       = "http://dx.doi.org/10.3928/0191-3913-19930901-10",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0191-3913",
-  pmid      = "8254447",
-  doi       = "10.3928/0191-3913-19930901-10"
-}
-
-@ARTICLE{Raina1998-yt,
-  title     = "A comparison of Wright card with Teller card for detection of
-               amblyopia",
-  author    = "Raina, J",
-  journal   = "Journal of pediatric ophthalmology and strabismus",
-  publisher = "journals.healio.com",
-  volume    =  35,
-  number    =  1,
-  pages     = "17--21",
-  year      =  1998,
-  url       = "http://dx.doi.org/10.3928/0191-3913-19980101-08",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0191-3913",
-  pmid      = "9503310",
-  doi       = "10.3928/0191-3913-19980101-08"
-}
-
-@ARTICLE{Mohan2016-ov,
-  title     = "Assessment of Grating Acuity in Infants and Toddlers Using an
-               Electronic Acuity Card: The Dobson Card",
-  author    = "Mohan, Kathleen M and Miller, Joseph M and Harvey, Erin M and
-               Gerhart, Kimberly D and Apple, Howard P and Apple, Deborah and
-               Smith, Jordana M and Davis, Amy L and Leonard-Green, Tina and
-               Campus, Irene and Dennis, Leslie K",
-  journal   = "Journal of pediatric ophthalmology and strabismus",
-  publisher = "journals.healio.com",
-  volume    =  53,
-  number    =  1,
-  pages     = "56--59",
-  year      =  2016,
-  url       = "http://dx.doi.org/10.3928/01913913-20160113-09",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0191-3913, 1938-2405",
-  pmid      = "26836005",
-  doi       = "10.3928/01913913-20160113-09"
-}
-
-@ARTICLE{Zimmermann2015-gq,
-  title     = "Teller test with functional vision evaluation in children with
-               low vision",
-  author    = "Zimmermann, Anita and Silva, Sarah Vieira da and Zimmermann,
-               Sara Martins Vieira and Lira, Rodrigo Pessoa Cavalcanti and
-               Carvalho, Keila Miriam Monteiro de",
-  journal   = "Revista Brasileira de Oftalmologia",
-  publisher = "Sociedade Brasileira de Oftalmologia",
-  volume    =  74,
-  number    =  6,
-  pages     = "362--365",
-  year      =  2015,
-  url       = "https://www.scielo.br/j/rbof/a/7bbcZJdzVqkTMKZngnC7kgm/?lang=en&format=html",
-  keywords  = "Visual acuity; Low vision; Vision; Child development; Vision
-               disorders;TAC",
-  language  = "en",
-  issn      = "0034-7280, 1982-8551",
-  doi       = "10.5935/0034-7280.20150076"
-}
-
-@ARTICLE{Paik2001-ge,
-  title     = "The clinical interpretation of Teller Acuity Card Test in the
-               diagnosis of amblyopia",
-  author    = "Paik, Hae-Jung and Shin, Min-Kyung",
-  journal   = "Journal of the Korean Ophthalmological Society",
-  publisher = "pesquisa.bvsalud.org",
-  pages     = "1030--1036",
-  year      =  2001,
-  url       = "https://pesquisa.bvsalud.org/portal/resource/pt/wpr-224156",
-  keywords  = "TAC"
-}
-
-@ARTICLE{McDonald1985-vb,
-  title    = "The acuity card procedure: a rapid test of infant acuity",
-  author   = "McDonald, M A and Dobson, V and Sebris, S L and Baitch, L and
-              Varner, D and Teller, D Y",
-  journal  = "Investigative ophthalmology \& visual science",
-  volume   =  26,
-  number   =  8,
-  pages    = "1158--1162",
-  month    =  aug,
-  year     =  1985,
-  url      = "https://www.ncbi.nlm.nih.gov/pubmed/4019107",
-  keywords = "TAC",
-  language = "en",
-  issn     = "0146-0404",
-  pmid     = "4019107"
-}
-
-@ARTICLE{McDonald1985-ch,
-  title     = "The acuity card procedure: a rapid test of infant acuity",
-  author    = "McDonald, M A and Dobson, V and Sebris, S L and Baitch, L and
-               Varner, D and Teller, D Y",
-  journal   = "Investigative ophthalmology \& visual science",
-  publisher = "The Association for Research in Vision and Ophthalmology",
-  volume    =  26,
-  number    =  8,
-  pages     = "1158--1162",
-  year      =  1985,
-  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2159823",
-  keywords  = "TAC",
-  issn      = "0146-0404"
-}
-
-@ARTICLE{Chung2005-db,
-  title     = "The Clinical Usefulness of the Teller Acuity Cards Test in
-               Preverbal Children",
-  author    = "Chung, Mi-Ran and Choi, Dong-Gyu",
-  journal   = "Journal of the Korean Ophthalmological Society",
-  publisher = "pesquisa.bvsalud.org",
-  pages     = "330--335",
-  year      =  2005,
-  url       = "https://pesquisa.bvsalud.org/portal/resource/pt/wpr-168181",
-  keywords  = "TAC"
-}
-
-@ARTICLE{Marx1990-dn,
-  title     = "Visual acuity estimates in noncommunicative elderly persons",
-  author    = "Marx, M S and Werner, P and Cohen-Mansfield, J and Hartmann, E E",
-  journal   = "Investigative ophthalmology \& visual science",
-  publisher = "iovs.arvojournals.org",
-  volume    =  31,
+@ARTICLE{Vital-Durand1989-jf,
+  title     = "Measurement of visual acuity in infants in 6 minutes: Teller's
+               Acuity Cards",
+  author    = "Vital-Durand, F and Hullo, A",
+  journal   = "Journal francais d'ophtalmologie",
+  publisher = "europepmc.org",
+  volume    =  12,
   number    =  3,
-  pages     = "593--596",
+  pages     = "221--225",
+  year      =  1989,
+  url       = "https://europepmc.org/article/med/2621305",
+  keywords  = "TAC",
+  language  = "fr",
+  issn      = "0181-5512, 1773-0597",
+  pmid      = "2621305"
+}
+
+@ARTICLE{Jacobsen2001-fb,
+  title     = "Assessment of visual acuity in relation to central nervous
+               system activation in children with mental retardation",
+  author    = "Jacobsen, K and Gr{\o}ttland, H and Flaten, M A",
+  journal   = "American journal of mental retardation: AJMR",
+  publisher = "meridian.allenpress.com",
+  volume    =  106,
+  number    =  2,
+  pages     = "145--150",
   month     =  mar,
-  year      =  1990,
-  url       = "https://www.ncbi.nlm.nih.gov/pubmed/2318597",
+  year      =  2001,
+  url       = "http://dx.doi.org/10.1352/0895-8017(2001)106<0145:AOVAIR>2.0.CO;2",
   keywords  = "TAC",
   language  = "en",
-  issn      = "0146-0404",
-  pmid      = "2318597"
+  issn      = "0895-8017",
+  pmid      = "11321605",
+  doi       = "10.1352/0895-8017(2001)106<0145:AOVAIR>2.0.CO;2"
 }
 
-@MISC{Faulkner2013-ax,
-  title        = "Comparison of the pacific acuity test to the gold standard
-                  teller acuity card",
-  author       = "Faulkner, Leslie and Meyer-Borel, Rachel and Proctor, Alissa
-                  and Figures:, Body Word Count:",
-  publisher    = "dashboard.digitallibrary.nsuok.edu",
-  year         =  2013,
-  url          = "https://dashboard.digitallibrary.nsuok.edu/downloads/a580bbdd-2ccf-4962-9842-08b88059a2f8",
-  howpublished = "\url{https://dashboard.digitallibrary.nsuok.edu/downloads/a580bbdd-2ccf-4962-9842-08b88059a2f8}",
-  note         = "Accessed: 2024-2-2",
-  keywords     = "TAC"
+@ARTICLE{Holmes1994-mx,
+  title     = "Assessment of visual acuity in children with trisomy 18",
+  author    = "Holmes, J M and Coates, C M",
+  journal   = "Ophthalmic genetics",
+  publisher = "Taylor \& Francis",
+  volume    =  15,
+  number    = "3-4",
+  pages     = "115--120",
+  year      =  1994,
+  url       = "http://dx.doi.org/10.3109/13816819409057837",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "1381-6810",
+  pmid      = "7749664",
+  doi       = "10.3109/13816819409057837"
 }
 
-@ARTICLE{Green2013-al,
-  title     = "Comparison of Diopsys Pattern Reversal Visual Evoked Potential
-               Responses and Grating Acuity Measurements using the Teller
-               Acuity Card Procedure",
-  author    = "Green, Tina and Twelker, John and Kramer, Theresa and Mercer,
-               Diane and Ober, Charis and Donaldson, Candice and Miller, Hugh
-               and Miller, Joseph and Harvey, Erin",
+@ARTICLE{Wen2022-jx,
+  title     = "Automated assessment of grating acuity in infants and toddlers
+               using an eye-tracking system",
+  author    = "Wen, Jing and Yang, Bikun and Li, Xiaoqing and Cui, Jinshi and
+               Wang, Li",
+  journal   = "Journal of vision",
+  publisher = "iovs.arvojournals.org",
+  volume    =  22,
+  number    =  12,
+  pages     = "8",
+  month     =  nov,
+  year      =  2022,
+  url       = "http://dx.doi.org/10.1167/jov.22.12.8",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "1534-7362",
+  pmid      = "36331256",
+  doi       = "10.1167/jov.22.12.8",
+  pmc       = "PMC9645362"
+}
+
+@ARTICLE{McDONALD1986-tg,
+  title     = "Monocular Acuity in Normal Infants: The Acuity Card Procedure",
+  author    = "McDONALD, Maryalice and Sebris, Lawson S and Mohn, Gesine and
+               Teller, Davida Y and Dobson, Velma",
+  journal   = "Optometry and vision science: official publication of the
+               American Academy of Optometry",
+  publisher = "journals.lww.com",
+  volume    =  63,
+  number    =  2,
+  pages     = "127",
+  month     =  feb,
+  year      =  1986,
+  url       = "https://journals.lww.com/optvissci/abstract/1986/02000/monocular_acuity_in_normal_infants__the_acuity.8.aspx",
+  keywords  = "TAC",
+  issn      = "1040-5488, 1538-9235"
+}
+
+@ARTICLE{Leone2014-rg,
+  title     = "Normative visual acuity in infants and preschool-aged children
+               in Sydney",
+  author    = "Leone, Jody F and Mitchell, Paul and Kifley, Annette and Rose,
+               Kathryn A and {Sydney Childhood Eye Studies}",
+  journal   = "Acta ophthalmologica",
+  publisher = "Wiley",
+  volume    =  92,
+  number    =  7,
+  pages     = "e521--9",
+  month     =  nov,
+  year      =  2014,
+  url       = "https://onlinelibrary.wiley.com/doi/abs/10.1111/aos.12366",
+  keywords  = "ATS HOTV EVA; logMAR VA; population-based; preschool children;
+               teller acuity cards II; visual acuity;TAC",
+  copyright = "http://onlinelibrary.wiley.com/termsAndConditions\#vor",
+  language  = "en",
+  issn      = "1755-375X, 1755-3768",
+  pmid      = "24606232",
+  doi       = "10.1111/aos.12366"
+}
+
+@ARTICLE{Da_Cunha1996-hu,
+  title     = "Ocular findings in Down's syndrome",
+  author    = "da Cunha, R P and Moreira, J B",
+  journal   = "American journal of ophthalmology",
+  publisher = "Elsevier",
+  volume    =  122,
+  number    =  2,
+  pages     = "236--244",
+  month     =  aug,
+  year      =  1996,
+  url       = "http://dx.doi.org/10.1016/s0002-9394(14)72015-x",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0002-9394",
+  pmid      = "8694092",
+  doi       = "10.1016/s0002-9394(14)72015-x"
+}
+
+@ARTICLE{Chandna1991-me,
+  title     = "Natural history of the development of visual acuity in infants",
+  author    = "Chandna, A",
+  journal   = "Eye",
+  publisher = "nature.com",
+  volume    = "5 ( Pt 1)",
+  pages     = "20--26",
+  year      =  1991,
+  url       = "http://dx.doi.org/10.1038/eye.1991.4",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0950-222X",
+  pmid      = "2060665",
+  doi       = "10.1038/eye.1991.4"
+}
+
+@ARTICLE{Bremond-Gignac2010-aj,
+  title     = "Comparison of a New Preferential Looking Test to Teller Acuity
+               Cards for Evaluation of Infants Visual Acuity",
+  author    = "Bremond-Gignac, D and Pichereau, T and Brunet, M and Louage, P
+               and Milazzo, S",
   journal   = "Investigative ophthalmology \& visual science",
   publisher = "The Association for Research in Vision and Ophthalmology",
-  volume    =  54,
-  number    =  15,
-  pages     = "4377--4377",
-  month     =  jun,
-  year      =  2013,
-  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2149232",
+  volume    =  51,
+  number    =  13,
+  pages     = "5289--5289",
+  month     =  apr,
+  year      =  2010,
+  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2373891",
   keywords  = "TAC",
   issn      = "0146-0404, 1552-5783"
 }
 
-@ARTICLE{Salomao1995-pg,
-  title    = "Large sample population age norms for visual acuities obtained
-              with {Vistech-Teller} Acuity Cards",
-  author   = "Salom{\~a}o, S R and Ventura, D F",
-  journal  = "Investigative ophthalmology \& visual science",
-  volume   =  36,
-  number   =  3,
-  pages    = "657--670",
-  month    =  mar,
-  year     =  1995,
-  url      = "https://www.ncbi.nlm.nih.gov/pubmed/7890496",
-  keywords = "Aging; Brazil; Child, Preschool; Ethnic Groups; Female; Humans;
-              Infant; Male; Population; Reference Values; Vision, Binocular;
-              Vision Tests; Visual Acuity;grating-plaid-motion;TAC",
-  language = "eng",
-  issn     = "0146-0404",
-  pmid     = "7890496"
-}
-
-@ARTICLE{Friedman2002-jf,
-  title     = "Grating visual acuity using the preferential-looking method in
-               elderly nursing home residents",
-  author    = "Friedman, David S and Munoz, Beatriz and Massof, Robert W and
-               Bandeen-Roche, Karen and West, Sheila K",
-  journal   = "Investigative ophthalmology \& visual science",
-  publisher = "jov.arvojournals.org",
-  volume    =  43,
-  number    =  8,
-  pages     = "2572--2578",
-  month     =  aug,
-  year      =  2002,
-  url       = "https://www.ncbi.nlm.nih.gov/pubmed/12147587",
+@ARTICLE{Rydberg1999-mu,
+  title     = "Assessment of visual acuity in children aged 1 1/2-6 years, with
+               normal and subnormal vision",
+  author    = "Rydberg, A and Ericson, B and Lennerstrand, G and Jacobson, L
+               and Lindstedt, E",
+  journal   = "Strabismus",
+  publisher = "Taylor \& Francis",
+  volume    =  7,
+  number    =  1,
+  pages     = "1--24",
+  month     =  mar,
+  year      =  1999,
+  url       = "http://dx.doi.org/10.1076/stra.7.1.1.656",
   keywords  = "TAC",
   language  = "en",
-  issn      = "0146-0404",
-  pmid      = "12147587"
+  issn      = "0927-3972",
+  pmid      = "10401500",
+  doi       = "10.1076/stra.7.1.1.656"
 }
 
-@ARTICLE{Bass1995-up,
-  title     = "A clinical comparison of visual acuity between the Cardiff
-               acuity test and the Teller acuity and Snellen acuity tests in an
-               adult population",
-  author    = "Bass, J L and Ramsey, C S and Robertson, B D",
-  publisher = "core.ac.uk",
+@ARTICLE{Kelly2021-mr,
+  title     = "Cerebral Visual Impairment Characterized by Abnormal Visual
+               Orienting Behavior With Preserved Visual Cortical Activation",
+  author    = "Kelly, John P and Phillips, James O and Saneto, Russell P and
+               Khalatbari, Hedieh and Poliakov, Andrew and Tarczy-Hornoch,
+               Kristina and Weiss, Avery H",
+  journal   = "Investigative ophthalmology \& visual science",
+  publisher = "arvojournals.org",
+  volume    =  62,
+  number    =  6,
+  pages     = "15",
+  month     =  may,
+  year      =  2021,
+  url       = "http://dx.doi.org/10.1167/iovs.62.6.15",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0146-0404, 1552-5783",
+  pmid      = "33984120",
+  doi       = "10.1167/iovs.62.6.15",
+  pmc       = "PMC8132015"
+}
+
+@ARTICLE{Quinn1993-bz,
+  title    = "The Teller acuity card procedure. Three testers in a clinical
+              setting",
+  author   = "Quinn, G E and Berlin, J A and James, M",
+  journal  = "Ophthalmology",
+  volume   =  100,
+  number   =  4,
+  pages    = "488--494",
+  month    =  apr,
+  year     =  1993,
+  url      = "http://dx.doi.org/10.1016/s0161-6420(93)31617-9",
+  keywords = "TAC",
+  language = "en",
+  issn     = "0161-6420",
+  pmid     = "8479705",
+  doi      = "10.1016/s0161-6420(93)31617-9"
+}
+
+@ARTICLE{Teller1983-br,
+  title     = "Measurement of visual acuity in human and monkey infants: the
+               interface between laboratory and clinic",
+  author    = "Teller, D Y",
+  journal   = "Behavioural brain research",
+  publisher = "Elsevier",
+  volume    =  10,
+  number    =  1,
+  pages     = "15--23",
+  month     =  oct,
+  year      =  1983,
+  url       = "http://dx.doi.org/10.1016/0166-4328(83)90146-8",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0166-4328",
+  pmid      = "6639722",
+  doi       = "10.1016/0166-4328(83)90146-8"
+}
+
+@ARTICLE{Salomao1995-qr,
+  title     = "Large sample population age norms for visual acuities obtained
+               with {Vistech-Teller} Acuity Cards",
+  author    = "Salomao, Solange Rios and Ventura, Dora Fix",
+  journal   = "Investigative ophthalmology \& visual science",
+  publisher = "The Association for Research in Vision and Ophthalmology",
+  volume    =  36,
+  number    =  3,
+  pages     = "657--670",
   year      =  1995,
-  url       = "https://core.ac.uk/download/pdf/212801046.pdf",
-  keywords  = "TAC"
-}
-
-@MISC{Osman2020-kk,
-  title        = "Contrast Sensitivity and Visual Acuity among the Elderly",
-  author       = "Osman, M",
-  publisher    = "rave.ohiolink.edu",
-  year         =  2020,
-  url          = "https://rave.ohiolink.edu/etdc/view?acc_num=osu1586874623985066",
-  howpublished = "\url{https://rave.ohiolink.edu/etdc/view?acc_num=osu1586874623985066}",
-  note         = "Accessed: 2024-2-2",
-  keywords     = "TAC"
+  url       = "https://www.academia.edu/download/45431569/Salomao_SR_Ventura_DF._Large_sample_popu20160507-14018-7tnbx3.pdf",
+  keywords  = "TAC",
+  issn      = "0146-0404"
 }
 
 @ARTICLE{Cavallini2002-hl,
@@ -1667,89 +1897,142 @@
   pmid      = "12224796"
 }
 
-@ARTICLE{Bowman2009-gz,
-  title     = "The 'mirror test'for estimating visual acuity in infants",
-  author    = "Bowman, R J C and Law, E and Hutchinson, K and {others}",
-  journal   = "British Journal of",
-  publisher = "bjo.bmj.com",
+@ARTICLE{Drover2009-gf,
+  title     = "The teller acuity cards are effective in detecting amblyopia",
+  author    = "Drover, James R and Wyatt, Lauren M and Stager, David R and
+               Birch, Eileen E",
+  journal   = "Optometry and vision science: official publication of the
+               American Academy of Optometry",
+  publisher = "ncbi.nlm.nih.gov",
+  volume    =  86,
+  number    =  6,
+  pages     = "755--759",
+  month     =  jun,
   year      =  2009,
-  url       = "https://bjo.bmj.com/content/bjophthalmol/early/2009/11/29/bjo.2009.162750.full.pdf",
-  keywords  = "TAC"
-}
-
-@ARTICLE{Park1990-um,
-  title     = "Sensitivity, specificity and efficiency of Teller acuity cards
-               for detecting amblyopia",
-  author    = "Park, Mee-Gyeoung and Kim, Jung-Woo and Tchah, Hung-Won and Jin,
-               Yang-Han and Kim, Yang-J",
-  journal   = "Journal of the Korean Ophthalmological Society",
-  publisher = "pesquisa.bvsalud.org",
-  pages     = "697--701",
-  year      =  1990,
-  url       = "https://pesquisa.bvsalud.org/portal/resource/pt/wpr-131687",
-  keywords  = "TAC"
-}
-
-@ARTICLE{Kaiwa1990-dw,
-  title     = "Teller acuity cards and assessment of visual acuity in children",
-  author    = "Kaiwa, Izumi and Okuyama, Shigeyoshi and Kimpara, Yoko and
-               Shimizu, Takako",
-  journal   = "JAPANESE ORTHOPTIC JOURNAL",
-  publisher = "JAPANESE ASSOCIATION OF CERTIFIED ORTHOPTISTS",
-  volume    =  18,
-  pages     = "67--71",
-  year      =  1990,
-  url       = "https://www.jstage.jst.go.jp/article/jorthoptic1977/18/0/18_0_67/_article/-char/ja/",
-  keywords  = "TAC"
-}
-
-@ARTICLE{Ambrosio2020-jx,
-  title     = "Teller Cards and Freiburg Acuity Visual Evoked Potential in
-               Children with Poor Visual Behavior",
-  author    = "Ambrosio, Lucia and Hansen, Ronald M and Akula, James D and De
-               Bruyn, Hanna and Peterson, Bridget and Baglieri, Anna Maria and
-               Fulton, Anne B",
-  journal   = "Investigative ophthalmology \& visual science",
-  publisher = "The Association for Research in Vision and Ophthalmology",
-  volume    =  61,
-  number    =  7,
-  pages     = "3371--3371",
-  month     =  jun,
-  year      =  2020,
-  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2768023",
+  url       = "http://dx.doi.org/10.1097/OPX.0b013e3181a523a3",
   keywords  = "TAC",
-  issn      = "0146-0404, 1552-5783"
+  language  = "en",
+  issn      = "1040-5488, 1538-9235",
+  pmid      = "19390474",
+  doi       = "10.1097/OPX.0b013e3181a523a3",
+  pmc       = "PMC2869287"
 }
 
-@ARTICLE{Yudcovitch2004-td,
-  title     = "An Evaluation of Infant Visual Acuity Using Lea Grating Paddles
-               and Teller Acuity Cards",
-  author    = "Yudcovitch, Lorne and Linden, Emily and Maeda, Jennifer and
-               Shore, Neeru",
-  journal   = "Journal of Optometric Vision Development",
-  publisher = "search.ebscohost.com",
-  volume    =  35,
-  year      =  2004,
-  url       = "https://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&authtype=crawler&jrnl=0149886X&asa=Y&AN=17668964&h=FQJLtHuIVhyH3%2F0oA6iYv49ZFt87YhaORWKCzyluOo1YTRIHYaFYjzizOMPXkMDx5NWmsRU5ZCjj0h6jrqXVXw%3D%3D&crl=c",
-  keywords  = "TAC"
-}
-
-@ARTICLE{Miller2015-cu,
-  title     = "The Dobson Card: An electronic display for forced-choice
-               preferential looking ({FPL}) assessment of infant and toddler
-               visual acuity",
-  author    = "Miller, Joseph M and Apple, Howard P and Green, Tina K and
-               Apple, Deborah and Harvey, Erin M",
-  journal   = "Investigative ophthalmology \& visual science",
-  publisher = "The Association for Research in Vision and Ophthalmology",
-  volume    =  56,
-  number    =  7,
-  pages     = "2921--2921",
-  month     =  jun,
-  year      =  2015,
-  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2332740",
+@ARTICLE{Clifford2005-ei,
+  title     = "Are norms based on the original Teller Acuity Cards appropriate
+               for use with the new Teller Acuity Cards {II}?",
+  author    = "Clifford, Candice E and Haynes, Breann M and Dobson, Velma",
+  journal   = "Journal of AAPOS: the official publication of the American
+               Association for Pediatric Ophthalmology and Strabismus /
+               American Association for Pediatric Ophthalmology and Strabismus",
+  publisher = "Elsevier",
+  volume    =  9,
+  number    =  5,
+  pages     = "475--479",
+  month     =  oct,
+  year      =  2005,
+  url       = "http://dx.doi.org/10.1016/j.jaapos.2005.04.011",
   keywords  = "TAC",
-  issn      = "0146-0404, 1552-5783"
+  language  = "en",
+  issn      = "1091-8531",
+  pmid      = "16213399",
+  doi       = "10.1016/j.jaapos.2005.04.011"
+}
+
+@ARTICLE{Mash1998-sg,
+  title     = "Long-term reliability and predictive validity of the Teller
+               Acuity Card procedure",
+  author    = "Mash, C and Dobson, V",
+  journal   = "Vision research",
+  publisher = "Elsevier",
+  volume    =  38,
+  number    =  4,
+  pages     = "619--626",
+  month     =  feb,
+  year      =  1998,
+  url       = "http://dx.doi.org/10.1016/s0042-6989(97)88335-6",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0042-6989",
+  pmid      = "9536384",
+  doi       = "10.1016/s0042-6989(97)88335-6"
+}
+
+@ARTICLE{Riddell1997-cs,
+  title     = "Comparison of measures of visual acuity in infants: Teller
+               acuity cards and sweep visual evoked potentials",
+  author    = "Riddell, P M and Ladenheim, B and Mast, J and Catalano, T and
+               Nobile, R and Hainline, L",
+  journal   = "Optometry and vision science: official publication of the
+               American Academy of Optometry",
+  publisher = "journals.lww.com",
+  volume    =  74,
+  number    =  9,
+  pages     = "702--707",
+  month     =  sep,
+  year      =  1997,
+  url       = "http://dx.doi.org/10.1097/00006324-199709000-00017",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "1040-5488",
+  pmid      = "9380367",
+  doi       = "10.1097/00006324-199709000-00017"
+}
+
+@ARTICLE{Ciocler_Froiman2013-xr,
+  title     = "Assessment of visual acuity in patients with dementia using
+               teller acuity cards",
+  author    = "Ciocler Froiman, Priscila and Dantas, Paulo Elias Correa",
+  journal   = "Strabismus",
+  publisher = "Taylor \& Francis",
+  volume    =  21,
+  number    =  2,
+  pages     = "93--97",
+  month     =  jun,
+  year      =  2013,
+  url       = "http://dx.doi.org/10.3109/09273972.2013.787634",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0927-3972, 1744-5132",
+  pmid      = "23713929",
+  doi       = "10.3109/09273972.2013.787634"
+}
+
+@ARTICLE{Getz1996-ih,
+  title     = "Interobserver reliability of the Teller Acuity Card procedure in
+               pediatric patients",
+  author    = "Getz, L M and Dobson, V and Luna, B and Mash, C",
+  journal   = "Investigative ophthalmology \& visual science",
+  publisher = "researchgate.net",
+  volume    =  37,
+  number    =  1,
+  pages     = "180--187",
+  month     =  jan,
+  year      =  1996,
+  url       = "https://www.ncbi.nlm.nih.gov/pubmed/8550321",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0146-0404",
+  pmid      = "8550321"
+}
+
+@ARTICLE{Spierer1999-op,
+  title     = "Vision screening of preverbal children with Teller acuity cards",
+  author    = "Spierer, A and Royzman, Z and Chetrit, A and Novikov, I and
+               Barkay, A",
+  journal   = "Ophthalmology",
+  publisher = "Elsevier",
+  volume    =  106,
+  number    =  4,
+  pages     = "849--854",
+  month     =  apr,
+  year      =  1999,
+  url       = "http://dx.doi.org/10.1016/S0161-6420(99)90176-8",
+  keywords  = "TAC",
+  language  = "en",
+  issn      = "0161-6420",
+  pmid      = "10201612",
+  doi       = "10.1016/S0161-6420(99)90176-8"
 }
 
 @ARTICLE{Mayer1995-hi,
@@ -1772,189 +2055,37 @@
   pmid     = "7890497"
 }
 
-% The entry below contains non-ASCII chars that could not be converted
-% to a LaTeX equivalent.
-@ARTICLE{Kasugai2006-wc,
-  title     = "Comparison between Teller Acuity Cards™ and Teller Acuity Cards
-               {II™}",
-  author    = "Kasugai, Megumi and Asano, Noriko and Hori, Humiko and Sakurai,
-               Hiroko and Kawase, Yoshikatsu",
-  journal   = "JAPANESE ORTHOPTIC JOURNAL",
-  publisher = "JAPANESE ASSOCIATION OF CERTIFIED ORTHOPTISTS",
-  volume    =  35,
-  pages     = "141--146",
-  year      =  2006,
-  url       = "https://www.jstage.jst.go.jp/article/jorthoptic1977/35/0/35_0_141/_article/-char/ja/",
-  keywords  = "TAC"
+@ARTICLE{Hargadon_DD2010-pa,
+  title    = "Recognition acuity, grating acuity, contrast sensitivity, and
+              visual fields in 6-year-old children",
+  author   = "{Hargadon DD} and {Wood J} and {Twelker J} and {Harvey EM} and
+              {Dobson V}",
+  journal  = "Archives of ophthalmology",
+  volume   =  128,
+  number   =  1,
+  pages    = "70--74",
+  month    =  jan,
+  year     =  2010,
+  url      = "http://dx.doi.org/10.1001/archophthalmol.2009.343",
+  keywords = "grating-plaid-motion;TAC",
+  issn     = "0093-0326, 0003-9950",
+  doi      = "10.1001/archophthalmol.2009.343"
 }
 
-@ARTICLE{Suzuki1995-nh,
-  title     = "Studies on development of visual acuity in infants measured by
-               the Teller Acuity Cards",
-  author    = "Suzuki, Y and Awaya, S",
-  journal   = "Japanese journal of ophthalmology",
-  publisher = "europepmc.org",
-  volume    =  39,
-  number    =  2,
-  pages     = "166--171",
-  year      =  1995,
-  url       = "https://www.ncbi.nlm.nih.gov/pubmed/8538073",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0021-5155",
-  pmid      = "8538073"
-}
-
-@ARTICLE{Haynes2004-hz,
-  title     = "Are Teller Acuity Card Norms Based on the Original Vistech
-               Acuity Cards Appropriate for Use with the New Stereo Optical
-               Acuity Cards?",
-  author    = "Haynes, B M and Clifford, C E and Dobson, V",
-  journal   = "Investigative ophthalmology \& visual science",
-  publisher = "The Association for Research in Vision and Ophthalmology",
-  volume    =  45,
-  number    =  13,
-  pages     = "4308--4308",
-  month     =  may,
-  year      =  2004,
-  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2409842",
-  keywords  = "TAC",
-  issn      = "0146-0404, 1552-5783"
-}
-
-@ARTICLE{Getz1996-ih,
-  title     = "Interobserver reliability of the Teller Acuity Card procedure in
-               pediatric patients",
-  author    = "Getz, L M and Dobson, V and Luna, B and Mash, C",
-  journal   = "Investigative ophthalmology \& visual science",
-  publisher = "researchgate.net",
-  volume    =  37,
-  number    =  1,
-  pages     = "180--187",
-  month     =  jan,
-  year      =  1996,
-  url       = "https://www.ncbi.nlm.nih.gov/pubmed/8550321",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0146-0404",
-  pmid      = "8550321"
-}
-
-@ARTICLE{Vital-Durand1990-vo,
-  title     = "500 visual acuity tests in infants with Teller acuity cards",
-  author    = "Vital-Durand, F and Hullo, A",
-  journal   = "Ophtalmologie: organe de la Societe francaise d'ophtalmologie",
-  publisher = "europepmc.org",
-  volume    =  4,
-  number    =  2,
-  pages     = "208--211",
-  month     =  mar,
-  year      =  1990,
-  url       = "https://europepmc.org/article/med/2235017",
-  keywords  = "TAC",
-  language  = "fr",
-  issn      = "0989-3105",
-  pmid      = "2235017"
-}
-
-@ARTICLE{Vital-Durand1989-jf,
-  title     = "Measurement of visual acuity in infants in 6 minutes: Teller's
-               Acuity Cards",
-  author    = "Vital-Durand, F and Hullo, A",
-  journal   = "Journal francais d'ophtalmologie",
-  publisher = "europepmc.org",
-  volume    =  12,
-  number    =  3,
-  pages     = "221--225",
-  year      =  1989,
-  url       = "https://europepmc.org/article/med/2621305",
-  keywords  = "TAC",
-  language  = "fr",
-  issn      = "0181-5512, 1773-0597",
-  pmid      = "2621305"
-}
-
-@ARTICLE{Bowman1995-sd,
-  title     = "Comparison of the new Cardiff Acuity Test with the Teller Acuity
-               Test in toddlers 12 to 36 months of age",
-  author    = "Bowman, Edith G and Preston, P",
-  publisher = "core.ac.uk",
-  year      =  1995,
-  url       = "https://core.ac.uk/download/pdf/212801053.pdf",
-  keywords  = "TAC"
-}
-
-@PHDTHESIS{Rideout2023-ij,
-  title     = "A comparison of behavioural procedures for measuring Vernier
-               acuity and grating acuity",
-  author    = "Rideout, Rebecca",
-  publisher = "Memorial University of Newfoundland",
-  month     =  sep,
-  year      =  2023,
-  url       = "http://research.library.mun.ca/id/eprint/16175",
-  school    = "Memorial University of Newfoundland",
-  keywords  = "grating acuity, vernier acuity, Teller Acuity Cards, Vernier
-               Acuity Cards, 4/4 procedure, staircase procedure, Teller Acuity
-               Card procedure;TAC",
-  language  = "en"
-}
-
-@ARTICLE{Clifford2004-zi,
-  title     = "Are Teller Acuity Card Norms Obtained with the Teller Stage
-               Appropriate for Use When Testing is Conducted without the Stage?",
-  author    = "Clifford, C E and Haynes, B M and Dobson, V",
-  journal   = "Investigative ophthalmology \& visual science",
-  publisher = "The Association for Research in Vision and Ophthalmology",
-  volume    =  45,
-  number    =  13,
-  pages     = "4309--4309",
-  month     =  may,
-  year      =  2004,
-  url       = "https://iovs.arvojournals.org/article.aspx?articleid=2409843",
-  keywords  = "TAC",
-  issn      = "0146-0404, 1552-5783"
-}
-
-@ARTICLE{Salomao1995-qr,
-  title     = "Large sample population age norms for visual acuities obtained
-               with {Vistech-Teller} Acuity Cards",
-  author    = "Salomao, Solange Rios and Ventura, Dora Fix",
-  journal   = "Investigative ophthalmology \& visual science",
-  publisher = "The Association for Research in Vision and Ophthalmology",
-  volume    =  36,
-  number    =  3,
-  pages     = "657--670",
-  year      =  1995,
-  url       = "https://www.academia.edu/download/45431569/Salomao_SR_Ventura_DF._Large_sample_popu20160507-14018-7tnbx3.pdf",
-  keywords  = "TAC",
-  issn      = "0146-0404"
-}
-
-@ARTICLE{Linden2001-rm,
-  title     = "An evaluation of infant visual acuity using Lea Grating paddles
-               and Teller Acuity Cards",
-  author    = "Linden, M and Maeda, J and Verma, Neeru",
-  publisher = "core.ac.uk",
-  year      =  2001,
-  url       = "https://core.ac.uk/download/pdf/212801430.pdf",
-  keywords  = "TAC"
-}
-
-@ARTICLE{Sharma2003-lx,
-  title     = "Comparative evaluation of Teller and Cardiff acuity tests in
-               normals and unilateral amblyopes in under-two-year-olds",
-  author    = "Sharma, Pradeep and Bairagi, Debasis and Sachdeva, Murli M and
-               Kaur, Kulwant and Khokhar, Sudarshan and Saxena, Rohit",
-  journal   = "Indian journal of ophthalmology",
-  publisher = "journals.lww.com",
-  volume    =  51,
-  number    =  4,
-  pages     = "341--345",
-  month     =  dec,
-  year      =  2003,
-  url       = "https://www.ncbi.nlm.nih.gov/pubmed/14750623",
-  keywords  = "TAC",
-  language  = "en",
-  issn      = "0301-4738",
-  pmid      = "14750623"
+@ARTICLE{Hall2000-xb,
+  title    = "The predictive utility of the Teller acuity cards for assessing
+              visual outcome in children with preterm birth and associated
+              perinatal risks",
+  author   = "Hall, Heather L and Courage, Mary L and Adams, Russell J",
+  journal  = "Vision research",
+  volume   =  40,
+  number   =  15,
+  pages    = "2067--2076",
+  month    =  jul,
+  year     =  2000,
+  url      = "http://www.sciencedirect.com/science/article/pii/S004269890000064X",
+  keywords = "Acuity cards; Children; Infants; Perinatal complications;
+              Predictive value;grating-plaid-motion;TAC",
+  issn     = "0042-6989",
+  doi      = "10.1016/S0042-6989(00)00064-X"
 }
