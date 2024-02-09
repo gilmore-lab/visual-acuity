@@ -129,12 +129,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals">Goals</a></li>
   <li><a href="#phase-i-search" id="toc-phase-i-search" class="nav-link" data-scroll-target="#phase-i-search">Phase I: Search</a></li>
   <li><a href="#phase-ii-data-entry" id="toc-phase-ii-data-entry" class="nav-link" data-scroll-target="#phase-ii-data-entry">Phase II: Data entry</a></li>
-  <li><a href="#contacting-authors" id="toc-contacting-authors" class="nav-link" data-scroll-target="#contacting-authors">Contacting authors</a></li>
-  </ul></li>
-  <li><a href="#literature-evaluation" id="toc-literature-evaluation" class="nav-link" data-scroll-target="#literature-evaluation">Literature evaluation</a>
-  <ul class="collapse">
-  <li><a href="#goals-1" id="toc-goals-1" class="nav-link" data-scroll-target="#goals-1">Goals</a></li>
-  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation">Evaluation</a></li>
   </ul></li>
   <li><a href="#data-extraction" id="toc-data-extraction" class="nav-link" data-scroll-target="#data-extraction">Data extraction</a>
   <ul class="collapse">
@@ -219,6 +213,18 @@ Note
 <ol start="4" type="1">
 <li>After you have retrieved a page of entries, switch to the Paperpile tab to add the <code>TAC</code> tag to these entries. Use shift-click to select multiple entries in Paperpile.</li>
 </ol>
+</section>
+</section>
+<section id="phase-ii-data-entry" class="level3">
+<h3 class="anchored" data-anchor-id="phase-ii-data-entry">Phase II: Data entry</h3>
+<section id="goals-1" class="level4">
+<h4 class="anchored" data-anchor-id="goals-1">Goals</h4>
+<ol type="1">
+<li>Create a database of references found in Phase I.</li>
+</ol>
+</section>
+<section id="option-a-automated-extraction" class="level4">
+<h4 class="anchored" data-anchor-id="option-a-automated-extraction">Option A: Automated extraction</h4>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -233,28 +239,54 @@ Note
 <p>There appear to be some R packages that can read *.bib files and convert them to data frames, see <a href="https://rdrr.io/cran/revtools/" class="uri">https://rdrr.io/cran/revtools/</a> and <a href="https://docs.ropensci.org/bib2df/" class="uri">https://docs.ropensci.org/bib2df/</a>.</p>
 </div>
 </div>
+<p>We should assign someone the task of determining how to parse a <code>*.bib</code> file into a data frame.</p>
 </section>
-</section>
-<section id="phase-ii-data-entry" class="level3">
-<h3 class="anchored" data-anchor-id="phase-ii-data-entry">Phase II: Data entry</h3>
-</section>
-<section id="contacting-authors" class="level3">
-<h3 class="anchored" data-anchor-id="contacting-authors">Contacting authors</h3>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdp6HK0FldL5awoT8LTXnr8Sqe7QbDxGc-gjhOpVJ452GLlqA/viewform?embedded=true" width="640" height="1370" frameborder="0" marginheight="0" marginwidth="0">
-Loading…
-</iframe>
-</section>
-</section>
-<section id="literature-evaluation" class="level2">
-<h2 class="anchored" data-anchor-id="literature-evaluation">Literature evaluation</h2>
-<section id="goals-1" class="level3">
-<h3 class="anchored" data-anchor-id="goals-1">Goals</h3>
+<section id="option-b-manual-entry" class="level4">
+<h4 class="anchored" data-anchor-id="option-b-manual-entry">Option B: Manual entry</h4>
+<p>In the meantime, we fall back on manual data entry.</p>
 <ol type="1">
-<li>To evaluate which of the papers captured in the literature search have group or individual level data that can be extracted.</li>
+<li>Open the Google Sheet “Legacy Project Acuity Data: By Paper” and open the <code>paper_data</code> tab:</li>
 </ol>
+<p><a href="https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778" class="uri">https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778</a></p>
+<p><img src="include/img/visual-acuity-legacy-by-paper-paper_data.png" id="fig-googlesheet-for-entering-refs" class="img-fluid" alt="Paper reference database"> 2. In a second Chrome window, click on the Paperpile icon and open Paperpile.</p>
+<p><img src="include/img/open-paperpile-in-chrome.png" class="img-fluid"> 3. In the left panel of the Paperpile window, search for the <code>TAC</code> tag and select it.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="include/img/paperpile-select-tac-tag.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Selecting the ‘TAC’ (Teller Acuity Cards) tag in Paperpile</figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>In the right panel of the Paperpile window, select sort by author.</li>
+</ol>
+<p><img src="include/img/paperpile-sort-by-author.png" class="img-fluid" alt="Sort Paperpile entries by author"> 5. Shrink the Paperpile window and push it flush right, then shrink the Google Sheets window and push it flush left.</p>
+<p><img src="include/img/googlesheets-left-paperpile-right.png" class="img-fluid" alt="Window placement for data entry"> 6. Sort Google Sheet data by Author</p>
+<ol start="7" type="1">
+<li><p>Copy citation from Paperpile (command+c) and paste into ‘citation’ field in Google Sheet.</p></li>
+<li><p>Reformat Google Sheet ‘citation’ column.</p></li>
+</ol>
+<ol type="a">
+<li>Select column</li>
+<li>Select Format | Wrapping | Wrap</li>
+</ol>
+<p><img src="include/img/reformat-wrap-citation.png" class="img-fluid"></p>
+<ol start="20" type="i">
+<li>Sort Google Sheet data by <code>author_first</code> and <code>pub_year</code></li>
+</ol>
+<p>Data | Sort Range | Advanced</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="include/img/sort-google-sheet-author-pub-year.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Sorting a Google Sheet</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="include/img/google-sheet-sort-parameter-settings.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Sort settings for <code>author_first</code> and <code>pub_year</code></figcaption>
+</figure>
+</div>
 </section>
-<section id="evaluation" class="level3">
-<h3 class="anchored" data-anchor-id="evaluation">Evaluation</h3>
 </section>
 </section>
 <section id="data-extraction" class="level2">

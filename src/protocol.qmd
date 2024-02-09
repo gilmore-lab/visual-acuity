@@ -46,11 +46,21 @@ For example, this URL uses `teller acuity cards`:
 
 <https://scholar.google.com/scholar?hl=en&as_sdt=0,39&as_vis=1&q=%22teller+acuity+cards%22>
 
-When looking for sources on Google Scholar, look for the Paperpile box and ensure it is gray. Gray sources are sources we do not currently have in Paperpile. Green sources indicate we already have collected them in Paperpile. An example of both can be seen below.
+When looking for sources on Google Scholar, look for the Paperpile box and ensure it is gray. 
+Gray sources are sources we do not currently have in Paperpile. Green sources indicate we already have collected them in Paperpile. 
+An example of both can be seen below.
 
 INSERT FIGURES FROM GOOGLE DOC
 
 4. After you have retrieved a page of entries, switch to the Paperpile tab to add the `TAC` tag to these entries. Use shift-click to select multiple entries in Paperpile.
+
+### Phase II: Data entry
+
+#### Goals
+
+1. Create a database of references found in Phase I.
+
+#### Option A: Automated extraction
 
 ::: {.callout-note}
 
@@ -62,19 +72,48 @@ There appear to be some R packages that can read *.bib files and convert them to
 
 :::
 
-### Phase II: Data entry
+We should assign someone the task of determining how to parse a `*.bib` file into a data frame.
 
-### Contacting authors
+#### Option B: Manual entry
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdp6HK0FldL5awoT8LTXnr8Sqe7QbDxGc-gjhOpVJ452GLlqA/viewform?embedded=true" width="640" height="1370" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+In the meantime, we fall back on manual data entry.
 
-## Literature evaluation
+1. Open the Google Sheet "Legacy Project Acuity Data: By Paper" and open the `paper_data` tab:
 
-### Goals
+<https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778>
 
-1. To evaluate which of the papers captured in the literature search have group or individual level data that can be extracted.
+![Paper reference database](include/img/visual-acuity-legacy-by-paper-paper_data.png){#fig-googlesheet-for-entering-refs}
+2. In a second Chrome window, click on the Paperpile icon and open Paperpile.
 
-### Evaluation
+![](include/img/open-paperpile-in-chrome.png)
+3. In the left panel of the Paperpile window, search for the `TAC` tag and select it.
+
+![Selecting the 'TAC' (Teller Acuity Cards) tag in Paperpile](include/img/paperpile-select-tac-tag.png)
+
+4. In the right panel of the Paperpile window, select sort by author.
+
+![Sort Paperpile entries by author](include/img/paperpile-sort-by-author.png)
+5. Shrink the Paperpile window and push it flush right, then shrink the Google Sheets window and push it flush left.
+
+![Window placement for data entry](include/img/googlesheets-left-paperpile-right.png)
+6. Sort Google Sheet data by Author
+
+7. Copy citation from Paperpile (command+c) and paste into 'citation' field in Google Sheet.
+
+8. Reformat Google Sheet 'citation' column.
+
+a. Select column
+b. Select Format | Wrapping | Wrap 
+
+![](include/img/reformat-wrap-citation.png)
+
+xx. Sort Google Sheet data by `author_first` and `pub_year`
+
+Data | Sort Range | Advanced 
+
+![Sorting a Google Sheet](include/img/sort-google-sheet-author-pub-year.png)
+
+![Sort settings for `author_first` and `pub_year`](include/img/google-sheet-sort-parameter-settings.png)
 
 ## Data extraction
 
