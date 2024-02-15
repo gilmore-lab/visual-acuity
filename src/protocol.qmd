@@ -15,6 +15,7 @@ The text here is adapted from a working draft document written in Google Docs th
 ### Goals
 
 1. Capture the published literature that reports data on using Teller Acuity Cards.
+
 2. Create a database of that literature.
 
 ### Phase I: Search
@@ -32,8 +33,8 @@ Here are some preparatory steps that need to be completed prior to doing literat
 
 #### Search terms
 
-`teller acuity cards`
-`visual acuity cards`
+`teller acuity cards`</br>
+`visual acuity cards`</br>
 `teller cards`
 
 #### Google Scholar
@@ -49,17 +50,17 @@ For example, this URL uses `teller acuity cards`:
 When looking for sources on Google Scholar, look for the Paperpile box and ensure it is gray. 
 Gray sources are sources we do not currently have in Paperpile. 
 
-![Reference not yet in our Paperpile](include/img/google-scholar-not-in-paperpile.png)
+![Reference not yet in our Paperpile](include/img/google-scholar-not-in-paperpile.png){width="60%" .lightbox}
 
 Green sources indicate we already have collected them in Paperpile. 
 
-![Reference already in Paperpile](include/img/google-scholar-already-in-paperpile.png)
+![Reference already in Paperpile](include/img/google-scholar-already-in-paperpile.png){width="60%" .lightbox}
 
 Add the references **not** already in Paperpile by pressing the grey button.
 
 4. After you have retrieved a page of entries, switch to the Paperpile tab to add the `TAC` tag to these entries. Use shift-click to select multiple entries in Paperpile.
 
-![Papers recently added to Paperpile. After clicking on the tags button and entering 'TAC' in the search window, Paperpile lists all of the paper with the . 'TAC' tag. To add 'TAC' to the new, *selected* papers, click on the checkbox.](include/img/paperpile-add-tac-tag.png)
+![Papers recently added to Paperpile. After clicking on the tags button and entering 'TAC' in the search window, Paperpile lists all of the paper with the . 'TAC' tag. To add 'TAC' to the new, *selected* papers, click on the checkbox.](include/img/paperpile-add-tac-tag.png){width="60%" .lightbox}
 
 ### Phase II: Data entry
 
@@ -89,20 +90,24 @@ In the meantime, we fall back on manual data entry.
 
 <https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778>
 
-![Paper reference database](include/img/visual-acuity-legacy-by-paper-paper_data.png){#fig-googlesheet-for-entering-refs}
+![Paper reference database](include/img/visual-acuity-legacy-by-paper-paper_data.png){#fig-googlesheet-for-entering-refs width="60%" .lightbox}
+
 2. In a second Chrome window, click on the Paperpile icon and open Paperpile.
 
-![](include/img/open-paperpile-in-chrome.png)
+![](include/img/open-paperpile-in-chrome.png){width="60%" .lightbox fig-align="center"}
+
 3. In the left panel of the Paperpile window, search for the `TAC` tag and select it.
 
-![Selecting the 'TAC' (Teller Acuity Cards) tag in Paperpile](include/img/paperpile-select-tac-tag.png)
+![Selecting the 'TAC' (Teller Acuity Cards) tag in Paperpile](include/img/paperpile-select-tac-tag.png){width="60%" .lightbox}
 
 4. In the right panel of the Paperpile window, select sort by author.
 
-![Sort Paperpile entries by author](include/img/paperpile-sort-by-author.png)
+![Sort Paperpile entries by author](include/img/paperpile-sort-by-author.png){width="60%" .lightbox}
+
 5. Shrink the Paperpile window and push it flush right, then shrink the Google Sheets window and push it flush left.
 
-![Window placement for data entry](include/img/googlesheets-left-paperpile-right.png)
+![Window placement for data entry](include/img/googlesheets-left-paperpile-right.png){width="60%" .lightbox}
+
 6. Sort Google Sheet data by Author
 
 7. Copy citation (in APA format) from Paperpile (using the command+c keyboard shortcut) and paste into 'citation' field in Google Sheet.
@@ -112,25 +117,46 @@ In the meantime, we fall back on manual data entry.
 a. Select column
 b. Select Format | Wrapping | Wrap 
 
-![](include/img/reformat-wrap-citation.png)
+![](include/img/reformat-wrap-citation.png){width="60%" .lightbox fig-align="center"}
 
 xx. Sort Google Sheet data by `author_first` and `pub_year`
 
 Data | Sort Range | Advanced 
 
-![Sorting a Google Sheet](include/img/sort-google-sheet-author-pub-year.png)
+![Sorting a Google Sheet](include/img/sort-google-sheet-author-pub-year.png){width="60%" .lightbox}
 
-![Sort settings for `author_first` and `pub_year`](include/img/google-sheet-sort-parameter-settings.png)
+![Sort settings for `author_first` and `pub_year`](include/img/google-sheet-sort-parameter-settings.png){width="60%" .lightbox}
 
-## Data extraction
+## Data evaluation & extraction
 
 ### Goals
 
-1. To extract group-level data from each paper identified in the prior phase.
+1. To evaluate each paper to determine whether it contains extractable data.
+2. To extract group-level data from each paper identified as having extractable data.
 2. Enter group-level data into a common database.
+
+### Data evaluation
+
+#### Phase I
+
+For each paper in the `paper_data` tab in the Google Sheet
+
+<https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778>
+
+1. Open the paper via its URL.
+
+Add "yes" to the `url_openable` data column in the Google Sheet to report that you could open a PDF or web version of the complete paper.
+
+Enter "paywall" if the URL resolves, but you would need to pay for access to the paper.
+
+If the paper can't be found because the URL doesn't resolve, enter "not_found".
+
+#### Phase II
+
+Select the papers that could be opened (`url_openable` == "yes")
+
+1. Scan the paper to find any data tables that contain acuity card summary data.
 
 ### Data extraction
 
-### Qualty Assurance
-
-
+### Quality Assurance

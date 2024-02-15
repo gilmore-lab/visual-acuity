@@ -39,6 +39,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -142,11 +145,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#phase-i-search" id="toc-phase-i-search" class="nav-link" data-scroll-target="#phase-i-search">Phase I: Search</a></li>
   <li><a href="#phase-ii-data-entry" id="toc-phase-ii-data-entry" class="nav-link" data-scroll-target="#phase-ii-data-entry">Phase II: Data entry</a></li>
   </ul></li>
-  <li><a href="#data-extraction" id="toc-data-extraction" class="nav-link" data-scroll-target="#data-extraction">Data extraction</a>
+  <li><a href="#data-evaluation-extraction" id="toc-data-evaluation-extraction" class="nav-link" data-scroll-target="#data-evaluation-extraction">Data evaluation &amp; extraction</a>
   <ul class="collapse">
   <li><a href="#goals-2" id="toc-goals-2" class="nav-link" data-scroll-target="#goals-2">Goals</a></li>
-  <li><a href="#data-extraction-1" id="toc-data-extraction-1" class="nav-link" data-scroll-target="#data-extraction-1">Data extraction</a></li>
-  <li><a href="#qualty-assurance" id="toc-qualty-assurance" class="nav-link" data-scroll-target="#qualty-assurance">Qualty Assurance</a></li>
+  <li><a href="#data-evaluation" id="toc-data-evaluation" class="nav-link" data-scroll-target="#data-evaluation">Data evaluation</a></li>
+  <li><a href="#data-extraction" id="toc-data-extraction" class="nav-link" data-scroll-target="#data-extraction">Data extraction</a></li>
+  <li><a href="#quality-assurance" id="toc-quality-assurance" class="nav-link" data-scroll-target="#quality-assurance">Quality Assurance</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -184,8 +188,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="goals" class="level3">
 <h3 class="anchored" data-anchor-id="goals">Goals</h3>
 <ol type="1">
-<li>Capture the published literature that reports data on using Teller Acuity Cards.</li>
-<li>Create a database of that literature.</li>
+<li><p>Capture the published literature that reports data on using Teller Acuity Cards.</p></li>
+<li><p>Create a database of that literature.</p></li>
 </ol>
 </section>
 <section id="phase-i-search" class="level3">
@@ -211,7 +215,7 @@ Note
 </div>
 <section id="search-terms" class="level4">
 <h4 class="anchored" data-anchor-id="search-terms">Search terms</h4>
-<p><code>teller acuity cards</code> <code>visual acuity cards</code> <code>teller cards</code></p>
+<p><code>teller acuity cards</code><br> <code>visual acuity cards</code><br> <code>teller cards</code></p>
 </section>
 <section id="google-scholar" class="level4">
 <h4 class="anchored" data-anchor-id="google-scholar">Google Scholar</h4>
@@ -225,14 +229,14 @@ Note
 <p>When looking for sources on Google Scholar, look for the Paperpile box and ensure it is gray. Gray sources are sources we do not currently have in Paperpile.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="include/img/google-scholar-not-in-paperpile.png" class="img-fluid figure-img"></p>
+<p><a href="include/img/google-scholar-not-in-paperpile.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Reference not yet in our Paperpile"><img src="include/img/google-scholar-not-in-paperpile.png" class="img-fluid figure-img" style="width:60.0%" alt="Reference not yet in our Paperpile"></a></p>
 <figcaption>Reference not yet in our Paperpile</figcaption>
 </figure>
 </div>
 <p>Green sources indicate we already have collected them in Paperpile.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="include/img/google-scholar-already-in-paperpile.png" class="img-fluid figure-img"></p>
+<p><a href="include/img/google-scholar-already-in-paperpile.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Reference already in Paperpile"><img src="include/img/google-scholar-already-in-paperpile.png" class="img-fluid figure-img" style="width:60.0%" alt="Reference already in Paperpile"></a></p>
 <figcaption>Reference already in Paperpile</figcaption>
 </figure>
 </div>
@@ -242,7 +246,7 @@ Note
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="include/img/paperpile-add-tac-tag.png" class="img-fluid figure-img"></p>
+<p><a href="include/img/paperpile-add-tac-tag.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Papers recently added to Paperpile. After clicking on the tags button and entering ‘TAC’ in the search window, Paperpile lists all of the paper with the . ‘TAC’ tag. To add ‘TAC’ to the new, selected papers, click on the checkbox."><img src="include/img/paperpile-add-tac-tag.png" class="img-fluid figure-img" style="width:60.0%" alt="Papers recently added to Paperpile. After clicking on the tags button and entering ‘TAC’ in the search window, Paperpile lists all of the paper with the . ‘TAC’ tag. To add ‘TAC’ to the new, selected papers, click on the checkbox."></a></p>
 <figcaption>Papers recently added to Paperpile. After clicking on the tags button and entering ‘TAC’ in the search window, Paperpile lists all of the paper with the . ‘TAC’ tag. To add ‘TAC’ to the new, <em>selected</em> papers, click on the checkbox.</figcaption>
 </figure>
 </div>
@@ -281,20 +285,53 @@ Note
 <li>Open the Google Sheet “Legacy Project Acuity Data: By Paper” and open the <code>paper_data</code> tab:</li>
 </ol>
 <p><a href="https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778" class="uri">https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778</a></p>
-<p><img src="include/img/visual-acuity-legacy-by-paper-paper_data.png" id="fig-googlesheet-for-entering-refs" class="img-fluid" alt="Paper reference database"> 2. In a second Chrome window, click on the Paperpile icon and open Paperpile.</p>
-<p><img src="include/img/open-paperpile-in-chrome.png" class="img-fluid"> 3. In the left panel of the Paperpile window, search for the <code>TAC</code> tag and select it.</p>
+<div id="fig-googlesheet-for-entering-refs" class="lightbox quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-googlesheet-for-entering-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/img/visual-acuity-legacy-by-paper-paper_data.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4"><img src="include/img/visual-acuity-legacy-by-paper-paper_data.png" class="img-fluid figure-img" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-googlesheet-for-entering-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Paper reference database
+</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>In a second Chrome window, click on the Paperpile icon and open Paperpile.</li>
+</ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="include/img/paperpile-select-tac-tag.png" class="img-fluid figure-img"></p>
+<p><a href="include/img/open-paperpile-in-chrome.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="include/img/open-paperpile-in-chrome.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>In the left panel of the Paperpile window, search for the <code>TAC</code> tag and select it.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="include/img/paperpile-select-tac-tag.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="Selecting the ‘TAC’ (Teller Acuity Cards) tag in Paperpile"><img src="include/img/paperpile-select-tac-tag.png" class="img-fluid figure-img" style="width:60.0%" alt="Selecting the ‘TAC’ (Teller Acuity Cards) tag in Paperpile"></a></p>
 <figcaption>Selecting the ‘TAC’ (Teller Acuity Cards) tag in Paperpile</figcaption>
 </figure>
 </div>
 <ol start="4" type="1">
 <li>In the right panel of the Paperpile window, select sort by author.</li>
 </ol>
-<p><img src="include/img/paperpile-sort-by-author.png" class="img-fluid" alt="Sort Paperpile entries by author"> 5. Shrink the Paperpile window and push it flush right, then shrink the Google Sheets window and push it flush left.</p>
-<p><img src="include/img/googlesheets-left-paperpile-right.png" class="img-fluid" alt="Window placement for data entry"> 6. Sort Google Sheet data by Author</p>
-<ol start="7" type="1">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="include/img/paperpile-sort-by-author.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="Sort Paperpile entries by author"><img src="include/img/paperpile-sort-by-author.png" class="img-fluid figure-img" style="width:60.0%" alt="Sort Paperpile entries by author"></a></p>
+<figcaption>Sort Paperpile entries by author</figcaption>
+</figure>
+</div>
+<ol start="5" type="1">
+<li>Shrink the Paperpile window and push it flush right, then shrink the Google Sheets window and push it flush left.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="include/img/googlesheets-left-paperpile-right.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="Window placement for data entry"><img src="include/img/googlesheets-left-paperpile-right.png" class="img-fluid figure-img" style="width:60.0%" alt="Window placement for data entry"></a></p>
+<figcaption>Window placement for data entry</figcaption>
+</figure>
+</div>
+<ol start="6" type="1">
+<li><p>Sort Google Sheet data by Author</p></li>
 <li><p>Copy citation (in APA format) from Paperpile (using the command+c keyboard shortcut) and paste into ‘citation’ field in Google Sheet.</p></li>
 <li><p>Reformat Google Sheet ‘citation’ column.</p></li>
 </ol>
@@ -302,42 +339,79 @@ Note
 <li>Select column</li>
 <li>Select Format | Wrapping | Wrap</li>
 </ol>
-<p><img src="include/img/reformat-wrap-citation.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="include/img/reformat-wrap-citation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="include/img/reformat-wrap-citation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
+</figure>
+</div>
 <ol start="20" type="i">
 <li>Sort Google Sheet data by <code>author_first</code> and <code>pub_year</code></li>
 </ol>
 <p>Data | Sort Range | Advanced</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="include/img/sort-google-sheet-author-pub-year.png" class="img-fluid figure-img"></p>
+<p><a href="include/img/sort-google-sheet-author-pub-year.png" class="lightbox" data-glightbox="description: .lightbox-desc-10" data-gallery="quarto-lightbox-gallery-10" title="Sorting a Google Sheet"><img src="include/img/sort-google-sheet-author-pub-year.png" class="img-fluid figure-img" style="width:60.0%" alt="Sorting a Google Sheet"></a></p>
 <figcaption>Sorting a Google Sheet</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="include/img/google-sheet-sort-parameter-settings.png" class="img-fluid figure-img"></p>
+<p><a href="include/img/google-sheet-sort-parameter-settings.png" class="lightbox" data-glightbox="description: .lightbox-desc-11" data-gallery="quarto-lightbox-gallery-11" title="Sort settings for author_first and pub_year"><img src="include/img/google-sheet-sort-parameter-settings.png" class="img-fluid figure-img" style="width:60.0%" alt="Sort settings for author_first and pub_year"></a></p>
 <figcaption>Sort settings for <code>author_first</code> and <code>pub_year</code></figcaption>
 </figure>
 </div>
 </section>
 </section>
 </section>
-<section id="data-extraction" class="level2">
-<h2 class="anchored" data-anchor-id="data-extraction">Data extraction</h2>
+<section id="data-evaluation-extraction" class="level2">
+<h2 class="anchored" data-anchor-id="data-evaluation-extraction">Data evaluation &amp; extraction</h2>
 <section id="goals-2" class="level3">
 <h3 class="anchored" data-anchor-id="goals-2">Goals</h3>
 <ol type="1">
-<li>To extract group-level data from each paper identified in the prior phase.</li>
+<li>To evaluate each paper to determine whether it contains extractable data.</li>
+<li>To extract group-level data from each paper identified as having extractable data.</li>
 <li>Enter group-level data into a common database.</li>
 </ol>
 </section>
-<section id="data-extraction-1" class="level3">
-<h3 class="anchored" data-anchor-id="data-extraction-1">Data extraction</h3>
+<section id="data-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="data-evaluation">Data evaluation</h3>
+<section id="phase-i" class="level4">
+<h4 class="anchored" data-anchor-id="phase-i">Phase I</h4>
+<p>For each paper in the <code>paper_data</code> tab in the Google Sheet</p>
+<p><a href="https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778" class="uri">https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778</a></p>
+<ol type="1">
+<li>Open the paper via its URL.</li>
+</ol>
+<p>Add “yes” to the <code>url_openable</code> data column in the Google Sheet to report that you could open a PDF or web version of the complete paper.</p>
+<p>Enter “paywall” if the URL resolves, but you would need to pay for access to the paper.</p>
+<p>If the paper can’t be found because the URL doesn’t resolve, enter “not_found”.</p>
 </section>
-<section id="qualty-assurance" class="level3">
-<h3 class="anchored" data-anchor-id="qualty-assurance">Qualty Assurance</h3>
+<section id="phase-ii" class="level4">
+<h4 class="anchored" data-anchor-id="phase-ii">Phase II</h4>
+<p>Select the papers that could be opened (<code>url_openable</code> == “yes”)</p>
+<ol type="1">
+<li>Scan the paper to find any data tables that contain acuity card summary data.</li>
+</ol>
+</section>
+</section>
+<section id="data-extraction" class="level3">
+<h3 class="anchored" data-anchor-id="data-extraction">Data extraction</h3>
+</section>
+<section id="quality-assurance" class="level3">
+<h3 class="anchored" data-anchor-id="quality-assurance">Quality Assurance</h3>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">Reference not yet in our Paperpile</span>
+<span class="glightbox-desc lightbox-desc-2">Reference already in Paperpile</span>
+<span class="glightbox-desc lightbox-desc-3">Papers recently added to Paperpile. After clicking on the tags button and entering ‘TAC’ in the search window, Paperpile lists all of the paper with the . ‘TAC’ tag. To add ‘TAC’ to the new, <em>selected</em> papers, click on the checkbox.</span>
+<span class="glightbox-desc lightbox-desc-4">Figure&nbsp;1: Paper reference database</span>
+<span class="glightbox-desc lightbox-desc-6">Selecting the ‘TAC’ (Teller Acuity Cards) tag in Paperpile</span>
+<span class="glightbox-desc lightbox-desc-7">Sort Paperpile entries by author</span>
+<span class="glightbox-desc lightbox-desc-8">Window placement for data entry</span>
+<span class="glightbox-desc lightbox-desc-10">Sorting a Google Sheet</span>
+<span class="glightbox-desc lightbox-desc-11">Sort settings for <code>author_first</code> and <code>pub_year</code></span>
+</div>
 </section>
 </section>
 
@@ -730,6 +804,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
