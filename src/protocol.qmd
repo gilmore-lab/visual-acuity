@@ -47,12 +47,19 @@ For example, this URL uses `teller acuity cards`:
 <https://scholar.google.com/scholar?hl=en&as_sdt=0,39&as_vis=1&q=%22teller+acuity+cards%22>
 
 When looking for sources on Google Scholar, look for the Paperpile box and ensure it is gray. 
-Gray sources are sources we do not currently have in Paperpile. Green sources indicate we already have collected them in Paperpile. 
-An example of both can be seen below.
+Gray sources are sources we do not currently have in Paperpile. 
 
-INSERT FIGURES FROM GOOGLE DOC
+![Reference not yet in our Paperpile](include/img/google-scholar-not-in-paperpile.png)
+
+Green sources indicate we already have collected them in Paperpile. 
+
+![Reference already in Paperpile](include/img/google-scholar-already-in-paperpile.png)
+
+Add the references **not** already in Paperpile by pressing the grey button.
 
 4. After you have retrieved a page of entries, switch to the Paperpile tab to add the `TAC` tag to these entries. Use shift-click to select multiple entries in Paperpile.
+
+![Papers recently added to Paperpile. After clicking on the tags button and entering 'TAC' in the search window, Paperpile lists all of the paper with the . 'TAC' tag. To add 'TAC' to the new, *selected* papers, click on the checkbox.](include/img/paperpile-add-tac-tag.png)
 
 ### Phase II: Data entry
 
@@ -98,7 +105,7 @@ In the meantime, we fall back on manual data entry.
 ![Window placement for data entry](include/img/googlesheets-left-paperpile-right.png)
 6. Sort Google Sheet data by Author
 
-7. Copy citation from Paperpile (command+c) and paste into 'citation' field in Google Sheet.
+7. Copy citation (in APA format) from Paperpile (using the command+c keyboard shortcut) and paste into 'citation' field in Google Sheet.
 
 8. Reformat Google Sheet 'citation' column.
 
