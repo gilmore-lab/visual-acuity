@@ -16,7 +16,7 @@ This page describes the process of data gathering, cleaning, and visualization.
 
 We use a Google Sheet to store the by-study data:
 
-<https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing>
+<https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0>
 
 ::: {.callout-note}
 
