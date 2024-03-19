@@ -1,0 +1,66 @@
+---
+title: "dashboard"
+format: html
+params:
+  data_dir: "data/csv"
+  update_data: TRUE
+  use_sysenv_creds: TRUE
+  google_data_fn: "Legacy Project Acuity Data: By Paper"
+---
+
+This is a dashboard for the data collection and cleaning process.
+
+https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778
+https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0
+
+## Download
+
+```{r}
+if (!dir.exists(params$data_dir)) {
+  message("Creating missing ",  params$data_dir, ".")
+  dir.create(params$data_dir)
+}
+
+if (params$update_data) {
+  if (params$use_sysenv_creds) {
+    google_creds <- Sys.getenv("GMAIL_SURVEY")
+    if (google_creds != "") {
+      options(gargle_oauth_email = google_creds)
+      googledrive::drive_auth()
+    } else {
+      message("No Google account information stored in `.Renviron`.")
+      message("Add authorized Google account name to `.Renviron` using `usethist::edit_r_environ()`.")
+    }
+  }
+
+  googledrive::drive_download(
+    params$google_data_fn,
+    path = file.path(params$data_dir, "by-paper.csv"),
+    type = "csv",
+    overwrite = TRUE
+  )
+  message("Data updated.")
+} else {
+  message("Using stored data.")
+}
+```
+
+::: {.callout-note}
+
+We have a separate tracking sheet that needs to be integrated into this workflow.
+
+:::
+
+## Clean
+
+## Visualize
+
+1. Time series of data collections by time.
+2. Number of papers
+3. By dates
+4. Who entered
+5. Opened successfully
+  - On PSU network
+  - Access via PSU Libraries
+
+

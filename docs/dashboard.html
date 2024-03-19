@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Legacy Project: Visual Acuity - Data Management Plan</title>
+<title>Legacy Project: Visual Acuity - dashboard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -127,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./data-management-plan.html" aria-current="page"> 
+    <a class="nav-link" href="./data-management-plan.html"> 
 <span class="menu-text">data mgmt</span></a>
   </li>  
 </ul>
@@ -146,30 +180,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-mgmt-plan" id="toc-data-mgmt-plan" class="nav-link active" data-scroll-target="#data-mgmt-plan">Data Management and Sharing Plan</a>
-  <ul class="collapse">
-  <li><a href="#element-1-data-type" id="toc-element-1-data-type" class="nav-link" data-scroll-target="#element-1-data-type">Element 1: Data Type</a>
-  <ul class="collapse">
-  <li><a href="#a.-types-and-amount-of-scientific-data-expected-to-be-generated-in-the-project" id="toc-a.-types-and-amount-of-scientific-data-expected-to-be-generated-in-the-project" class="nav-link" data-scroll-target="#a.-types-and-amount-of-scientific-data-expected-to-be-generated-in-the-project">A. Types and amount of scientific data expected to be generated in the project:</a></li>
-  <li><a href="#b.-scientific-data-that-will-be-preserved-and-shared-and-the-rationale-for-doing-so" id="toc-b.-scientific-data-that-will-be-preserved-and-shared-and-the-rationale-for-doing-so" class="nav-link" data-scroll-target="#b.-scientific-data-that-will-be-preserved-and-shared-and-the-rationale-for-doing-so">B. Scientific data that will be preserved and shared, and the rationale for doing so:</a></li>
-  <li><a href="#c.-metadata-other-relevant-data-and-associated-documentation" id="toc-c.-metadata-other-relevant-data-and-associated-documentation" class="nav-link" data-scroll-target="#c.-metadata-other-relevant-data-and-associated-documentation">C. Metadata, other relevant data, and associated documentation:</a></li>
-  </ul></li>
-  <li><a href="#element-2-related-tools-software-andor-code" id="toc-element-2-related-tools-software-andor-code" class="nav-link" data-scroll-target="#element-2-related-tools-software-andor-code">Element 2: Related Tools, Software and/or Code:</a></li>
-  <li><a href="#element-3-standards" id="toc-element-3-standards" class="nav-link" data-scroll-target="#element-3-standards">Element 3: Standards</a></li>
-  <li><a href="#element-4-data-preservation-access-and-associated-timelines" id="toc-element-4-data-preservation-access-and-associated-timelines" class="nav-link" data-scroll-target="#element-4-data-preservation-access-and-associated-timelines">Element 4: Data Preservation, Access, and Associated Timelines</a>
-  <ul class="collapse">
-  <li><a href="#a.-repository-where-scientific-data-and-metadata-will-be-archived" id="toc-a.-repository-where-scientific-data-and-metadata-will-be-archived" class="nav-link" data-scroll-target="#a.-repository-where-scientific-data-and-metadata-will-be-archived">A. Repository where scientific data and metadata will be archived:</a></li>
-  <li><a href="#b.-how-scientific-data-will-be-findable-and-identifiable" id="toc-b.-how-scientific-data-will-be-findable-and-identifiable" class="nav-link" data-scroll-target="#b.-how-scientific-data-will-be-findable-and-identifiable">B. How scientific data will be findable and identifiable:</a></li>
-  <li><a href="#c.-when-and-how-long-the-scientific-data-will-be-made-available" id="toc-c.-when-and-how-long-the-scientific-data-will-be-made-available" class="nav-link" data-scroll-target="#c.-when-and-how-long-the-scientific-data-will-be-made-available">C. When and how long the scientific data will be made available:</a></li>
-  </ul></li>
-  <li><a href="#element-5-access-distribution-or-reuse-considerations" id="toc-element-5-access-distribution-or-reuse-considerations" class="nav-link" data-scroll-target="#element-5-access-distribution-or-reuse-considerations">Element 5: Access, Distribution, or Reuse Considerations:</a>
-  <ul class="collapse">
-  <li><a href="#a.-factors-affecting-subsequent-access-distribution-or-reuse-of-scientific-data" id="toc-a.-factors-affecting-subsequent-access-distribution-or-reuse-of-scientific-data" class="nav-link" data-scroll-target="#a.-factors-affecting-subsequent-access-distribution-or-reuse-of-scientific-data">A. Factors affecting subsequent access, distribution, or reuse of scientific data:</a></li>
-  <li><a href="#b.-whether-access-to-scientific-data-will-be-controlled" id="toc-b.-whether-access-to-scientific-data-will-be-controlled" class="nav-link" data-scroll-target="#b.-whether-access-to-scientific-data-will-be-controlled">B. Whether access to scientific data will be controlled:</a></li>
-  <li><a href="#c.-protections-for-privacy-rights-and-confidentiality-of-human-research-participants" id="toc-c.-protections-for-privacy-rights-and-confidentiality-of-human-research-participants" class="nav-link" data-scroll-target="#c.-protections-for-privacy-rights-and-confidentiality-of-human-research-participants">C. Protections for privacy, rights, and confidentiality of human research participants:</a></li>
-  </ul></li>
-  <li><a href="#element-6-oversight-of-data-management-and-sharing" id="toc-element-6-oversight-of-data-management-and-sharing" class="nav-link" data-scroll-target="#element-6-oversight-of-data-management-and-sharing">Element 6: Oversight of Data Management and Sharing:</a></li>
-  </ul></li>
+  <li><a href="#download" id="toc-download" class="nav-link active" data-scroll-target="#download">Download</a></li>
+  <li><a href="#clean" id="toc-clean" class="nav-link" data-scroll-target="#clean">Clean</a></li>
+  <li><a href="#visualize" id="toc-visualize" class="nav-link" data-scroll-target="#visualize">Visualize</a></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Management Plan</h1>
+<h1 class="title">dashboard</h1>
 </div>
 
 
@@ -195,80 +208,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="data-mgmt-plan" class="level1 unnumbered">
-<h1 class="unnumbered">Data Management and Sharing Plan</h1>
-<div class="rmdnote">
-<p>The following was updated on 2023-03-01. It is based on document OMB No.&nbsp;0925-0001 and 0925-0002 (Rev.&nbsp;07/2022 Approved Through TBD).</p>
-<p>Note that the following contains some URLs provided by the user. These are prohibited in a document submitted to NIH. Since this document is not part of an NIH study, we provide them here for transparency.</p>
+<p>This is a dashboard for the data collection and cleaning process.</p>
+<p>https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778 https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0</p>
+<section id="download" class="level2">
+<h2 class="anchored" data-anchor-id="download">Download</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(params<span class="sc">$</span>data_dir)) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing "</span>,  params<span class="sc">$</span>data_dir, <span class="st">"."</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(params<span class="sc">$</span>data_dir)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (params<span class="sc">$</span>use_sysenv_creds) {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    google_creds <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (google_creds <span class="sc">!=</span> <span class="st">""</span>) {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> google_creds)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"No Google account information stored in `.Renviron`."</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"Add authorized Google account name to `.Renviron` using `usethist::edit_r_environ()`."</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  googledrive<span class="sc">::</span><span class="fu">drive_download</span>(</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    params<span class="sc">$</span>google_data_fn,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">path =</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"by-paper.csv"</span>),</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">"csv"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">overwrite =</span> <span class="cn">TRUE</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated."</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>File downloaded:</code></pre>
 </div>
-<p><em>If any of the proposed research in the application involves the generation of scientific data, this application is subject to the NIH Policy for Data Management and Sharing and requires submission of a Data Management and Sharing Plan. If the proposed research in the application will generate large-scale genomic data, the Genomic Data Sharing Policy also applies and should be addressed in this Plan. Refer to the detailed instructions in the application guide for developing this plan as well as to additional guidance on <a href="https://sharing.nih.gov" class="uri">https://sharing.nih.gov</a>. The Plan is recommended not to exceed two pages. Text in italics should be deleted. There is no “form page” for the Data Management and Sharing Plan. The DMS Plan may be provided in the format shown below.</em></p>
-<p><em>Public reporting burden for this collection of information is estimated to average 2 hours per response, including the time for reviewing instructions, searching existing data sources, gathering, and maintaining the data needed, and completing and reviewing the collection of information. An agency may not conduct or sponsor, and a person is not required to respond to, a collection of information unless it displays a currently valid OMB control number. Send comments regarding this burden estimate or any other aspect of this collection of information, including suggestions for reducing this burden, to: NIH, Project Clearance Branch, 6705 Rockledge Drive, MSC 7974, Bethesda, MD 20892-7974, ATTN: PRA (0925-0001 and 0925-0002). Do not return the completed form to this address.</em></p>
-<section id="element-1-data-type" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="element-1-data-type">Element 1: Data Type</h2>
-<section id="a.-types-and-amount-of-scientific-data-expected-to-be-generated-in-the-project" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="a.-types-and-amount-of-scientific-data-expected-to-be-generated-in-the-project">A. Types and amount of scientific data expected to be generated in the project:</h3>
-<p><em>Summarize the types and estimated amount of scientific data expected to be generated in the project.</em></p>
+<div class="cell-output cell-output-stderr">
+<pre><code>• 'Legacy Project Acuity Data: By Paper'
+  &lt;id: 1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Saved locally as:</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>• 'data/csv/by-paper.csv'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data updated.</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We have a separate tracking sheet that needs to be integrated into this workflow.</p>
+</div>
+</div>
 </section>
-<section id="b.-scientific-data-that-will-be-preserved-and-shared-and-the-rationale-for-doing-so" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="b.-scientific-data-that-will-be-preserved-and-shared-and-the-rationale-for-doing-so">B. Scientific data that will be preserved and shared, and the rationale for doing so:</h3>
-<p><em>Describe which scientific data from the project will be preserved and shared and provide the rationale for this decision.</em></p>
+<section id="clean" class="level2">
+<h2 class="anchored" data-anchor-id="clean">Clean</h2>
 </section>
-<section id="c.-metadata-other-relevant-data-and-associated-documentation" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="c.-metadata-other-relevant-data-and-associated-documentation">C. Metadata, other relevant data, and associated documentation:</h3>
-<p><em>Briefly list the metadata, other relevant data, and any associated documentation (e.g., study protocols and data collection instruments) that will be made accessible to facilitate interpretation of the scientific data.</em></p>
-<p>The full protocol, including survey questions is shared publicly via a website on the code/documentation sharing website, GitHub.</p>
-</section>
-</section>
-<section id="element-2-related-tools-software-andor-code" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="element-2-related-tools-software-andor-code">Element 2: Related Tools, Software and/or Code:</h2>
-<p><em>State whether specialized tools, software, and/or code are needed to access or manipulate shared scientific data, and if so, provide the name(s) of the needed tool(s) and software and specify how they can be accessed.</em></p>
-</section>
-<section id="element-3-standards" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="element-3-standards">Element 3: Standards</h2>
-<p><em>State what common data standards will be applied to the scientific data and associated metadata to enable interoperability of datasets and resources, and provide the name(s) of the data standards that will be applied and describe how these data standards will be applied to the scientific data generated by the research proposed in this project. If applicable, indicate that no consensus standards exist.</em></p>
-<p>There are no consensus standards that apply to these data to our knowledge. However, our publicly shared data cleaning code documents that ways that we modified the original dataset to make it more human-readable. CSV text files are considered to be interoperable.</p>
-</section>
-<section id="element-4-data-preservation-access-and-associated-timelines" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="element-4-data-preservation-access-and-associated-timelines">Element 4: Data Preservation, Access, and Associated Timelines</h2>
-<section id="a.-repository-where-scientific-data-and-metadata-will-be-archived" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="a.-repository-where-scientific-data-and-metadata-will-be-archived">A. Repository where scientific data and metadata will be archived:</h3>
-<p><em>Provide the name of the repository(ies) where scientific data and metadata arising from the project will be archived; see <a href="https://sharing.nih.gov/data-management-and-sharing-policy/sharing-scientific-data/selecting-a-data-repository">Selecting a Data Repository</a>.</em></p>
-<p>When the project is complete and we receive permission to do so, the data may be archived on Databrary (<a href="https://databrary.org" class="uri">https://databrary.org</a>). Metadata and summary data/visualizations will be archived on GitHub, <a href="https://gilmore-lab.github.io/visual-acuity/" class="uri">https://gilmore-lab.github.io/visual-acuity/</a>.</p>
-</section>
-<section id="b.-how-scientific-data-will-be-findable-and-identifiable" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="b.-how-scientific-data-will-be-findable-and-identifiable">B. How scientific data will be findable and identifiable:</h3>
-<p><em>Describe how the scientific data will be findable and identifiable, i.e., via a persistent unique identifier or other standard indexing tools.</em></p>
-<p>If the project data are shared publicly, Databrary will create a persistent identifier (e.g., DOI).</p>
-</section>
-<section id="c.-when-and-how-long-the-scientific-data-will-be-made-available" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="c.-when-and-how-long-the-scientific-data-will-be-made-available">C. When and how long the scientific data will be made available:</h3>
-<p><em>Describe when the scientific data will be made available to other users (i.e., no later than time of an associated publication or end of the performance period, whichever comes first) and for how long data will be available.</em></p>
-</section>
-</section>
-<section id="element-5-access-distribution-or-reuse-considerations" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="element-5-access-distribution-or-reuse-considerations">Element 5: Access, Distribution, or Reuse Considerations:</h2>
-<section id="a.-factors-affecting-subsequent-access-distribution-or-reuse-of-scientific-data" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="a.-factors-affecting-subsequent-access-distribution-or-reuse-of-scientific-data">A. Factors affecting subsequent access, distribution, or reuse of scientific data:</h3>
-<p><em>NIH expects that in drafting Plans, researchers maximize the appropriate sharing of scientific data. Describe and justify any applicable factors or data use limitations affecting subsequent access, distribution, or reuse of scientific data related to informed consent, privacy and confidentiality protections, and any other considerations that may limit the extent of data sharing. See <a href="https://sharing.nih.gov/faqs#/data-management-and-sharing-policy.htm">Frequently Asked Questions</a> for examples of justifiable reasons for limiting sharing of data.</em></p>
-</section>
-<section id="b.-whether-access-to-scientific-data-will-be-controlled" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="b.-whether-access-to-scientific-data-will-be-controlled">B. Whether access to scientific data will be controlled:</h3>
-<p><em>State whether access to the scientific data will be controlled (i.e., made available by a data repository only after approval).</em></p>
-<p>Databrary does not approve data shared by researchers. Authorization to upload and share data is governed by a formal <a href="https://databrary.org/about/agreement.html">Databrary Access Agreement</a> that binds Databrary and New York University with a researcher’s home institution. The DAA gives institutionally authorized researchers the right to share data and materials with Databrary consistent with the policies of their institution, ethics board approvals, and the permission of research participants. Similarly, while researchers can share data on Databrary and control or approve individual access themselves, Databrary does not require it.</p>
-<p>Once shared, data from this project will be available to anyone.</p>
-</section>
-<section id="c.-protections-for-privacy-rights-and-confidentiality-of-human-research-participants" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="c.-protections-for-privacy-rights-and-confidentiality-of-human-research-participants">C. Protections for privacy, rights, and confidentiality of human research participants:</h3>
-<p><em>If generating scientific data derived from humans, describe how the privacy, rights, and confidentiality of human research participants will be protected (e.g., through de-identification, Certificates of Confidentiality, and other protective measures).</em></p>
-</section>
-</section>
-<section id="element-6-oversight-of-data-management-and-sharing" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="element-6-oversight-of-data-management-and-sharing">Element 6: Oversight of Data Management and Sharing:</h2>
-<p><em>Describe how compliance with this Plan will be monitored and managed, frequency of oversight, and by whom at your institution (e.g., titles, roles).</em></p>
-<p>The PIs on the project will manage these provisions.</p>
+<section id="visualize" class="level2">
+<h2 class="anchored" data-anchor-id="visualize">Visualize</h2>
+<ol type="1">
+<li>Time series of data collections by time.</li>
+<li>Number of papers</li>
+<li>By dates</li>
+<li>Who entered</li>
+<li>Opened successfully</li>
+</ol>
+<ul>
+<li>On PSU network</li>
+<li>Access via PSU Libraries</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -18,8 +18,10 @@ website:
         text: about
       - href: protocol.qmd
         text: protocol
-      - href: data.qmd
-        text: data
+      - text: data
+        menu:
+        - href: dashboard.qmd
+        - href: data.qmd
       - href: data-management-plan.qmd
         text: 'data mgmt'
 

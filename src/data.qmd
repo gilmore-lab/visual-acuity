@@ -1,6 +1,7 @@
 ---
 title: data
 bibliography: "include/bib/teller-acuity-cards.bib"
+draft: true
 params:
   data_dir: "data/csv"
   update_data: TRUE
