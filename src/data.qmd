@@ -6,7 +6,9 @@ params:
   data_dir: "data/csv"
   update_data: TRUE
   use_sysenv_creds: TRUE
-  google_data_fn: "Legacy Project Acuity Data: By Paper"
+  google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"
+  sheet_name: "by_paper"
+  data_fn: "by-paper.csv"
 ---
 
 ## Overview
@@ -55,20 +57,17 @@ if (params$update_data) {
     }
   }
 
-  googledrive::drive_download(
-    params$google_data_fn,
-    path = file.path(params$data_dir, "by-paper.csv"),
-    type = "csv",
-    overwrite = TRUE
-  )
-  message("Data updated.")
+  this_sheet <- googlesheets4::read_sheet(ss = params$google_data_url,
+                            sheet = params$sheet_name)
+  out_fn <- file.path(params$data_dir, params$data_fn)
+  readr::write_csv(this_sheet, out_fn)
+  message("Data updated: ", out_fn)
 } else {
   message("Using stored data.")
 }
 ```
 
 The data file has been saved as a comma-separated value (CSV) format data file in a special directory called `csv/`.
-
 
 ### Open CSV
 

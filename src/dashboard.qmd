@@ -5,13 +5,18 @@ params:
   data_dir: "data/csv"
   update_data: TRUE
   use_sysenv_creds: TRUE
-  google_data_fn: "Legacy Project Acuity Data: By Paper"
+  google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"
+  sheet_name: "paper_data"
+  data_fn: "paper-sources.csv"
 ---
 
 This is a dashboard for the data collection and cleaning process.
 
-https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778
-https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0
+## Set-up
+
+```{r}
+library(ggplot2)
+```
 
 ## Download
 
@@ -33,13 +38,11 @@ if (params$update_data) {
     }
   }
 
-  googledrive::drive_download(
-    params$google_data_fn,
-    path = file.path(params$data_dir, "by-paper.csv"),
-    type = "csv",
-    overwrite = TRUE
-  )
-  message("Data updated.")
+  papers_data <- googlesheets4::read_sheet(ss = params$google_data_url,
+                            sheet = params$sheet_name)
+  out_fn <- file.path(params$data_dir, params$data_fn)
+  readr::write_csv(papers_data, out_fn)
+  message("Data updated: ", out_fn)
 } else {
   message("Using stored data.")
 }
@@ -56,11 +59,34 @@ We have a separate tracking sheet that needs to be integrated into this workflow
 ## Visualize
 
 1. Time series of data collections by time.
-2. Number of papers
+2. Number of papers by pub date.
+
+```{r}
+papers_data |>
+  ggplot() +
+  aes(x = pub_year) +
+  geom_bar()
+```
+
 3. By dates
 4. Who entered
+
+```{r}
+papers_data |>
+  ggplot() +
+  aes(x = entered_by) +
+  geom_bar()
+```
+
+
 5. Opened successfully
   - On PSU network
+  
+```{r}
+papers_data |>
+  ggplot() +
+  aes(x = url_openable) +
+  geom_bar()
+```
+  
   - Access via PSU Libraries
-
-
