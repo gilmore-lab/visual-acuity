@@ -123,7 +123,7 @@
     "href": "dashboard.html#visualize",
     "title": "dashboard",
     "section": "Visualize",
-    "text": "Visualize\n\nTime series of data collections by time.\nNumber of papers by pub date.\n\n\npapers_data |&gt;\n  ggplot() +\n  aes(x = pub_year) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\nBy dates\nWho entered\n\n\npapers_data |&gt;\n  ggplot() +\n  aes(x = entered_by) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\nOpened successfully\n\n\nOn PSU network\n\n\npapers_data |&gt;\n  ggplot() +\n  aes(x = url_openable) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\nAccess via PSU Libraries"
+    "text": "Visualize\n\nTime series of data collections by time.\nNumber of papers by pub date.\n\n\npapers_data |&gt;\n  ggplot() +\n  aes(x = pub_year) +\n  geom_bar()\n\n\n\n\nPapers by publication year\n\n\n\n\n\nBy dates\nWho entered\n\n\npapers_data |&gt;\n  ggplot() +\n  aes(x = entered_by) +\n  geom_bar()\n\n\n\n\nPapers entered by analyst\n\n\n\n\n\nOpened successfully\n\n\nOn PSU network\n\n\npapers_data |&gt;\n  ggplot() +\n  aes(x = url_openable) +\n  geom_bar()\n\n\n\n\nPapers with openable URLs\n\n\n\n\n\nAccess via PSU Libraries"
   },
   {
     "objectID": "paper-summary.html#summarize-captured-paper-data",

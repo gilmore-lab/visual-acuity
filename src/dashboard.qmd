@@ -62,6 +62,8 @@ We have a separate tracking sheet that needs to be integrated into this workflow
 2. Number of papers by pub date.
 
 ```{r}
+#| title: "Papers by publication year"
+#| fig-cap: "Papers by publication year"
 papers_data |>
   ggplot() +
   aes(x = pub_year) +
@@ -72,6 +74,8 @@ papers_data |>
 4. Who entered
 
 ```{r}
+#| title: "Papers entered by analyst"
+#| fig-cap: "Papers entered by analyst"
 papers_data |>
   ggplot() +
   aes(x = entered_by) +
@@ -83,6 +87,8 @@ papers_data |>
   - On PSU network
   
 ```{r}
+#| title: "Papers with openable URLs"
+#| fig-cap: "Papers with openable URLs"
 papers_data |>
   ggplot() +
   aes(x = url_openable) +
