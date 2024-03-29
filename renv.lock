@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.3.2",
+    "Version": "4.3.3",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -91,6 +91,19 @@
         "R"
       ],
       "Hash": "543776ae6848fde2f48ff3816d0628bc"
+    },
+    "bib2df": {
+      "Package": "bib2df",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "dplyr",
+        "httr",
+        "humaniformat",
+        "stringr"
+      ],
+      "Hash": "f2cf33875b859a757ad919a4471cdc0f"
     },
     "bit": {
       "Package": "bit",
@@ -573,6 +586,17 @@
         "openssl"
       ],
       "Hash": "ac107251d9d9fd72f0ca8049988f1d7f"
+    },
+    "humaniformat": {
+      "Package": "humaniformat",
+      "Version": "0.6.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "Rcpp",
+        "methods"
+      ],
+      "Hash": "d521cf9db39ca79250a00029661fb7cd"
     },
     "ids": {
       "Package": "ids",

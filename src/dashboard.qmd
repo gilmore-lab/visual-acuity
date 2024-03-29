@@ -73,10 +73,16 @@ We have configured Paperpile to synch a .bib formatted file directly with this r
 The file can be found here: `src/data/paperpile.bib`.
 
 ```{r}
-va_refs <- bib2df::bib2df("data/paperpile.bib")
+refs_w_pdf <- bib2df::bib2df("data/paperpile-tac-has-pdf.bib")
+refs_no_pdf <- bib2df::bib2df("data/paperpile-tac-no-pdf.bib")
 
-va_refs |>
-  dplyr::select(c("BIBTEXKEY", "YEAR", "URL"))
+refs_w_pdf <- refs_w_pdf |>
+  dplyr::mutate(pdf = TRUE)
+
+refs_no_pdf <- refs_no_pdf |>
+  dplyr::mutate(pdf = FALSE)
+
+refs <- dplyr::full_join(refs_w_pdf, refs_no_pdf)
 ```
 
 ## Clean
@@ -85,55 +91,55 @@ The downloaded data are sufficiently clean as of 2024-03-28 for the following vi
 
 ## Visualize
 
-### Papers by publication date (Google Scholar)
+<!-- ### Papers by publication date (Google Scholar) -->
 
-```{r}
-#| label: fig-papers-by-pub-year
-#| fig-cap: "Papers by publication year"
-papers_data |>
-  ggplot() +
-  aes(x = pub_year) +
-  geom_bar() +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-```
+<!-- ```{r} -->
+<!-- #| label: fig-papers-by-pub-year -->
+<!-- #| fig-cap: "Papers by publication year" -->
+<!-- papers_data |> -->
+<!--   ggplot() + -->
+<!--   aes(x = pub_year) + -->
+<!--   geom_bar() + -->
+<!--     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) -->
+<!-- ``` -->
 
-git@github.com:rogilmore/visual-acuity/src/data
+### Papers by publication date
 
-### Papers by publication date (Paperpile)
+The following uses the new has-pdf/no-pdf export workflow from Paperpile directly to Github.
 
 ```{r}
 #| label: fig-papers-by-pub-year-paperpile
 #| fig-cap: "Papers by publication year"
-va_refs |>
+refs |>
   ggplot() +
-  aes(x = YEAR) +
+  aes(x = YEAR, fill = pdf) +
   geom_bar() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 ```
 
-### Papers entered by analyst
+<!-- ### Papers entered by analyst -->
 
-```{r}
-#| label: fig-papers-by-analyst
-#| fig-cap: "Papers entered by analyst"
-papers_data |>
-  ggplot() +
-  aes(x = entered_by) +
-  geom_bar()
-```
+<!-- ```{r} -->
+<!-- #| label: fig-papers-by-analyst -->
+<!-- #| fig-cap: "Papers entered by analyst" -->
+<!-- papers_data |> -->
+<!--   ggplot() + -->
+<!--   aes(x = entered_by) + -->
+<!--   geom_bar() -->
+<!-- ``` -->
 
 
-### Papers by open status
+<!-- ### Papers by open status -->
 
-#### On PSU network
-  
-```{r}
-#| label: fig-openable-papers
-#| fig-cap: "Papers with openable URLs"
-papers_data |>
-  ggplot() +
-  aes(x = url_openable) +
-  geom_bar()
-```
-  
-#### Access via PSU Libraries
+<!-- #### On PSU network -->
+
+<!-- ```{r} -->
+<!-- #| label: fig-openable-papers -->
+<!-- #| fig-cap: "Papers with openable URLs" -->
+<!-- papers_data |> -->
+<!--   ggplot() + -->
+<!--   aes(x = url_openable) + -->
+<!--   geom_bar() -->
+<!-- ``` -->
+
+<!-- #### Access via PSU Libraries -->
