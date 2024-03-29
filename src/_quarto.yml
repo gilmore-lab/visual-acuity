@@ -22,8 +22,13 @@ website:
         menu:
         - href: dashboard.qmd
         - href: data.qmd
+      - href: products.qmd
+        text: products
       - href: data-management-plan.qmd
         text: 'data mgmt'
+  repo-url: https://github.com/gilmore-lab/visual-acuity
+  repo-actions: [edit, issue]
+  repo-subdir: src
 
 format:
   html:
@@ -35,6 +40,7 @@ format:
     footnotes-hover: true
     bibliography: [include/bib/teller-acuity-cards.bib]
     csl: include/bib/apa.csl
+    
 
 editor: source
     

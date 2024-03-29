@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Legacy Project: Visual Acuity - dashboard</title>
+<title>Legacy Project: Visual Acuity - Dashboard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -152,14 +152,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="dropdown-menu" aria-labelledby="nav-menu-data">    
         <li>
     <a class="dropdown-item" href="./dashboard.html">
- <span class="dropdown-text">dashboard</span></a>
+ <span class="dropdown-text">Dashboard</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./data.html">
- <span class="dropdown-text">data</span></a>
+ <span class="dropdown-text">Data</span></a>
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./products.html"> 
+<span class="menu-text">products</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./data-management-plan.html"> 
 <span class="menu-text">data mgmt</span></a>
@@ -181,18 +185,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up">Set-up</a></li>
-  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a>
+  <ul class="collapse">
+  <li><a href="#synched-paperpile-file-from-github" id="toc-synched-paperpile-file-from-github" class="nav-link" data-scroll-target="#synched-paperpile-file-from-github">Synched Paperpile file from GitHub</a></li>
+  </ul></li>
   <li><a href="#clean" id="toc-clean" class="nav-link" data-scroll-target="#clean">Clean</a></li>
-  <li><a href="#visualize" id="toc-visualize" class="nav-link" data-scroll-target="#visualize">Visualize</a></li>
+  <li><a href="#visualize" id="toc-visualize" class="nav-link" data-scroll-target="#visualize">Visualize</a>
+  <ul class="collapse">
+  <li><a href="#data-collections-over-time" id="toc-data-collections-over-time" class="nav-link" data-scroll-target="#data-collections-over-time">Data collections over time</a></li>
+  <li><a href="#papers-by-publication-date" id="toc-papers-by-publication-date" class="nav-link" data-scroll-target="#papers-by-publication-date">Papers by publication date</a></li>
+  <li><a href="#papers-entered-by-analyst" id="toc-papers-entered-by-analyst" class="nav-link" data-scroll-target="#papers-entered-by-analyst">Papers entered by analyst</a></li>
+  <li><a href="#papers-by-open-status" id="toc-papers-by-open-status" class="nav-link" data-scroll-target="#papers-by-open-status">Papers by open status</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/gilmore-lab/visual-acuity/edit/main/src/dashboard.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gilmore-lab/visual-acuity/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">dashboard</h1>
+<div class="quarto-title-block"><div><h1 class="title">Dashboard</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -210,15 +223,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>This is a dashboard for the data collection and cleaning process.</p>
+<p>All code is “folded” by default. Select “Show All Code” from the menu at the upper right to reveal the code chunks.</p>
 <section id="set-up" class="level2">
 <h2 class="anchored" data-anchor-id="set-up">Set-up</h2>
+<p>We load <code>ggplot2</code> to make the following plot commands easier to type.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="download" class="level2">
 <h2 class="anchored" data-anchor-id="download">Download</h2>
+<p>The data are stored in a Google sheet that we download if <code>params$update_data == TRUE</code>.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(params<span class="sc">$</span>data_dir)) {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing "</span>,  params<span class="sc">$</span>data_dir, <span class="st">"."</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(params<span class="sc">$</span>data_dir)</span>
@@ -244,6 +265,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Auto-refreshing stale OAuth token.</code></pre>
+</div>
 <div class="cell-output cell-output-stderr">
 <pre><code>✔ Reading from "Legacy Project Acuity Data: By Paper".</code></pre>
 </div>
@@ -267,21 +292,30 @@ Note
 <p>We have a separate tracking sheet that needs to be integrated into this workflow.</p>
 </div>
 </div>
+<section id="synched-paperpile-file-from-github" class="level3">
+<h3 class="anchored" data-anchor-id="synched-paperpile-file-from-github">Synched Paperpile file from GitHub</h3>
+<p>We have configured Paperpile to synch a .bib formatted file directly with this repo on GitHub. The file can be found here: <code>src/data/paperpile.bib</code>.</p>
+</section>
 </section>
 <section id="clean" class="level2">
 <h2 class="anchored" data-anchor-id="clean">Clean</h2>
+<p>The downloaded data are sufficiently clean as of 2024-03-28 for the following visualizations.</p>
 </section>
 <section id="visualize" class="level2">
 <h2 class="anchored" data-anchor-id="visualize">Visualize</h2>
-<ol type="1">
-<li>Time series of data collections by time.</li>
-<li>Number of papers by pub date.</li>
-</ol>
+<section id="data-collections-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="data-collections-over-time">Data collections over time</h3>
+</section>
+<section id="papers-by-publication-date" class="level3">
+<h3 class="anchored" data-anchor-id="papers-by-publication-date">Papers by publication date</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>papers_data <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> pub_year) <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>papers_data <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> pub_year) <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div id="fig-papers-by-pub-year" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -295,15 +329,17 @@ Figure&nbsp;1: Papers by publication year
 </div>
 </div>
 </div>
-<ol start="3" type="1">
-<li>By dates</li>
-<li>Who entered</li>
-</ol>
+</section>
+<section id="papers-entered-by-analyst" class="level3">
+<h3 class="anchored" data-anchor-id="papers-entered-by-analyst">Papers entered by analyst</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>papers_data <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> entered_by) <span class="sc">+</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>papers_data <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> entered_by) <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div id="fig-papers-by-analyst" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -317,17 +353,19 @@ Figure&nbsp;2: Papers entered by analyst
 </div>
 </div>
 </div>
-<ol start="5" type="1">
-<li>Opened successfully</li>
-</ol>
-<ul>
-<li>On PSU network</li>
-</ul>
+</section>
+<section id="papers-by-open-status" class="level3">
+<h3 class="anchored" data-anchor-id="papers-by-open-status">Papers by open status</h3>
+<section id="on-psu-network" class="level4">
+<h4 class="anchored" data-anchor-id="on-psu-network">On PSU network</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>papers_data <span class="sc">|&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> url_openable) <span class="sc">+</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>papers_data <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> url_openable) <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div id="fig-openable-papers" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -341,11 +379,15 @@ Figure&nbsp;3: Papers with openable URLs
 </div>
 </div>
 </div>
-<ul>
-<li>Access via PSU Libraries</li>
-</ul>
+</section>
+<section id="access-via-psu-libraries" class="level4">
+<h4 class="anchored" data-anchor-id="access-via-psu-libraries">Access via PSU Libraries</h4>
 
 
+<!-- -->
+
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -428,6 +470,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -735,10 +828,129 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Dashboard"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="an">params:</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">  data_dir: "data/csv"</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co">  update_data: TRUE</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co">  use_sysenv_creds: TRUE</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co">  google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co">  sheet_name: "paper_data"</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co">  data_fn: "paper-sources.csv"</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>This is a dashboard for the data collection and cleaning process.</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>All code is "folded" by default.</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>Select "Show All Code" from the menu at the upper right to reveal the code chunks.</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Set-up</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>We load <span class="in">`ggplot2`</span> to make the following plot commands easier to type.</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Download</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>The data are stored in a Google sheet that we download if <span class="in">`params$update_data == TRUE`</span>.</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(params<span class="sc">$</span>data_dir)) {</span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing "</span>,  params<span class="sc">$</span>data_dir, <span class="st">"."</span>)</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(params<span class="sc">$</span>data_dir)</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (params<span class="sc">$</span>use_sysenv_creds) {</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>    google_creds <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>)</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (google_creds <span class="sc">!=</span> <span class="st">""</span>) {</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>      <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> google_creds)</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>      googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"No Google account information stored in `.Renviron`."</span>)</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"Add authorized Google account name to `.Renviron` using `usethist::edit_r_environ()`."</span>)</span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>  papers_data <span class="ot">&lt;-</span> googlesheets4<span class="sc">::</span><span class="fu">read_sheet</span>(<span class="at">ss =</span> params<span class="sc">$</span>google_data_url,</span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>                            <span class="at">sheet =</span> params<span class="sc">$</span>sheet_name)</span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>  out_fn <span class="ot">&lt;-</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, params<span class="sc">$</span>data_fn)</span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">write_csv</span>(papers_data, out_fn)</span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated: "</span>, out_fn)</span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a>We have a separate tracking sheet that needs to be integrated into this workflow.</span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a><span class="fu">### Synched Paperpile file from GitHub</span></span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>We have configured Paperpile to synch a .bib formatted file directly with this repo on GitHub.</span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>The file can be found here: <span class="in">`src/data/paperpile.bib`</span>.</span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## Clean</span></span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a>The downloaded data are sufficiently clean as of 2024-03-28 for the following visualizations.</span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualize</span></span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data collections over time</span></span>
+<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a><span class="fu">### Papers by publication date</span></span>
+<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-papers-by-pub-year</span></span>
+<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Papers by publication year"</span></span>
+<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>papers_data <span class="sc">|&gt;</span></span>
+<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> pub_year) <span class="sc">+</span></span>
+<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a><span class="fu">### Papers entered by analyst</span></span>
+<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-papers-by-analyst</span></span>
+<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Papers entered by analyst"</span></span>
+<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a>papers_data <span class="sc">|&gt;</span></span>
+<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> entered_by) <span class="sc">+</span></span>
+<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a><span class="fu">### Papers by open status</span></span>
+<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a><span class="fu">#### On PSU network</span></span>
+<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-openable-papers</span></span>
+<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Papers with openable URLs"</span></span>
+<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a>papers_data <span class="sc">|&gt;</span></span>
+<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> url_openable) <span class="sc">+</span></span>
+<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Access via PSU Libraries</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gilmore-lab/visual-acuity/edit/main/src/dashboard.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gilmore-lab/visual-acuity/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

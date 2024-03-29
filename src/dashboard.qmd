@@ -1,9 +1,13 @@
 ---
-title: "dashboard"
-format: html
+title: "Dashboard"
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
 params:
   data_dir: "data/csv"
-  update_data: TRUE
+  update_data: FALSE
   use_sysenv_creds: TRUE
   google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"
   sheet_name: "paper_data"
@@ -12,13 +16,20 @@ params:
 
 This is a dashboard for the data collection and cleaning process.
 
+All code is "folded" by default.
+Select "Show All Code" from the menu at the upper right to reveal the code chunks.
+
 ## Set-up
+
+We load `ggplot2` to make the following plot commands easier to type.
 
 ```{r}
 library(ggplot2)
 ```
 
 ## Download
+
+The data are stored in a Google sheet that we download if `params$update_data == TRUE`.
 
 ```{r}
 if (!dir.exists(params$data_dir)) {
@@ -45,6 +56,8 @@ if (params$update_data) {
   message("Data updated: ", out_fn)
 } else {
   message("Using stored data.")
+  papers_data <- readr::read_csv(file.path(params$data_dir, params$data_fn),
+                                 show_col_types = FALSE)
 }
 ```
 
@@ -54,12 +67,25 @@ We have a separate tracking sheet that needs to be integrated into this workflow
 
 :::
 
+### Synched Paperpile file from GitHub
+
+We have configured Paperpile to synch a .bib formatted file directly with this repo on GitHub.
+The file can be found here: `src/data/paperpile.bib`.
+
+```{r}
+va_refs <- bib2df::bib2df("data/paperpile.bib")
+
+va_refs |>
+  dplyr::select(c("BIBTEXKEY", "YEAR", "URL"))
+```
+
 ## Clean
+
+The downloaded data are sufficiently clean as of 2024-03-28 for the following visualizations.
 
 ## Visualize
 
-1. Time series of data collections by time.
-2. Number of papers by pub date.
+### Papers by publication date (Google Scholar)
 
 ```{r}
 #| label: fig-papers-by-pub-year
@@ -67,11 +93,25 @@ We have a separate tracking sheet that needs to be integrated into this workflow
 papers_data |>
   ggplot() +
   aes(x = pub_year) +
-  geom_bar()
+  geom_bar() +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 ```
 
-3. By dates
-4. Who entered
+git@github.com:rogilmore/visual-acuity/src/data
+
+### Papers by publication date (Paperpile)
+
+```{r}
+#| label: fig-papers-by-pub-year-paperpile
+#| fig-cap: "Papers by publication year"
+va_refs |>
+  ggplot() +
+  aes(x = YEAR) +
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+
+### Papers entered by analyst
 
 ```{r}
 #| label: fig-papers-by-analyst
@@ -83,8 +123,9 @@ papers_data |>
 ```
 
 
-5. Opened successfully
-  - On PSU network
+### Papers by open status
+
+#### On PSU network
   
 ```{r}
 #| label: fig-openable-papers
@@ -95,4 +136,4 @@ papers_data |>
   geom_bar()
 ```
   
-  - Access via PSU Libraries
+#### Access via PSU Libraries

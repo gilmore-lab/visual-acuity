@@ -1,5 +1,10 @@
 ---
 title: Protocol
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
 ---
 
 ## Overview
