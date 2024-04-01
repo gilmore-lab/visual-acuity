@@ -11,11 +11,13 @@ format:
 
 This page describes the protocol for collecting, capturing, and cleaning data associated with the project.
 
+The text here is adapted from a working draft document written in Google Docs that is hosted here:
+
+<https://docs.google.com/document/d/1-ZKrNflBO7UIq5I0pJ8U5K-rtoiads12Zf_OQq_S65Q/edit>
+
 ::: {.callout-warning}
 
 On April 1, no joke!, we changed the protocol substantially based on our discovery that Paperpile can export references with useful tags directly to our Github repo.
-
-The old version of the protocol can be found [here](protocol_v01.qmd).
 
 :::
 
@@ -145,6 +147,26 @@ Data | Sort Range | Advanced
 2. Enter group-level data into a common database.
 
 ### Data evaluation
+
+#### Phase I
+
+For each paper in the `paper_data` tab in the Google Sheet
+
+<https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=2144658778>
+
+1. Open the paper via its URL.
+
+Add "yes" to the `url_openable` data column in the Google Sheet to report that you could open a PDF or web version of the complete paper.
+
+Enter "paywall" if the URL resolves, but you would need to pay for access to the paper.
+
+If the paper can't be found because the URL doesn't resolve, enter "not_found".
+
+#### Phase II
+
+Select the papers that could be opened (`url_openable` == "yes")
+
+1. Scan the paper to find any data tables that contain acuity card summary data.
 
 ### Data extraction
 
