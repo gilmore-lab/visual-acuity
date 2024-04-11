@@ -137,7 +137,7 @@
     "href": "dashboard.html#upload-cleaned",
     "title": "Dashboard",
     "section": "Upload cleaned",
-    "text": "Upload cleaned\nWe the push the cleaned data back to Google Sheets for further analysis and processing\n\n\nCode\nnew_refs |&gt; \n  googlesheets4::sheet_write(project_ss, \"from_paperpile_via_github\")\n\n\n✔ Writing to \"Legacy Project Acuity Data: By Paper\".\n\n\n✔ Writing to sheet 'from_paperpile_via_github'."
+    "text": "Upload cleaned\nWe the push the cleaned data back to Google Sheets for further analysis and processing.\n\n\n\n\n\n\nWarning\n\n\n\nWe do not push the cleaned data back to the original sheet but to a new one to avoid overwriting data.\n\n\n\n\nCode\nnew_refs |&gt; \n  googlesheets4::sheet_write(project_ss, \"from_paperpile_via_github_cleaned\")\n\n\n✔ Writing to \"Legacy Project Acuity Data: By Paper\".\n\n\n✔ Writing to sheet 'from_paperpile_via_github_cleaned'."
   },
   {
     "objectID": "dashboard.html#visualize",
@@ -215,5 +215,12 @@
     "title": "Protocol",
     "section": "Data evaluation & extraction",
     "text": "Data evaluation & extraction\n\nGoals\n\nTo evaluate each paper to determine whether it contains extractable data.\nTo extract group-level data from each paper identified as having extractable data.\nEnter group-level data into a common database.\n\n\n\nData evaluation\n\n\nData extraction\n\n\nQuality Assurance\n\n\n\n\n\nReference not yet in our Paperpile\nReference already in Paperpile\nPapers recently added to Paperpile. After clicking on the tags button and entering ‘TAC’ in the search window, Paperpile lists all of the paper with the . ‘TAC’ tag. To add ‘TAC’ to the new, selected papers, click on the checkbox.\nFigure 1: Paper reference database\nSelecting the ‘TAC’ (Teller Acuity Cards) tag in Paperpile\nSort Paperpile entries by author\nWindow placement for data entry\nSorting a Google Sheet\nSort settings for author_first and pub_year"
+  },
+  {
+    "objectID": "dashboard.html#extracted-tables",
+    "href": "dashboard.html#extracted-tables",
+    "title": "Dashboard",
+    "section": "Extracted tables",
+    "text": "Extracted tables\nThis section extracts data about our progress in capturing data tables from these articles.\n\n\nCode\nimg_folder &lt;- googledrive::drive_find(type = \"folder\", q = \"name contains 'legacy'\")\nimg_df &lt;- googledrive::drive_ls(img_folder)\n\nimg_df &lt;- img_df |&gt;\n  dplyr::mutate(paper_id = stringr::str_extract_all(name, \"[a-zA-Z0-9]+\\\\-[a-z]{2}\"))\n\n\nNow that we have re-extracted the paper_id, we can do some summaries.\n\n\nCode\nn_tables &lt;- dim(img_df)[1]\nn_papers &lt;- length(unique(img_df$paper_id))\n\n\nWe’ve processed 29 papers and 74 tables as of 2024-04-11."
   }
 ]

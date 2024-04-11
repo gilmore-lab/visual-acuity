@@ -116,11 +116,17 @@ new_refs <- refs |>
 
 ## Upload cleaned
 
-We the push the cleaned data back to Google Sheets for further analysis and processing
+We the push the cleaned data back to Google Sheets for further analysis and processing.
+
+::: {.callout-warning}
+
+We do not push the cleaned data back to the original sheet but to a new one to avoid overwriting data.
+
+:::
 
 ```{r}
 new_refs |> 
-  googlesheets4::sheet_write(project_ss, "from_paperpile_via_github")
+  googlesheets4::sheet_write(project_ss, "from_paperpile_via_github_cleaned")
 ```
 
 ## Visualize
@@ -138,6 +144,27 @@ refs |>
   geom_bar() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 ```
+
+## Extracted tables
+
+This section extracts data about our progress in capturing data tables from these articles.
+
+```{r}
+img_folder <- googledrive::drive_find(type = "folder", q = "name contains 'legacy'")
+img_df <- googledrive::drive_ls(img_folder)
+
+img_df <- img_df |>
+  dplyr::mutate(paper_id = stringr::str_extract_all(name, "[a-zA-Z0-9]+\\-[a-z]{2}"))
+```
+
+Now that we have re-extracted the `paper_id`, we can do some summaries.
+
+```{r}
+n_tables <- dim(img_df)[1]
+n_papers <- length(unique(img_df$paper_id))
+```
+
+We've processed `{r} n_papers` papers and `{r} n_tables` tables as of `{r} Sys.Date()`.
 
 <!-- ### Papers entered by analyst -->
 
