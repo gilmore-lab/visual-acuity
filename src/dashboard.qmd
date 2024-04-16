@@ -145,6 +145,8 @@ refs |>
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 ```
 
+There are `{r} dim(refs)[1]` papers in our Paperpile. Of these `{r} sum(refs$pdf)` have PDFs.
+
 ## Extracted tables
 
 This section extracts data about our progress in capturing data tables from these articles.

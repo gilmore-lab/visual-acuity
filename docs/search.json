@@ -144,7 +144,7 @@
     "href": "dashboard.html#visualize",
     "title": "Dashboard",
     "section": "Visualize",
-    "text": "Visualize\n\nPapers by publication date\nThe following uses the new has-pdf/no-pdf export workflow from Paperpile directly to Github.\n\n\nCode\nrefs |&gt;\n  ggplot() +\n  aes(x = YEAR, fill = pdf) +\n  geom_bar() +\n  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))\n\n\n\n\n\n\n\n\nFigure 1: Papers by publication year"
+    "text": "Visualize\n\nPapers by publication date\nThe following uses the new has-pdf/no-pdf export workflow from Paperpile directly to Github.\n\n\nCode\nrefs |&gt;\n  ggplot() +\n  aes(x = YEAR, fill = pdf) +\n  geom_bar() +\n  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))\n\n\n\n\n\n\n\n\nFigure 1: Papers by publication year\n\n\n\n\n\nThere are 752 papers in our Paperpile. Of these 314 have PDFs."
   },
   {
     "objectID": "data.html",
@@ -221,6 +221,6 @@
     "href": "dashboard.html#extracted-tables",
     "title": "Dashboard",
     "section": "Extracted tables",
-    "text": "Extracted tables\nThis section extracts data about our progress in capturing data tables from these articles.\n\n\nCode\nimg_folder &lt;- googledrive::drive_find(type = \"folder\", q = \"name contains 'legacy'\")\nimg_df &lt;- googledrive::drive_ls(img_folder)\n\nimg_df &lt;- img_df |&gt;\n  dplyr::mutate(paper_id = stringr::str_extract_all(name, \"[a-zA-Z0-9]+\\\\-[a-z]{2}\"))\n\n\nNow that we have re-extracted the paper_id, we can do some summaries.\n\n\nCode\nn_tables &lt;- dim(img_df)[1]\nn_papers &lt;- length(unique(img_df$paper_id))\n\n\nWe’ve processed 29 papers and 74 tables as of 2024-04-11."
+    "text": "Extracted tables\nThis section extracts data about our progress in capturing data tables from these articles.\n\n\nCode\nimg_folder &lt;- googledrive::drive_find(type = \"folder\", q = \"name contains 'legacy'\")\nimg_df &lt;- googledrive::drive_ls(img_folder)\n\nimg_df &lt;- img_df |&gt;\n  dplyr::mutate(paper_id = stringr::str_extract_all(name, \"[a-zA-Z0-9]+\\\\-[a-z]{2}\"))\n\n\nNow that we have re-extracted the paper_id, we can do some summaries.\n\n\nCode\nn_tables &lt;- dim(img_df)[1]\nn_papers &lt;- length(unique(img_df$paper_id))\n\n\nWe’ve processed 46 papers and 120 tables as of 2024-04-16."
   }
 ]
