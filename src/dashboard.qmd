@@ -7,7 +7,7 @@ format:
     toc: true
 params:
   data_dir: "data/csv"
-  update_data: TRUE
+  update_data: FALSE
   use_sysenv_creds: TRUE
   google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"
   sheet_name: "paper_data"
@@ -19,6 +19,8 @@ This is a dashboard for the data collection and cleaning process.
 All code is "folded" by default.
 Select "Show All Code" from the menu at the upper right to reveal the code chunks.
 
+This page was last rendered on `{r} Sys.time()`.
+
 ## Set-up
 
 We load `ggplot2` to make the following plot commands easier to type.
@@ -29,7 +31,8 @@ library(ggplot2)
 
 ## Download
 
-The data are stored in a Google sheet that we download if `params$update_data == TRUE`.
+The data are stored in a Google sheet that we download again if `params$update_data == TRUE`.
+Otherwise, we make use of a stored data file.
 
 ```{r}
 if (!dir.exists(params$data_dir)) {
@@ -72,15 +75,25 @@ We import `data/paperpile-tac-has-pdf.bib` and `data/paperpile-tac-no-pdf.bib` s
 
 ```{r}
 refs_w_pdf <- bib2df::bib2df("data/paperpile-tac-has-pdf.bib", separate_names = TRUE)
-refs_no_pdf <- bib2df::bib2df("data/paperpile-tac-no-pdf.bib", separate_names = TRUE)
 
 refs_w_pdf <- refs_w_pdf |>
   dplyr::mutate(pdf = TRUE)
+```
+
+We have `{r} dim(refs_w_pdf)[1]` papers with PDFs to process.
+
+```{r}
+refs_no_pdf <- bib2df::bib2df("data/paperpile-tac-no-pdf.bib", separate_names = TRUE)
 
 refs_no_pdf <- refs_no_pdf |>
   dplyr::mutate(pdf = FALSE)
+```
 
-refs <- dplyr::full_join(refs_w_pdf, refs_no_pdf)
+We have `{r} dim(refs_no_pdf)[1]` papers *without* PDFs to process.
+In a separate workflow, we will try to access these papers via the PSU Libraries and other sources.
+
+```{r}
+refs_all <- dplyr::full_join(refs_w_pdf, refs_no_pdf)
 ```
 
 ## Clean
@@ -102,13 +115,13 @@ make_editor_list <- function(df) {
   }
 }
 
-authors_string <- purrr::map(refs$AUTHOR, make_author_list) |> 
+authors_string <- purrr::map(refs_all$AUTHOR, make_author_list) |> 
   purrr::list_c()
 
-editors_string <- purrr::map(refs$EDITOR, make_author_list) |> 
+editors_string <- purrr::map(refs_all$EDITOR, make_author_list) |> 
   purrr::list_c()
 
-new_refs <- refs |>
+new_refs_all <- refs_all |>
   dplyr::mutate(authors = authors_string,
                 editors = editors_string) |>
   dplyr::select(-c("AUTHOR", "ANNOTE", "EDITOR"))
@@ -125,7 +138,7 @@ We do not push the cleaned data back to the original sheet but to a new one to a
 :::
 
 ```{r}
-new_refs |> 
+new_refs_all |> 
   googlesheets4::sheet_write(project_ss, "from_paperpile_via_github_cleaned")
 ```
 
@@ -138,14 +151,14 @@ The following uses the new has-pdf/no-pdf export workflow from Paperpile directl
 ```{r}
 #| label: fig-papers-by-pub-year-paperpile
 #| fig-cap: "Papers by publication year"
-refs |>
+refs_all |>
   ggplot() +
   aes(x = YEAR, fill = pdf) +
   geom_bar() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 ```
 
-There are `{r} dim(refs)[1]` papers in our Paperpile. Of these `{r} sum(refs$pdf)` have PDFs.
+There are `{r} dim(refs_all)[1]` papers in our Paperpile. Of these `{r} sum(refs_all$pdf)` have PDFs.
 
 ## Extracted tables
 
@@ -166,19 +179,34 @@ n_tables <- dim(img_df)[1]
 n_papers <- length(unique(img_df$paper_id))
 ```
 
-We've processed `{r} n_papers` papers and `{r} n_tables` tables as of `{r} Sys.Date()`.
+We have processed `{r} n_papers` papers and `{r} n_tables` tables as of `{r} Sys.time()`.
 
-<!-- ### Papers entered by analyst -->
+### Papers entered by analyst
 
-<!-- ```{r} -->
-<!-- #| label: fig-papers-by-analyst -->
-<!-- #| fig-cap: "Papers entered by analyst" -->
-<!-- papers_data |> -->
-<!--   ggplot() + -->
-<!--   aes(x = entered_by) + -->
-<!--   geom_bar() -->
-<!-- ``` -->
+We use the `from_paperpile_via_github` tab to keep track of our work.
+So, we first import this sheet.
 
+```{r}
+papers_progress_data <- googlesheets4::read_sheet(ss = project_ss,
+                            sheet = "from_paperpile_via_github")
+```
+
+Here is a table of the papers processed by each analyst.
+
+```{r}
+xtabs(formula = ~ open_attempt_by, data = papers_progress_data)
+```
+
+Here is a table of the number of captured figures:
+
+```{r}
+papers_progress_data |>
+  dplyr::filter(!is.na(number_of_captured_figs),
+                !is.na(open_attempt_by)) |>
+  dplyr::group_by(open_attempt_by) |>
+  dplyr::summarise(n_figs = sum(number_of_captured_figs)) |>
+  knitr::kable("html")
+```
 
 <!-- ### Papers by open status -->
 
