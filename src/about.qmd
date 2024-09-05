@@ -1,6 +1,4 @@
----
-title: About
----
+# About
 
 This page describes what the project is about.
 

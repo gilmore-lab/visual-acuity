@@ -1,34 +1,10 @@
 ---
-title: "Legacy Project: Visual acuity"
-date: "`r Sys.Date()`"
-bibliography: ['include/bib/teller-acuity-cards.bib']
-params:
-  pi_name: Rick Gilmore
-  pi_dept: Psychology
-  pi_ph: 814-865-3664
-  pi_email: rog1@psu.edu
-  irb_protocol_id: None
-  irb_long_name: "The Legacy Project: The development of visual acuity"
+title: ""
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ![](data_files/figure-html/fig-teller-acuity-across-age-1.png)
+## About
 
-## Investigators {-}
-
-*Rick Gilmore* is Professor of Psychology at Penn State.
-
-*Andrea Seisler* is the lab manager. She also serves as the Authorizations and Support Specialist for [Databrary](https://databrary.org).
-
-*Brianna Beamer* is an undergraduate research assistant.
-
-*Nicole Cruz* is an undergraduate research assistant.
-
-*Julia DiFulvio* is an undergraduate research assistant.
-
-*Peter Huang* is an undergraduate research assistant.
-
-
+This project aims to gather, curate, summarize, and publish data about visual acuity as measured by the Teller Acuity Card (TAC) procedure and described in the published literature.
+The project will summarize data based on participants grouped by age, sex/gender, or other characteristics.
+The project will also summarize individual participant data where available.

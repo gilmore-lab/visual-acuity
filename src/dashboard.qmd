@@ -1,10 +1,5 @@
 ---
 title: "Dashboard"
-format:
-  html:
-    code-fold: true
-    code-tools: true
-    toc: true
 params:
   data_dir: "data/csv"
   update_data: FALSE

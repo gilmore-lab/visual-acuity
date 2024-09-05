@@ -1,11 +1,5 @@
 ---
-title: Data
-bibliography: "include/bib/teller-acuity-cards.bib"
-format:
-  html:
-    code-fold: true
-    code-tools: true
-    toc: true
+title: ""
 params:
   data_dir: "data/csv"
   update_data: TRUE
@@ -234,6 +228,7 @@ Now, let's look at the age at test.
 ```{r}
 gilmore_archival_df$`Age at test`
 ```
+
 Instead, let's see what it looks like to compute age at test from the dates.
 
 ```{r}
