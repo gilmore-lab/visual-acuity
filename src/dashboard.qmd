@@ -199,7 +199,12 @@ xtabs(formula = ~ open_attempt_by, data = papers_progress_data)
 
 Here is a table of the number of captured figures:
 
-```{r}
+::: {.callout-warning}
+As of 2024-09-05, we do not render this table because `number_of_captured_figs` is a non-numeric list.
+:::
+
+```{r, eval=FALSE}
+# 2024-09-05 do not evaluate because number_of_captured_figs is a non-numeric list
 papers_progress_data |>
   dplyr::filter(!is.na(number_of_captured_figs),
                 !is.na(open_attempt_by)) |>

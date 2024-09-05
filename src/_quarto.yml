@@ -5,27 +5,20 @@ project:
     - "irb/*.qmd"
   output-dir: "../docs"
 
-website:
+book:
   title: "Legacy Project: Visual Acuity"
-  comments: 
-    hypothesis:
-      theme: clean
-  navbar:
-    left:
-      - href: index.qmd
-        text: home
-      - href: about.qmd
-        text: about
-      - href: protocol.qmd
-        text: protocol
-      - text: data
-        menu:
+  author: "Rick Gilmore, Nicole Cruz, Julia DiFulvia, & Brianna Beamer"
+  chapters:
+    - href: index.qmd
+    - href: about.qmd
+    - part: "Protocol"
+      chapters:
+        - href: protocol_v01.qmd
+    - part: "Data"
+      chapters:
         - href: dashboard.qmd
         - href: data.qmd
-      - href: products.qmd
-        text: products
-      - href: data-management-plan.qmd
-        text: 'data mgmt'
+        - href: data-management-plan.qmd
   repo-url: https://github.com/gilmore-lab/visual-acuity
   repo-actions: [edit, issue]
   repo-subdir: src
@@ -35,12 +28,12 @@ format:
     theme: cosmo
     css: include/css/styles.css
     toc: true
+    toc-depth: 3
     number-sections: false
     citations-hover: true
     footnotes-hover: true
     bibliography: [include/bib/teller-acuity-cards.bib]
     csl: include/bib/apa.csl
-    
-
+    date-modified: last-modified
 editor: source
     

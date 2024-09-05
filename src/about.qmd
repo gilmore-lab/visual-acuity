@@ -4,3 +4,6 @@ title: About
 
 This page describes what the project is about.
 
+::: {.callout-warning}
+Some pages on this site are still works-in-progress.
+:::
