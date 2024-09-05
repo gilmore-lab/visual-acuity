@@ -3,6 +3,7 @@ title: ""
 ---
 
 ![](data_files/figure-html/fig-teller-acuity-across-age-1.png)
+
 ## About
 
 This project aims to gather, curate, summarize, and publish data about visual acuity as measured by the Teller Acuity Card (TAC) procedure and described in the published literature.
