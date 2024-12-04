@@ -132,10 +132,50 @@ We are still in the early phases of the project (as of `r Sys.time()`), but it i
 library(ggplot2)
 acuity_df |>
   ggplot() +
-  aes(x = age_grp_rog, y = mean_acuity_cyc_deg, color = country) +
+  aes(
+    x = age_grp_rog,
+    y = mean_acuity_cyc_deg,
+    color = country,
+    shape = author_first
+  ) +
   geom_point() +
   geom_smooth() +
   facet_grid(cols = vars(binoc_monoc))
+```
+
+Number of total participants.
+
+```{r}
+#| label: cross-tabs
+
+acuity_df |>
+  dplyr::filter(!is.na(n_participants)) |>
+  dplyr::mutate(n_participants_tot = sum(n_participants)) |>
+  dplyr::select(n_participants_tot) |>
+  unique()
+```
+
+```{r}
+acuity_df |>
+  dplyr::group_by(age_grp_rog) |>
+  dplyr::mutate(min_acuity = min(mean_acuity_cyc_deg),
+                max_acuity = max(mean_acuity_cyc_deg),
+                max_minus_min = max_acuity - min_acuity) |>
+  dplyr::select(age_grp_rog, min_acuity, max_acuity, max_minus_min)
+```
+
+```{r}
+binoc <- acuity_df |>
+  dplyr::filter(binoc_monoc == "binoc")
+monoc <- acuity_df |>
+  dplyr::filter(binoc_monoc == "monoc")
+
+lm_b <- lm(mean_acuity_cyc_deg ~ age_grp_rog, data = binoc)
+
+lm_m <- lm(mean_acuity_cyc_deg ~ age_grp_rog, data = monoc)
+
+summary(lm_b)
+summary(lm_m)
 ```
 
 ## By-individual data

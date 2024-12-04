@@ -2,7 +2,7 @@
 title: "Dashboard"
 params:
   data_dir: "data/csv"
-  update_data: FALSE
+  update_data: TRUE
   use_sysenv_creds: TRUE
   google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"
   sheet_name: "paper_data"
@@ -116,10 +116,14 @@ authors_string <- purrr::map(refs_all$AUTHOR, make_author_list) |>
 editors_string <- purrr::map(refs_all$EDITOR, make_author_list) |> 
   purrr::list_c()
 
+refs_all <- refs_all |>
+    dplyr::mutate(YEAR2 = stringr::str_extract(DATE, "^[0-9]{4}"))
+
 new_refs_all <- refs_all |>
   dplyr::mutate(authors = authors_string,
                 editors = editors_string) |>
   dplyr::select(-c("AUTHOR", "ANNOTE", "EDITOR"))
+
 ```
 
 ## Upload cleaned
@@ -147,8 +151,9 @@ The following uses the new has-pdf/no-pdf export workflow from Paperpile directl
 #| label: fig-papers-by-pub-year-paperpile
 #| fig-cap: "Papers by publication year"
 refs_all |>
+  dplyr::filter(!is.na(YEAR2)) |>
   ggplot() +
-  aes(x = YEAR, fill = pdf) +
+  aes(x = YEAR2, fill = pdf) +
   geom_bar() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 ```

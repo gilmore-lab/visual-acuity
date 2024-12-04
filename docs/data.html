@@ -243,7 +243,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">September 5, 2024</p>
+      <p class="date-modified">December 4, 2024</p>
     </div>
   </div>
     
@@ -488,17 +488,22 @@ Important
 <p>Rick Gilmore decided to take the mean of the age range reported in the <span class="citation" data-cites="Xiang2021-ry">(<a href="#ref-Xiang2021-ry" role="doc-biblioref">Xiang et al., 2021</a>)</span> data and create a new variable <em>strictly</em> for visualization purposes, <code>age_grp_rog</code>.</p>
 </div>
 </div>
-<p>We are still in the early phases of the project (as of 2024-11-21 08:02:12.513956), but it is good to start sketching the the data visualizations we will eventually want to see.</p>
+<p>We are still in the early phases of the project (as of 2024-12-04 14:21:01.897708), but it is good to start sketching the the data visualizations we will eventually want to see.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>acuity_df <span class="sc">|&gt;</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> age_grp_rog, <span class="at">y =</span> mean_acuity_cyc_deg, <span class="at">color =</span> country) <span class="sc">+</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> country,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">shape =</span> author_first</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
@@ -513,7 +518,7 @@ Important
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
-: reciprocal condition number 4.2872e-17</code></pre>
+: reciprocal condition number 3.2363e-17</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
@@ -529,7 +534,17 @@ as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius 3</c
 <pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
 else if (is.data.frame(newdata))
 as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
-number 4.2872e-17</code></pre>
+number 3.2363e-17</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The shape palette can deal with a maximum of 6 discrete values because more
+than 6 becomes difficult to discriminate
+ℹ you have requested 8 values. Consider specifying shapes manually if you need
+  that many have them.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 29 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
 <div id="fig-teller-acuity-across-age" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -555,20 +570,20 @@ Figure&nbsp;4.1: Developmental time course of mean acuity as assessed by Teller 
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> <span class="st">"psubrainlab@gmail.com"</span>)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> <span class="st">"psubrainlab@gmail.com"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Then we download the relevant file.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"vep-session-log"</span>,</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">path =</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"by-participant.csv"</span>),</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"csv"</span>,</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">overwrite =</span> <span class="cn">TRUE</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"vep-session-log"</span>,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">path =</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"by-participant.csv"</span>),</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"csv"</span>,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">overwrite =</span> <span class="cn">TRUE</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>File downloaded:</code></pre>
@@ -587,10 +602,10 @@ Figure&nbsp;4.1: Developmental time course of mean acuity as assessed by Teller 
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"by-participant.csv"</span>),</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(gilmore_archival_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"by-participant.csv"</span>),</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(gilmore_archival_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Participant Number in an IRB year"  "IRB Count"                         
@@ -609,15 +624,15 @@ Figure&nbsp;4.1: Developmental time course of mean acuity as assessed by Teller 
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Date, Time, Sex, DOB, <span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">`</span><span class="at">Age at test</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Date, Time, Sex, DOB, <span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">`</span><span class="at">Age at test</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Then, let’s filter those where we have TAC data.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(gilmore_archival_df, <span class="fu">unique</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(gilmore_archival_df, <span class="fu">unique</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "20/94 6.4 cyc/deg @ 55cm"                                   
@@ -638,11 +653,11 @@ Figure&nbsp;4.1: Developmental time course of mean acuity as assessed by Teller 
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>),</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span> <span class="sc">!=</span> <span class="st">"not interested"</span>)</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(gilmore_archival_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>),</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span> <span class="sc">!=</span> <span class="st">"not interested"</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(gilmore_archival_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 34  6</code></pre>
@@ -666,10 +681,10 @@ Note
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">view_dist_cm =</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">"[0-9]{2}cm"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">view_dist_cm =</span> stringr<span class="sc">::</span><span class="fu">str_remove</span>(view_dist_cm, <span class="st">"cm"</span>)) <span class="co"># remove 'cm'</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>view_dist_cm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">view_dist_cm =</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">"[0-9]{2}cm"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">view_dist_cm =</span> stringr<span class="sc">::</span><span class="fu">str_remove</span>(view_dist_cm, <span class="st">"cm"</span>)) <span class="co"># remove 'cm'</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>view_dist_cm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "55" "55" "55" "55" "55" "55" "55" "55" "55" "55" "55" "55" "55" "55" "55"
@@ -681,13 +696,13 @@ Note
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add 'cyc' to separate cyc/deg from Snellen acuity</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">"[0-9]{1}[</span><span class="sc">\\</span><span class="st">./]{1}[0-9]+ cyc"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_remove</span>(acuity_cyc_deg, <span class="st">" cyc"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_replace</span>(acuity_cyc_deg, <span class="st">"/"</span>, <span class="st">"."</span>))</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>acuity_cyc_deg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add 'cyc' to separate cyc/deg from Snellen acuity</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">"[0-9]{1}[</span><span class="sc">\\</span><span class="st">./]{1}[0-9]+ cyc"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_remove</span>(acuity_cyc_deg, <span class="st">" cyc"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_replace</span>(acuity_cyc_deg, <span class="st">"/"</span>, <span class="st">"."</span>))</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>acuity_cyc_deg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "6.4"  "3.1"  "1.3"  "3.1"  "3.1"  "1.6"  "4.7"  "3.1"  "3.1"  "3.1" 
@@ -700,7 +715,7 @@ Note
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span><span class="st">`</span><span class="at">Age at test</span><span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span><span class="st">`</span><span class="at">Age at test</span><span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "0 Years, 6 Months, 25 Days" "0 Years, 5 Months, 28 Days"
@@ -726,10 +741,10 @@ Note
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">age_at_test_days =</span> lubridate<span class="sc">::</span><span class="fu">mdy</span>(Date) <span class="sc">-</span> lubridate<span class="sc">::</span><span class="fu">mdy</span>(DOB))</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>age_at_test_days</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">age_at_test_days =</span> lubridate<span class="sc">::</span><span class="fu">mdy</span>(Date) <span class="sc">-</span> lubridate<span class="sc">::</span><span class="fu">mdy</span>(DOB))</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>age_at_test_days</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Time differences in days
@@ -742,14 +757,14 @@ Note
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> <span class="fu">as.numeric</span>(acuity_cyc_deg)) <span class="sc">|&gt;</span></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> age_at_test_days, <span class="at">y =</span> acuity_cyc_deg, <span class="at">color =</span> Sex) <span class="sc">+</span></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">#theme_classic() +</span></span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> <span class="fu">as.numeric</span>(acuity_cyc_deg)) <span class="sc">|&gt;</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> age_at_test_days, <span class="at">y =</span> acuity_cyc_deg, <span class="at">color =</span> Sex) <span class="sc">+</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">#theme_classic() +</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>, <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>Don't know how to automatically pick scale for object of type &lt;difftime&gt;.
@@ -1278,266 +1293,271 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb41" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> ""</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="an">params:</span></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="co">  data_dir: "data/csv"</span></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="co">  update_data: TRUE</span></span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="co">  use_sysenv_creds: TRUE</span></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co">  google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"</span></span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="co">  sheet_name: "by_paper"</span></span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="co">  data_fn: "by-paper.csv"</span></span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
-<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>This page describes the process of data gathering, cleaning, and visualization.</span>
-<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gathering</span></span>
-<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a>We use a Google Sheet to store the by-study data:</span>
-<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0&gt;</span></span>
-<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-22"><a href="#cb41-22" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-24"><a href="#cb41-24" aria-hidden="true" tabindex="-1"></a>**Note**: There is no identifiable data here at the moment, so Google Sheets are a viable option.</span>
-<span id="cb41-25"><a href="#cb41-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-26"><a href="#cb41-26" aria-hidden="true" tabindex="-1"></a>Later on, we start contacting authors, we will need to restrict access to that information for privacy reasons.</span>
-<span id="cb41-27"><a href="#cb41-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-28"><a href="#cb41-28" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb41-29"><a href="#cb41-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-30"><a href="#cb41-30" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb41-31"><a href="#cb41-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-32"><a href="#cb41-32" aria-hidden="true" tabindex="-1"></a>We need a process for managing who has edit access.</span>
-<span id="cb41-33"><a href="#cb41-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-34"><a href="#cb41-34" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb41-35"><a href="#cb41-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-36"><a href="#cb41-36" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">`googledrive`</span><span class="co">](https://cran.r-project.org/web/packages/googledrive/index.html)</span> package provides a convenient way to access documents stored on Google.</span>
-<span id="cb41-37"><a href="#cb41-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-38"><a href="#cb41-38" aria-hidden="true" tabindex="-1"></a><span class="fu">### Download from Google as CSV</span></span>
-<span id="cb41-39"><a href="#cb41-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-42"><a href="#cb41-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-43"><a href="#cb41-43" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(params<span class="sc">$</span>data_dir)) {</span>
-<span id="cb41-44"><a href="#cb41-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing "</span>,  params<span class="sc">$</span>data_dir, <span class="st">"."</span>)</span>
-<span id="cb41-45"><a href="#cb41-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(params<span class="sc">$</span>data_dir)</span>
-<span id="cb41-46"><a href="#cb41-46" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb41-47"><a href="#cb41-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-48"><a href="#cb41-48" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
-<span id="cb41-49"><a href="#cb41-49" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (params<span class="sc">$</span>use_sysenv_creds) {</span>
-<span id="cb41-50"><a href="#cb41-50" aria-hidden="true" tabindex="-1"></a>    google_creds <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>)</span>
-<span id="cb41-51"><a href="#cb41-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (google_creds <span class="sc">!=</span> <span class="st">""</span>) {</span>
-<span id="cb41-52"><a href="#cb41-52" aria-hidden="true" tabindex="-1"></a>      <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> google_creds)</span>
-<span id="cb41-53"><a href="#cb41-53" aria-hidden="true" tabindex="-1"></a>      googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
-<span id="cb41-54"><a href="#cb41-54" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb41-55"><a href="#cb41-55" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"No Google account information stored in `.Renviron`."</span>)</span>
-<span id="cb41-56"><a href="#cb41-56" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"Add authorized Google account name to `.Renviron` using `usethist::edit_r_environ()`."</span>)</span>
-<span id="cb41-57"><a href="#cb41-57" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb41-58"><a href="#cb41-58" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb41-59"><a href="#cb41-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-60"><a href="#cb41-60" aria-hidden="true" tabindex="-1"></a>  this_sheet <span class="ot">&lt;-</span> googlesheets4<span class="sc">::</span><span class="fu">read_sheet</span>(<span class="at">ss =</span> params<span class="sc">$</span>google_data_url,</span>
-<span id="cb41-61"><a href="#cb41-61" aria-hidden="true" tabindex="-1"></a>                            <span class="at">sheet =</span> params<span class="sc">$</span>sheet_name)</span>
-<span id="cb41-62"><a href="#cb41-62" aria-hidden="true" tabindex="-1"></a>  out_fn <span class="ot">&lt;-</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, params<span class="sc">$</span>data_fn)</span>
-<span id="cb41-63"><a href="#cb41-63" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">write_csv</span>(this_sheet, out_fn)</span>
-<span id="cb41-64"><a href="#cb41-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated: "</span>, out_fn)</span>
-<span id="cb41-65"><a href="#cb41-65" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb41-66"><a href="#cb41-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
-<span id="cb41-67"><a href="#cb41-67" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb41-68"><a href="#cb41-68" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-69"><a href="#cb41-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-70"><a href="#cb41-70" aria-hidden="true" tabindex="-1"></a>The data file has been saved as a comma-separated value (CSV) format data file in a special directory called <span class="in">`csv/`</span>.</span>
-<span id="cb41-71"><a href="#cb41-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-72"><a href="#cb41-72" aria-hidden="true" tabindex="-1"></a><span class="fu">### Open CSV</span></span>
-<span id="cb41-73"><a href="#cb41-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-74"><a href="#cb41-74" aria-hidden="true" tabindex="-1"></a>Next we load the data file.</span>
-<span id="cb41-75"><a href="#cb41-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-76"><a href="#cb41-76" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE, echo=TRUE}</span></span>
-<span id="cb41-77"><a href="#cb41-77" aria-hidden="true" tabindex="-1"></a><span class="in">acuity_df &lt;-</span></span>
-<span id="cb41-78"><a href="#cb41-78" aria-hidden="true" tabindex="-1"></a><span class="in">  readr::read_csv(file.path(params$data_dir, "by-paper.csv"), show_col_types = FALSE)</span></span>
-<span id="cb41-79"><a href="#cb41-79" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-80"><a href="#cb41-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-81"><a href="#cb41-81" aria-hidden="true" tabindex="-1"></a>We'll show the column (variable names) since these will be part of our data dictionary.</span>
-<span id="cb41-82"><a href="#cb41-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-85"><a href="#cb41-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-86"><a href="#cb41-86" aria-hidden="true" tabindex="-1"></a>acuity_cols <span class="ot">&lt;-</span> <span class="fu">names</span>(acuity_df)</span>
-<span id="cb41-87"><a href="#cb41-87" aria-hidden="true" tabindex="-1"></a>acuity_cols</span>
-<span id="cb41-88"><a href="#cb41-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-89"><a href="#cb41-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-90"><a href="#cb41-90" aria-hidden="true" tabindex="-1"></a><span class="fu">### Create data dictionary</span></span>
-<span id="cb41-91"><a href="#cb41-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-92"><a href="#cb41-92" aria-hidden="true" tabindex="-1"></a>We'll start by creating a data dictionary so that we can refer to it later in our cleaning and data analysis.</span>
-<span id="cb41-93"><a href="#cb41-93" aria-hidden="true" tabindex="-1"></a>We do this by creating a data frame or 'tibble' because this is a convenient format for manipulating the information.</span>
-<span id="cb41-94"><a href="#cb41-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-97"><a href="#cb41-97" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-98"><a href="#cb41-98" aria-hidden="true" tabindex="-1"></a>acuity_data_dict <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">col_name =</span> <span class="fu">names</span>(acuity_df))</span>
-<span id="cb41-99"><a href="#cb41-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-100"><a href="#cb41-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-101"><a href="#cb41-101" aria-hidden="true" tabindex="-1"></a>Now, we write a short description of each variable in the data file.</span>
-<span id="cb41-102"><a href="#cb41-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-105"><a href="#cb41-105" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-106"><a href="#cb41-106" aria-hidden="true" tabindex="-1"></a>acuity_data_dict <span class="ot">&lt;-</span> acuity_data_dict <span class="sc">|&gt;</span></span>
-<span id="cb41-107"><a href="#cb41-107" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">col_desc =</span> <span class="fu">c</span>(<span class="st">"Last name of 1st author"</span>,</span>
-<span id="cb41-108"><a href="#cb41-108" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Full APA format citation"</span>,</span>
-<span id="cb41-109"><a href="#cb41-109" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Paper publication year"</span>,</span>
-<span id="cb41-110"><a href="#cb41-110" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Source in paper"</span>,</span>
-<span id="cb41-111"><a href="#cb41-111" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Reported age range in mos"</span>,</span>
-<span id="cb41-112"><a href="#cb41-112" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Age in mos as conformed by ROG"</span>,</span>
-<span id="cb41-113"><a href="#cb41-113" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Participants tested monocularly or binocularly"</span>,</span>
-<span id="cb41-114"><a href="#cb41-114" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Number of participants in group"</span>,</span>
-<span id="cb41-115"><a href="#cb41-115" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Testing distance in cm"</span>,</span>
-<span id="cb41-116"><a href="#cb41-116" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Starting card in cyc/deg"</span>,</span>
-<span id="cb41-117"><a href="#cb41-117" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Mean (group) acuity in cyc/deg"</span>,</span>
-<span id="cb41-118"><a href="#cb41-118" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Estimated lower limit of acuity in cyc/deg"</span>,</span>
-<span id="cb41-119"><a href="#cb41-119" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Teller Acuity Card closest equivalent to this lower limit"</span>,</span>
-<span id="cb41-120"><a href="#cb41-120" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Estimated upper limit of acuity in cyc/deg"</span>,</span>
-<span id="cb41-121"><a href="#cb41-121" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Country where data were collected"</span>,</span>
-<span id="cb41-122"><a href="#cb41-122" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"TAC-I or TAC-II"</span>))</span>
-<span id="cb41-123"><a href="#cb41-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-124"><a href="#cb41-124" aria-hidden="true" tabindex="-1"></a>acuity_data_dict <span class="sc">|&gt;</span></span>
-<span id="cb41-125"><a href="#cb41-125" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
-<span id="cb41-126"><a href="#cb41-126" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span>
-<span id="cb41-127"><a href="#cb41-127" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-128"><a href="#cb41-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-129"><a href="#cb41-129" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data visualization</span></span>
-<span id="cb41-130"><a href="#cb41-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-131"><a href="#cb41-131" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb41-132"><a href="#cb41-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-133"><a href="#cb41-133" aria-hidden="true" tabindex="-1"></a>Rick Gilmore decided to take the mean of the age range reported in the <span class="co">[</span><span class="ot">@Xiang2021-ry</span><span class="co">]</span> data and create a new variable *strictly* for visualization purposes, <span class="in">`age_grp_rog`</span>.</span>
-<span id="cb41-134"><a href="#cb41-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-135"><a href="#cb41-135" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb41-136"><a href="#cb41-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-137"><a href="#cb41-137" aria-hidden="true" tabindex="-1"></a>We are still in the early phases of the project (as of <span class="in">`r Sys.time()`</span>), but it is good to start sketching the the data visualizations we will eventually want to see.</span>
-<span id="cb41-138"><a href="#cb41-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-139"><a href="#cb41-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig-teller-acuity-across-age, fig.cap="Developmental time course of mean acuity as assessed by Teller Acuity Cards"}</span></span>
-<span id="cb41-140"><a href="#cb41-140" aria-hidden="true" tabindex="-1"></a><span class="in">library(ggplot2)</span></span>
-<span id="cb41-141"><a href="#cb41-141" aria-hidden="true" tabindex="-1"></a><span class="in">acuity_df |&gt;</span></span>
-<span id="cb41-142"><a href="#cb41-142" aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot() +</span></span>
-<span id="cb41-143"><a href="#cb41-143" aria-hidden="true" tabindex="-1"></a><span class="in">  aes(x = age_grp_rog, y = mean_acuity_cyc_deg, color = country) +</span></span>
-<span id="cb41-144"><a href="#cb41-144" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point() +</span></span>
-<span id="cb41-145"><a href="#cb41-145" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_smooth() +</span></span>
-<span id="cb41-146"><a href="#cb41-146" aria-hidden="true" tabindex="-1"></a><span class="in">  facet_grid(cols = vars(binoc_monoc))</span></span>
-<span id="cb41-147"><a href="#cb41-147" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-148"><a href="#cb41-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-149"><a href="#cb41-149" aria-hidden="true" tabindex="-1"></a><span class="fu">## By-individual data</span></span>
-<span id="cb41-150"><a href="#cb41-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-151"><a href="#cb41-151" aria-hidden="true" tabindex="-1"></a>The Gilmore lab has some archival data that we can potentially use in this project.</span>
-<span id="cb41-152"><a href="#cb41-152" aria-hidden="true" tabindex="-1"></a>The following represents Rick Gilmore's work to gather, clean, and visualize these data.</span>
-<span id="cb41-153"><a href="#cb41-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-154"><a href="#cb41-154" aria-hidden="true" tabindex="-1"></a><span class="fu">### Gathering</span></span>
-<span id="cb41-155"><a href="#cb41-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-156"><a href="#cb41-156" aria-hidden="true" tabindex="-1"></a>The de-identified archival data are stored in a Google sheet accessed by the lab Google account.</span>
-<span id="cb41-157"><a href="#cb41-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-158"><a href="#cb41-158" aria-hidden="true" tabindex="-1"></a>First, we must authenticate to Google to access the relevant file and download it.</span>
-<span id="cb41-159"><a href="#cb41-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-162"><a href="#cb41-162" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-163"><a href="#cb41-163" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> <span class="st">"psubrainlab@gmail.com"</span>)</span>
-<span id="cb41-164"><a href="#cb41-164" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
-<span id="cb41-165"><a href="#cb41-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-166"><a href="#cb41-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-167"><a href="#cb41-167" aria-hidden="true" tabindex="-1"></a>Then we download the relevant file.</span>
-<span id="cb41-168"><a href="#cb41-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-171"><a href="#cb41-171" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-172"><a href="#cb41-172" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(</span>
-<span id="cb41-173"><a href="#cb41-173" aria-hidden="true" tabindex="-1"></a>  <span class="st">"vep-session-log"</span>,</span>
-<span id="cb41-174"><a href="#cb41-174" aria-hidden="true" tabindex="-1"></a>  <span class="at">path =</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"by-participant.csv"</span>),</span>
-<span id="cb41-175"><a href="#cb41-175" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"csv"</span>,</span>
-<span id="cb41-176"><a href="#cb41-176" aria-hidden="true" tabindex="-1"></a>  <span class="at">overwrite =</span> <span class="cn">TRUE</span></span>
-<span id="cb41-177"><a href="#cb41-177" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb41-178"><a href="#cb41-178" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-179"><a href="#cb41-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-180"><a href="#cb41-180" aria-hidden="true" tabindex="-1"></a>Unlike the Google sheet newly created for the by-study data, this one requires a lot of cleaning.</span>
-<span id="cb41-181"><a href="#cb41-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-184"><a href="#cb41-184" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-185"><a href="#cb41-185" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span></span>
-<span id="cb41-186"><a href="#cb41-186" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"by-participant.csv"</span>),</span>
-<span id="cb41-187"><a href="#cb41-187" aria-hidden="true" tabindex="-1"></a>                  <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb41-188"><a href="#cb41-188" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(gilmore_archival_df)</span>
-<span id="cb41-189"><a href="#cb41-189" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-190"><a href="#cb41-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-191"><a href="#cb41-191" aria-hidden="true" tabindex="-1"></a>We'll keep <span class="in">`Date`</span>, <span class="in">`Time`</span>, <span class="in">`Sex`</span>, <span class="in">`DOB`</span>, <span class="in">`Teller Acuity Cards`</span>, <span class="in">`Age at test`</span>.</span>
-<span id="cb41-192"><a href="#cb41-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-195"><a href="#cb41-195" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-196"><a href="#cb41-196" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb41-197"><a href="#cb41-197" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Date, Time, Sex, DOB, <span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">`</span><span class="at">Age at test</span><span class="st">`</span>)</span>
-<span id="cb41-198"><a href="#cb41-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-199"><a href="#cb41-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-200"><a href="#cb41-200" aria-hidden="true" tabindex="-1"></a>Then, let's filter those where we have TAC data.</span>
-<span id="cb41-201"><a href="#cb41-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-204"><a href="#cb41-204" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-205"><a href="#cb41-205" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(gilmore_archival_df, <span class="fu">unique</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>))</span>
-<span id="cb41-206"><a href="#cb41-206" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-209"><a href="#cb41-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-210"><a href="#cb41-210" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb41-211"><a href="#cb41-211" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>),</span>
-<span id="cb41-212"><a href="#cb41-212" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span> <span class="sc">!=</span> <span class="st">"not interested"</span>)</span>
-<span id="cb41-213"><a href="#cb41-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-214"><a href="#cb41-214" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(gilmore_archival_df)</span>
-<span id="cb41-215"><a href="#cb41-215" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-216"><a href="#cb41-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-217"><a href="#cb41-217" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb41-218"><a href="#cb41-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-219"><a href="#cb41-219" aria-hidden="true" tabindex="-1"></a>This file illustrates how making data FAIR from the outset can save work.</span>
-<span id="cb41-220"><a href="#cb41-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-221"><a href="#cb41-221" aria-hidden="true" tabindex="-1"></a>This one is not too terribly hard to parse, but it could have been better planned.</span>
-<span id="cb41-222"><a href="#cb41-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-223"><a href="#cb41-223" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb41-224"><a href="#cb41-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-225"><a href="#cb41-225" aria-hidden="true" tabindex="-1"></a>We'll extract the viewing distance with a regular expression.</span>
-<span id="cb41-226"><a href="#cb41-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-229"><a href="#cb41-229" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-230"><a href="#cb41-230" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb41-231"><a href="#cb41-231" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">view_dist_cm =</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">"[0-9]{2}cm"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb41-232"><a href="#cb41-232" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">view_dist_cm =</span> stringr<span class="sc">::</span><span class="fu">str_remove</span>(view_dist_cm, <span class="st">"cm"</span>)) <span class="co"># remove 'cm'</span></span>
-<span id="cb41-233"><a href="#cb41-233" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>view_dist_cm</span>
-<span id="cb41-234"><a href="#cb41-234" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-235"><a href="#cb41-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-236"><a href="#cb41-236" aria-hidden="true" tabindex="-1"></a>Similarly, we'll extract the acuity in cyc/deg using a regular expression.</span>
-<span id="cb41-237"><a href="#cb41-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-240"><a href="#cb41-240" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-241"><a href="#cb41-241" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb41-242"><a href="#cb41-242" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add 'cyc' to separate cyc/deg from Snellen acuity</span></span>
-<span id="cb41-243"><a href="#cb41-243" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">"[0-9]{1}[</span><span class="sc">\\</span><span class="st">./]{1}[0-9]+ cyc"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb41-244"><a href="#cb41-244" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_remove</span>(acuity_cyc_deg, <span class="st">" cyc"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb41-245"><a href="#cb41-245" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_replace</span>(acuity_cyc_deg, <span class="st">"/"</span>, <span class="st">"."</span>))</span>
-<span id="cb41-246"><a href="#cb41-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-247"><a href="#cb41-247" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>acuity_cyc_deg</span>
-<span id="cb41-248"><a href="#cb41-248" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-249"><a href="#cb41-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-250"><a href="#cb41-250" aria-hidden="true" tabindex="-1"></a>Now, let's look at the age at test.</span>
-<span id="cb41-251"><a href="#cb41-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-254"><a href="#cb41-254" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-255"><a href="#cb41-255" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span><span class="st">`</span><span class="at">Age at test</span><span class="st">`</span></span>
-<span id="cb41-256"><a href="#cb41-256" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-257"><a href="#cb41-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-258"><a href="#cb41-258" aria-hidden="true" tabindex="-1"></a>Instead, let's see what it looks like to compute age at test from the dates.</span>
-<span id="cb41-259"><a href="#cb41-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-262"><a href="#cb41-262" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb41-263"><a href="#cb41-263" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
-<span id="cb41-264"><a href="#cb41-264" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">age_at_test_days =</span> lubridate<span class="sc">::</span><span class="fu">mdy</span>(Date) <span class="sc">-</span> lubridate<span class="sc">::</span><span class="fu">mdy</span>(DOB))</span>
-<span id="cb41-265"><a href="#cb41-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-266"><a href="#cb41-266" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>age_at_test_days</span>
-<span id="cb41-267"><a href="#cb41-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-268"><a href="#cb41-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-269"><a href="#cb41-269" aria-hidden="true" tabindex="-1"></a>That seems reasonable for now.</span>
-<span id="cb41-270"><a href="#cb41-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-271"><a href="#cb41-271" aria-hidden="true" tabindex="-1"></a>Let's see if we can plot these data.</span>
-<span id="cb41-272"><a href="#cb41-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-273"><a href="#cb41-273" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig-gilmore-lab-archival, fig.cap="Individual participant Teller Acuity Card thresholds from archival Gilmore lab data"}</span></span>
-<span id="cb41-274"><a href="#cb41-274" aria-hidden="true" tabindex="-1"></a><span class="in">gilmore_archival_df |&gt;</span></span>
-<span id="cb41-275"><a href="#cb41-275" aria-hidden="true" tabindex="-1"></a><span class="in">  dplyr::mutate(acuity_cyc_deg = as.numeric(acuity_cyc_deg)) |&gt;</span></span>
-<span id="cb41-276"><a href="#cb41-276" aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot() +</span></span>
-<span id="cb41-277"><a href="#cb41-277" aria-hidden="true" tabindex="-1"></a><span class="in">  aes(x = age_at_test_days, y = acuity_cyc_deg, color = Sex) +</span></span>
-<span id="cb41-278"><a href="#cb41-278" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point() +</span></span>
-<span id="cb41-279"><a href="#cb41-279" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_smooth(method = "lm") +</span></span>
-<span id="cb41-280"><a href="#cb41-280" aria-hidden="true" tabindex="-1"></a><span class="in">  #theme_classic() +</span></span>
-<span id="cb41-281"><a href="#cb41-281" aria-hidden="true" tabindex="-1"></a><span class="in">  theme(legend.position = "bottom", legend.title = element_blank()) </span></span>
-<span id="cb41-282"><a href="#cb41-282" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb41-283"><a href="#cb41-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-284"><a href="#cb41-284" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb41-285"><a href="#cb41-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-286"><a href="#cb41-286" aria-hidden="true" tabindex="-1"></a>Before I stop, I'm going to add the by-participant data file to a <span class="in">`.gitignore`</span> file, just to be extra careful.</span>
-<span id="cb41-287"><a href="#cb41-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-288"><a href="#cb41-288" aria-hidden="true" tabindex="-1"></a>:::</span>
+<div class="sourceCode" id="cb43" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> ""</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="an">params:</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="co">  data_dir: "data/csv"</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="co">  update_data: TRUE</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="co">  use_sysenv_creds: TRUE</span></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="co">  google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"</span></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="co">  sheet_name: "by_paper"</span></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="co">  data_fn: "by-paper.csv"</span></span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>This page describes the process of data gathering, cleaning, and visualization.</span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gathering</span></span>
+<span id="cb43-17"><a href="#cb43-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-18"><a href="#cb43-18" aria-hidden="true" tabindex="-1"></a>We use a Google Sheet to store the by-study data:</span>
+<span id="cb43-19"><a href="#cb43-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-20"><a href="#cb43-20" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0&gt;</span></span>
+<span id="cb43-21"><a href="#cb43-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-22"><a href="#cb43-22" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb43-23"><a href="#cb43-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-24"><a href="#cb43-24" aria-hidden="true" tabindex="-1"></a>**Note**: There is no identifiable data here at the moment, so Google Sheets are a viable option.</span>
+<span id="cb43-25"><a href="#cb43-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-26"><a href="#cb43-26" aria-hidden="true" tabindex="-1"></a>Later on, we start contacting authors, we will need to restrict access to that information for privacy reasons.</span>
+<span id="cb43-27"><a href="#cb43-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-28"><a href="#cb43-28" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb43-29"><a href="#cb43-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-30"><a href="#cb43-30" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb43-31"><a href="#cb43-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-32"><a href="#cb43-32" aria-hidden="true" tabindex="-1"></a>We need a process for managing who has edit access.</span>
+<span id="cb43-33"><a href="#cb43-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-34"><a href="#cb43-34" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb43-35"><a href="#cb43-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-36"><a href="#cb43-36" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">`googledrive`</span><span class="co">](https://cran.r-project.org/web/packages/googledrive/index.html)</span> package provides a convenient way to access documents stored on Google.</span>
+<span id="cb43-37"><a href="#cb43-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-38"><a href="#cb43-38" aria-hidden="true" tabindex="-1"></a><span class="fu">### Download from Google as CSV</span></span>
+<span id="cb43-39"><a href="#cb43-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-42"><a href="#cb43-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-43"><a href="#cb43-43" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(params<span class="sc">$</span>data_dir)) {</span>
+<span id="cb43-44"><a href="#cb43-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing "</span>,  params<span class="sc">$</span>data_dir, <span class="st">"."</span>)</span>
+<span id="cb43-45"><a href="#cb43-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(params<span class="sc">$</span>data_dir)</span>
+<span id="cb43-46"><a href="#cb43-46" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb43-47"><a href="#cb43-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-48"><a href="#cb43-48" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
+<span id="cb43-49"><a href="#cb43-49" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (params<span class="sc">$</span>use_sysenv_creds) {</span>
+<span id="cb43-50"><a href="#cb43-50" aria-hidden="true" tabindex="-1"></a>    google_creds <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>)</span>
+<span id="cb43-51"><a href="#cb43-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (google_creds <span class="sc">!=</span> <span class="st">""</span>) {</span>
+<span id="cb43-52"><a href="#cb43-52" aria-hidden="true" tabindex="-1"></a>      <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> google_creds)</span>
+<span id="cb43-53"><a href="#cb43-53" aria-hidden="true" tabindex="-1"></a>      googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
+<span id="cb43-54"><a href="#cb43-54" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb43-55"><a href="#cb43-55" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"No Google account information stored in `.Renviron`."</span>)</span>
+<span id="cb43-56"><a href="#cb43-56" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"Add authorized Google account name to `.Renviron` using `usethist::edit_r_environ()`."</span>)</span>
+<span id="cb43-57"><a href="#cb43-57" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb43-58"><a href="#cb43-58" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb43-59"><a href="#cb43-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-60"><a href="#cb43-60" aria-hidden="true" tabindex="-1"></a>  this_sheet <span class="ot">&lt;-</span> googlesheets4<span class="sc">::</span><span class="fu">read_sheet</span>(<span class="at">ss =</span> params<span class="sc">$</span>google_data_url,</span>
+<span id="cb43-61"><a href="#cb43-61" aria-hidden="true" tabindex="-1"></a>                            <span class="at">sheet =</span> params<span class="sc">$</span>sheet_name)</span>
+<span id="cb43-62"><a href="#cb43-62" aria-hidden="true" tabindex="-1"></a>  out_fn <span class="ot">&lt;-</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, params<span class="sc">$</span>data_fn)</span>
+<span id="cb43-63"><a href="#cb43-63" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">write_csv</span>(this_sheet, out_fn)</span>
+<span id="cb43-64"><a href="#cb43-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated: "</span>, out_fn)</span>
+<span id="cb43-65"><a href="#cb43-65" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb43-66"><a href="#cb43-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
+<span id="cb43-67"><a href="#cb43-67" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb43-68"><a href="#cb43-68" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-69"><a href="#cb43-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-70"><a href="#cb43-70" aria-hidden="true" tabindex="-1"></a>The data file has been saved as a comma-separated value (CSV) format data file in a special directory called <span class="in">`csv/`</span>.</span>
+<span id="cb43-71"><a href="#cb43-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-72"><a href="#cb43-72" aria-hidden="true" tabindex="-1"></a><span class="fu">### Open CSV</span></span>
+<span id="cb43-73"><a href="#cb43-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-74"><a href="#cb43-74" aria-hidden="true" tabindex="-1"></a>Next we load the data file.</span>
+<span id="cb43-75"><a href="#cb43-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-76"><a href="#cb43-76" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE, echo=TRUE}</span></span>
+<span id="cb43-77"><a href="#cb43-77" aria-hidden="true" tabindex="-1"></a><span class="in">acuity_df &lt;-</span></span>
+<span id="cb43-78"><a href="#cb43-78" aria-hidden="true" tabindex="-1"></a><span class="in">  readr::read_csv(file.path(params$data_dir, "by-paper.csv"), show_col_types = FALSE)</span></span>
+<span id="cb43-79"><a href="#cb43-79" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-80"><a href="#cb43-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-81"><a href="#cb43-81" aria-hidden="true" tabindex="-1"></a>We'll show the column (variable names) since these will be part of our data dictionary.</span>
+<span id="cb43-82"><a href="#cb43-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-85"><a href="#cb43-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-86"><a href="#cb43-86" aria-hidden="true" tabindex="-1"></a>acuity_cols <span class="ot">&lt;-</span> <span class="fu">names</span>(acuity_df)</span>
+<span id="cb43-87"><a href="#cb43-87" aria-hidden="true" tabindex="-1"></a>acuity_cols</span>
+<span id="cb43-88"><a href="#cb43-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-89"><a href="#cb43-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-90"><a href="#cb43-90" aria-hidden="true" tabindex="-1"></a><span class="fu">### Create data dictionary</span></span>
+<span id="cb43-91"><a href="#cb43-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-92"><a href="#cb43-92" aria-hidden="true" tabindex="-1"></a>We'll start by creating a data dictionary so that we can refer to it later in our cleaning and data analysis.</span>
+<span id="cb43-93"><a href="#cb43-93" aria-hidden="true" tabindex="-1"></a>We do this by creating a data frame or 'tibble' because this is a convenient format for manipulating the information.</span>
+<span id="cb43-94"><a href="#cb43-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-97"><a href="#cb43-97" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-98"><a href="#cb43-98" aria-hidden="true" tabindex="-1"></a>acuity_data_dict <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">col_name =</span> <span class="fu">names</span>(acuity_df))</span>
+<span id="cb43-99"><a href="#cb43-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-100"><a href="#cb43-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-101"><a href="#cb43-101" aria-hidden="true" tabindex="-1"></a>Now, we write a short description of each variable in the data file.</span>
+<span id="cb43-102"><a href="#cb43-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-105"><a href="#cb43-105" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-106"><a href="#cb43-106" aria-hidden="true" tabindex="-1"></a>acuity_data_dict <span class="ot">&lt;-</span> acuity_data_dict <span class="sc">|&gt;</span></span>
+<span id="cb43-107"><a href="#cb43-107" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">col_desc =</span> <span class="fu">c</span>(<span class="st">"Last name of 1st author"</span>,</span>
+<span id="cb43-108"><a href="#cb43-108" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Full APA format citation"</span>,</span>
+<span id="cb43-109"><a href="#cb43-109" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Paper publication year"</span>,</span>
+<span id="cb43-110"><a href="#cb43-110" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Source in paper"</span>,</span>
+<span id="cb43-111"><a href="#cb43-111" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Reported age range in mos"</span>,</span>
+<span id="cb43-112"><a href="#cb43-112" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Age in mos as conformed by ROG"</span>,</span>
+<span id="cb43-113"><a href="#cb43-113" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Participants tested monocularly or binocularly"</span>,</span>
+<span id="cb43-114"><a href="#cb43-114" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Number of participants in group"</span>,</span>
+<span id="cb43-115"><a href="#cb43-115" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Testing distance in cm"</span>,</span>
+<span id="cb43-116"><a href="#cb43-116" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Starting card in cyc/deg"</span>,</span>
+<span id="cb43-117"><a href="#cb43-117" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Mean (group) acuity in cyc/deg"</span>,</span>
+<span id="cb43-118"><a href="#cb43-118" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Estimated lower limit of acuity in cyc/deg"</span>,</span>
+<span id="cb43-119"><a href="#cb43-119" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Teller Acuity Card closest equivalent to this lower limit"</span>,</span>
+<span id="cb43-120"><a href="#cb43-120" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Estimated upper limit of acuity in cyc/deg"</span>,</span>
+<span id="cb43-121"><a href="#cb43-121" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"Country where data were collected"</span>,</span>
+<span id="cb43-122"><a href="#cb43-122" aria-hidden="true" tabindex="-1"></a>                             <span class="st">"TAC-I or TAC-II"</span>))</span>
+<span id="cb43-123"><a href="#cb43-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-124"><a href="#cb43-124" aria-hidden="true" tabindex="-1"></a>acuity_data_dict <span class="sc">|&gt;</span></span>
+<span id="cb43-125"><a href="#cb43-125" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb43-126"><a href="#cb43-126" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span>
+<span id="cb43-127"><a href="#cb43-127" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-128"><a href="#cb43-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-129"><a href="#cb43-129" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data visualization</span></span>
+<span id="cb43-130"><a href="#cb43-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-131"><a href="#cb43-131" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb43-132"><a href="#cb43-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-133"><a href="#cb43-133" aria-hidden="true" tabindex="-1"></a>Rick Gilmore decided to take the mean of the age range reported in the <span class="co">[</span><span class="ot">@Xiang2021-ry</span><span class="co">]</span> data and create a new variable *strictly* for visualization purposes, <span class="in">`age_grp_rog`</span>.</span>
+<span id="cb43-134"><a href="#cb43-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-135"><a href="#cb43-135" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb43-136"><a href="#cb43-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-137"><a href="#cb43-137" aria-hidden="true" tabindex="-1"></a>We are still in the early phases of the project (as of <span class="in">`r Sys.time()`</span>), but it is good to start sketching the the data visualizations we will eventually want to see.</span>
+<span id="cb43-138"><a href="#cb43-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-139"><a href="#cb43-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig-teller-acuity-across-age, fig.cap="Developmental time course of mean acuity as assessed by Teller Acuity Cards"}</span></span>
+<span id="cb43-140"><a href="#cb43-140" aria-hidden="true" tabindex="-1"></a><span class="in">library(ggplot2)</span></span>
+<span id="cb43-141"><a href="#cb43-141" aria-hidden="true" tabindex="-1"></a><span class="in">acuity_df |&gt;</span></span>
+<span id="cb43-142"><a href="#cb43-142" aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot() +</span></span>
+<span id="cb43-143"><a href="#cb43-143" aria-hidden="true" tabindex="-1"></a><span class="in">  aes(</span></span>
+<span id="cb43-144"><a href="#cb43-144" aria-hidden="true" tabindex="-1"></a><span class="in">    x = age_grp_rog,</span></span>
+<span id="cb43-145"><a href="#cb43-145" aria-hidden="true" tabindex="-1"></a><span class="in">    y = mean_acuity_cyc_deg,</span></span>
+<span id="cb43-146"><a href="#cb43-146" aria-hidden="true" tabindex="-1"></a><span class="in">    color = country,</span></span>
+<span id="cb43-147"><a href="#cb43-147" aria-hidden="true" tabindex="-1"></a><span class="in">    shape = author_first</span></span>
+<span id="cb43-148"><a href="#cb43-148" aria-hidden="true" tabindex="-1"></a><span class="in">  ) +</span></span>
+<span id="cb43-149"><a href="#cb43-149" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point() +</span></span>
+<span id="cb43-150"><a href="#cb43-150" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_smooth() +</span></span>
+<span id="cb43-151"><a href="#cb43-151" aria-hidden="true" tabindex="-1"></a><span class="in">  facet_grid(cols = vars(binoc_monoc))</span></span>
+<span id="cb43-152"><a href="#cb43-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-153"><a href="#cb43-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-154"><a href="#cb43-154" aria-hidden="true" tabindex="-1"></a><span class="fu">## By-individual data</span></span>
+<span id="cb43-155"><a href="#cb43-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-156"><a href="#cb43-156" aria-hidden="true" tabindex="-1"></a>The Gilmore lab has some archival data that we can potentially use in this project.</span>
+<span id="cb43-157"><a href="#cb43-157" aria-hidden="true" tabindex="-1"></a>The following represents Rick Gilmore's work to gather, clean, and visualize these data.</span>
+<span id="cb43-158"><a href="#cb43-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-159"><a href="#cb43-159" aria-hidden="true" tabindex="-1"></a><span class="fu">### Gathering</span></span>
+<span id="cb43-160"><a href="#cb43-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-161"><a href="#cb43-161" aria-hidden="true" tabindex="-1"></a>The de-identified archival data are stored in a Google sheet accessed by the lab Google account.</span>
+<span id="cb43-162"><a href="#cb43-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-163"><a href="#cb43-163" aria-hidden="true" tabindex="-1"></a>First, we must authenticate to Google to access the relevant file and download it.</span>
+<span id="cb43-164"><a href="#cb43-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-167"><a href="#cb43-167" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-168"><a href="#cb43-168" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> <span class="st">"psubrainlab@gmail.com"</span>)</span>
+<span id="cb43-169"><a href="#cb43-169" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
+<span id="cb43-170"><a href="#cb43-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-171"><a href="#cb43-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-172"><a href="#cb43-172" aria-hidden="true" tabindex="-1"></a>Then we download the relevant file.</span>
+<span id="cb43-173"><a href="#cb43-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-176"><a href="#cb43-176" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-177"><a href="#cb43-177" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(</span>
+<span id="cb43-178"><a href="#cb43-178" aria-hidden="true" tabindex="-1"></a>  <span class="st">"vep-session-log"</span>,</span>
+<span id="cb43-179"><a href="#cb43-179" aria-hidden="true" tabindex="-1"></a>  <span class="at">path =</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"by-participant.csv"</span>),</span>
+<span id="cb43-180"><a href="#cb43-180" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"csv"</span>,</span>
+<span id="cb43-181"><a href="#cb43-181" aria-hidden="true" tabindex="-1"></a>  <span class="at">overwrite =</span> <span class="cn">TRUE</span></span>
+<span id="cb43-182"><a href="#cb43-182" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb43-183"><a href="#cb43-183" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-184"><a href="#cb43-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-185"><a href="#cb43-185" aria-hidden="true" tabindex="-1"></a>Unlike the Google sheet newly created for the by-study data, this one requires a lot of cleaning.</span>
+<span id="cb43-186"><a href="#cb43-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-189"><a href="#cb43-189" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-190"><a href="#cb43-190" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span></span>
+<span id="cb43-191"><a href="#cb43-191" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"by-participant.csv"</span>),</span>
+<span id="cb43-192"><a href="#cb43-192" aria-hidden="true" tabindex="-1"></a>                  <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb43-193"><a href="#cb43-193" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(gilmore_archival_df)</span>
+<span id="cb43-194"><a href="#cb43-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-195"><a href="#cb43-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-196"><a href="#cb43-196" aria-hidden="true" tabindex="-1"></a>We'll keep <span class="in">`Date`</span>, <span class="in">`Time`</span>, <span class="in">`Sex`</span>, <span class="in">`DOB`</span>, <span class="in">`Teller Acuity Cards`</span>, <span class="in">`Age at test`</span>.</span>
+<span id="cb43-197"><a href="#cb43-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-200"><a href="#cb43-200" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-201"><a href="#cb43-201" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb43-202"><a href="#cb43-202" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Date, Time, Sex, DOB, <span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">`</span><span class="at">Age at test</span><span class="st">`</span>)</span>
+<span id="cb43-203"><a href="#cb43-203" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-204"><a href="#cb43-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-205"><a href="#cb43-205" aria-hidden="true" tabindex="-1"></a>Then, let's filter those where we have TAC data.</span>
+<span id="cb43-206"><a href="#cb43-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-209"><a href="#cb43-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-210"><a href="#cb43-210" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(gilmore_archival_df, <span class="fu">unique</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>))</span>
+<span id="cb43-211"><a href="#cb43-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-214"><a href="#cb43-214" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-215"><a href="#cb43-215" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb43-216"><a href="#cb43-216" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>),</span>
+<span id="cb43-217"><a href="#cb43-217" aria-hidden="true" tabindex="-1"></a>                <span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span> <span class="sc">!=</span> <span class="st">"not interested"</span>)</span>
+<span id="cb43-218"><a href="#cb43-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-219"><a href="#cb43-219" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(gilmore_archival_df)</span>
+<span id="cb43-220"><a href="#cb43-220" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-221"><a href="#cb43-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-222"><a href="#cb43-222" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb43-223"><a href="#cb43-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-224"><a href="#cb43-224" aria-hidden="true" tabindex="-1"></a>This file illustrates how making data FAIR from the outset can save work.</span>
+<span id="cb43-225"><a href="#cb43-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-226"><a href="#cb43-226" aria-hidden="true" tabindex="-1"></a>This one is not too terribly hard to parse, but it could have been better planned.</span>
+<span id="cb43-227"><a href="#cb43-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-228"><a href="#cb43-228" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb43-229"><a href="#cb43-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-230"><a href="#cb43-230" aria-hidden="true" tabindex="-1"></a>We'll extract the viewing distance with a regular expression.</span>
+<span id="cb43-231"><a href="#cb43-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-234"><a href="#cb43-234" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-235"><a href="#cb43-235" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb43-236"><a href="#cb43-236" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">view_dist_cm =</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">"[0-9]{2}cm"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb43-237"><a href="#cb43-237" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">view_dist_cm =</span> stringr<span class="sc">::</span><span class="fu">str_remove</span>(view_dist_cm, <span class="st">"cm"</span>)) <span class="co"># remove 'cm'</span></span>
+<span id="cb43-238"><a href="#cb43-238" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>view_dist_cm</span>
+<span id="cb43-239"><a href="#cb43-239" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-240"><a href="#cb43-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-241"><a href="#cb43-241" aria-hidden="true" tabindex="-1"></a>Similarly, we'll extract the acuity in cyc/deg using a regular expression.</span>
+<span id="cb43-242"><a href="#cb43-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-245"><a href="#cb43-245" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-246"><a href="#cb43-246" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb43-247"><a href="#cb43-247" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add 'cyc' to separate cyc/deg from Snellen acuity</span></span>
+<span id="cb43-248"><a href="#cb43-248" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_extract</span>(<span class="st">`</span><span class="at">Teller Acuity Cards</span><span class="st">`</span>, <span class="st">"[0-9]{1}[</span><span class="sc">\\</span><span class="st">./]{1}[0-9]+ cyc"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb43-249"><a href="#cb43-249" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_remove</span>(acuity_cyc_deg, <span class="st">" cyc"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb43-250"><a href="#cb43-250" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">acuity_cyc_deg =</span> stringr<span class="sc">::</span><span class="fu">str_replace</span>(acuity_cyc_deg, <span class="st">"/"</span>, <span class="st">"."</span>))</span>
+<span id="cb43-251"><a href="#cb43-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-252"><a href="#cb43-252" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>acuity_cyc_deg</span>
+<span id="cb43-253"><a href="#cb43-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-254"><a href="#cb43-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-255"><a href="#cb43-255" aria-hidden="true" tabindex="-1"></a>Now, let's look at the age at test.</span>
+<span id="cb43-256"><a href="#cb43-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-259"><a href="#cb43-259" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-260"><a href="#cb43-260" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span><span class="st">`</span><span class="at">Age at test</span><span class="st">`</span></span>
+<span id="cb43-261"><a href="#cb43-261" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-262"><a href="#cb43-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-263"><a href="#cb43-263" aria-hidden="true" tabindex="-1"></a>Instead, let's see what it looks like to compute age at test from the dates.</span>
+<span id="cb43-264"><a href="#cb43-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-267"><a href="#cb43-267" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb43-268"><a href="#cb43-268" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df <span class="ot">&lt;-</span> gilmore_archival_df <span class="sc">|&gt;</span></span>
+<span id="cb43-269"><a href="#cb43-269" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">age_at_test_days =</span> lubridate<span class="sc">::</span><span class="fu">mdy</span>(Date) <span class="sc">-</span> lubridate<span class="sc">::</span><span class="fu">mdy</span>(DOB))</span>
+<span id="cb43-270"><a href="#cb43-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-271"><a href="#cb43-271" aria-hidden="true" tabindex="-1"></a>gilmore_archival_df<span class="sc">$</span>age_at_test_days</span>
+<span id="cb43-272"><a href="#cb43-272" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-273"><a href="#cb43-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-274"><a href="#cb43-274" aria-hidden="true" tabindex="-1"></a>That seems reasonable for now.</span>
+<span id="cb43-275"><a href="#cb43-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-276"><a href="#cb43-276" aria-hidden="true" tabindex="-1"></a>Let's see if we can plot these data.</span>
+<span id="cb43-277"><a href="#cb43-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-278"><a href="#cb43-278" aria-hidden="true" tabindex="-1"></a><span class="in">```{r fig-gilmore-lab-archival, fig.cap="Individual participant Teller Acuity Card thresholds from archival Gilmore lab data"}</span></span>
+<span id="cb43-279"><a href="#cb43-279" aria-hidden="true" tabindex="-1"></a><span class="in">gilmore_archival_df |&gt;</span></span>
+<span id="cb43-280"><a href="#cb43-280" aria-hidden="true" tabindex="-1"></a><span class="in">  dplyr::mutate(acuity_cyc_deg = as.numeric(acuity_cyc_deg)) |&gt;</span></span>
+<span id="cb43-281"><a href="#cb43-281" aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot() +</span></span>
+<span id="cb43-282"><a href="#cb43-282" aria-hidden="true" tabindex="-1"></a><span class="in">  aes(x = age_at_test_days, y = acuity_cyc_deg, color = Sex) +</span></span>
+<span id="cb43-283"><a href="#cb43-283" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_point() +</span></span>
+<span id="cb43-284"><a href="#cb43-284" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_smooth(method = "lm") +</span></span>
+<span id="cb43-285"><a href="#cb43-285" aria-hidden="true" tabindex="-1"></a><span class="in">  #theme_classic() +</span></span>
+<span id="cb43-286"><a href="#cb43-286" aria-hidden="true" tabindex="-1"></a><span class="in">  theme(legend.position = "bottom", legend.title = element_blank()) </span></span>
+<span id="cb43-287"><a href="#cb43-287" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb43-288"><a href="#cb43-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-289"><a href="#cb43-289" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb43-290"><a href="#cb43-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-291"><a href="#cb43-291" aria-hidden="true" tabindex="-1"></a>Before I stop, I'm going to add the by-participant data file to a <span class="in">`.gitignore`</span> file, just to be extra careful.</span>
+<span id="cb43-292"><a href="#cb43-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-293"><a href="#cb43-293" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
