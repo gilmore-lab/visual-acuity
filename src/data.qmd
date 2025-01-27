@@ -103,6 +103,7 @@ acuity_data_dict <- acuity_data_dict |>
                              "Reported age range in mos",
                              "Age in mos as conformed by ROG",
                              "Participants tested monocularly or binocularly",
+                             "Typical or atypically developing",
                              "Number of participants in group",
                              "Testing distance in cm",
                              "Starting card in cyc/deg",
@@ -135,8 +136,7 @@ acuity_df |>
   aes(
     x = age_grp_rog,
     y = mean_acuity_cyc_deg,
-    color = country,
-    shape = author_first
+    color = country
   ) +
   geom_point() +
   geom_smooth() +
@@ -161,7 +161,10 @@ acuity_df |>
   dplyr::mutate(min_acuity = min(mean_acuity_cyc_deg),
                 max_acuity = max(mean_acuity_cyc_deg),
                 max_minus_min = max_acuity - min_acuity) |>
-  dplyr::select(age_grp_rog, min_acuity, max_acuity, max_minus_min)
+  dplyr::select(age_grp_rog, min_acuity, max_acuity, max_minus_min) |>
+  dplyr::arrange(age_grp_rog) |>
+  kableExtra::kable(format='html') |>
+  kableExtra::kable_classic()
 ```
 
 ```{r}
