@@ -1,4 +1,12 @@
-# VSS 2025 Submission
+---
+title: "VSS 2025 Submission"
+params:
+  data_dir: "data/csv"
+  update_data: TRUE
+  use_sysenv_creds: TRUE
+  google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"
+  data_fn: "by-paper.csv"
+---
 
 ## Title
 
@@ -11,3 +19,203 @@ Rick Gilmore (rog1@psu.edu), Julia DiFulvio, Brianna Beamer, Nicole Cruz; The Pe
 ## Abstract
 
 Replication is a cornerstone of scientific rigor and a prerequisite for cumulative science. This project synthesized evidence from published research that employed a widely used measure of grating visual acuity (VA), Teller Acuity Cards (TAC). We sought to capture findings about the development of VA in early childhood into an aggregated dataset and share the dataset openly. Online literature searches identified papers that mentioned “teller acuity cards”, “visual acuity cards”, or “teller cards”. We found n=745 papers published from 1974-2024. Next, we identified empirical papers that used TAC to measure VA and which reported VA in an extractable tabular form. To-date, n=250 of 316 papers with available PDF versions have been evaluated and n=14 have been identified that present extractable data meeting our screening criteria. Available datasets represent more than n=3,991 participants and 7 countries (Australia, Brazil, Canada, China, Italy, Mexico, and the U.S.). As expected, group VA increases from birth to 36-months, with faster rates of change among children tested binocularly (0.47 cyc/deg per month) than those tested monocularly (0.35 cyc/deg per month). Group VA values at similar ages vary substantially across studies, especially in children older than 12 months. Our synthesis of published TAC VA data confirms anticipated age-related trends and points to avenues for future research, particularly regarding what factors account for cross-study and by-country differences in rates of development. We hope our soon-to-be openly shared dataset contributes toward a more cumulative science of visual development.
+
+## Data analysis
+
+## Visualization & analysis
+
+### Setup
+
+```{r}
+#| label: setup
+library(googledrive)
+library(ggplot2)
+library(readr)
+library(dplyr)
+```
+
+### Import
+
+We use a Google Sheet to store the by-study data:
+
+<https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0>
+
+The Google Sheet has multiple tabs:
+
+- The `typical_group` tab contains group data from typically developing children.
+- The `typical_indiv` tab contains data from typically developing individual children.
+- The `atypical_group` tab contains group data from atypically developing children.
+- The `atypical_indiv` tab contains data from atypically developing individual children.
+
+```{r}
+#| label: import-data
+# Define a helper function
+
+import_save_TAC <- function(sheet_name = "typical_group",
+                            csv_name = "typical_group.csv") {
+  
+  this_sheet <- googlesheets4::read_sheet(ss = params$google_data_url,
+                            sheet = sheet_name)
+  out_fn <- file.path(params$data_dir, csv_name)
+  readr::write_csv(this_sheet, out_fn)
+  message("Data updated: ", out_fn)
+}
+
+# Create data files
+if (!dir.exists(params$data_dir)) {
+  message("Creating missing ",  params$data_dir, ".")
+  dir.create(params$data_dir)
+}
+
+if (params$update_data) {
+  if (params$use_sysenv_creds) {
+    google_creds <- Sys.getenv("GMAIL_SURVEY")
+    if (google_creds != "") {
+      options(gargle_oauth_email = google_creds)
+      googledrive::drive_auth()
+    } else {
+      message("No Google account information stored in `.Renviron`.")
+      message(
+        "Add authorized Google account name to `.Renviron` using `usethis::edit_r_environ()`."
+      )
+    }
+  }
+  
+  purrr::map2(
+    c(
+      "typical_group",
+      "typical_indiv",
+      "atypical_group",
+      "atypical_indiv"
+    ),
+    c(
+      "typical_group.csv",
+      "typical_indiv.csv",
+      "atypical_group.csv",
+      "atypical_indiv.csv"
+    ),
+    import_save_TAC
+  )
+  
+  # import_save_TAC()
+  
+  # this_sheet <- googlesheets4::read_sheet(ss = params$google_data_url,
+  #                           sheet = params$sheet_name)
+  # out_fn <- file.path(params$data_dir, params$data_fn)
+  # readr::write_csv(this_sheet, out_fn)
+  # message("Data updated: ", out_fn)
+} else {
+  message("Using stored data.")
+}
+```
+
+### Visualize
+
+We'll create visualizations for each group of data separately.
+
+#### Typical Group
+
+```{r}
+#| label: import-typical-group
+
+typ_group_df <-
+  readr::read_csv(file.path(params$data_dir, "typical_group.csv"), show_col_types = FALSE)
+str(typ_group_df)
+```
+
+::: {.callout-important}
+Rick Gilmore decided to take the mean of the age range reported in the [@Xiang2021-ry] data and create a new variable *strictly* for visualization purposes, `age_grp_rog`.
+:::
+
+```{r}
+#| label: fig-typical-group-by-age
+#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"
+
+typ_group_df |>
+  ggplot() +
+  aes(
+    x = age_grp_rog,
+    y = mean_acuity_cyc_deg,
+    color = country
+  ) +
+  geom_point() +
+  geom_smooth() +
+  facet_grid(cols = vars(binoc_monoc)) +
+  xlab("Age (mos)") +
+  ylab("Mean acuity (cyc/deg)") +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(limits = c(0, 30))
+```
+
+### Atypical Group
+
+```{r}
+#| label: import-atypical-group
+
+atyp_group_df <-
+  readr::read_csv(file.path(params$data_dir, "atypical_group.csv"), show_col_types = FALSE)
+str(atyp_group_df)
+```
+
+Some of the acuity measurements were in LogMAR, so we must transform these to cycles per degree before plotting.
+
+```{r}
+logMAR_to_cyc_per_deg <- function(logMARmin) {
+  60/(10^(logMARmin))
+}
+
+atyp_group_df <- atyp_group_df |>
+  dplyr::mutate(mean_acuity_cyc_deg = if_else(acuity_units == "cyc_deg", mean_acuity, 
+                                              logMAR_to_cyc_per_deg(mean_acuity)))
+```
+
+```{r}
+#| label: fig-atypical-group-by-age
+#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for atypically developing children as assessed by Teller Acuity Cards"
+
+atyp_group_df |>
+  ggplot() +
+  aes(
+    x = age_mos,
+    y = mean_acuity_cyc_deg,
+    color = eye
+  ) +
+  geom_point() +
+  geom_smooth() +
+  facet_grid(cols = vars(condition)) +
+  xlab("Age (mos)") +
+  ylab("Mean acuity (cyc/deg)") +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(limits = c(0, 30))
+```
+
+### Typical Individual
+
+```{r}
+#| label: import-typical-indiv
+
+typ_indiv_df <-
+  readr::read_csv(file.path(params$data_dir, "typical_indiv.csv"), show_col_types = FALSE)
+str(atyp_group_df)
+```
+
+```{r}
+#| label: fig-typical-indiv-by-age
+#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing individual children as assessed by Teller Acuity Cards"
+
+typ_indiv_df |>
+  ggplot() +
+  aes(
+    x = age_mos,
+    y = mean_acuity_cyc_deg,
+    color = sub_id
+  ) +
+  geom_point() +
+  geom_smooth() +
+  #facet_grid(cols = vars(eye)) +
+  xlab("Age (mos)") +
+  ylab("Acuity (cyc/deg)") +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(limits = c(0, 30)) +
+  scale_x_continuous(limits = c(0, 50))
+```

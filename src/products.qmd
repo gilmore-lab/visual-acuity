@@ -11,5 +11,5 @@ At the moment, there are none, except for the information on this site.
 
 ## [Vision Sciences Society](https://www.visionsciences.org) 2025
 
-We aim to submit an abstract to VSS 2025 by the submission deadline Friday, December 6, 2024.
-Note that abstract submissions open October 12, 2024.
+We submitted an [abstract](vss-2025-submitted.qmd) to VSS 2025 and were accepted.
+

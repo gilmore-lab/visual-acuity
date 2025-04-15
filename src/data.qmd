@@ -5,8 +5,8 @@ params:
   update_data: TRUE
   use_sysenv_creds: TRUE
   google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"
-  sheet_name: "by_paper"
-  data_fn: "by-paper.csv"
+  sheet_name: "typical_group"
+  data_fn: "typical_group.csv"
 ---
 
 ## Overview

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -164,6 +164,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="./data.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cleaning &amp; visualization</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vss-2025-submitted.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">VSS 2025 Submission</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -238,7 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>This is a dashboard for the data collection and cleaning process.</p>
 <p>All code is “folded” by default. Select “Show All Code” from the menu at the upper right to reveal the code chunks.</p>
-<p>This page was last rendered on 2024-12-04 15:01:48.706818.</p>
+<p>This page was last rendered on 2025-04-15 17:32:05.866204.</p>
 <section id="set-up" class="level2">
 <h2 class="anchored" data-anchor-id="set-up">Set-up</h2>
 <p>We load <code>ggplot2</code> to make the following plot commands easier to type.</p>
@@ -320,7 +325,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">pdf =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>We have 316 papers with PDFs to process.</p>
+<p>We have 422 papers with PDFs to process.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -342,7 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">pdf =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>We have 429 papers <em>without</em> PDFs to process. In a separate workflow, we will try to access these papers via the PSU Libraries and other sources.</p>
+<p>We have 421 papers <em>without</em> PDFs to process. In a separate workflow, we will try to access these papers via the PSU Libraries and other sources.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -353,7 +358,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 BOOKTITLE, CHAPTER, CROSSREF, EDITION, EDITOR, HOWPUBLISHED, INSTITUTION,
 JOURNAL, KEY, MONTH, NOTE, NUMBER, ORGANIZATION, PAGES, PUBLISHER, SCHOOL,
 SERIES, TITLE, TYPE, VOLUME, YEAR, JOURNALTITLE, ISSUE, DATE, DOI, PMID, ISSN,
-URL, LANGUAGE, URLDATE, KEYWORDS, PMC, LOCATION, ISBN, ORIGTITLE, pdf)`</code></pre>
+URL, LANGUAGE, KEYWORDS, PMC, URLDATE, ORIGTITLE, LOCATION, EVENTTITLE, VENUE,
+ISBN, PAGETOTAL, pdf)`</code></pre>
 </div>
 </div>
 </section>
@@ -451,7 +457,7 @@ Figure&nbsp;3.1: Papers by publication year
 </div>
 </div>
 </div>
-<p>There are 745 papers in our Paperpile. Of these 316 have PDFs.</p>
+<p>There are 843 papers in our Paperpile. Of these 422 have PDFs.</p>
 </section>
 </section>
 <section id="extracted-tables" class="level2">
@@ -475,7 +481,7 @@ Figure&nbsp;3.1: Papers by publication year
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>n_papers <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(img_df<span class="sc">$</span>paper_id))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>We have processed 84 papers and 230 tables as of 2024-12-04 15:01:56.531004.</p>
+<p>We have processed 84 papers and 230 tables as of 2025-04-15 17:32:12.713829.</p>
 <section id="papers-entered-by-analyst" class="level3">
 <h3 class="anchored" data-anchor-id="papers-entered-by-analyst">Papers entered by analyst</h3>
 <p>We use the <code>from_paperpile_via_github</code> tab to keep track of our work. So, we first import this sheet.</p>
@@ -504,8 +510,8 @@ Figure&nbsp;3.1: Papers by publication year
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>open_attempt_by
-ars bhb hal jmd nlc  sh trw 
- 10  74  13  27   6   1  32 </code></pre>
+ars bhb hal jmd kgm mro nlc rog  sh trw 
+ 10  73  17  27   1   2   5   7   2  43 </code></pre>
 </div>
 </div>
 <p>Here is a table of the number of captured figures:</p>
@@ -635,8 +641,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -798,7 +802,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
