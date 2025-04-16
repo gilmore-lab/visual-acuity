@@ -132,20 +132,73 @@ Rick Gilmore decided to take the mean of the age range reported in the [@Xiang20
 #| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"
 
 typ_group_df |>
+  dplyr::mutate(author_date = paste0(author_first, "_", pub_year)) |>
   ggplot() +
   aes(
     x = age_grp_rog,
     y = mean_acuity_cyc_deg,
-    color = country
+    color = author_year
   ) +
   geom_point() +
-  geom_smooth() +
+  geom_smooth(method = "lm", se = FALSE) +
   facet_grid(cols = vars(binoc_monoc)) +
   xlab("Age (mos)") +
   ylab("Mean acuity (cyc/deg)") +
-  theme(legend.position = "bottom") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank()) +
   scale_y_continuous(limits = c(0, 30))
 ```
+
+```{r}
+typ_group_df |>
+  ggplot() +
+  aes(x = mean_acuity_cyc_deg, y = sd) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+```{r}
+typ_group_df |>
+  ggplot() +
+  aes(x = age_grp_rog, y = sd) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+```{r}
+#| label: tbl-typical-group-binoc
+#| tbl-cap: "Participants tested binocularly by study"
+typ_group_df_binoc <- typ_group_df |>
+  dplyr::select(author_year, age_grp_rog, binoc_monoc, n_participants) |>
+  dplyr::filter(binoc_monoc == "binoc") 
+
+typ_group_df_binoc |>
+  group_by(author_year) |>
+  dplyr::arrange(author_year) |>
+  
+  dplyr::summarise(tot_participants = sum(n_participants)) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_material()
+```
+
+There were *n*=`{r} sum(typ_group_df_binoc$n_participants)` participants tested binocularly from *n*=`{r} length(unique(typ_group_df_binoc$author_year))` studies.
+
+```{r}
+#| label: tbl-typical-group-monoc
+#| tbl-cap: "Participants tested monocularly by study"
+typ_group_df_monoc <- typ_group_df |>
+  dplyr::select(author_first, pub_year, age_grp_rog, binoc_monoc, n_participants) |>
+  dplyr::filter(binoc_monoc == "monoc") 
+
+typ_group_df_monoc |>
+  group_by(pub_year, author_first) |>
+  dplyr::arrange(pub_year) |>
+  dplyr::summarise(tot_participants = sum(n_participants)) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_material()
+```
+
+There were *n*=`{r} sum(typ_group_df_monoc$n_participants)` participants tested monocularly.
 
 ### Atypical Group
 
