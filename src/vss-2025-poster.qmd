@@ -1,0 +1,83 @@
+---
+title: Synthesizing evidence about developmental patterns in human visual acuity as measured by Teller Acuity Cards
+format:
+  poster-typst: 
+    size: "72x36"
+    poster-authors: "R.O. Gilmore^1^, J. DiFulvio^1^, B. Beamer^1^, N. Cruz^1^"
+    departments: "^1^Department of Psychology, The Pennsylvania State University"
+    institution-logo: "./include/img/penn-state-shield.jpg"
+    univ_image: "./include/img/unwatermarked-mt-nittany.jpg"
+    univ-logo-column-size: 6
+    univ-logo-scale: 75
+    title-column-size: 54
+    title-font-size: 100
+    authors-font-size: 52
+    univ-image-column-size: 8
+    univ-image-scale: 80
+    font-size: 48
+    footer-text: "Vision Sciences Society 2025"
+    footer-emails: "rog1@psu.edu"
+    footer-color: "a4c5e6"
+    footer-url: "Download this poster at:  https://gilmore-lab.github.io"
+---
+
+# Abstract
+
+Replication is a cornerstone of scientific rigor and a prerequisite for cumulative science. This project synthesized evidence from published research that employed a widely used measure of grating visual acuity (VA), Teller Acuity Cards (TAC). We sought to capture findings about the development of VA in early childhood into an aggregated dataset and share the dataset openly. Online literature searches identified papers that mentioned “teller acuity cards”, “visual acuity cards”, or “teller cards”. We found n=745 papers published from 1974-2024. Next, we identified empirical papers that used TAC to measure VA and which reported VA in an extractable tabular form. To-date, n=250 of 316 papers with available PDF versions have been evaluated and n=14 have been identified that present extractable data meeting our screening criteria. Available datasets represent more than n=3,991 participants and 7 countries (Australia, Brazil, Canada, China, Italy, Mexico, and the U.S.). As expected, group VA increases from birth to 36-months, with faster rates of change among children tested binocularly (0.47 cyc/deg per month) than those tested monocularly (0.35 cyc/deg per month). Group VA values at similar ages vary substantially across studies, especially in children older than 12 months. Our synthesis of published TAC VA data confirms anticipated age-related trends and points to avenues for future research, particularly regarding what factors account for cross-study and by-country differences in rates of development. We hope our soon-to-be openly shared dataset contributes toward a more cumulative science of visual development.
+
+# Methods
+
+1. Paper search
+2. Paper filtering, evaluation
+3. Data aggregation, cleaning
+4. Data visualization
+
+# Results
+
+## Papers synthesized
+
+| **Category** | *n*      | **Comments** |
+|--------|------------|---------------|
+| Found in search | 745 | Terms: “teller acuity cards”, “visual acuity cards”, or “teller cards” |
+| Had PDFs | 350? | Continuing to seek additional papers |
+| No PDF available | 395? | |
+| Extractable data | 20? | |
+
+\
+
+## Group data: Typically developing children
+
+![](https://gilmore-lab.github.io/visual-acuity/vss-2025-submitted_files/figure-html/fig-typical-group-by-age-1.png)
+
+## Group data: Aypically developing children
+
+![](https://gilmore-lab.github.io/visual-acuity/vss-2025-submitted_files/figure-html/fig-atypical-group-by-age-1.png)
+
+## Individual data: Typically developing children
+
+![](https://gilmore-lab.github.io/visual-acuity/vss-2025-submitted_files/figure-html/fig-typical-indiv-by-age-1.png)
+
+# Conclusions
+
+::: {.block fill="luma(210)" inset="25pt" radius="15pt" stroke="5pt + blue"}
+
+- Synthesizing evidence about core facets of human visual development is important and illuminating.
+
+- Idiosyncratic practices for reporting data in published papers makes evidence synthesis challenging.
+
+- Future work will involve contacting individual researchers to seek unpublished or more complete datasets from published work.
+
+- Vision scientists should adopt open data sharing practices more widely.
+:::
+
+# Data availability
+
+Data and code used in the preparation of this report are available at: <https://gilmore-lab.github.io/visual-acuity>.
+
+```{r}
+#| label: qr-code-site
+#| echo: false
+plot(qrcode::qr_code("https://gilmore-lab.github.io/visual-acuity"))
+```
+
+# References
