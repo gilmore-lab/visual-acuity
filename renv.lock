@@ -82,6 +82,16 @@
       ],
       "Hash": "c39f4155b3ceb1a9a2799d700fbd4b6a"
     },
+    "assertthat": {
+      "Package": "assertthat",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "tools"
+      ],
+      "Hash": "50c838a310445e954bc13f26f26a6ecf"
+    },
     "base64enc": {
       "Package": "base64enc",
       "Version": "0.1-3",
@@ -898,6 +908,19 @@
         "vctrs"
       ],
       "Hash": "cc8b5d43f90551fa6df0a6be5d640a4f"
+    },
+    "qrcode": {
+      "Package": "qrcode",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "assertthat",
+        "stats",
+        "utils"
+      ],
+      "Hash": "e74a28e63bd943ef0c662d2feffdcb41"
     },
     "rappdirs": {
       "Package": "rappdirs",

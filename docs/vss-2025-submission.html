@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>VSS 2025 Submission – Legacy Project: Visual Acuity</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./data-management-plan.html" rel="next">
+<link href="./data.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="include/css/styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./vss-2025-submission.html"><span class="chapter-title">VSS 2025 Submission</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Legacy Project: Visual Acuity</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/gilmore-lab/visual-acuity/tree/main/src/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">About</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./protocol_v01.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Protocol</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dashboard.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dashboard</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Cleaning &amp; visualization</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./vss-2025-submission.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">VSS 2025 Submission</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Addenda</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data-management-plan.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Data Management Plan</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#title" id="toc-title" class="nav-link active" data-scroll-target="#title">Title</a></li>
+  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#status" id="toc-status" class="nav-link" data-scroll-target="#status">Status</a></li>
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#import" id="toc-import" class="nav-link" data-scroll-target="#import">Import</a></li>
+  <li><a href="#visualize" id="toc-visualize" class="nav-link" data-scroll-target="#visualize">Visualize</a></li>
+  <li><a href="#atypical-group" id="toc-atypical-group" class="nav-link" data-scroll-target="#atypical-group">Atypical Group</a></li>
+  <li><a href="#typical-individual" id="toc-typical-individual" class="nav-link" data-scroll-target="#typical-individual">Typical Individual</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/gilmore-lab/visual-acuity/edit/main/src/vss-2025-submission.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gilmore-lab/visual-acuity/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-title">VSS 2025 Submission</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">April 17, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="title" class="level2">
+<h2 class="anchored" data-anchor-id="title">Title</h2>
+<p>Synthesizing evidence about developmental patterns in human visual acuity as measured by Teller Acuity Cards</p>
+</section>
+<section id="authors" class="level2">
+<h2 class="anchored" data-anchor-id="authors">Authors</h2>
+<p>Rick Gilmore (rog1@psu.edu), Julia DiFulvio, Brianna Beamer, Nicole Cruz; The Pennsylvania State University</p>
+</section>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>Replication is a cornerstone of scientific rigor and a prerequisite for cumulative science. This project synthesized evidence from published research that employed a widely used measure of grating visual acuity (VA), Teller Acuity Cards (TAC). We sought to capture findings about the development of VA in early childhood into an aggregated dataset and share the dataset openly. Online literature searches identified papers that mentioned “teller acuity cards”, “visual acuity cards”, or “teller cards”. We found n=745 papers published from 1974-2024. Next, we identified empirical papers that used TAC to measure VA and which reported VA in an extractable tabular form. To-date, n=250 of 316 papers with available PDF versions have been evaluated and n=14 have been identified that present extractable data meeting our screening criteria. Available datasets represent more than n=3,991 participants and 7 countries (Australia, Brazil, Canada, China, Italy, Mexico, and the U.S.). As expected, group VA increases from birth to 36-months, with faster rates of change among children tested binocularly (0.47 cyc/deg per month) than those tested monocularly (0.35 cyc/deg per month). Group VA values at similar ages vary substantially across studies, especially in children older than 12 months. Our synthesis of published TAC VA data confirms anticipated age-related trends and points to avenues for future research, particularly regarding what factors account for cross-study and by-country differences in rates of development. We hope our soon-to-be openly shared dataset contributes toward a more cumulative science of visual development.</p>
+</section>
+<section id="status" class="level2">
+<h2 class="anchored" data-anchor-id="status">Status</h2>
+<p>The poster was accepted on February 6, 2025. It will be presented as follows:</p>
+<p><em>Poster Session</em>: Development: Infants, children<br>
+<em>Date/Time</em>: Sunday, May 18, 2025, 2:45 – 6:45 pm<br>
+<em>Location</em>: Pavilion<br>
+</p>
+</section>
+<section id="visualization" class="level2">
+<h2 class="anchored" data-anchor-id="visualization">Visualization</h2>
+<p>The following code documents our data visualization work.</p>
+<section id="setup" class="level3">
+<h3 class="anchored" data-anchor-id="setup">Setup</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+</div>
+</section>
+<section id="import" class="level3">
+<h3 class="anchored" data-anchor-id="import">Import</h3>
+<p>We use a Google Sheet to store the by-study data:</p>
+<p><a href="https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0</a></p>
+<p>The Google Sheet has multiple tabs:</p>
+<ul>
+<li>The <code>typical_group</code> tab contains group data from typically developing children.</li>
+<li>The <code>typical_indiv</code> tab contains data from typically developing individual children.</li>
+<li>The <code>atypical_group</code> tab contains group data from atypically developing children.</li>
+<li>The <code>atypical_indiv</code> tab contains data from atypically developing individual children.</li>
+</ul>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a helper function</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>import_save_TAC <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">sheet_name =</span> <span class="st">"typical_group"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                            <span class="at">csv_name =</span> <span class="st">"typical_group.csv"</span>) {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  this_sheet <span class="ot">&lt;-</span> googlesheets4<span class="sc">::</span><span class="fu">read_sheet</span>(<span class="at">ss =</span> params<span class="sc">$</span>google_data_url,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                            <span class="at">sheet =</span> sheet_name)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  out_fn <span class="ot">&lt;-</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, csv_name)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">write_csv</span>(this_sheet, out_fn)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated: "</span>, out_fn)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data files</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(params<span class="sc">$</span>data_dir)) {</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing "</span>,  params<span class="sc">$</span>data_dir, <span class="st">"."</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(params<span class="sc">$</span>data_dir)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (params<span class="sc">$</span>use_sysenv_creds) {</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    google_creds <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (google_creds <span class="sc">!=</span> <span class="st">""</span>) {</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> google_creds)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>      googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"No Google account information stored in `.Renviron`."</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Add authorized Google account name to `.Renviron` using `usethis::edit_r_environ()`."</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map2</span>(</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_group"</span>,</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_indiv"</span>,</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_group"</span>,</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_indiv"</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_group.csv"</span>,</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_indiv.csv"</span>,</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_group.csv"</span>,</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_indiv.csv"</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    import_save_TAC</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>  <span class="co"># import_save_TAC()</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>  <span class="co"># this_sheet &lt;- googlesheets4::read_sheet(ss = params$google_data_url,</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>  <span class="co">#                           sheet = params$sheet_name)</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  <span class="co"># out_fn &lt;- file.path(params$data_dir, params$data_fn)</span></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>  <span class="co"># readr::write_csv(this_sheet, out_fn)</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>  <span class="co"># message("Data updated: ", out_fn)</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Reading from "Legacy Project Acuity Data: By Paper".</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Range ''typical_group''.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data updated: data/csv/typical_group.csv</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Reading from "Legacy Project Acuity Data: By Paper".</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Range ''typical_indiv''.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data updated: data/csv/typical_indiv.csv</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Reading from "Legacy Project Acuity Data: By Paper".</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Range ''atypical_group''.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data updated: data/csv/atypical_group.csv</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Reading from "Legacy Project Acuity Data: By Paper".</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ Range ''atypical_indiv''.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data updated: data/csv/atypical_indiv.csv</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+NULL
+
+[[2]]
+NULL
+
+[[3]]
+NULL
+
+[[4]]
+NULL</code></pre>
+</div>
+</div>
+</section>
+<section id="visualize" class="level3">
+<h3 class="anchored" data-anchor-id="visualize">Visualize</h3>
+<p>We’ll create visualizations for each group of data separately.</p>
+<section id="typical-group" class="level4">
+<h4 class="anchored" data-anchor-id="typical-group">Typical Group</h4>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="ot">&lt;-</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"typical_group.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Rick Gilmore decided to take the mean of the age range reported in the <span class="citation" data-cites="Xiang2021-ry">(<a href="#ref-Xiang2021-ry" role="doc-biblioref">Xiang et al., 2021</a>)</span> data and create a new variable <em>strictly</em> for visualization purposes, <code>age_grp_rog</code>.</p>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> author_year</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_smooth()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-typical-group-by-age-paper" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-typical-group-by-age-paper-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="vss-2025-submission_files/figure-html/fig-typical-group-by-age-paper-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-typical-group-by-age-paper-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-typical-group-by-age" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-typical-group-by-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="vss-2025-submission_files/figure-html/fig-typical-group-by-age-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-typical-group-by-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.2: Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Let’s limit consideration to children below three.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> binoc_monoc</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(binoc_monoc)) +</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-typical-group-by-age-less-than-3y" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-typical-group-by-age-less-than-3y-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="vss-2025-submission_files/figure-html/fig-typical-group-by-age-less-than-3y-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-typical-group-by-age-less-than-3y-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.3: Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Let’s look at TAC-I vs.&nbsp;TAC-II</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">card_type =</span> stringr<span class="sc">::</span><span class="fu">str_to_upper</span>(card_type)) <span class="sc">|&gt;</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> card_type</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-typical-group-by-age-less-than-3y-monoc-binoc-by-card-type" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-typical-group-by-age-less-than-3y-monoc-binoc-by-card-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="vss-2025-submission_files/figure-html/fig-typical-group-by-age-less-than-3y-monoc-binoc-by-card-type-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-typical-group-by-age-less-than-3y-monoc-binoc-by-card-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.4: Developmental time course of mean grating acuity (in cyc/deg) for typically developing children 3 and younger as assessed by Teller Acuity Cards. Comparison between TAC-I and TAC-II cards by binocular vs.&nbsp;monocular testing.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_acuity_cyc_deg, <span class="at">y =</span> sd) <span class="sc">+</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 73 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 73 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-typical-group-sd-by-acuity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-typical-group-sd-by-acuity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="vss-2025-submission_files/figure-html/fig-typical-group-sd-by-acuity-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-typical-group-sd-by-acuity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.5: Relationship between the standard deviation (SD) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> age_grp_rog, <span class="at">y =</span> sd) <span class="sc">+</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 73 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 73 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-typical-group-sd-by-age" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-typical-group-sd-by-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="vss-2025-submission_files/figure-html/fig-typical-group-sd-by-age-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-typical-group-sd-by-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.6: Relationship between the standard deviation (SD in octaves) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards as a function of child age in months.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"binoc"</span>) </span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="sc">|&gt;</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(author_year) <span class="sc">|&gt;</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(author_year) <span class="sc">|&gt;</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-typical-group-binoc" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-typical-group-binoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.1: Participants tested binocularly by study
+</figcaption>
+<div aria-describedby="tbl-typical-group-binoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="lightable-material do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">author_year</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">tot_participants</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Brown1986</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cavallini2002</td>
+<td style="text-align: right;">414</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Courage1990</td>
+<td style="text-align: right;">140</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dobson1987</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Heersema1988</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Heersema1990</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kohl1988</td>
+<td style="text-align: right;">36</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Leone2014</td>
+<td style="text-align: right;">544</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">McDonald1985</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">McDonald1986a</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">McDonald1986b</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">McDonald1986c</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rodriguez1996</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Salomao1995</td>
+<td style="text-align: right;">646</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Teller1986</td>
+<td style="text-align: right;">247</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Wen2022</td>
+<td style="text-align: right;">155</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Xiang2021</td>
+<td style="text-align: right;">215</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">van Hof-van Duin1986</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">van Hof-van Duin1990</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>There were <em>n</em>=NA participants tested binocularly from <em>n</em>=19 studies.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_first, pub_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"monoc"</span>) </span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="sc">|&gt;</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pub_year, author_first) <span class="sc">|&gt;</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(pub_year) <span class="sc">|&gt;</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'pub_year'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div id="tbl-typical-group-monoc" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-typical-group-monoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.2: Participants tested monocularly by study
+</figcaption>
+<div aria-describedby="tbl-typical-group-monoc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="lightable-material do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">pub_year</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">author_first</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">tot_participants</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Leone</td>
+<td style="text-align: right;">442</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Mayer</td>
+<td style="text-align: right;">451</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Salomao</td>
+<td style="text-align: right;">624</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Teller</td>
+<td style="text-align: right;">71</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Xiang</td>
+<td style="text-align: right;">208</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>There were <em>n</em>=1796 participants tested monocularly.</p>
+</section>
+</section>
+<section id="atypical-group" class="level3">
+<h3 class="anchored" data-anchor-id="atypical-group">Atypical Group</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"atypical_group.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>spc_tbl_ [33 × 31] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ BIBTEXKEY                     : chr [1:33] "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" ...
+ $ author_first                  : chr [1:33] "Mash" "Mash" "Mash" "Mash" ...
+ $ title                         : chr [1:33] "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" ...
+ $ condition                     : chr [1:33] "preterm_birth" "preterm_birth" "preterm_birth" "preterm_birth" ...
+ $ age_mos                       : num [1:33] 4 8 11 17 24 30 36 48 4 8 ...
+ $ binoc_minoc                   : chr [1:33] "monoc" "monoc" "monoc" "monoc" ...
+ $ eye                           : chr [1:33] "right" "right" "right" "right" ...
+ $ n_participants                : num [1:33] 95 103 90 82 83 95 105 125 95 103 ...
+ $ mean_acuity                   : num [1:33] 2.18 3.87 3.53 5.6 7.05 ...
+ $ acuity_units                  : chr [1:33] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
+ $ mean_acuity_standard_deviation: num [1:33] 0.76 0.66 0.8 0.76 0.76 0.76 0.66 0.53 0.73 0.63 ...
+ $ std_dev_units                 : chr [1:33] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
+ $ indiv_eye_acuity_cyc_deg      : logi [1:33] NA NA NA NA NA NA ...
+ $ st_dev_indiv_eye              : logi [1:33] NA NA NA NA NA NA ...
+ $ country                       : chr [1:33] "united_states" "united_states" "united_states" "united_states" ...
+ $ card_type                     : chr [1:33] "tac_i" "tac_i" "tac_i" "tac_i" ...
+ $ Column 1                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 2                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 3                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 4                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 5                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 6                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 7                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 8                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 9                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 10                     : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 11                     : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 12                     : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 13                     : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 14                     : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 15                     : logi [1:33] NA NA NA NA NA NA ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   BIBTEXKEY = col_character(),
+  ..   author_first = col_character(),
+  ..   title = col_character(),
+  ..   condition = col_character(),
+  ..   age_mos = col_double(),
+  ..   binoc_minoc = col_character(),
+  ..   eye = col_character(),
+  ..   n_participants = col_double(),
+  ..   mean_acuity = col_double(),
+  ..   acuity_units = col_character(),
+  ..   mean_acuity_standard_deviation = col_double(),
+  ..   std_dev_units = col_character(),
+  ..   indiv_eye_acuity_cyc_deg = col_logical(),
+  ..   st_dev_indiv_eye = col_logical(),
+  ..   country = col_character(),
+  ..   card_type = col_character(),
+  ..   `Column 1` = col_logical(),
+  ..   `Column 2` = col_logical(),
+  ..   `Column 3` = col_logical(),
+  ..   `Column 4` = col_logical(),
+  ..   `Column 5` = col_logical(),
+  ..   `Column 6` = col_logical(),
+  ..   `Column 7` = col_logical(),
+  ..   `Column 8` = col_logical(),
+  ..   `Column 9` = col_logical(),
+  ..   `Column 10` = col_logical(),
+  ..   `Column 11` = col_logical(),
+  ..   `Column 12` = col_logical(),
+  ..   `Column 13` = col_logical(),
+  ..   `Column 14` = col_logical(),
+  ..   `Column 15` = col_logical()
+  .. )
+ - attr(*, "problems")=&lt;externalptr&gt; </code></pre>
+</div>
+</div>
+<p>Some of the acuity measurements were in LogMAR, so we must transform these to cycles per degree before plotting.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>logMAR_to_cyc_per_deg <span class="ot">&lt;-</span> <span class="cf">function</span>(logMARmin) {</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="dv">60</span><span class="sc">/</span>(<span class="dv">10</span><span class="sc">^</span>(logMARmin))</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span> atyp_group_df <span class="sc">|&gt;</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">mean_acuity_cyc_deg =</span> <span class="fu">if_else</span>(acuity_units <span class="sc">==</span> <span class="st">"cyc_deg"</span>, mean_acuity, </span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>                                              <span class="fu">logMAR_to_cyc_per_deg</span>(mean_acuity)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="sc">|&gt;</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> eye</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(condition)) <span class="sc">+</span></span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: span too small.  fewer data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: pseudoinverse used at 2.955</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: neighborhood radius 6.045</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: reciprocal condition number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: There are other near singularities as well. 36.542</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : span too small.  fewer
+data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
+2.955</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
+6.045</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
+number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : There are other near
+singularities as well. 36.542</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: span too small.  fewer data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: pseudoinverse used at 2.955</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: neighborhood radius 6.045</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: reciprocal condition number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: There are other near singularities as well. 36.542</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : span too small.  fewer
+data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
+2.955</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
+6.045</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
+number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : There are other near
+singularities as well. 36.542</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning
+-Inf
+Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning
+-Inf</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-atypical-group-by-age" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-atypical-group-by-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="vss-2025-submission_files/figure-html/fig-atypical-group-by-age-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-atypical-group-by-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.7: Developmental time course of mean grating acuity (in cyc/deg) for atypically developing children as assessed by Teller Acuity Cards
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="typical-individual" class="level3">
+<h3 class="anchored" data-anchor-id="typical-individual">Typical Individual</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="ot">&lt;-</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"typical_indiv.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [33 × 32] (S3: tbl_df/tbl/data.frame)
+ $ BIBTEXKEY                     : chr [1:33] "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" ...
+ $ author_first                  : chr [1:33] "Mash" "Mash" "Mash" "Mash" ...
+ $ title                         : chr [1:33] "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" ...
+ $ condition                     : chr [1:33] "preterm_birth" "preterm_birth" "preterm_birth" "preterm_birth" ...
+ $ age_mos                       : num [1:33] 4 8 11 17 24 30 36 48 4 8 ...
+ $ binoc_minoc                   : chr [1:33] "monoc" "monoc" "monoc" "monoc" ...
+ $ eye                           : chr [1:33] "right" "right" "right" "right" ...
+ $ n_participants                : num [1:33] 95 103 90 82 83 95 105 125 95 103 ...
+ $ mean_acuity                   : num [1:33] 2.18 3.87 3.53 5.6 7.05 ...
+ $ acuity_units                  : chr [1:33] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
+ $ mean_acuity_standard_deviation: num [1:33] 0.76 0.66 0.8 0.76 0.76 0.76 0.66 0.53 0.73 0.63 ...
+ $ std_dev_units                 : chr [1:33] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
+ $ indiv_eye_acuity_cyc_deg      : logi [1:33] NA NA NA NA NA NA ...
+ $ st_dev_indiv_eye              : logi [1:33] NA NA NA NA NA NA ...
+ $ country                       : chr [1:33] "united_states" "united_states" "united_states" "united_states" ...
+ $ card_type                     : chr [1:33] "tac_i" "tac_i" "tac_i" "tac_i" ...
+ $ Column 1                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 2                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 3                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 4                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 5                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 6                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 7                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 8                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 9                      : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 10                     : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 11                     : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 12                     : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 13                     : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 14                     : logi [1:33] NA NA NA NA NA NA ...
+ $ Column 15                     : logi [1:33] NA NA NA NA NA NA ...
+ $ mean_acuity_cyc_deg           : num [1:33] 2.18 3.87 3.53 5.6 7.05 ...</code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="sc">|&gt;</span></span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> sub_id</span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(eye)) +</span></span>
+<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb68-12"><a href="#cb68-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>)) <span class="sc">+</span></span>
+<span id="cb68-15"><a href="#cb68-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: span too small.  fewer data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: pseudoinverse used at 0.945</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: neighborhood radius 2.055</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: reciprocal condition number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: There are other near singularities as well. 81.993</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : span too small.  fewer
+data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
+0.945</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
+2.055</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
+number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : There are other near
+singularities as well. 81.993</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: span too small.  fewer data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: pseudoinverse used at -0.06</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: neighborhood radius 6.06</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: reciprocal condition number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: There are other near singularities as well. 82.084</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : span too small.  fewer
+data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
+-0.06</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
+6.06</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
+number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : There are other near
+singularities as well. 82.084</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: span too small.  fewer data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: pseudoinverse used at 0.945</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: neighborhood radius 2.055</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: reciprocal condition number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: There are other near singularities as well. 81.993</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : span too small.  fewer
+data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
+0.945</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
+2.055</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
+number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : There are other near
+singularities as well. 81.993</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: span too small.  fewer data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: pseudoinverse used at 0.945</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: neighborhood radius 5.055</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: reciprocal condition number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: There are other near singularities as well. 81.993</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : span too small.  fewer
+data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
+0.945</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
+5.055</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
+number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : There are other near
+singularities as well. 81.993</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: span too small.  fewer data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: pseudoinverse used at 2.955</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: neighborhood radius 3.045</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: reciprocal condition number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: There are other near singularities as well. 36.542</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : span too small.  fewer
+data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
+2.955</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
+3.045</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
+number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : There are other near
+singularities as well. 36.542</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: span too small.  fewer data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: pseudoinverse used at -0.06</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: neighborhood radius 3.06</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: reciprocal condition number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+: There are other near singularities as well. 82.084</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : span too small.  fewer
+data values than degrees of freedom.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : pseudoinverse used at
+-0.06</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : neighborhood radius
+3.06</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : reciprocal condition
+number 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in predLoess(object$y, object$x, newx = if (is.null(newdata)) object$x
+else if (is.data.frame(newdata))
+as.matrix(model.frame(delete.response(terms(object)), : There are other near
+singularities as well. 82.084</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning
+-Inf
+Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning
+-Inf
+Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning
+-Inf
+Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning
+-Inf
+Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning
+-Inf
+Warning in max(ids, na.rm = TRUE): no non-missing arguments to max; returning
+-Inf</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-typical-indiv-by-age" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-typical-indiv-by-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="vss-2025-submission_files/figure-html/fig-typical-indiv-by-age-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-typical-indiv-by-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.8: Developmental time course of mean grating acuity (in cyc/deg) for typically developing individual children as assessed by Teller Acuity Cards
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Xiang2021-ry" class="csl-entry" role="listitem">
+Xiang, Y., Long, E., Liu, Z., Li, X., Lin, Z., Zhu, Y., … Lin, H. (2021). Study to establish visual acuity norms with teller acuity cards <span>II</span> for infants from southern china. <em>Eye</em>, <em>35</em>(10), 2787–2792. <a href="https://doi.org/10.1038/s41433-020-01314-y">https://doi.org/10.1038/s41433-020-01314-y</a>
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./data.html" class="pagination-link" aria-label="Cleaning &amp; visualization">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Cleaning &amp; visualization</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./data-management-plan.html" class="pagination-link" aria-label="Data Management Plan">
+        <span class="nav-page-text"><span class="chapter-title">Data Management Plan</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb131" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb131-2"><a href="#cb131-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "VSS 2025 Submission"</span></span>
+<span id="cb131-3"><a href="#cb131-3" aria-hidden="true" tabindex="-1"></a><span class="an">params:</span></span>
+<span id="cb131-4"><a href="#cb131-4" aria-hidden="true" tabindex="-1"></a><span class="co">  data_dir: "data/csv"</span></span>
+<span id="cb131-5"><a href="#cb131-5" aria-hidden="true" tabindex="-1"></a><span class="co">  update_data: TRUE</span></span>
+<span id="cb131-6"><a href="#cb131-6" aria-hidden="true" tabindex="-1"></a><span class="co">  use_sysenv_creds: TRUE</span></span>
+<span id="cb131-7"><a href="#cb131-7" aria-hidden="true" tabindex="-1"></a><span class="co">  google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"</span></span>
+<span id="cb131-8"><a href="#cb131-8" aria-hidden="true" tabindex="-1"></a><span class="co">  data_fn: "by-paper.csv"</span></span>
+<span id="cb131-9"><a href="#cb131-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb131-10"><a href="#cb131-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-11"><a href="#cb131-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Title</span></span>
+<span id="cb131-12"><a href="#cb131-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-13"><a href="#cb131-13" aria-hidden="true" tabindex="-1"></a>Synthesizing evidence about developmental patterns in human visual acuity as measured by Teller Acuity Cards</span>
+<span id="cb131-14"><a href="#cb131-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-15"><a href="#cb131-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Authors</span></span>
+<span id="cb131-16"><a href="#cb131-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-17"><a href="#cb131-17" aria-hidden="true" tabindex="-1"></a>Rick Gilmore (rog1@psu.edu), Julia DiFulvio, Brianna Beamer, Nicole Cruz; The Pennsylvania State University</span>
+<span id="cb131-18"><a href="#cb131-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-19"><a href="#cb131-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Abstract</span></span>
+<span id="cb131-20"><a href="#cb131-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-21"><a href="#cb131-21" aria-hidden="true" tabindex="-1"></a>Replication is a cornerstone of scientific rigor and a prerequisite for cumulative science. This project synthesized evidence from published research that employed a widely used measure of grating visual acuity (VA), Teller Acuity Cards (TAC). We sought to capture findings about the development of VA in early childhood into an aggregated dataset and share the dataset openly. Online literature searches identified papers that mentioned “teller acuity cards”, “visual acuity cards”, or “teller cards”. We found n=745 papers published from 1974-2024. Next, we identified empirical papers that used TAC to measure VA and which reported VA in an extractable tabular form. To-date, n=250 of 316 papers with available PDF versions have been evaluated and n=14 have been identified that present extractable data meeting our screening criteria. Available datasets represent more than n=3,991 participants and 7 countries (Australia, Brazil, Canada, China, Italy, Mexico, and the U.S.). As expected, group VA increases from birth to 36-months, with faster rates of change among children tested binocularly (0.47 cyc/deg per month) than those tested monocularly (0.35 cyc/deg per month). Group VA values at similar ages vary substantially across studies, especially in children older than 12 months. Our synthesis of published TAC VA data confirms anticipated age-related trends and points to avenues for future research, particularly regarding what factors account for cross-study and by-country differences in rates of development. We hope our soon-to-be openly shared dataset contributes toward a more cumulative science of visual development.</span>
+<span id="cb131-22"><a href="#cb131-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-23"><a href="#cb131-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Status</span></span>
+<span id="cb131-24"><a href="#cb131-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-25"><a href="#cb131-25" aria-hidden="true" tabindex="-1"></a>The poster was accepted on February 6, 2025. It will be presented as follows:</span>
+<span id="cb131-26"><a href="#cb131-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-27"><a href="#cb131-27" aria-hidden="true" tabindex="-1"></a>*Poster Session*: Development: Infants, children \</span>
+<span id="cb131-28"><a href="#cb131-28" aria-hidden="true" tabindex="-1"></a>*Date/Time*: Sunday, May 18, 2025, 2:45 – 6:45 pm \</span>
+<span id="cb131-29"><a href="#cb131-29" aria-hidden="true" tabindex="-1"></a>*Location*: Pavilion \</span>
+<span id="cb131-30"><a href="#cb131-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-31"><a href="#cb131-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualization</span></span>
+<span id="cb131-32"><a href="#cb131-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-33"><a href="#cb131-33" aria-hidden="true" tabindex="-1"></a>The following code documents our data visualization work.</span>
+<span id="cb131-34"><a href="#cb131-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-35"><a href="#cb131-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### Setup</span></span>
+<span id="cb131-36"><a href="#cb131-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-39"><a href="#cb131-39" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-40"><a href="#cb131-40" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: setup</span></span>
+<span id="cb131-41"><a href="#cb131-41" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span>
+<span id="cb131-42"><a href="#cb131-42" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb131-43"><a href="#cb131-43" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb131-44"><a href="#cb131-44" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb131-45"><a href="#cb131-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-46"><a href="#cb131-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-47"><a href="#cb131-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### Import</span></span>
+<span id="cb131-48"><a href="#cb131-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-49"><a href="#cb131-49" aria-hidden="true" tabindex="-1"></a>We use a Google Sheet to store the by-study data:</span>
+<span id="cb131-50"><a href="#cb131-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-51"><a href="#cb131-51" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0&gt;</span></span>
+<span id="cb131-52"><a href="#cb131-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-53"><a href="#cb131-53" aria-hidden="true" tabindex="-1"></a>The Google Sheet has multiple tabs:</span>
+<span id="cb131-54"><a href="#cb131-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-55"><a href="#cb131-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`typical_group`</span> tab contains group data from typically developing children.</span>
+<span id="cb131-56"><a href="#cb131-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`typical_indiv`</span> tab contains data from typically developing individual children.</span>
+<span id="cb131-57"><a href="#cb131-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`atypical_group`</span> tab contains group data from atypically developing children.</span>
+<span id="cb131-58"><a href="#cb131-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`atypical_indiv`</span> tab contains data from atypically developing individual children.</span>
+<span id="cb131-59"><a href="#cb131-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-62"><a href="#cb131-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-63"><a href="#cb131-63" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-data</span></span>
+<span id="cb131-64"><a href="#cb131-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a helper function</span></span>
+<span id="cb131-65"><a href="#cb131-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-66"><a href="#cb131-66" aria-hidden="true" tabindex="-1"></a>import_save_TAC <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">sheet_name =</span> <span class="st">"typical_group"</span>,</span>
+<span id="cb131-67"><a href="#cb131-67" aria-hidden="true" tabindex="-1"></a>                            <span class="at">csv_name =</span> <span class="st">"typical_group.csv"</span>) {</span>
+<span id="cb131-68"><a href="#cb131-68" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb131-69"><a href="#cb131-69" aria-hidden="true" tabindex="-1"></a>  this_sheet <span class="ot">&lt;-</span> googlesheets4<span class="sc">::</span><span class="fu">read_sheet</span>(<span class="at">ss =</span> params<span class="sc">$</span>google_data_url,</span>
+<span id="cb131-70"><a href="#cb131-70" aria-hidden="true" tabindex="-1"></a>                            <span class="at">sheet =</span> sheet_name)</span>
+<span id="cb131-71"><a href="#cb131-71" aria-hidden="true" tabindex="-1"></a>  out_fn <span class="ot">&lt;-</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, csv_name)</span>
+<span id="cb131-72"><a href="#cb131-72" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">write_csv</span>(this_sheet, out_fn)</span>
+<span id="cb131-73"><a href="#cb131-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated: "</span>, out_fn)</span>
+<span id="cb131-74"><a href="#cb131-74" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb131-75"><a href="#cb131-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-76"><a href="#cb131-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data files</span></span>
+<span id="cb131-77"><a href="#cb131-77" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(params<span class="sc">$</span>data_dir)) {</span>
+<span id="cb131-78"><a href="#cb131-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing "</span>,  params<span class="sc">$</span>data_dir, <span class="st">"."</span>)</span>
+<span id="cb131-79"><a href="#cb131-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(params<span class="sc">$</span>data_dir)</span>
+<span id="cb131-80"><a href="#cb131-80" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb131-81"><a href="#cb131-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-82"><a href="#cb131-82" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
+<span id="cb131-83"><a href="#cb131-83" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (params<span class="sc">$</span>use_sysenv_creds) {</span>
+<span id="cb131-84"><a href="#cb131-84" aria-hidden="true" tabindex="-1"></a>    google_creds <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>)</span>
+<span id="cb131-85"><a href="#cb131-85" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (google_creds <span class="sc">!=</span> <span class="st">""</span>) {</span>
+<span id="cb131-86"><a href="#cb131-86" aria-hidden="true" tabindex="-1"></a>      <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> google_creds)</span>
+<span id="cb131-87"><a href="#cb131-87" aria-hidden="true" tabindex="-1"></a>      googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
+<span id="cb131-88"><a href="#cb131-88" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb131-89"><a href="#cb131-89" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"No Google account information stored in `.Renviron`."</span>)</span>
+<span id="cb131-90"><a href="#cb131-90" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(</span>
+<span id="cb131-91"><a href="#cb131-91" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Add authorized Google account name to `.Renviron` using `usethis::edit_r_environ()`."</span></span>
+<span id="cb131-92"><a href="#cb131-92" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb131-93"><a href="#cb131-93" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb131-94"><a href="#cb131-94" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb131-95"><a href="#cb131-95" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb131-96"><a href="#cb131-96" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map2</span>(</span>
+<span id="cb131-97"><a href="#cb131-97" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
+<span id="cb131-98"><a href="#cb131-98" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_group"</span>,</span>
+<span id="cb131-99"><a href="#cb131-99" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_indiv"</span>,</span>
+<span id="cb131-100"><a href="#cb131-100" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_group"</span>,</span>
+<span id="cb131-101"><a href="#cb131-101" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_indiv"</span></span>
+<span id="cb131-102"><a href="#cb131-102" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb131-103"><a href="#cb131-103" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
+<span id="cb131-104"><a href="#cb131-104" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_group.csv"</span>,</span>
+<span id="cb131-105"><a href="#cb131-105" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_indiv.csv"</span>,</span>
+<span id="cb131-106"><a href="#cb131-106" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_group.csv"</span>,</span>
+<span id="cb131-107"><a href="#cb131-107" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_indiv.csv"</span></span>
+<span id="cb131-108"><a href="#cb131-108" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb131-109"><a href="#cb131-109" aria-hidden="true" tabindex="-1"></a>    import_save_TAC</span>
+<span id="cb131-110"><a href="#cb131-110" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb131-111"><a href="#cb131-111" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb131-112"><a href="#cb131-112" aria-hidden="true" tabindex="-1"></a>  <span class="co"># import_save_TAC()</span></span>
+<span id="cb131-113"><a href="#cb131-113" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb131-114"><a href="#cb131-114" aria-hidden="true" tabindex="-1"></a>  <span class="co"># this_sheet &lt;- googlesheets4::read_sheet(ss = params$google_data_url,</span></span>
+<span id="cb131-115"><a href="#cb131-115" aria-hidden="true" tabindex="-1"></a>  <span class="co">#                           sheet = params$sheet_name)</span></span>
+<span id="cb131-116"><a href="#cb131-116" aria-hidden="true" tabindex="-1"></a>  <span class="co"># out_fn &lt;- file.path(params$data_dir, params$data_fn)</span></span>
+<span id="cb131-117"><a href="#cb131-117" aria-hidden="true" tabindex="-1"></a>  <span class="co"># readr::write_csv(this_sheet, out_fn)</span></span>
+<span id="cb131-118"><a href="#cb131-118" aria-hidden="true" tabindex="-1"></a>  <span class="co"># message("Data updated: ", out_fn)</span></span>
+<span id="cb131-119"><a href="#cb131-119" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb131-120"><a href="#cb131-120" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
+<span id="cb131-121"><a href="#cb131-121" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb131-122"><a href="#cb131-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-123"><a href="#cb131-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-124"><a href="#cb131-124" aria-hidden="true" tabindex="-1"></a><span class="fu">### Visualize</span></span>
+<span id="cb131-125"><a href="#cb131-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-126"><a href="#cb131-126" aria-hidden="true" tabindex="-1"></a>We'll create visualizations for each group of data separately.</span>
+<span id="cb131-127"><a href="#cb131-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-128"><a href="#cb131-128" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Typical Group</span></span>
+<span id="cb131-129"><a href="#cb131-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-132"><a href="#cb131-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-133"><a href="#cb131-133" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-typical-group</span></span>
+<span id="cb131-134"><a href="#cb131-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-135"><a href="#cb131-135" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="ot">&lt;-</span></span>
+<span id="cb131-136"><a href="#cb131-136" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"typical_group.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb131-137"><a href="#cb131-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-138"><a href="#cb131-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-139"><a href="#cb131-139" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb131-140"><a href="#cb131-140" aria-hidden="true" tabindex="-1"></a>Rick Gilmore decided to take the mean of the age range reported in the <span class="co">[</span><span class="ot">@Xiang2021-ry</span><span class="co">]</span> data and create a new variable *strictly* for visualization purposes, <span class="in">`age_grp_rog`</span>.</span>
+<span id="cb131-141"><a href="#cb131-141" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb131-142"><a href="#cb131-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-145"><a href="#cb131-145" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-146"><a href="#cb131-146" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age-paper</span></span>
+<span id="cb131-147"><a href="#cb131-147" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"</span></span>
+<span id="cb131-148"><a href="#cb131-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-149"><a href="#cb131-149" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb131-150"><a href="#cb131-150" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb131-151"><a href="#cb131-151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb131-152"><a href="#cb131-152" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb131-153"><a href="#cb131-153" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb131-154"><a href="#cb131-154" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb131-155"><a href="#cb131-155" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> author_year</span>
+<span id="cb131-156"><a href="#cb131-156" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb131-157"><a href="#cb131-157" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb131-158"><a href="#cb131-158" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb131-159"><a href="#cb131-159" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
+<span id="cb131-160"><a href="#cb131-160" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb131-161"><a href="#cb131-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb131-162"><a href="#cb131-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb131-163"><a href="#cb131-163" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb131-164"><a href="#cb131-164" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb131-165"><a href="#cb131-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-166"><a href="#cb131-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-169"><a href="#cb131-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-170"><a href="#cb131-170" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age</span></span>
+<span id="cb131-171"><a href="#cb131-171" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"</span></span>
+<span id="cb131-172"><a href="#cb131-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-173"><a href="#cb131-173" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb131-174"><a href="#cb131-174" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb131-175"><a href="#cb131-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb131-176"><a href="#cb131-176" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb131-177"><a href="#cb131-177" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb131-178"><a href="#cb131-178" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb131-179"><a href="#cb131-179" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb131-180"><a href="#cb131-180" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb131-181"><a href="#cb131-181" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb131-182"><a href="#cb131-182" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
+<span id="cb131-183"><a href="#cb131-183" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb131-184"><a href="#cb131-184" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb131-185"><a href="#cb131-185" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb131-186"><a href="#cb131-186" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb131-187"><a href="#cb131-187" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb131-188"><a href="#cb131-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-189"><a href="#cb131-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-190"><a href="#cb131-190" aria-hidden="true" tabindex="-1"></a>Let's limit consideration to children below three.</span>
+<span id="cb131-191"><a href="#cb131-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-194"><a href="#cb131-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-195"><a href="#cb131-195" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age-less-than-3y</span></span>
+<span id="cb131-196"><a href="#cb131-196" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"</span></span>
+<span id="cb131-197"><a href="#cb131-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-198"><a href="#cb131-198" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb131-199"><a href="#cb131-199" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb131-200"><a href="#cb131-200" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb131-201"><a href="#cb131-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb131-202"><a href="#cb131-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb131-203"><a href="#cb131-203" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb131-204"><a href="#cb131-204" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb131-205"><a href="#cb131-205" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> binoc_monoc</span>
+<span id="cb131-206"><a href="#cb131-206" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb131-207"><a href="#cb131-207" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb131-208"><a href="#cb131-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb131-209"><a href="#cb131-209" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(binoc_monoc)) +</span></span>
+<span id="cb131-210"><a href="#cb131-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb131-211"><a href="#cb131-211" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb131-212"><a href="#cb131-212" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb131-213"><a href="#cb131-213" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb131-214"><a href="#cb131-214" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb131-215"><a href="#cb131-215" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-216"><a href="#cb131-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-217"><a href="#cb131-217" aria-hidden="true" tabindex="-1"></a>Let's look at TAC-I vs. TAC-II</span>
+<span id="cb131-218"><a href="#cb131-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-221"><a href="#cb131-221" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-222"><a href="#cb131-222" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age-less-than-3y-monoc-binoc-by-card-type</span></span>
+<span id="cb131-223"><a href="#cb131-223" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children 3 and younger as assessed by Teller Acuity Cards. Comparison between TAC-I and TAC-II cards by binocular vs. monocular testing."</span></span>
+<span id="cb131-224"><a href="#cb131-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-225"><a href="#cb131-225" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb131-226"><a href="#cb131-226" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb131-227"><a href="#cb131-227" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb131-228"><a href="#cb131-228" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">card_type =</span> stringr<span class="sc">::</span><span class="fu">str_to_upper</span>(card_type)) <span class="sc">|&gt;</span></span>
+<span id="cb131-229"><a href="#cb131-229" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb131-230"><a href="#cb131-230" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb131-231"><a href="#cb131-231" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb131-232"><a href="#cb131-232" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb131-233"><a href="#cb131-233" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> card_type</span>
+<span id="cb131-234"><a href="#cb131-234" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb131-235"><a href="#cb131-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb131-236"><a href="#cb131-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb131-237"><a href="#cb131-237" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
+<span id="cb131-238"><a href="#cb131-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb131-239"><a href="#cb131-239" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb131-240"><a href="#cb131-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb131-241"><a href="#cb131-241" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb131-242"><a href="#cb131-242" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb131-243"><a href="#cb131-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-244"><a href="#cb131-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-247"><a href="#cb131-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-248"><a href="#cb131-248" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-sd-by-acuity</span></span>
+<span id="cb131-249"><a href="#cb131-249" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Relationship between the standard deviation (SD) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards."</span></span>
+<span id="cb131-250"><a href="#cb131-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-251"><a href="#cb131-251" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb131-252"><a href="#cb131-252" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb131-253"><a href="#cb131-253" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_acuity_cyc_deg, <span class="at">y =</span> sd) <span class="sc">+</span></span>
+<span id="cb131-254"><a href="#cb131-254" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb131-255"><a href="#cb131-255" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span>
+<span id="cb131-256"><a href="#cb131-256" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-257"><a href="#cb131-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-260"><a href="#cb131-260" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-261"><a href="#cb131-261" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-sd-by-age</span></span>
+<span id="cb131-262"><a href="#cb131-262" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Relationship between the standard deviation (SD in octaves) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards as a function of child age in months."</span></span>
+<span id="cb131-263"><a href="#cb131-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-264"><a href="#cb131-264" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb131-265"><a href="#cb131-265" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb131-266"><a href="#cb131-266" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> age_grp_rog, <span class="at">y =</span> sd) <span class="sc">+</span></span>
+<span id="cb131-267"><a href="#cb131-267" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb131-268"><a href="#cb131-268" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span>
+<span id="cb131-269"><a href="#cb131-269" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-270"><a href="#cb131-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-271"><a href="#cb131-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-274"><a href="#cb131-274" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-275"><a href="#cb131-275" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-typical-group-binoc</span></span>
+<span id="cb131-276"><a href="#cb131-276" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Participants tested binocularly by study"</span></span>
+<span id="cb131-277"><a href="#cb131-277" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb131-278"><a href="#cb131-278" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
+<span id="cb131-279"><a href="#cb131-279" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"binoc"</span>) </span>
+<span id="cb131-280"><a href="#cb131-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-281"><a href="#cb131-281" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="sc">|&gt;</span></span>
+<span id="cb131-282"><a href="#cb131-282" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(author_year) <span class="sc">|&gt;</span></span>
+<span id="cb131-283"><a href="#cb131-283" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(author_year) <span class="sc">|&gt;</span></span>
+<span id="cb131-284"><a href="#cb131-284" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb131-285"><a href="#cb131-285" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
+<span id="cb131-286"><a href="#cb131-286" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb131-287"><a href="#cb131-287" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span>
+<span id="cb131-288"><a href="#cb131-288" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-289"><a href="#cb131-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-290"><a href="#cb131-290" aria-hidden="true" tabindex="-1"></a>There were *n*=`{r} sum(typ_group_df_binoc$n_participants)` participants tested binocularly from *n*=<span class="in">`{r} length(unique(typ_group_df_binoc$author_year))`</span> studies.</span>
+<span id="cb131-291"><a href="#cb131-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-294"><a href="#cb131-294" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-295"><a href="#cb131-295" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-typical-group-monoc</span></span>
+<span id="cb131-296"><a href="#cb131-296" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Participants tested monocularly by study"</span></span>
+<span id="cb131-297"><a href="#cb131-297" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb131-298"><a href="#cb131-298" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_first, pub_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
+<span id="cb131-299"><a href="#cb131-299" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"monoc"</span>) </span>
+<span id="cb131-300"><a href="#cb131-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-301"><a href="#cb131-301" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="sc">|&gt;</span></span>
+<span id="cb131-302"><a href="#cb131-302" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pub_year, author_first) <span class="sc">|&gt;</span></span>
+<span id="cb131-303"><a href="#cb131-303" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(pub_year) <span class="sc">|&gt;</span></span>
+<span id="cb131-304"><a href="#cb131-304" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
+<span id="cb131-305"><a href="#cb131-305" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb131-306"><a href="#cb131-306" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span>
+<span id="cb131-307"><a href="#cb131-307" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-308"><a href="#cb131-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-309"><a href="#cb131-309" aria-hidden="true" tabindex="-1"></a>There were *n*=<span class="in">`{r} sum(typ_group_df_monoc$n_participants)`</span> participants tested monocularly.</span>
+<span id="cb131-310"><a href="#cb131-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-311"><a href="#cb131-311" aria-hidden="true" tabindex="-1"></a><span class="fu">### Atypical Group</span></span>
+<span id="cb131-312"><a href="#cb131-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-315"><a href="#cb131-315" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-316"><a href="#cb131-316" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-atypical-group</span></span>
+<span id="cb131-317"><a href="#cb131-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-318"><a href="#cb131-318" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span></span>
+<span id="cb131-319"><a href="#cb131-319" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"atypical_group.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb131-320"><a href="#cb131-320" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span>
+<span id="cb131-321"><a href="#cb131-321" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-322"><a href="#cb131-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-323"><a href="#cb131-323" aria-hidden="true" tabindex="-1"></a>Some of the acuity measurements were in LogMAR, so we must transform these to cycles per degree before plotting.</span>
+<span id="cb131-324"><a href="#cb131-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-327"><a href="#cb131-327" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-328"><a href="#cb131-328" aria-hidden="true" tabindex="-1"></a>logMAR_to_cyc_per_deg <span class="ot">&lt;-</span> <span class="cf">function</span>(logMARmin) {</span>
+<span id="cb131-329"><a href="#cb131-329" aria-hidden="true" tabindex="-1"></a>  <span class="dv">60</span><span class="sc">/</span>(<span class="dv">10</span><span class="sc">^</span>(logMARmin))</span>
+<span id="cb131-330"><a href="#cb131-330" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb131-331"><a href="#cb131-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-332"><a href="#cb131-332" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span> atyp_group_df <span class="sc">|&gt;</span></span>
+<span id="cb131-333"><a href="#cb131-333" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">mean_acuity_cyc_deg =</span> <span class="fu">if_else</span>(acuity_units <span class="sc">==</span> <span class="st">"cyc_deg"</span>, mean_acuity, </span>
+<span id="cb131-334"><a href="#cb131-334" aria-hidden="true" tabindex="-1"></a>                                              <span class="fu">logMAR_to_cyc_per_deg</span>(mean_acuity)))</span>
+<span id="cb131-335"><a href="#cb131-335" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-336"><a href="#cb131-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-339"><a href="#cb131-339" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-340"><a href="#cb131-340" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-atypical-group-by-age</span></span>
+<span id="cb131-341"><a href="#cb131-341" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for atypically developing children as assessed by Teller Acuity Cards"</span></span>
+<span id="cb131-342"><a href="#cb131-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-343"><a href="#cb131-343" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="sc">|&gt;</span></span>
+<span id="cb131-344"><a href="#cb131-344" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb131-345"><a href="#cb131-345" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb131-346"><a href="#cb131-346" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
+<span id="cb131-347"><a href="#cb131-347" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb131-348"><a href="#cb131-348" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> eye</span>
+<span id="cb131-349"><a href="#cb131-349" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb131-350"><a href="#cb131-350" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb131-351"><a href="#cb131-351" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb131-352"><a href="#cb131-352" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(condition)) <span class="sc">+</span></span>
+<span id="cb131-353"><a href="#cb131-353" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb131-354"><a href="#cb131-354" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb131-355"><a href="#cb131-355" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb131-356"><a href="#cb131-356" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb131-357"><a href="#cb131-357" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-358"><a href="#cb131-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-359"><a href="#cb131-359" aria-hidden="true" tabindex="-1"></a><span class="fu">### Typical Individual</span></span>
+<span id="cb131-360"><a href="#cb131-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-363"><a href="#cb131-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-364"><a href="#cb131-364" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-typical-indiv</span></span>
+<span id="cb131-365"><a href="#cb131-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-366"><a href="#cb131-366" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="ot">&lt;-</span></span>
+<span id="cb131-367"><a href="#cb131-367" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"typical_indiv.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb131-368"><a href="#cb131-368" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span>
+<span id="cb131-369"><a href="#cb131-369" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb131-370"><a href="#cb131-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-373"><a href="#cb131-373" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb131-374"><a href="#cb131-374" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-indiv-by-age</span></span>
+<span id="cb131-375"><a href="#cb131-375" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing individual children as assessed by Teller Acuity Cards"</span></span>
+<span id="cb131-376"><a href="#cb131-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb131-377"><a href="#cb131-377" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="sc">|&gt;</span></span>
+<span id="cb131-378"><a href="#cb131-378" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb131-379"><a href="#cb131-379" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb131-380"><a href="#cb131-380" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
+<span id="cb131-381"><a href="#cb131-381" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb131-382"><a href="#cb131-382" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> sub_id</span>
+<span id="cb131-383"><a href="#cb131-383" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb131-384"><a href="#cb131-384" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb131-385"><a href="#cb131-385" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb131-386"><a href="#cb131-386" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(eye)) +</span></span>
+<span id="cb131-387"><a href="#cb131-387" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb131-388"><a href="#cb131-388" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb131-389"><a href="#cb131-389" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb131-390"><a href="#cb131-390" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>)) <span class="sc">+</span></span>
+<span id="cb131-391"><a href="#cb131-391" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span>
+<span id="cb131-392"><a href="#cb131-392" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/gilmore-lab/visual-acuity/edit/main/src/vss-2025-submission.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/gilmore-lab/visual-acuity/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

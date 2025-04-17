@@ -20,9 +20,17 @@ Rick Gilmore (rog1@psu.edu), Julia DiFulvio, Brianna Beamer, Nicole Cruz; The Pe
 
 Replication is a cornerstone of scientific rigor and a prerequisite for cumulative science. This project synthesized evidence from published research that employed a widely used measure of grating visual acuity (VA), Teller Acuity Cards (TAC). We sought to capture findings about the development of VA in early childhood into an aggregated dataset and share the dataset openly. Online literature searches identified papers that mentioned “teller acuity cards”, “visual acuity cards”, or “teller cards”. We found n=745 papers published from 1974-2024. Next, we identified empirical papers that used TAC to measure VA and which reported VA in an extractable tabular form. To-date, n=250 of 316 papers with available PDF versions have been evaluated and n=14 have been identified that present extractable data meeting our screening criteria. Available datasets represent more than n=3,991 participants and 7 countries (Australia, Brazil, Canada, China, Italy, Mexico, and the U.S.). As expected, group VA increases from birth to 36-months, with faster rates of change among children tested binocularly (0.47 cyc/deg per month) than those tested monocularly (0.35 cyc/deg per month). Group VA values at similar ages vary substantially across studies, especially in children older than 12 months. Our synthesis of published TAC VA data confirms anticipated age-related trends and points to avenues for future research, particularly regarding what factors account for cross-study and by-country differences in rates of development. We hope our soon-to-be openly shared dataset contributes toward a more cumulative science of visual development.
 
-## Data analysis
+## Status
 
-## Visualization & analysis
+The poster was accepted on February 6, 2025. It will be presented as follows:
+
+*Poster Session*: Development: Infants, children \
+*Date/Time*: Sunday, May 18, 2025, 2:45 – 6:45 pm \
+*Location*: Pavilion \
+
+## Visualization
+
+The following code documents our data visualization work.
 
 ### Setup
 
@@ -120,7 +128,6 @@ We'll create visualizations for each group of data separately.
 
 typ_group_df <-
   readr::read_csv(file.path(params$data_dir, "typical_group.csv"), show_col_types = FALSE)
-str(typ_group_df)
 ```
 
 ::: {.callout-important}
@@ -128,7 +135,7 @@ Rick Gilmore decided to take the mean of the age range reported in the [@Xiang20
 :::
 
 ```{r}
-#| label: fig-typical-group-by-age
+#| label: fig-typical-group-by-age-paper
 #| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"
 
 typ_group_df |>
@@ -150,6 +157,81 @@ typ_group_df |>
 ```
 
 ```{r}
+#| label: fig-typical-group-by-age
+#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"
+
+typ_group_df |>
+  dplyr::mutate(author_date = paste0(author_first, "_", pub_year)) |>
+  ggplot() +
+  aes(
+    x = age_grp_rog,
+    y = mean_acuity_cyc_deg,
+  ) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_grid(cols = vars(binoc_monoc)) +
+  xlab("Age (mos)") +
+  ylab("Mean acuity (cyc/deg)") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank()) +
+  scale_y_continuous(limits = c(0, 30))
+```
+
+Let's limit consideration to children below three.
+
+```{r}
+#| label: fig-typical-group-by-age-less-than-3y
+#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"
+
+typ_group_df |>
+  dplyr::mutate(author_date = paste0(author_first, "_", pub_year)) |>
+  dplyr::filter(age_grp_rog <= 36) |>
+  ggplot() +
+  aes(
+    x = age_grp_rog,
+    y = mean_acuity_cyc_deg,
+    color = binoc_monoc
+  ) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE) +
+  #facet_grid(cols = vars(binoc_monoc)) +
+  xlab("Age (mos)") +
+  ylab("Mean acuity (cyc/deg)") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank()) +
+  scale_y_continuous(limits = c(0, 30))
+```
+
+Let's look at TAC-I vs. TAC-II
+
+```{r}
+#| label: fig-typical-group-by-age-less-than-3y-monoc-binoc-by-card-type
+#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children 3 and younger as assessed by Teller Acuity Cards. Comparison between TAC-I and TAC-II cards by binocular vs. monocular testing."
+
+typ_group_df |>
+  dplyr::mutate(author_date = paste0(author_first, "_", pub_year)) |>
+  dplyr::filter(age_grp_rog <= 36) |>
+  dplyr::mutate(card_type = stringr::str_to_upper(card_type)) |>
+  ggplot() +
+  aes(
+    x = age_grp_rog,
+    y = mean_acuity_cyc_deg,
+    color = card_type
+  ) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE) +
+  facet_grid(cols = vars(binoc_monoc)) +
+  xlab("Age (mos)") +
+  ylab("Mean acuity (cyc/deg)") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank()) +
+  scale_y_continuous(limits = c(0, 30))
+```
+
+```{r}
+#| label: fig-typical-group-sd-by-acuity
+#| fig-cap: "Relationship between the standard deviation (SD) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards."
+
 typ_group_df |>
   ggplot() +
   aes(x = mean_acuity_cyc_deg, y = sd) +
@@ -158,12 +240,16 @@ typ_group_df |>
 ```
 
 ```{r}
+#| label: fig-typical-group-sd-by-age
+#| fig-cap: "Relationship between the standard deviation (SD in octaves) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards as a function of child age in months."
+
 typ_group_df |>
   ggplot() +
   aes(x = age_grp_rog, y = sd) +
   geom_point() +
   geom_smooth(method = "lm")
 ```
+
 
 ```{r}
 #| label: tbl-typical-group-binoc

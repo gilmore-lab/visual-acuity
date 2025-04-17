@@ -21,7 +21,7 @@ book:
     - href: dashboard.qmd
     - href: data.qmd
       text: "Cleaning & visualization"
-    - href: vss-2025-submitted.qmd
+    - href: vss-2025-submission.qmd
     - part: "Addenda"
       chapters:
         - href: data-management-plan.qmd
