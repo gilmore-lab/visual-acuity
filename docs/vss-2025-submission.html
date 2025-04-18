@@ -217,7 +217,7 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#title" id="toc-title" class="nav-link active" data-scroll-target="#title">Title</a></li>
+  <li><a href="#poster-title" id="toc-poster-title" class="nav-link active" data-scroll-target="#poster-title">Poster title</a></li>
   <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
   <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
   <li><a href="#status" id="toc-status" class="nav-link" data-scroll-target="#status">Status</a></li>
@@ -249,7 +249,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">April 17, 2025</p>
+      <p class="date-modified">April 18, 2025</p>
     </div>
   </div>
     
@@ -260,8 +260,8 @@ div.csl-indent {
 </header>
 
 
-<section id="title" class="level2">
-<h2 class="anchored" data-anchor-id="title">Title</h2>
+<section id="poster-title" class="level2">
+<h2 class="anchored" data-anchor-id="poster-title">Poster title</h2>
 <p>Synthesizing evidence about developmental patterns in human visual acuity as measured by Teller Acuity Cards</p>
 </section>
 <section id="authors" class="level2">
@@ -540,23 +540,53 @@ Figure&nbsp;5.2: Developmental time course of mean grating acuity (in cyc/deg) f
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> binoc_monoc</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(author_date) <span class="sc">|&gt;</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg</span>
 <span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(binoc_monoc)) +</span></span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_smooth(method = "lm", se = TRUE) +</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(binoc_monoc)) +</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="vss-2025-submission_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> binoc_monoc</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">TRUE</span>, ) <span class="sc">+</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(binoc_monoc)) +</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
 </div>
 <div class="cell-output-display">
 <div id="fig-typical-group-by-age-less-than-3y" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -575,27 +605,27 @@ Figure&nbsp;5.3: Developmental time course of mean grating acuity (in cyc/deg) f
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">card_type =</span> stringr<span class="sc">::</span><span class="fu">str_to_upper</span>(card_type)) <span class="sc">|&gt;</span></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> card_type</span>
-<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
-<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
-<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
-<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">card_type =</span> stringr<span class="sc">::</span><span class="fu">str_to_upper</span>(card_type)) <span class="sc">|&gt;</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> card_type</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
 </div>
 <div class="cell-output-display">
 <div id="fig-typical-group-by-age-less-than-3y-monoc-binoc-by-card-type" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -613,21 +643,21 @@ Figure&nbsp;5.4: Developmental time course of mean grating acuity (in cyc/deg) f
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_acuity_cyc_deg, <span class="at">y =</span> sd) <span class="sc">+</span></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_acuity_cyc_deg, <span class="at">y =</span> sd) <span class="sc">+</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 73 rows containing non-finite outside the scale range
+<pre><code>Warning: Removed 91 rows containing non-finite outside the scale range
 (`stat_smooth()`).</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 73 rows containing missing values or values outside the scale range
+<pre><code>Warning: Removed 91 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
@@ -646,21 +676,21 @@ Figure&nbsp;5.5: Relationship between the standard deviation (SD) of estimated v
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> age_grp_rog, <span class="at">y =</span> sd) <span class="sc">+</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> age_grp_rog, <span class="at">y =</span> sd) <span class="sc">+</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 73 rows containing non-finite outside the scale range
+<pre><code>Warning: Removed 91 rows containing non-finite outside the scale range
 (`stat_smooth()`).</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 73 rows containing missing values or values outside the scale range
+<pre><code>Warning: Removed 91 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
 </div>
 <div class="cell-output-display">
@@ -679,17 +709,17 @@ Figure&nbsp;5.6: Relationship between the standard deviation (SD in octaves) of 
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"binoc"</span>) </span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="sc">|&gt;</span></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(author_year) <span class="sc">|&gt;</span></span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(author_year) <span class="sc">|&gt;</span></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"binoc"</span>) </span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="sc">|&gt;</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(author_year) <span class="sc">|&gt;</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(author_year) <span class="sc">|&gt;</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="tbl-typical-group-binoc" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -740,27 +770,27 @@ Table&nbsp;5.1: Participants tested binocularly by study
 </tr>
 <tr class="odd">
 <td style="text-align: left;">McDonald1985</td>
-<td style="text-align: right;">8</td>
+<td style="text-align: right;">16</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">McDonald1986a</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: right;">20</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">McDonald1986b</td>
-<td style="text-align: right;">14</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">McDonald1986c</td>
 <td style="text-align: right;">18</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Rodriguez1996</td>
 <td style="text-align: right;">150</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Salomao1995</td>
 <td style="text-align: right;">646</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sarbajna2024</td>
+<td style="text-align: right;">74</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Teller1986</td>
@@ -795,16 +825,16 @@ Table&nbsp;5.1: Participants tested binocularly by study
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_first, pub_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"monoc"</span>) </span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="sc">|&gt;</span></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pub_year, author_first) <span class="sc">|&gt;</span></span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(pub_year) <span class="sc">|&gt;</span></span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_first, pub_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"monoc"</span>) </span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="sc">|&gt;</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pub_year, author_first) <span class="sc">|&gt;</span></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(pub_year) <span class="sc">|&gt;</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>`summarise()` has grouped output by 'pub_year'. You can override using the
@@ -834,7 +864,7 @@ Table&nbsp;5.2: Participants tested monocularly by study
 <tr class="even">
 <td style="text-align: left;">NA</td>
 <td style="text-align: left;">Mayer</td>
-<td style="text-align: right;">451</td>
+<td style="text-align: right;">911</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">NA</td>
@@ -843,10 +873,15 @@ Table&nbsp;5.2: Participants tested monocularly by study
 </tr>
 <tr class="even">
 <td style="text-align: left;">NA</td>
+<td style="text-align: left;">Sarbajna</td>
+<td style="text-align: right;">151</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NA</td>
 <td style="text-align: left;">Teller</td>
 <td style="text-align: right;">71</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">NA</td>
 <td style="text-align: left;">Xiang</td>
 <td style="text-align: right;">208</td>
@@ -860,7 +895,7 @@ Table&nbsp;5.2: Participants tested monocularly by study
 </figure>
 </div>
 </div>
-<p>There were <em>n</em>=1796 participants tested monocularly.</p>
+<p>There were <em>n</em>=2407 participants tested monocularly.</p>
 </section>
 </section>
 <section id="atypical-group" class="level3">
@@ -868,43 +903,43 @@ Table&nbsp;5.2: Participants tested monocularly by study
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"atypical_group.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"atypical_group.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>spc_tbl_ [33 × 31] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
- $ BIBTEXKEY                     : chr [1:33] "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" ...
- $ author_first                  : chr [1:33] "Mash" "Mash" "Mash" "Mash" ...
- $ title                         : chr [1:33] "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" ...
- $ condition                     : chr [1:33] "preterm_birth" "preterm_birth" "preterm_birth" "preterm_birth" ...
- $ age_mos                       : num [1:33] 4 8 11 17 24 30 36 48 4 8 ...
- $ binoc_minoc                   : chr [1:33] "monoc" "monoc" "monoc" "monoc" ...
- $ eye                           : chr [1:33] "right" "right" "right" "right" ...
- $ n_participants                : num [1:33] 95 103 90 82 83 95 105 125 95 103 ...
- $ mean_acuity                   : num [1:33] 2.18 3.87 3.53 5.6 7.05 ...
- $ acuity_units                  : chr [1:33] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
- $ mean_acuity_standard_deviation: num [1:33] 0.76 0.66 0.8 0.76 0.76 0.76 0.66 0.53 0.73 0.63 ...
- $ std_dev_units                 : chr [1:33] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
- $ indiv_eye_acuity_cyc_deg      : logi [1:33] NA NA NA NA NA NA ...
- $ st_dev_indiv_eye              : logi [1:33] NA NA NA NA NA NA ...
- $ country                       : chr [1:33] "united_states" "united_states" "united_states" "united_states" ...
- $ card_type                     : chr [1:33] "tac_i" "tac_i" "tac_i" "tac_i" ...
- $ Column 1                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 2                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 3                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 4                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 5                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 6                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 7                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 8                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 9                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 10                     : logi [1:33] NA NA NA NA NA NA ...
- $ Column 11                     : logi [1:33] NA NA NA NA NA NA ...
- $ Column 12                     : logi [1:33] NA NA NA NA NA NA ...
- $ Column 13                     : logi [1:33] NA NA NA NA NA NA ...
- $ Column 14                     : logi [1:33] NA NA NA NA NA NA ...
- $ Column 15                     : logi [1:33] NA NA NA NA NA NA ...
+<pre><code>spc_tbl_ [60 × 31] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ BIBTEXKEY                     : chr [1:60] "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" ...
+ $ author_first                  : chr [1:60] "Mash" "Mash" "Mash" "Mash" ...
+ $ title                         : chr [1:60] "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" ...
+ $ condition                     : chr [1:60] "preterm_birth" "preterm_birth" "preterm_birth" "preterm_birth" ...
+ $ age_mos                       : num [1:60] 4 8 11 17 24 30 36 48 4 8 ...
+ $ binoc_minoc                   : chr [1:60] "monoc" "monoc" "monoc" "monoc" ...
+ $ eye                           : chr [1:60] "right" "right" "right" "right" ...
+ $ n_participants                : num [1:60] 95 103 90 82 83 95 105 125 95 103 ...
+ $ mean_acuity                   : num [1:60] 2.18 3.87 3.53 5.6 7.05 ...
+ $ acuity_units                  : chr [1:60] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
+ $ mean_acuity_standard_deviation: num [1:60] 0.76 0.66 0.8 0.76 0.76 0.76 0.66 0.53 0.73 0.63 ...
+ $ std_dev_units                 : chr [1:60] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
+ $ indiv_eye_acuity_cyc_deg      : logi [1:60] NA NA NA NA NA NA ...
+ $ st_dev_indiv_eye              : logi [1:60] NA NA NA NA NA NA ...
+ $ country                       : chr [1:60] "united_states" "united_states" "united_states" "united_states" ...
+ $ card_type                     : chr [1:60] "tac_i" "tac_i" "tac_i" "tac_i" ...
+ $ Column 1                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 2                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 3                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 4                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 5                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 6                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 7                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 8                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 9                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 10                     : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 11                     : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 12                     : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 13                     : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 14                     : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 15                     : logi [1:60] NA NA NA NA NA NA ...
  - attr(*, "spec")=
   .. cols(
   ..   BIBTEXKEY = col_character(),
@@ -946,32 +981,32 @@ Table&nbsp;5.2: Participants tested monocularly by study
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>logMAR_to_cyc_per_deg <span class="ot">&lt;-</span> <span class="cf">function</span>(logMARmin) {</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="dv">60</span><span class="sc">/</span>(<span class="dv">10</span><span class="sc">^</span>(logMARmin))</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span> atyp_group_df <span class="sc">|&gt;</span></span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">mean_acuity_cyc_deg =</span> <span class="fu">if_else</span>(acuity_units <span class="sc">==</span> <span class="st">"cyc_deg"</span>, mean_acuity, </span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>                                              <span class="fu">logMAR_to_cyc_per_deg</span>(mean_acuity)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>logMAR_to_cyc_per_deg <span class="ot">&lt;-</span> <span class="cf">function</span>(logMARmin) {</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="dv">60</span><span class="sc">/</span>(<span class="dv">10</span><span class="sc">^</span>(logMARmin))</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span> atyp_group_df <span class="sc">|&gt;</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">mean_acuity_cyc_deg =</span> <span class="fu">if_else</span>(acuity_units <span class="sc">==</span> <span class="st">"cyc_deg"</span>, mean_acuity, </span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>                                              <span class="fu">logMAR_to_cyc_per_deg</span>(mean_acuity)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="sc">|&gt;</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
-<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> eye</span>
-<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(condition)) <span class="sc">+</span></span>
-<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
-<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
-<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
-<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="sc">|&gt;</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> eye</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(condition)) <span class="sc">+</span></span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
@@ -1101,64 +1136,64 @@ Figure&nbsp;5.7: Developmental time course of mean grating acuity (in cyc/deg) f
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="ot">&lt;-</span></span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"typical_indiv.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="ot">&lt;-</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"typical_indiv.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>tibble [33 × 32] (S3: tbl_df/tbl/data.frame)
- $ BIBTEXKEY                     : chr [1:33] "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" ...
- $ author_first                  : chr [1:33] "Mash" "Mash" "Mash" "Mash" ...
- $ title                         : chr [1:33] "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" ...
- $ condition                     : chr [1:33] "preterm_birth" "preterm_birth" "preterm_birth" "preterm_birth" ...
- $ age_mos                       : num [1:33] 4 8 11 17 24 30 36 48 4 8 ...
- $ binoc_minoc                   : chr [1:33] "monoc" "monoc" "monoc" "monoc" ...
- $ eye                           : chr [1:33] "right" "right" "right" "right" ...
- $ n_participants                : num [1:33] 95 103 90 82 83 95 105 125 95 103 ...
- $ mean_acuity                   : num [1:33] 2.18 3.87 3.53 5.6 7.05 ...
- $ acuity_units                  : chr [1:33] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
- $ mean_acuity_standard_deviation: num [1:33] 0.76 0.66 0.8 0.76 0.76 0.76 0.66 0.53 0.73 0.63 ...
- $ std_dev_units                 : chr [1:33] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
- $ indiv_eye_acuity_cyc_deg      : logi [1:33] NA NA NA NA NA NA ...
- $ st_dev_indiv_eye              : logi [1:33] NA NA NA NA NA NA ...
- $ country                       : chr [1:33] "united_states" "united_states" "united_states" "united_states" ...
- $ card_type                     : chr [1:33] "tac_i" "tac_i" "tac_i" "tac_i" ...
- $ Column 1                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 2                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 3                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 4                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 5                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 6                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 7                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 8                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 9                      : logi [1:33] NA NA NA NA NA NA ...
- $ Column 10                     : logi [1:33] NA NA NA NA NA NA ...
- $ Column 11                     : logi [1:33] NA NA NA NA NA NA ...
- $ Column 12                     : logi [1:33] NA NA NA NA NA NA ...
- $ Column 13                     : logi [1:33] NA NA NA NA NA NA ...
- $ Column 14                     : logi [1:33] NA NA NA NA NA NA ...
- $ Column 15                     : logi [1:33] NA NA NA NA NA NA ...
- $ mean_acuity_cyc_deg           : num [1:33] 2.18 3.87 3.53 5.6 7.05 ...</code></pre>
+<pre><code>tibble [60 × 32] (S3: tbl_df/tbl/data.frame)
+ $ BIBTEXKEY                     : chr [1:60] "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" "Mash1998-sg" ...
+ $ author_first                  : chr [1:60] "Mash" "Mash" "Mash" "Mash" ...
+ $ title                         : chr [1:60] "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" "Long-term reliability and predictive validity of the teller acuity card procedure" ...
+ $ condition                     : chr [1:60] "preterm_birth" "preterm_birth" "preterm_birth" "preterm_birth" ...
+ $ age_mos                       : num [1:60] 4 8 11 17 24 30 36 48 4 8 ...
+ $ binoc_minoc                   : chr [1:60] "monoc" "monoc" "monoc" "monoc" ...
+ $ eye                           : chr [1:60] "right" "right" "right" "right" ...
+ $ n_participants                : num [1:60] 95 103 90 82 83 95 105 125 95 103 ...
+ $ mean_acuity                   : num [1:60] 2.18 3.87 3.53 5.6 7.05 ...
+ $ acuity_units                  : chr [1:60] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
+ $ mean_acuity_standard_deviation: num [1:60] 0.76 0.66 0.8 0.76 0.76 0.76 0.66 0.53 0.73 0.63 ...
+ $ std_dev_units                 : chr [1:60] "cyc_deg" "cyc_deg" "cyc_deg" "cyc_deg" ...
+ $ indiv_eye_acuity_cyc_deg      : logi [1:60] NA NA NA NA NA NA ...
+ $ st_dev_indiv_eye              : logi [1:60] NA NA NA NA NA NA ...
+ $ country                       : chr [1:60] "united_states" "united_states" "united_states" "united_states" ...
+ $ card_type                     : chr [1:60] "tac_i" "tac_i" "tac_i" "tac_i" ...
+ $ Column 1                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 2                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 3                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 4                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 5                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 6                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 7                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 8                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 9                      : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 10                     : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 11                     : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 12                     : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 13                     : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 14                     : logi [1:60] NA NA NA NA NA NA ...
+ $ Column 15                     : logi [1:60] NA NA NA NA NA NA ...
+ $ mean_acuity_cyc_deg           : num [1:60] 2.18 3.87 3.53 5.6 7.05 ...</code></pre>
 </div>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="sc">|&gt;</span></span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
-<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
-<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> sub_id</span>
-<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(eye)) +</span></span>
-<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
-<span id="cb68-12"><a href="#cb68-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
-<span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
-<span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>)) <span class="sc">+</span></span>
-<span id="cb68-15"><a href="#cb68-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="sc">|&gt;</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> sub_id</span>
+<span id="cb69-7"><a href="#cb69-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb69-9"><a href="#cb69-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb69-10"><a href="#cb69-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(eye)) +</span></span>
+<span id="cb69-11"><a href="#cb69-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb69-12"><a href="#cb69-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb69-13"><a href="#cb69-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb69-14"><a href="#cb69-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>)) <span class="sc">+</span></span>
+<span id="cb69-15"><a href="#cb69-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
@@ -1983,366 +2018,388 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb131" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb131-2"><a href="#cb131-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "VSS 2025 Submission"</span></span>
-<span id="cb131-3"><a href="#cb131-3" aria-hidden="true" tabindex="-1"></a><span class="an">params:</span></span>
-<span id="cb131-4"><a href="#cb131-4" aria-hidden="true" tabindex="-1"></a><span class="co">  data_dir: "data/csv"</span></span>
-<span id="cb131-5"><a href="#cb131-5" aria-hidden="true" tabindex="-1"></a><span class="co">  update_data: TRUE</span></span>
-<span id="cb131-6"><a href="#cb131-6" aria-hidden="true" tabindex="-1"></a><span class="co">  use_sysenv_creds: TRUE</span></span>
-<span id="cb131-7"><a href="#cb131-7" aria-hidden="true" tabindex="-1"></a><span class="co">  google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"</span></span>
-<span id="cb131-8"><a href="#cb131-8" aria-hidden="true" tabindex="-1"></a><span class="co">  data_fn: "by-paper.csv"</span></span>
-<span id="cb131-9"><a href="#cb131-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb131-10"><a href="#cb131-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-11"><a href="#cb131-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Title</span></span>
-<span id="cb131-12"><a href="#cb131-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-13"><a href="#cb131-13" aria-hidden="true" tabindex="-1"></a>Synthesizing evidence about developmental patterns in human visual acuity as measured by Teller Acuity Cards</span>
-<span id="cb131-14"><a href="#cb131-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-15"><a href="#cb131-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Authors</span></span>
-<span id="cb131-16"><a href="#cb131-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-17"><a href="#cb131-17" aria-hidden="true" tabindex="-1"></a>Rick Gilmore (rog1@psu.edu), Julia DiFulvio, Brianna Beamer, Nicole Cruz; The Pennsylvania State University</span>
-<span id="cb131-18"><a href="#cb131-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-19"><a href="#cb131-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Abstract</span></span>
-<span id="cb131-20"><a href="#cb131-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-21"><a href="#cb131-21" aria-hidden="true" tabindex="-1"></a>Replication is a cornerstone of scientific rigor and a prerequisite for cumulative science. This project synthesized evidence from published research that employed a widely used measure of grating visual acuity (VA), Teller Acuity Cards (TAC). We sought to capture findings about the development of VA in early childhood into an aggregated dataset and share the dataset openly. Online literature searches identified papers that mentioned “teller acuity cards”, “visual acuity cards”, or “teller cards”. We found n=745 papers published from 1974-2024. Next, we identified empirical papers that used TAC to measure VA and which reported VA in an extractable tabular form. To-date, n=250 of 316 papers with available PDF versions have been evaluated and n=14 have been identified that present extractable data meeting our screening criteria. Available datasets represent more than n=3,991 participants and 7 countries (Australia, Brazil, Canada, China, Italy, Mexico, and the U.S.). As expected, group VA increases from birth to 36-months, with faster rates of change among children tested binocularly (0.47 cyc/deg per month) than those tested monocularly (0.35 cyc/deg per month). Group VA values at similar ages vary substantially across studies, especially in children older than 12 months. Our synthesis of published TAC VA data confirms anticipated age-related trends and points to avenues for future research, particularly regarding what factors account for cross-study and by-country differences in rates of development. We hope our soon-to-be openly shared dataset contributes toward a more cumulative science of visual development.</span>
-<span id="cb131-22"><a href="#cb131-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-23"><a href="#cb131-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Status</span></span>
-<span id="cb131-24"><a href="#cb131-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-25"><a href="#cb131-25" aria-hidden="true" tabindex="-1"></a>The poster was accepted on February 6, 2025. It will be presented as follows:</span>
-<span id="cb131-26"><a href="#cb131-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-27"><a href="#cb131-27" aria-hidden="true" tabindex="-1"></a>*Poster Session*: Development: Infants, children \</span>
-<span id="cb131-28"><a href="#cb131-28" aria-hidden="true" tabindex="-1"></a>*Date/Time*: Sunday, May 18, 2025, 2:45 – 6:45 pm \</span>
-<span id="cb131-29"><a href="#cb131-29" aria-hidden="true" tabindex="-1"></a>*Location*: Pavilion \</span>
-<span id="cb131-30"><a href="#cb131-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-31"><a href="#cb131-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualization</span></span>
-<span id="cb131-32"><a href="#cb131-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-33"><a href="#cb131-33" aria-hidden="true" tabindex="-1"></a>The following code documents our data visualization work.</span>
-<span id="cb131-34"><a href="#cb131-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-35"><a href="#cb131-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### Setup</span></span>
-<span id="cb131-36"><a href="#cb131-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-39"><a href="#cb131-39" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-40"><a href="#cb131-40" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: setup</span></span>
-<span id="cb131-41"><a href="#cb131-41" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span>
-<span id="cb131-42"><a href="#cb131-42" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb131-43"><a href="#cb131-43" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb131-44"><a href="#cb131-44" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb131-45"><a href="#cb131-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-46"><a href="#cb131-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-47"><a href="#cb131-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### Import</span></span>
-<span id="cb131-48"><a href="#cb131-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-49"><a href="#cb131-49" aria-hidden="true" tabindex="-1"></a>We use a Google Sheet to store the by-study data:</span>
-<span id="cb131-50"><a href="#cb131-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-51"><a href="#cb131-51" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0&gt;</span></span>
-<span id="cb131-52"><a href="#cb131-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-53"><a href="#cb131-53" aria-hidden="true" tabindex="-1"></a>The Google Sheet has multiple tabs:</span>
-<span id="cb131-54"><a href="#cb131-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-55"><a href="#cb131-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`typical_group`</span> tab contains group data from typically developing children.</span>
-<span id="cb131-56"><a href="#cb131-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`typical_indiv`</span> tab contains data from typically developing individual children.</span>
-<span id="cb131-57"><a href="#cb131-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`atypical_group`</span> tab contains group data from atypically developing children.</span>
-<span id="cb131-58"><a href="#cb131-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`atypical_indiv`</span> tab contains data from atypically developing individual children.</span>
-<span id="cb131-59"><a href="#cb131-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-62"><a href="#cb131-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-63"><a href="#cb131-63" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-data</span></span>
-<span id="cb131-64"><a href="#cb131-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a helper function</span></span>
-<span id="cb131-65"><a href="#cb131-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-66"><a href="#cb131-66" aria-hidden="true" tabindex="-1"></a>import_save_TAC <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">sheet_name =</span> <span class="st">"typical_group"</span>,</span>
-<span id="cb131-67"><a href="#cb131-67" aria-hidden="true" tabindex="-1"></a>                            <span class="at">csv_name =</span> <span class="st">"typical_group.csv"</span>) {</span>
-<span id="cb131-68"><a href="#cb131-68" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb131-69"><a href="#cb131-69" aria-hidden="true" tabindex="-1"></a>  this_sheet <span class="ot">&lt;-</span> googlesheets4<span class="sc">::</span><span class="fu">read_sheet</span>(<span class="at">ss =</span> params<span class="sc">$</span>google_data_url,</span>
-<span id="cb131-70"><a href="#cb131-70" aria-hidden="true" tabindex="-1"></a>                            <span class="at">sheet =</span> sheet_name)</span>
-<span id="cb131-71"><a href="#cb131-71" aria-hidden="true" tabindex="-1"></a>  out_fn <span class="ot">&lt;-</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, csv_name)</span>
-<span id="cb131-72"><a href="#cb131-72" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">write_csv</span>(this_sheet, out_fn)</span>
-<span id="cb131-73"><a href="#cb131-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated: "</span>, out_fn)</span>
-<span id="cb131-74"><a href="#cb131-74" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb131-75"><a href="#cb131-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-76"><a href="#cb131-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data files</span></span>
-<span id="cb131-77"><a href="#cb131-77" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(params<span class="sc">$</span>data_dir)) {</span>
-<span id="cb131-78"><a href="#cb131-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing "</span>,  params<span class="sc">$</span>data_dir, <span class="st">"."</span>)</span>
-<span id="cb131-79"><a href="#cb131-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(params<span class="sc">$</span>data_dir)</span>
-<span id="cb131-80"><a href="#cb131-80" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb131-81"><a href="#cb131-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-82"><a href="#cb131-82" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
-<span id="cb131-83"><a href="#cb131-83" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (params<span class="sc">$</span>use_sysenv_creds) {</span>
-<span id="cb131-84"><a href="#cb131-84" aria-hidden="true" tabindex="-1"></a>    google_creds <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>)</span>
-<span id="cb131-85"><a href="#cb131-85" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (google_creds <span class="sc">!=</span> <span class="st">""</span>) {</span>
-<span id="cb131-86"><a href="#cb131-86" aria-hidden="true" tabindex="-1"></a>      <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> google_creds)</span>
-<span id="cb131-87"><a href="#cb131-87" aria-hidden="true" tabindex="-1"></a>      googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
-<span id="cb131-88"><a href="#cb131-88" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb131-89"><a href="#cb131-89" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"No Google account information stored in `.Renviron`."</span>)</span>
-<span id="cb131-90"><a href="#cb131-90" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(</span>
-<span id="cb131-91"><a href="#cb131-91" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Add authorized Google account name to `.Renviron` using `usethis::edit_r_environ()`."</span></span>
-<span id="cb131-92"><a href="#cb131-92" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb131-93"><a href="#cb131-93" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb131-94"><a href="#cb131-94" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb131-95"><a href="#cb131-95" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb131-96"><a href="#cb131-96" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map2</span>(</span>
-<span id="cb131-97"><a href="#cb131-97" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
-<span id="cb131-98"><a href="#cb131-98" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_group"</span>,</span>
-<span id="cb131-99"><a href="#cb131-99" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_indiv"</span>,</span>
-<span id="cb131-100"><a href="#cb131-100" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_group"</span>,</span>
-<span id="cb131-101"><a href="#cb131-101" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_indiv"</span></span>
-<span id="cb131-102"><a href="#cb131-102" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb131-103"><a href="#cb131-103" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
-<span id="cb131-104"><a href="#cb131-104" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_group.csv"</span>,</span>
-<span id="cb131-105"><a href="#cb131-105" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_indiv.csv"</span>,</span>
-<span id="cb131-106"><a href="#cb131-106" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_group.csv"</span>,</span>
-<span id="cb131-107"><a href="#cb131-107" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_indiv.csv"</span></span>
-<span id="cb131-108"><a href="#cb131-108" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb131-109"><a href="#cb131-109" aria-hidden="true" tabindex="-1"></a>    import_save_TAC</span>
-<span id="cb131-110"><a href="#cb131-110" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb131-111"><a href="#cb131-111" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb131-112"><a href="#cb131-112" aria-hidden="true" tabindex="-1"></a>  <span class="co"># import_save_TAC()</span></span>
-<span id="cb131-113"><a href="#cb131-113" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb131-114"><a href="#cb131-114" aria-hidden="true" tabindex="-1"></a>  <span class="co"># this_sheet &lt;- googlesheets4::read_sheet(ss = params$google_data_url,</span></span>
-<span id="cb131-115"><a href="#cb131-115" aria-hidden="true" tabindex="-1"></a>  <span class="co">#                           sheet = params$sheet_name)</span></span>
-<span id="cb131-116"><a href="#cb131-116" aria-hidden="true" tabindex="-1"></a>  <span class="co"># out_fn &lt;- file.path(params$data_dir, params$data_fn)</span></span>
-<span id="cb131-117"><a href="#cb131-117" aria-hidden="true" tabindex="-1"></a>  <span class="co"># readr::write_csv(this_sheet, out_fn)</span></span>
-<span id="cb131-118"><a href="#cb131-118" aria-hidden="true" tabindex="-1"></a>  <span class="co"># message("Data updated: ", out_fn)</span></span>
-<span id="cb131-119"><a href="#cb131-119" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb131-120"><a href="#cb131-120" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
-<span id="cb131-121"><a href="#cb131-121" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb131-122"><a href="#cb131-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-123"><a href="#cb131-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-124"><a href="#cb131-124" aria-hidden="true" tabindex="-1"></a><span class="fu">### Visualize</span></span>
-<span id="cb131-125"><a href="#cb131-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-126"><a href="#cb131-126" aria-hidden="true" tabindex="-1"></a>We'll create visualizations for each group of data separately.</span>
-<span id="cb131-127"><a href="#cb131-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-128"><a href="#cb131-128" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Typical Group</span></span>
-<span id="cb131-129"><a href="#cb131-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-132"><a href="#cb131-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-133"><a href="#cb131-133" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-typical-group</span></span>
-<span id="cb131-134"><a href="#cb131-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-135"><a href="#cb131-135" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="ot">&lt;-</span></span>
-<span id="cb131-136"><a href="#cb131-136" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"typical_group.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb131-137"><a href="#cb131-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-138"><a href="#cb131-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-139"><a href="#cb131-139" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb131-140"><a href="#cb131-140" aria-hidden="true" tabindex="-1"></a>Rick Gilmore decided to take the mean of the age range reported in the <span class="co">[</span><span class="ot">@Xiang2021-ry</span><span class="co">]</span> data and create a new variable *strictly* for visualization purposes, <span class="in">`age_grp_rog`</span>.</span>
-<span id="cb131-141"><a href="#cb131-141" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb131-142"><a href="#cb131-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-145"><a href="#cb131-145" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-146"><a href="#cb131-146" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age-paper</span></span>
-<span id="cb131-147"><a href="#cb131-147" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"</span></span>
-<span id="cb131-148"><a href="#cb131-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-149"><a href="#cb131-149" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb131-150"><a href="#cb131-150" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
-<span id="cb131-151"><a href="#cb131-151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb131-152"><a href="#cb131-152" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb131-153"><a href="#cb131-153" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
-<span id="cb131-154"><a href="#cb131-154" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
-<span id="cb131-155"><a href="#cb131-155" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> author_year</span>
-<span id="cb131-156"><a href="#cb131-156" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb131-157"><a href="#cb131-157" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb131-158"><a href="#cb131-158" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb131-159"><a href="#cb131-159" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
-<span id="cb131-160"><a href="#cb131-160" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
-<span id="cb131-161"><a href="#cb131-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
-<span id="cb131-162"><a href="#cb131-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb131-163"><a href="#cb131-163" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb131-164"><a href="#cb131-164" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
-<span id="cb131-165"><a href="#cb131-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-166"><a href="#cb131-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-169"><a href="#cb131-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-170"><a href="#cb131-170" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age</span></span>
-<span id="cb131-171"><a href="#cb131-171" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"</span></span>
-<span id="cb131-172"><a href="#cb131-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-173"><a href="#cb131-173" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb131-174"><a href="#cb131-174" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
-<span id="cb131-175"><a href="#cb131-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb131-176"><a href="#cb131-176" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb131-177"><a href="#cb131-177" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
-<span id="cb131-178"><a href="#cb131-178" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
-<span id="cb131-179"><a href="#cb131-179" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb131-180"><a href="#cb131-180" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb131-181"><a href="#cb131-181" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb131-182"><a href="#cb131-182" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
-<span id="cb131-183"><a href="#cb131-183" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
-<span id="cb131-184"><a href="#cb131-184" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
-<span id="cb131-185"><a href="#cb131-185" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb131-186"><a href="#cb131-186" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb131-187"><a href="#cb131-187" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
-<span id="cb131-188"><a href="#cb131-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-189"><a href="#cb131-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-190"><a href="#cb131-190" aria-hidden="true" tabindex="-1"></a>Let's limit consideration to children below three.</span>
-<span id="cb131-191"><a href="#cb131-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-194"><a href="#cb131-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-195"><a href="#cb131-195" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age-less-than-3y</span></span>
-<span id="cb131-196"><a href="#cb131-196" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"</span></span>
-<span id="cb131-197"><a href="#cb131-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-198"><a href="#cb131-198" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb131-199"><a href="#cb131-199" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
-<span id="cb131-200"><a href="#cb131-200" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
-<span id="cb131-201"><a href="#cb131-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb131-202"><a href="#cb131-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb131-203"><a href="#cb131-203" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
-<span id="cb131-204"><a href="#cb131-204" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
-<span id="cb131-205"><a href="#cb131-205" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> binoc_monoc</span>
-<span id="cb131-206"><a href="#cb131-206" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb131-207"><a href="#cb131-207" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb131-208"><a href="#cb131-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb131-209"><a href="#cb131-209" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(binoc_monoc)) +</span></span>
-<span id="cb131-210"><a href="#cb131-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
-<span id="cb131-211"><a href="#cb131-211" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
-<span id="cb131-212"><a href="#cb131-212" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb131-213"><a href="#cb131-213" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb131-214"><a href="#cb131-214" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
-<span id="cb131-215"><a href="#cb131-215" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-216"><a href="#cb131-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-217"><a href="#cb131-217" aria-hidden="true" tabindex="-1"></a>Let's look at TAC-I vs. TAC-II</span>
-<span id="cb131-218"><a href="#cb131-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-221"><a href="#cb131-221" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-222"><a href="#cb131-222" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age-less-than-3y-monoc-binoc-by-card-type</span></span>
-<span id="cb131-223"><a href="#cb131-223" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children 3 and younger as assessed by Teller Acuity Cards. Comparison between TAC-I and TAC-II cards by binocular vs. monocular testing."</span></span>
-<span id="cb131-224"><a href="#cb131-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-225"><a href="#cb131-225" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb131-226"><a href="#cb131-226" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
-<span id="cb131-227"><a href="#cb131-227" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
-<span id="cb131-228"><a href="#cb131-228" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">card_type =</span> stringr<span class="sc">::</span><span class="fu">str_to_upper</span>(card_type)) <span class="sc">|&gt;</span></span>
-<span id="cb131-229"><a href="#cb131-229" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb131-230"><a href="#cb131-230" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb131-231"><a href="#cb131-231" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
-<span id="cb131-232"><a href="#cb131-232" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
-<span id="cb131-233"><a href="#cb131-233" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> card_type</span>
-<span id="cb131-234"><a href="#cb131-234" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb131-235"><a href="#cb131-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb131-236"><a href="#cb131-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb131-237"><a href="#cb131-237" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
-<span id="cb131-238"><a href="#cb131-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
-<span id="cb131-239"><a href="#cb131-239" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
-<span id="cb131-240"><a href="#cb131-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb131-241"><a href="#cb131-241" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb131-242"><a href="#cb131-242" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
-<span id="cb131-243"><a href="#cb131-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-244"><a href="#cb131-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-247"><a href="#cb131-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-248"><a href="#cb131-248" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-sd-by-acuity</span></span>
-<span id="cb131-249"><a href="#cb131-249" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Relationship between the standard deviation (SD) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards."</span></span>
-<span id="cb131-250"><a href="#cb131-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-251"><a href="#cb131-251" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb131-252"><a href="#cb131-252" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb131-253"><a href="#cb131-253" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_acuity_cyc_deg, <span class="at">y =</span> sd) <span class="sc">+</span></span>
-<span id="cb131-254"><a href="#cb131-254" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb131-255"><a href="#cb131-255" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span>
-<span id="cb131-256"><a href="#cb131-256" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-257"><a href="#cb131-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-260"><a href="#cb131-260" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-261"><a href="#cb131-261" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-sd-by-age</span></span>
-<span id="cb131-262"><a href="#cb131-262" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Relationship between the standard deviation (SD in octaves) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards as a function of child age in months."</span></span>
-<span id="cb131-263"><a href="#cb131-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-264"><a href="#cb131-264" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb131-265"><a href="#cb131-265" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb131-266"><a href="#cb131-266" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> age_grp_rog, <span class="at">y =</span> sd) <span class="sc">+</span></span>
-<span id="cb131-267"><a href="#cb131-267" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb131-268"><a href="#cb131-268" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span>
-<span id="cb131-269"><a href="#cb131-269" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-270"><a href="#cb131-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-271"><a href="#cb131-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-274"><a href="#cb131-274" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-275"><a href="#cb131-275" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-typical-group-binoc</span></span>
-<span id="cb131-276"><a href="#cb131-276" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Participants tested binocularly by study"</span></span>
-<span id="cb131-277"><a href="#cb131-277" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb131-278"><a href="#cb131-278" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
-<span id="cb131-279"><a href="#cb131-279" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"binoc"</span>) </span>
-<span id="cb131-280"><a href="#cb131-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-281"><a href="#cb131-281" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="sc">|&gt;</span></span>
-<span id="cb131-282"><a href="#cb131-282" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(author_year) <span class="sc">|&gt;</span></span>
-<span id="cb131-283"><a href="#cb131-283" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(author_year) <span class="sc">|&gt;</span></span>
-<span id="cb131-284"><a href="#cb131-284" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb131-285"><a href="#cb131-285" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
-<span id="cb131-286"><a href="#cb131-286" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
-<span id="cb131-287"><a href="#cb131-287" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span>
-<span id="cb131-288"><a href="#cb131-288" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-289"><a href="#cb131-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-290"><a href="#cb131-290" aria-hidden="true" tabindex="-1"></a>There were *n*=`{r} sum(typ_group_df_binoc$n_participants)` participants tested binocularly from *n*=<span class="in">`{r} length(unique(typ_group_df_binoc$author_year))`</span> studies.</span>
-<span id="cb131-291"><a href="#cb131-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-294"><a href="#cb131-294" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-295"><a href="#cb131-295" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-typical-group-monoc</span></span>
-<span id="cb131-296"><a href="#cb131-296" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Participants tested monocularly by study"</span></span>
-<span id="cb131-297"><a href="#cb131-297" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
-<span id="cb131-298"><a href="#cb131-298" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_first, pub_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
-<span id="cb131-299"><a href="#cb131-299" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"monoc"</span>) </span>
-<span id="cb131-300"><a href="#cb131-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-301"><a href="#cb131-301" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="sc">|&gt;</span></span>
-<span id="cb131-302"><a href="#cb131-302" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pub_year, author_first) <span class="sc">|&gt;</span></span>
-<span id="cb131-303"><a href="#cb131-303" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(pub_year) <span class="sc">|&gt;</span></span>
-<span id="cb131-304"><a href="#cb131-304" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
-<span id="cb131-305"><a href="#cb131-305" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
-<span id="cb131-306"><a href="#cb131-306" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span>
-<span id="cb131-307"><a href="#cb131-307" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-308"><a href="#cb131-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-309"><a href="#cb131-309" aria-hidden="true" tabindex="-1"></a>There were *n*=<span class="in">`{r} sum(typ_group_df_monoc$n_participants)`</span> participants tested monocularly.</span>
-<span id="cb131-310"><a href="#cb131-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-311"><a href="#cb131-311" aria-hidden="true" tabindex="-1"></a><span class="fu">### Atypical Group</span></span>
-<span id="cb131-312"><a href="#cb131-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-315"><a href="#cb131-315" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-316"><a href="#cb131-316" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-atypical-group</span></span>
-<span id="cb131-317"><a href="#cb131-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-318"><a href="#cb131-318" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span></span>
-<span id="cb131-319"><a href="#cb131-319" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"atypical_group.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb131-320"><a href="#cb131-320" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span>
-<span id="cb131-321"><a href="#cb131-321" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-322"><a href="#cb131-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-323"><a href="#cb131-323" aria-hidden="true" tabindex="-1"></a>Some of the acuity measurements were in LogMAR, so we must transform these to cycles per degree before plotting.</span>
-<span id="cb131-324"><a href="#cb131-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-327"><a href="#cb131-327" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-328"><a href="#cb131-328" aria-hidden="true" tabindex="-1"></a>logMAR_to_cyc_per_deg <span class="ot">&lt;-</span> <span class="cf">function</span>(logMARmin) {</span>
-<span id="cb131-329"><a href="#cb131-329" aria-hidden="true" tabindex="-1"></a>  <span class="dv">60</span><span class="sc">/</span>(<span class="dv">10</span><span class="sc">^</span>(logMARmin))</span>
-<span id="cb131-330"><a href="#cb131-330" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb131-331"><a href="#cb131-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-332"><a href="#cb131-332" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span> atyp_group_df <span class="sc">|&gt;</span></span>
-<span id="cb131-333"><a href="#cb131-333" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">mean_acuity_cyc_deg =</span> <span class="fu">if_else</span>(acuity_units <span class="sc">==</span> <span class="st">"cyc_deg"</span>, mean_acuity, </span>
-<span id="cb131-334"><a href="#cb131-334" aria-hidden="true" tabindex="-1"></a>                                              <span class="fu">logMAR_to_cyc_per_deg</span>(mean_acuity)))</span>
-<span id="cb131-335"><a href="#cb131-335" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-336"><a href="#cb131-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-339"><a href="#cb131-339" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-340"><a href="#cb131-340" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-atypical-group-by-age</span></span>
-<span id="cb131-341"><a href="#cb131-341" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for atypically developing children as assessed by Teller Acuity Cards"</span></span>
-<span id="cb131-342"><a href="#cb131-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-343"><a href="#cb131-343" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="sc">|&gt;</span></span>
-<span id="cb131-344"><a href="#cb131-344" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb131-345"><a href="#cb131-345" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb131-346"><a href="#cb131-346" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
-<span id="cb131-347"><a href="#cb131-347" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
-<span id="cb131-348"><a href="#cb131-348" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> eye</span>
-<span id="cb131-349"><a href="#cb131-349" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb131-350"><a href="#cb131-350" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb131-351"><a href="#cb131-351" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb131-352"><a href="#cb131-352" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(condition)) <span class="sc">+</span></span>
-<span id="cb131-353"><a href="#cb131-353" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
-<span id="cb131-354"><a href="#cb131-354" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
-<span id="cb131-355"><a href="#cb131-355" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
-<span id="cb131-356"><a href="#cb131-356" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
-<span id="cb131-357"><a href="#cb131-357" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-358"><a href="#cb131-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-359"><a href="#cb131-359" aria-hidden="true" tabindex="-1"></a><span class="fu">### Typical Individual</span></span>
-<span id="cb131-360"><a href="#cb131-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-363"><a href="#cb131-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-364"><a href="#cb131-364" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-typical-indiv</span></span>
-<span id="cb131-365"><a href="#cb131-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-366"><a href="#cb131-366" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="ot">&lt;-</span></span>
-<span id="cb131-367"><a href="#cb131-367" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"typical_indiv.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb131-368"><a href="#cb131-368" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span>
-<span id="cb131-369"><a href="#cb131-369" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb131-370"><a href="#cb131-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-373"><a href="#cb131-373" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb131-374"><a href="#cb131-374" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-indiv-by-age</span></span>
-<span id="cb131-375"><a href="#cb131-375" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing individual children as assessed by Teller Acuity Cards"</span></span>
-<span id="cb131-376"><a href="#cb131-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb131-377"><a href="#cb131-377" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="sc">|&gt;</span></span>
-<span id="cb131-378"><a href="#cb131-378" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb131-379"><a href="#cb131-379" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
-<span id="cb131-380"><a href="#cb131-380" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
-<span id="cb131-381"><a href="#cb131-381" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
-<span id="cb131-382"><a href="#cb131-382" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> sub_id</span>
-<span id="cb131-383"><a href="#cb131-383" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb131-384"><a href="#cb131-384" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb131-385"><a href="#cb131-385" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb131-386"><a href="#cb131-386" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(eye)) +</span></span>
-<span id="cb131-387"><a href="#cb131-387" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
-<span id="cb131-388"><a href="#cb131-388" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
-<span id="cb131-389"><a href="#cb131-389" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
-<span id="cb131-390"><a href="#cb131-390" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>)) <span class="sc">+</span></span>
-<span id="cb131-391"><a href="#cb131-391" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span>
-<span id="cb131-392"><a href="#cb131-392" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb132" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb132-2"><a href="#cb132-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "VSS 2025 Submission"</span></span>
+<span id="cb132-3"><a href="#cb132-3" aria-hidden="true" tabindex="-1"></a><span class="an">params:</span></span>
+<span id="cb132-4"><a href="#cb132-4" aria-hidden="true" tabindex="-1"></a><span class="co">  data_dir: "data/csv"</span></span>
+<span id="cb132-5"><a href="#cb132-5" aria-hidden="true" tabindex="-1"></a><span class="co">  update_data: TRUE</span></span>
+<span id="cb132-6"><a href="#cb132-6" aria-hidden="true" tabindex="-1"></a><span class="co">  use_sysenv_creds: TRUE</span></span>
+<span id="cb132-7"><a href="#cb132-7" aria-hidden="true" tabindex="-1"></a><span class="co">  google_data_url: "https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?usp=sharing"</span></span>
+<span id="cb132-8"><a href="#cb132-8" aria-hidden="true" tabindex="-1"></a><span class="co">  data_fn: "by-paper.csv"</span></span>
+<span id="cb132-9"><a href="#cb132-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb132-10"><a href="#cb132-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-11"><a href="#cb132-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Poster title</span></span>
+<span id="cb132-12"><a href="#cb132-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-13"><a href="#cb132-13" aria-hidden="true" tabindex="-1"></a>Synthesizing evidence about developmental patterns in human visual acuity as measured by Teller Acuity Cards</span>
+<span id="cb132-14"><a href="#cb132-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-15"><a href="#cb132-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Authors</span></span>
+<span id="cb132-16"><a href="#cb132-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-17"><a href="#cb132-17" aria-hidden="true" tabindex="-1"></a>Rick Gilmore (rog1@psu.edu), Julia DiFulvio, Brianna Beamer, Nicole Cruz; The Pennsylvania State University</span>
+<span id="cb132-18"><a href="#cb132-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-19"><a href="#cb132-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Abstract</span></span>
+<span id="cb132-20"><a href="#cb132-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-21"><a href="#cb132-21" aria-hidden="true" tabindex="-1"></a>Replication is a cornerstone of scientific rigor and a prerequisite for cumulative science. This project synthesized evidence from published research that employed a widely used measure of grating visual acuity (VA), Teller Acuity Cards (TAC). We sought to capture findings about the development of VA in early childhood into an aggregated dataset and share the dataset openly. Online literature searches identified papers that mentioned “teller acuity cards”, “visual acuity cards”, or “teller cards”. We found n=745 papers published from 1974-2024. Next, we identified empirical papers that used TAC to measure VA and which reported VA in an extractable tabular form. To-date, n=250 of 316 papers with available PDF versions have been evaluated and n=14 have been identified that present extractable data meeting our screening criteria. Available datasets represent more than n=3,991 participants and 7 countries (Australia, Brazil, Canada, China, Italy, Mexico, and the U.S.). As expected, group VA increases from birth to 36-months, with faster rates of change among children tested binocularly (0.47 cyc/deg per month) than those tested monocularly (0.35 cyc/deg per month). Group VA values at similar ages vary substantially across studies, especially in children older than 12 months. Our synthesis of published TAC VA data confirms anticipated age-related trends and points to avenues for future research, particularly regarding what factors account for cross-study and by-country differences in rates of development. We hope our soon-to-be openly shared dataset contributes toward a more cumulative science of visual development.</span>
+<span id="cb132-22"><a href="#cb132-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-23"><a href="#cb132-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Status</span></span>
+<span id="cb132-24"><a href="#cb132-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-25"><a href="#cb132-25" aria-hidden="true" tabindex="-1"></a>The poster was accepted on February 6, 2025. It will be presented as follows:</span>
+<span id="cb132-26"><a href="#cb132-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-27"><a href="#cb132-27" aria-hidden="true" tabindex="-1"></a>*Poster Session*: Development: Infants, children \</span>
+<span id="cb132-28"><a href="#cb132-28" aria-hidden="true" tabindex="-1"></a>*Date/Time*: Sunday, May 18, 2025, 2:45 – 6:45 pm \</span>
+<span id="cb132-29"><a href="#cb132-29" aria-hidden="true" tabindex="-1"></a>*Location*: Pavilion \</span>
+<span id="cb132-30"><a href="#cb132-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-31"><a href="#cb132-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualization</span></span>
+<span id="cb132-32"><a href="#cb132-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-33"><a href="#cb132-33" aria-hidden="true" tabindex="-1"></a>The following code documents our data visualization work.</span>
+<span id="cb132-34"><a href="#cb132-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-35"><a href="#cb132-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### Setup</span></span>
+<span id="cb132-36"><a href="#cb132-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-39"><a href="#cb132-39" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-40"><a href="#cb132-40" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: setup</span></span>
+<span id="cb132-41"><a href="#cb132-41" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span>
+<span id="cb132-42"><a href="#cb132-42" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb132-43"><a href="#cb132-43" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb132-44"><a href="#cb132-44" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb132-45"><a href="#cb132-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-46"><a href="#cb132-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-47"><a href="#cb132-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### Import</span></span>
+<span id="cb132-48"><a href="#cb132-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-49"><a href="#cb132-49" aria-hidden="true" tabindex="-1"></a>We use a Google Sheet to store the by-study data:</span>
+<span id="cb132-50"><a href="#cb132-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-51"><a href="#cb132-51" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit#gid=0&gt;</span></span>
+<span id="cb132-52"><a href="#cb132-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-53"><a href="#cb132-53" aria-hidden="true" tabindex="-1"></a>The Google Sheet has multiple tabs:</span>
+<span id="cb132-54"><a href="#cb132-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-55"><a href="#cb132-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`typical_group`</span> tab contains group data from typically developing children.</span>
+<span id="cb132-56"><a href="#cb132-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`typical_indiv`</span> tab contains data from typically developing individual children.</span>
+<span id="cb132-57"><a href="#cb132-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`atypical_group`</span> tab contains group data from atypically developing children.</span>
+<span id="cb132-58"><a href="#cb132-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The <span class="in">`atypical_indiv`</span> tab contains data from atypically developing individual children.</span>
+<span id="cb132-59"><a href="#cb132-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-62"><a href="#cb132-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-63"><a href="#cb132-63" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-data</span></span>
+<span id="cb132-64"><a href="#cb132-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a helper function</span></span>
+<span id="cb132-65"><a href="#cb132-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-66"><a href="#cb132-66" aria-hidden="true" tabindex="-1"></a>import_save_TAC <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">sheet_name =</span> <span class="st">"typical_group"</span>,</span>
+<span id="cb132-67"><a href="#cb132-67" aria-hidden="true" tabindex="-1"></a>                            <span class="at">csv_name =</span> <span class="st">"typical_group.csv"</span>) {</span>
+<span id="cb132-68"><a href="#cb132-68" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb132-69"><a href="#cb132-69" aria-hidden="true" tabindex="-1"></a>  this_sheet <span class="ot">&lt;-</span> googlesheets4<span class="sc">::</span><span class="fu">read_sheet</span>(<span class="at">ss =</span> params<span class="sc">$</span>google_data_url,</span>
+<span id="cb132-70"><a href="#cb132-70" aria-hidden="true" tabindex="-1"></a>                            <span class="at">sheet =</span> sheet_name)</span>
+<span id="cb132-71"><a href="#cb132-71" aria-hidden="true" tabindex="-1"></a>  out_fn <span class="ot">&lt;-</span> <span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, csv_name)</span>
+<span id="cb132-72"><a href="#cb132-72" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">write_csv</span>(this_sheet, out_fn)</span>
+<span id="cb132-73"><a href="#cb132-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated: "</span>, out_fn)</span>
+<span id="cb132-74"><a href="#cb132-74" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb132-75"><a href="#cb132-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-76"><a href="#cb132-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data files</span></span>
+<span id="cb132-77"><a href="#cb132-77" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(params<span class="sc">$</span>data_dir)) {</span>
+<span id="cb132-78"><a href="#cb132-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing "</span>,  params<span class="sc">$</span>data_dir, <span class="st">"."</span>)</span>
+<span id="cb132-79"><a href="#cb132-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(params<span class="sc">$</span>data_dir)</span>
+<span id="cb132-80"><a href="#cb132-80" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb132-81"><a href="#cb132-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-82"><a href="#cb132-82" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
+<span id="cb132-83"><a href="#cb132-83" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (params<span class="sc">$</span>use_sysenv_creds) {</span>
+<span id="cb132-84"><a href="#cb132-84" aria-hidden="true" tabindex="-1"></a>    google_creds <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>)</span>
+<span id="cb132-85"><a href="#cb132-85" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (google_creds <span class="sc">!=</span> <span class="st">""</span>) {</span>
+<span id="cb132-86"><a href="#cb132-86" aria-hidden="true" tabindex="-1"></a>      <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> google_creds)</span>
+<span id="cb132-87"><a href="#cb132-87" aria-hidden="true" tabindex="-1"></a>      googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
+<span id="cb132-88"><a href="#cb132-88" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb132-89"><a href="#cb132-89" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(<span class="st">"No Google account information stored in `.Renviron`."</span>)</span>
+<span id="cb132-90"><a href="#cb132-90" aria-hidden="true" tabindex="-1"></a>      <span class="fu">message</span>(</span>
+<span id="cb132-91"><a href="#cb132-91" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Add authorized Google account name to `.Renviron` using `usethis::edit_r_environ()`."</span></span>
+<span id="cb132-92"><a href="#cb132-92" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb132-93"><a href="#cb132-93" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb132-94"><a href="#cb132-94" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb132-95"><a href="#cb132-95" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb132-96"><a href="#cb132-96" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map2</span>(</span>
+<span id="cb132-97"><a href="#cb132-97" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
+<span id="cb132-98"><a href="#cb132-98" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_group"</span>,</span>
+<span id="cb132-99"><a href="#cb132-99" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_indiv"</span>,</span>
+<span id="cb132-100"><a href="#cb132-100" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_group"</span>,</span>
+<span id="cb132-101"><a href="#cb132-101" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_indiv"</span></span>
+<span id="cb132-102"><a href="#cb132-102" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb132-103"><a href="#cb132-103" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
+<span id="cb132-104"><a href="#cb132-104" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_group.csv"</span>,</span>
+<span id="cb132-105"><a href="#cb132-105" aria-hidden="true" tabindex="-1"></a>      <span class="st">"typical_indiv.csv"</span>,</span>
+<span id="cb132-106"><a href="#cb132-106" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_group.csv"</span>,</span>
+<span id="cb132-107"><a href="#cb132-107" aria-hidden="true" tabindex="-1"></a>      <span class="st">"atypical_indiv.csv"</span></span>
+<span id="cb132-108"><a href="#cb132-108" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb132-109"><a href="#cb132-109" aria-hidden="true" tabindex="-1"></a>    import_save_TAC</span>
+<span id="cb132-110"><a href="#cb132-110" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb132-111"><a href="#cb132-111" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb132-112"><a href="#cb132-112" aria-hidden="true" tabindex="-1"></a>  <span class="co"># import_save_TAC()</span></span>
+<span id="cb132-113"><a href="#cb132-113" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb132-114"><a href="#cb132-114" aria-hidden="true" tabindex="-1"></a>  <span class="co"># this_sheet &lt;- googlesheets4::read_sheet(ss = params$google_data_url,</span></span>
+<span id="cb132-115"><a href="#cb132-115" aria-hidden="true" tabindex="-1"></a>  <span class="co">#                           sheet = params$sheet_name)</span></span>
+<span id="cb132-116"><a href="#cb132-116" aria-hidden="true" tabindex="-1"></a>  <span class="co"># out_fn &lt;- file.path(params$data_dir, params$data_fn)</span></span>
+<span id="cb132-117"><a href="#cb132-117" aria-hidden="true" tabindex="-1"></a>  <span class="co"># readr::write_csv(this_sheet, out_fn)</span></span>
+<span id="cb132-118"><a href="#cb132-118" aria-hidden="true" tabindex="-1"></a>  <span class="co"># message("Data updated: ", out_fn)</span></span>
+<span id="cb132-119"><a href="#cb132-119" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb132-120"><a href="#cb132-120" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
+<span id="cb132-121"><a href="#cb132-121" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb132-122"><a href="#cb132-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-123"><a href="#cb132-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-124"><a href="#cb132-124" aria-hidden="true" tabindex="-1"></a><span class="fu">### Visualize</span></span>
+<span id="cb132-125"><a href="#cb132-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-126"><a href="#cb132-126" aria-hidden="true" tabindex="-1"></a>We'll create visualizations for each group of data separately.</span>
+<span id="cb132-127"><a href="#cb132-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-128"><a href="#cb132-128" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Typical Group</span></span>
+<span id="cb132-129"><a href="#cb132-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-132"><a href="#cb132-132" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-133"><a href="#cb132-133" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-typical-group</span></span>
+<span id="cb132-134"><a href="#cb132-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-135"><a href="#cb132-135" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="ot">&lt;-</span></span>
+<span id="cb132-136"><a href="#cb132-136" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"typical_group.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb132-137"><a href="#cb132-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-138"><a href="#cb132-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-139"><a href="#cb132-139" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb132-140"><a href="#cb132-140" aria-hidden="true" tabindex="-1"></a>Rick Gilmore decided to take the mean of the age range reported in the <span class="co">[</span><span class="ot">@Xiang2021-ry</span><span class="co">]</span> data and create a new variable *strictly* for visualization purposes, <span class="in">`age_grp_rog`</span>.</span>
+<span id="cb132-141"><a href="#cb132-141" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb132-142"><a href="#cb132-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-145"><a href="#cb132-145" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-146"><a href="#cb132-146" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age-paper</span></span>
+<span id="cb132-147"><a href="#cb132-147" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"</span></span>
+<span id="cb132-148"><a href="#cb132-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-149"><a href="#cb132-149" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-150"><a href="#cb132-150" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb132-151"><a href="#cb132-151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb132-152"><a href="#cb132-152" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb132-153"><a href="#cb132-153" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb132-154"><a href="#cb132-154" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb132-155"><a href="#cb132-155" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> author_year</span>
+<span id="cb132-156"><a href="#cb132-156" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb132-157"><a href="#cb132-157" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb132-158"><a href="#cb132-158" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb132-159"><a href="#cb132-159" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
+<span id="cb132-160"><a href="#cb132-160" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb132-161"><a href="#cb132-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb132-162"><a href="#cb132-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb132-163"><a href="#cb132-163" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb132-164"><a href="#cb132-164" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb132-165"><a href="#cb132-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-166"><a href="#cb132-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-169"><a href="#cb132-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-170"><a href="#cb132-170" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age</span></span>
+<span id="cb132-171"><a href="#cb132-171" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"</span></span>
+<span id="cb132-172"><a href="#cb132-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-173"><a href="#cb132-173" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-174"><a href="#cb132-174" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb132-175"><a href="#cb132-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb132-176"><a href="#cb132-176" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb132-177"><a href="#cb132-177" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb132-178"><a href="#cb132-178" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb132-179"><a href="#cb132-179" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb132-180"><a href="#cb132-180" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb132-181"><a href="#cb132-181" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb132-182"><a href="#cb132-182" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
+<span id="cb132-183"><a href="#cb132-183" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb132-184"><a href="#cb132-184" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb132-185"><a href="#cb132-185" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb132-186"><a href="#cb132-186" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb132-187"><a href="#cb132-187" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb132-188"><a href="#cb132-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-189"><a href="#cb132-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-190"><a href="#cb132-190" aria-hidden="true" tabindex="-1"></a>Let's limit consideration to children below three.</span>
+<span id="cb132-191"><a href="#cb132-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-194"><a href="#cb132-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-195"><a href="#cb132-195" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-196"><a href="#cb132-196" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb132-197"><a href="#cb132-197" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb132-198"><a href="#cb132-198" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(author_date) <span class="sc">|&gt;</span></span>
+<span id="cb132-199"><a href="#cb132-199" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb132-200"><a href="#cb132-200" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb132-201"><a href="#cb132-201" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb132-202"><a href="#cb132-202" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg</span>
+<span id="cb132-203"><a href="#cb132-203" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb132-204"><a href="#cb132-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb132-205"><a href="#cb132-205" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb132-206"><a href="#cb132-206" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_smooth(method = "lm", se = TRUE) +</span></span>
+<span id="cb132-207"><a href="#cb132-207" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(binoc_monoc)) +</span></span>
+<span id="cb132-208"><a href="#cb132-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb132-209"><a href="#cb132-209" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb132-210"><a href="#cb132-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb132-211"><a href="#cb132-211" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb132-212"><a href="#cb132-212" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb132-213"><a href="#cb132-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-214"><a href="#cb132-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-215"><a href="#cb132-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-218"><a href="#cb132-218" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-219"><a href="#cb132-219" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age-less-than-3y</span></span>
+<span id="cb132-220"><a href="#cb132-220" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"</span></span>
+<span id="cb132-221"><a href="#cb132-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-222"><a href="#cb132-222" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-223"><a href="#cb132-223" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb132-224"><a href="#cb132-224" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb132-225"><a href="#cb132-225" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb132-226"><a href="#cb132-226" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb132-227"><a href="#cb132-227" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb132-228"><a href="#cb132-228" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb132-229"><a href="#cb132-229" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> binoc_monoc</span>
+<span id="cb132-230"><a href="#cb132-230" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb132-231"><a href="#cb132-231" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb132-232"><a href="#cb132-232" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">TRUE</span>, ) <span class="sc">+</span></span>
+<span id="cb132-233"><a href="#cb132-233" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(binoc_monoc)) +</span></span>
+<span id="cb132-234"><a href="#cb132-234" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb132-235"><a href="#cb132-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb132-236"><a href="#cb132-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb132-237"><a href="#cb132-237" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb132-238"><a href="#cb132-238" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb132-239"><a href="#cb132-239" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-240"><a href="#cb132-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-241"><a href="#cb132-241" aria-hidden="true" tabindex="-1"></a>Let's look at TAC-I vs. TAC-II</span>
+<span id="cb132-242"><a href="#cb132-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-245"><a href="#cb132-245" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-246"><a href="#cb132-246" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-by-age-less-than-3y-monoc-binoc-by-card-type</span></span>
+<span id="cb132-247"><a href="#cb132-247" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children 3 and younger as assessed by Teller Acuity Cards. Comparison between TAC-I and TAC-II cards by binocular vs. monocular testing."</span></span>
+<span id="cb132-248"><a href="#cb132-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-249"><a href="#cb132-249" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-250"><a href="#cb132-250" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">author_date =</span> <span class="fu">paste0</span>(author_first, <span class="st">"_"</span>, pub_year)) <span class="sc">|&gt;</span></span>
+<span id="cb132-251"><a href="#cb132-251" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(age_grp_rog <span class="sc">&lt;=</span> <span class="dv">36</span>) <span class="sc">|&gt;</span></span>
+<span id="cb132-252"><a href="#cb132-252" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">card_type =</span> stringr<span class="sc">::</span><span class="fu">str_to_upper</span>(card_type)) <span class="sc">|&gt;</span></span>
+<span id="cb132-253"><a href="#cb132-253" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb132-254"><a href="#cb132-254" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb132-255"><a href="#cb132-255" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_grp_rog,</span>
+<span id="cb132-256"><a href="#cb132-256" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb132-257"><a href="#cb132-257" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> card_type</span>
+<span id="cb132-258"><a href="#cb132-258" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb132-259"><a href="#cb132-259" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb132-260"><a href="#cb132-260" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb132-261"><a href="#cb132-261" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(binoc_monoc)) <span class="sc">+</span></span>
+<span id="cb132-262"><a href="#cb132-262" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb132-263"><a href="#cb132-263" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb132-264"><a href="#cb132-264" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb132-265"><a href="#cb132-265" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb132-266"><a href="#cb132-266" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb132-267"><a href="#cb132-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-268"><a href="#cb132-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-271"><a href="#cb132-271" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-272"><a href="#cb132-272" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-sd-by-acuity</span></span>
+<span id="cb132-273"><a href="#cb132-273" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Relationship between the standard deviation (SD) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards."</span></span>
+<span id="cb132-274"><a href="#cb132-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-275"><a href="#cb132-275" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-276"><a href="#cb132-276" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb132-277"><a href="#cb132-277" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mean_acuity_cyc_deg, <span class="at">y =</span> sd) <span class="sc">+</span></span>
+<span id="cb132-278"><a href="#cb132-278" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb132-279"><a href="#cb132-279" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()</span>
+<span id="cb132-280"><a href="#cb132-280" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-281"><a href="#cb132-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-284"><a href="#cb132-284" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-285"><a href="#cb132-285" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-group-sd-by-age</span></span>
+<span id="cb132-286"><a href="#cb132-286" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Relationship between the standard deviation (SD in octaves) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards as a function of child age in months."</span></span>
+<span id="cb132-287"><a href="#cb132-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-288"><a href="#cb132-288" aria-hidden="true" tabindex="-1"></a>typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-289"><a href="#cb132-289" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb132-290"><a href="#cb132-290" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> age_grp_rog, <span class="at">y =</span> sd) <span class="sc">+</span></span>
+<span id="cb132-291"><a href="#cb132-291" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb132-292"><a href="#cb132-292" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span>
+<span id="cb132-293"><a href="#cb132-293" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-294"><a href="#cb132-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-295"><a href="#cb132-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-298"><a href="#cb132-298" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-299"><a href="#cb132-299" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-typical-group-binoc</span></span>
+<span id="cb132-300"><a href="#cb132-300" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Participants tested binocularly by study"</span></span>
+<span id="cb132-301"><a href="#cb132-301" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-302"><a href="#cb132-302" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
+<span id="cb132-303"><a href="#cb132-303" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"binoc"</span>) </span>
+<span id="cb132-304"><a href="#cb132-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-305"><a href="#cb132-305" aria-hidden="true" tabindex="-1"></a>typ_group_df_binoc <span class="sc">|&gt;</span></span>
+<span id="cb132-306"><a href="#cb132-306" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(author_year) <span class="sc">|&gt;</span></span>
+<span id="cb132-307"><a href="#cb132-307" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(author_year) <span class="sc">|&gt;</span></span>
+<span id="cb132-308"><a href="#cb132-308" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb132-309"><a href="#cb132-309" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
+<span id="cb132-310"><a href="#cb132-310" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb132-311"><a href="#cb132-311" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span>
+<span id="cb132-312"><a href="#cb132-312" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-313"><a href="#cb132-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-314"><a href="#cb132-314" aria-hidden="true" tabindex="-1"></a>There were *n*=`{r} sum(typ_group_df_binoc$n_participants)` participants tested binocularly from *n*=<span class="in">`{r} length(unique(typ_group_df_binoc$author_year))`</span> studies.</span>
+<span id="cb132-315"><a href="#cb132-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-318"><a href="#cb132-318" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-319"><a href="#cb132-319" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-typical-group-monoc</span></span>
+<span id="cb132-320"><a href="#cb132-320" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Participants tested monocularly by study"</span></span>
+<span id="cb132-321"><a href="#cb132-321" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="ot">&lt;-</span> typ_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-322"><a href="#cb132-322" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(author_first, pub_year, age_grp_rog, binoc_monoc, n_participants) <span class="sc">|&gt;</span></span>
+<span id="cb132-323"><a href="#cb132-323" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(binoc_monoc <span class="sc">==</span> <span class="st">"monoc"</span>) </span>
+<span id="cb132-324"><a href="#cb132-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-325"><a href="#cb132-325" aria-hidden="true" tabindex="-1"></a>typ_group_df_monoc <span class="sc">|&gt;</span></span>
+<span id="cb132-326"><a href="#cb132-326" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pub_year, author_first) <span class="sc">|&gt;</span></span>
+<span id="cb132-327"><a href="#cb132-327" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(pub_year) <span class="sc">|&gt;</span></span>
+<span id="cb132-328"><a href="#cb132-328" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">tot_participants =</span> <span class="fu">sum</span>(n_participants)) <span class="sc">|&gt;</span></span>
+<span id="cb132-329"><a href="#cb132-329" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>(<span class="at">format =</span> <span class="st">'html'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb132-330"><a href="#cb132-330" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_material</span>()</span>
+<span id="cb132-331"><a href="#cb132-331" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-332"><a href="#cb132-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-333"><a href="#cb132-333" aria-hidden="true" tabindex="-1"></a>There were *n*=<span class="in">`{r} sum(typ_group_df_monoc$n_participants)`</span> participants tested monocularly.</span>
+<span id="cb132-334"><a href="#cb132-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-335"><a href="#cb132-335" aria-hidden="true" tabindex="-1"></a><span class="fu">### Atypical Group</span></span>
+<span id="cb132-336"><a href="#cb132-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-339"><a href="#cb132-339" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-340"><a href="#cb132-340" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-atypical-group</span></span>
+<span id="cb132-341"><a href="#cb132-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-342"><a href="#cb132-342" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span></span>
+<span id="cb132-343"><a href="#cb132-343" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"atypical_group.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb132-344"><a href="#cb132-344" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span>
+<span id="cb132-345"><a href="#cb132-345" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-346"><a href="#cb132-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-347"><a href="#cb132-347" aria-hidden="true" tabindex="-1"></a>Some of the acuity measurements were in LogMAR, so we must transform these to cycles per degree before plotting.</span>
+<span id="cb132-348"><a href="#cb132-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-351"><a href="#cb132-351" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-352"><a href="#cb132-352" aria-hidden="true" tabindex="-1"></a>logMAR_to_cyc_per_deg <span class="ot">&lt;-</span> <span class="cf">function</span>(logMARmin) {</span>
+<span id="cb132-353"><a href="#cb132-353" aria-hidden="true" tabindex="-1"></a>  <span class="dv">60</span><span class="sc">/</span>(<span class="dv">10</span><span class="sc">^</span>(logMARmin))</span>
+<span id="cb132-354"><a href="#cb132-354" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb132-355"><a href="#cb132-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-356"><a href="#cb132-356" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="ot">&lt;-</span> atyp_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-357"><a href="#cb132-357" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">mean_acuity_cyc_deg =</span> <span class="fu">if_else</span>(acuity_units <span class="sc">==</span> <span class="st">"cyc_deg"</span>, mean_acuity, </span>
+<span id="cb132-358"><a href="#cb132-358" aria-hidden="true" tabindex="-1"></a>                                              <span class="fu">logMAR_to_cyc_per_deg</span>(mean_acuity)))</span>
+<span id="cb132-359"><a href="#cb132-359" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-360"><a href="#cb132-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-363"><a href="#cb132-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-364"><a href="#cb132-364" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-atypical-group-by-age</span></span>
+<span id="cb132-365"><a href="#cb132-365" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for atypically developing children as assessed by Teller Acuity Cards"</span></span>
+<span id="cb132-366"><a href="#cb132-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-367"><a href="#cb132-367" aria-hidden="true" tabindex="-1"></a>atyp_group_df <span class="sc">|&gt;</span></span>
+<span id="cb132-368"><a href="#cb132-368" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb132-369"><a href="#cb132-369" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb132-370"><a href="#cb132-370" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
+<span id="cb132-371"><a href="#cb132-371" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb132-372"><a href="#cb132-372" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> eye</span>
+<span id="cb132-373"><a href="#cb132-373" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb132-374"><a href="#cb132-374" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb132-375"><a href="#cb132-375" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb132-376"><a href="#cb132-376" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(condition)) <span class="sc">+</span></span>
+<span id="cb132-377"><a href="#cb132-377" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb132-378"><a href="#cb132-378" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb132-379"><a href="#cb132-379" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb132-380"><a href="#cb132-380" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>))</span>
+<span id="cb132-381"><a href="#cb132-381" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-382"><a href="#cb132-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-383"><a href="#cb132-383" aria-hidden="true" tabindex="-1"></a><span class="fu">### Typical Individual</span></span>
+<span id="cb132-384"><a href="#cb132-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-387"><a href="#cb132-387" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-388"><a href="#cb132-388" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: import-typical-indiv</span></span>
+<span id="cb132-389"><a href="#cb132-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-390"><a href="#cb132-390" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="ot">&lt;-</span></span>
+<span id="cb132-391"><a href="#cb132-391" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(params<span class="sc">$</span>data_dir, <span class="st">"typical_indiv.csv"</span>), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb132-392"><a href="#cb132-392" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(atyp_group_df)</span>
+<span id="cb132-393"><a href="#cb132-393" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb132-394"><a href="#cb132-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-397"><a href="#cb132-397" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb132-398"><a href="#cb132-398" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-typical-indiv-by-age</span></span>
+<span id="cb132-399"><a href="#cb132-399" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing individual children as assessed by Teller Acuity Cards"</span></span>
+<span id="cb132-400"><a href="#cb132-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb132-401"><a href="#cb132-401" aria-hidden="true" tabindex="-1"></a>typ_indiv_df <span class="sc">|&gt;</span></span>
+<span id="cb132-402"><a href="#cb132-402" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb132-403"><a href="#cb132-403" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb132-404"><a href="#cb132-404" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> age_mos,</span>
+<span id="cb132-405"><a href="#cb132-405" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> mean_acuity_cyc_deg,</span>
+<span id="cb132-406"><a href="#cb132-406" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> sub_id</span>
+<span id="cb132-407"><a href="#cb132-407" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb132-408"><a href="#cb132-408" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb132-409"><a href="#cb132-409" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb132-410"><a href="#cb132-410" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_grid(cols = vars(eye)) +</span></span>
+<span id="cb132-411"><a href="#cb132-411" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Age (mos)"</span>) <span class="sc">+</span></span>
+<span id="cb132-412"><a href="#cb132-412" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Acuity (cyc/deg)"</span>) <span class="sc">+</span></span>
+<span id="cb132-413"><a href="#cb132-413" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb132-414"><a href="#cb132-414" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">30</span>)) <span class="sc">+</span></span>
+<span id="cb132-415"><a href="#cb132-415" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span>
+<span id="cb132-416"><a href="#cb132-416" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

@@ -1,34 +1,61 @@
-BIBTEXKEY,author_first,title,condition,age_mos,binoc_minoc,eye,n_participants,mean_acuity,acuity_units,mean_acuity_standard_deviation,std_dev_units,indiv_eye_acuity_cyc_deg,st_dev_indiv_eye,country,card_type,Column 1,Column 2,Column 3,Column 4,Column 5,Column 6,Column 7,Column 8,Column 9,Column 10,Column 11,Column 12,Column 13,Column 14,Column 15
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,4,monoc,right,95,2.18,cyc_deg,0.76,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,8,monoc,right,103,3.87,cyc_deg,0.66,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,11,monoc,right,90,3.53,cyc_deg,0.8,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,17,monoc,right,82,5.6,cyc_deg,0.76,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,24,monoc,right,83,7.05,cyc_deg,0.76,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,30,monoc,right,95,10.19,cyc_deg,0.76,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,36,monoc,right,105,13.43,cyc_deg,0.66,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,48,monoc,right,125,18.12,cyc_deg,0.53,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,4,monoc,left,95,2.23,cyc_deg,0.73,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,8,monoc,left,103,4.06,cyc_deg,0.63,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,11,monoc,left,90,3.96,cyc_deg,0.53,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,17,monoc,left,82,5.73,cyc_deg,0.8,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,24,monoc,left,83,8.48,cyc_deg,0.56,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,30,monoc,left,95,10.43,cyc_deg,0.7,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,36,monoc,left,105,13.43,cyc_deg,0.56,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,48,monoc,left,125,18.97,cyc_deg,0.86,cyc_deg,NA,NA,united_states,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,macular_edema_rop,3,binoc,both,11,1.59,logMAR,0.16,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,macular_edema_rop,6,binoc,both,11,1.44,logMAR,0.14,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,macular_edema_rop,9,binoc,both,11,1.3,logMAR,0.14,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,macular_edema_rop,12,binoc,both,11,1.08,logMAR,0.11,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,rop,3,binoc,both,16,1.52,logMAR,0.11,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,rop,6,binoc,both,16,1.42,logMAR,0.13,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,rop,9,binoc,both,16,1.2,logMAR,0.08,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,rop,12,binoc,both,16,1.01,logMAR,0.12,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,preterm_birth,3,binoc,both,17,1.44,logMAR,0.09,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,preterm_birth,6,binoc,both,17,1.36,logMAR,0.09,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,preterm_birth,9,binoc,both,17,1.18,logMAR,0.1,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,preterm_birth,12,binoc,both,17,0.98,logMAR,0.12,logMAR,NA,NA,india,tac_ii,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Rodriguez1996-ji,Rodriguez,NA,preterm_birth,0.23076923076923078,binoc,both,18,0.39,cyc_deg,NA,NA,NA,NA,mexico,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Rodriguez1996-ji,Rodriguez,NA,preterm_birth,0.9230769230769231,binoc,both,NA,0.6,cyc_deg,NA,NA,NA,NA,mexico,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Rodriguez1996-ji,Rodriguez,NA,preterm_birth,2.7692307692307696,binoc,both,NA,1.05,cyc_deg,NA,NA,NA,NA,mexico,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Rodriguez1996-ji,Rodriguez,NA,preterm_birth,5.538461538461539,binoc,both,NA,4.02,cyc_deg,NA,NA,NA,NA,mexico,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Rodriguez1996-ji,Rodriguez,NA,preterm_birth,11.076923076923078,binoc,both,NA,6.22,cyc_deg,NA,NA,NA,NA,mexico,tac_i,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+BIBTEXKEY,author_first,title,condition,age_mos,binoc_minoc,eye,n_participants,mean_acuity,acuity_units,mean_acuity_standard_deviation,std_dev_units,indiv_eye_acuity_cyc_deg,st_dev_indiv_eye,country,card_type
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,4,monoc,OD,95,2.18,cyc_deg,0.76,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,8,monoc,OD,103,3.87,cyc_deg,0.66,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,11,monoc,OD,90,3.53,cyc_deg,0.8,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,17,monoc,OD,82,5.6,cyc_deg,0.76,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,24,monoc,OD,83,7.05,cyc_deg,0.76,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,30,monoc,OD,95,10.19,cyc_deg,0.76,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,36,monoc,OD,105,13.43,cyc_deg,0.66,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,48,monoc,OD,125,18.12,cyc_deg,0.53,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,4,monoc,OS,95,2.23,cyc_deg,0.73,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,8,monoc,OS,103,4.06,cyc_deg,0.63,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,11,monoc,OS,90,3.96,cyc_deg,0.53,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,17,monoc,OS,82,5.73,cyc_deg,0.8,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,24,monoc,OS,83,8.48,cyc_deg,0.56,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,30,monoc,OS,95,10.43,cyc_deg,0.7,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,36,monoc,OS,105,13.43,cyc_deg,0.56,cyc_deg,NA,NA,united_states,tac_i
+Mash1998-sg,Mash,Long-term reliability and predictive validity of the teller acuity card procedure,preterm_birth,48,monoc,OS,125,18.97,cyc_deg,0.86,cyc_deg,NA,NA,united_states,tac_i
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,macular_edema_rop,3,binoc,OU,11,1.59,logMAR,0.16,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,macular_edema_rop,6,binoc,OU,11,1.44,logMAR,0.14,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,macular_edema_rop,9,binoc,OU,11,1.3,logMAR,0.14,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,macular_edema_rop,12,binoc,OU,11,1.08,logMAR,0.11,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,rop,3,binoc,OU,16,1.52,logMAR,0.11,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,rop,6,binoc,OU,16,1.42,logMAR,0.13,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,rop,9,binoc,OU,16,1.2,logMAR,0.08,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,rop,12,binoc,OU,16,1.01,logMAR,0.12,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,preterm_birth,3,binoc,OU,17,1.44,logMAR,0.09,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,preterm_birth,6,binoc,OU,17,1.36,logMAR,0.09,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,preterm_birth,9,binoc,OU,17,1.18,logMAR,0.1,logMAR,NA,NA,india,tac_ii
+Vinekar2015-gy,Vinekar,Macular edema in Asian Indian premature infants with retinopathy of prematurity: Impact on visual acuity and refractive status after 1-year,preterm_birth,12,binoc,OU,17,0.98,logMAR,0.12,logMAR,NA,NA,india,tac_ii
+Rodriguez1996-ji,Rodriguez,NA,preterm_birth,0.23076923076923078,binoc,OU,18,0.39,cyc_deg,NA,NA,NA,NA,mexico,tac_i
+Rodriguez1996-ji,Rodriguez,NA,preterm_birth,0.9230769230769231,binoc,OU,NA,0.6,cyc_deg,NA,NA,NA,NA,mexico,tac_i
+Rodriguez1996-ji,Rodriguez,NA,preterm_birth,2.7692307692307696,binoc,OU,NA,1.05,cyc_deg,NA,NA,NA,NA,mexico,tac_i
+Rodriguez1996-ji,Rodriguez,NA,preterm_birth,5.538461538461539,binoc,OU,NA,4.02,cyc_deg,NA,NA,NA,NA,mexico,tac_i
+Rodriguez1996-ji,Rodriguez,NA,preterm_birth,11.076923076923078,binoc,OU,NA,6.22,cyc_deg,NA,NA,NA,NA,mexico,tac_i
+Sarbajna2024-yo,Sarbajna,NA,rop,3,monoc,OD,3,2.21,cyc_deg,0,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,3,monoc,OS,3,2.39,cyc_deg,0.85,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,3,binoc,OU,3,2.58,cyc_deg,0.64,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,4,monoc,OD,14,2.41,cyc_deg,1.16,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,4,monoc,OS,14,2.29,cyc_deg,0.88,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,4,binoc,OU,14,2.69,cyc_deg,1.01,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,5,monoc,OD,8,3.62,cyc_deg,1.01,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,5,monoc,OS,8,3.69,cyc_deg,1,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,5,binoc,OU,8,3.69,cyc_deg,1,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,6,monoc,OD,15,4.65,cyc_deg,1.82,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,6,monoc,OS,15,4.66,cyc_deg,1.87,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,6,binoc,OU,15,4.73,cyc_deg,1.81,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,7,monoc,OD,2,5.65,cyc_deg,1.2,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,7,monoc,OS,2,5.65,cyc_deg,1.2,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,7,binoc,OU,2,6.5,cyc_deg,0,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,8,monoc,OD,7,6.27,cyc_deg,3.6,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,8,monoc,OS,7,6.27,cyc_deg,3.6,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,8,binoc,OU,7,6.61,cyc_deg,3.24,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,9,monoc,OD,1,4.8,cyc_deg,0,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,9,monoc,OS,1,4.8,cyc_deg,0,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,9,binoc,OU,1,4.8,cyc_deg,0,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,10,monoc,OD,5,7.48,cyc_deg,2.22,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,10,monoc,OS,5,7.48,cyc_deg,2.22,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,10,binoc,OU,5,7.48,cyc_deg,2.22,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,12,monoc,OD,20,8.14,cyc_deg,2.44,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,12,monoc,OS,20,8.3,cyc_deg,2.65,cyc_deg,NA,NA,india,tac_ii
+Sarbajna2024-yo,Sarbajna,NA,rop,12,binoc,OU,20,7.89,cyc_deg,2.52,cyc_deg,NA,NA,india,tac_ii

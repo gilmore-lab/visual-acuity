@@ -8,7 +8,7 @@ params:
   data_fn: "by-paper.csv"
 ---
 
-## Title
+## Poster title
 
 Synthesizing evidence about developmental patterns in human visual acuity as measured by Teller Acuity Cards
 
@@ -125,7 +125,6 @@ We'll create visualizations for each group of data separately.
 
 ```{r}
 #| label: import-typical-group
-
 typ_group_df <-
   readr::read_csv(file.path(params$data_dir, "typical_group.csv"), show_col_types = FALSE)
 ```
@@ -180,6 +179,28 @@ typ_group_df |>
 Let's limit consideration to children below three.
 
 ```{r}
+typ_group_df |>
+  dplyr::mutate(author_date = paste0(author_first, "_", pub_year)) |>
+  dplyr::filter(age_grp_rog <= 36) |>
+  dplyr::arrange(author_date) |>
+  ggplot() +
+  aes(
+    x = age_grp_rog,
+    y = mean_acuity_cyc_deg
+  ) +
+  geom_point() +
+  geom_line() +
+  #geom_smooth(method = "lm", se = TRUE) +
+  #facet_grid(cols = vars(binoc_monoc)) +
+  xlab("Age (mos)") +
+  ylab("Mean acuity (cyc/deg)") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank()) +
+  scale_y_continuous(limits = c(0, 30))
+```
+
+
+```{r}
 #| label: fig-typical-group-by-age-less-than-3y
 #| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"
 
@@ -193,7 +214,7 @@ typ_group_df |>
     color = binoc_monoc
   ) +
   geom_point() +
-  geom_smooth(method = "lm", se = TRUE) +
+  geom_smooth(se = TRUE, ) +
   #facet_grid(cols = vars(binoc_monoc)) +
   xlab("Age (mos)") +
   ylab("Mean acuity (cyc/deg)") +
@@ -219,7 +240,7 @@ typ_group_df |>
     color = card_type
   ) +
   geom_point() +
-  geom_smooth(method = "lm", se = TRUE) +
+  geom_smooth(se = TRUE) +
   facet_grid(cols = vars(binoc_monoc)) +
   xlab("Age (mos)") +
   ylab("Mean acuity (cyc/deg)") +
@@ -236,7 +257,7 @@ typ_group_df |>
   ggplot() +
   aes(x = mean_acuity_cyc_deg, y = sd) +
   geom_point() +
-  geom_smooth(method = "lm")
+  geom_smooth()
 ```
 
 ```{r}
@@ -320,7 +341,7 @@ atyp_group_df |>
     color = eye
   ) +
   geom_point() +
-  geom_smooth() +
+  geom_smooth(se = FALSE) +
   facet_grid(cols = vars(condition)) +
   xlab("Age (mos)") +
   ylab("Mean acuity (cyc/deg)") +
