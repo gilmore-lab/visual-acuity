@@ -142,7 +142,7 @@ typ_group_df |>
   ggplot() +
   aes(
     x = age_grp_rog,
-    y = mean_acuity_cyc_deg,
+    y = central_tendency_cyc_deg,
     color = author_year
   ) +
   geom_point() +
@@ -155,6 +155,33 @@ typ_group_df |>
   scale_y_continuous(limits = c(0, 30))
 ```
 
+Let's try a version where we don't highlight the individual studies, but do highlight the group trends.
+
+```{r}
+#| label: fig-typical-group-by-age-paper-group-trend
+#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"
+
+typ_group_df |>
+  dplyr::mutate(author_date = paste0(author_first, "_", pub_year)) |>
+  ggplot() +
+  aes(
+    x = age_grp_rog,
+    y = central_tendency_cyc_deg
+  ) +
+  #geom_point() +
+  geom_line(aes(group = author_date), se = FALSE) +
+  geom_smooth(aes(group = 1), se = TRUE) +
+  facet_grid(cols = vars(binoc_monoc)) +
+  xlab("Age (mos)") +
+  ylab("Mean acuity (cyc/deg)") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank()) +
+  scale_y_continuous(limits = c(0, 30)) +
+  theme_classic()
+```
+
+Here's one with a linear fit, points and no by-study lines.
+
 ```{r}
 #| label: fig-typical-group-by-age
 #| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"
@@ -164,7 +191,7 @@ typ_group_df |>
   ggplot() +
   aes(
     x = age_grp_rog,
-    y = mean_acuity_cyc_deg,
+    y = central_tendency_cyc_deg,
   ) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
@@ -173,7 +200,8 @@ typ_group_df |>
   ylab("Mean acuity (cyc/deg)") +
   theme(legend.position = "bottom",
         legend.title = element_blank()) +
-  scale_y_continuous(limits = c(0, 30))
+  scale_y_continuous(limits = c(0, 30)) +
+    theme_classic()
 ```
 
 Let's limit consideration to children below three.
@@ -186,17 +214,20 @@ typ_group_df |>
   ggplot() +
   aes(
     x = age_grp_rog,
-    y = mean_acuity_cyc_deg
+    y = central_tendency_cyc_deg,
+    color = card_type
   ) +
   geom_point() +
-  geom_line() +
-  #geom_smooth(method = "lm", se = TRUE) +
-  #facet_grid(cols = vars(binoc_monoc)) +
+  geom_smooth(se = TRUE) +
+  geom_rug() +
+  facet_grid(cols = vars(binoc_monoc)) +
   xlab("Age (mos)") +
   ylab("Mean acuity (cyc/deg)") +
   theme(legend.position = "bottom",
         legend.title = element_blank()) +
-  scale_y_continuous(limits = c(0, 30))
+  scale_y_continuous(limits = c(0, 30)) +
+  theme_classic() +
+  theme(legend.position = "bottom", legend.title = element_blank())
 ```
 
 
@@ -210,7 +241,7 @@ typ_group_df |>
   ggplot() +
   aes(
     x = age_grp_rog,
-    y = mean_acuity_cyc_deg,
+    y = central_tendency_cyc_deg,
     color = binoc_monoc
   ) +
   geom_point() +
@@ -236,7 +267,7 @@ typ_group_df |>
   ggplot() +
   aes(
     x = age_grp_rog,
-    y = mean_acuity_cyc_deg,
+    y = central_tendency_cyc_deg,
     color = card_type
   ) +
   geom_point() +
@@ -249,28 +280,70 @@ typ_group_df |>
   scale_y_continuous(limits = c(0, 30))
 ```
 
+#### Variability
+
+We need helper functions for converting standard deviation into consistent units.
+
+```{r}
+sd_from_conf_bound <- function(mean, bound, n, p = .95) {
+  ci_length <- abs(mean-bound)
+  if (p == .95) {
+    (ci_length/3.92)*sqrt(n)
+  } else if( p == .90) {
+    (ci_length/3.29)*sqrt(n)
+  }
+}
+
+sd_to_octaves <- function(mean, sd) {
+  log2(sd/mean)
+}
+
+# Tolerance intervals
+#https://www.itl.nist.gov/div898/handbook/prc/section2/prc263.htm
+# https://www.itl.nist.gov/div898/handbook/prc/section2/prc263.r
+n = 43
+p = 0.90 # proportion of population
+g = 0.99 # confidence interval
+nu = n-1
+zp = qnorm(p)
+zg = qnorm(g)
+a = 1 - ((zg**2)/(2*nu))
+b = zp**2 - (zg**2)/n
+k1 = (zp + (zp**2 - a*b)**.5)/a
+c(a,b,k1)
+```
+
+Many of the studies report variability in terms of octaves.
+
 ```{r}
 #| label: fig-typical-group-sd-by-acuity
 #| fig-cap: "Relationship between the standard deviation (SD) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards."
 
-typ_group_df |>
+typ_group_df_sd <- typ_group_df |>
+  dplyr::filter(sd_units %in% c("cyc_deg", "octave"),
+                !is.na(sd)) |>
+  dplyr::mutate(sd_oct = if_else(sd_units == "cyc_deg", log2(sd), sd))
+
+typ_group_df_sd |>
   ggplot() +
-  aes(x = mean_acuity_cyc_deg, y = sd) +
-  geom_point() +
-  geom_smooth()
+  aes(x = central_tendency_cyc_deg, y = sd) +
+  geom_point()
 ```
 
 ```{r}
 #| label: fig-typical-group-sd-by-age
 #| fig-cap: "Relationship between the standard deviation (SD in octaves) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards as a function of child age in months."
 
-typ_group_df |>
+typ_group_df_sd |>
   ggplot() +
-  aes(x = age_grp_rog, y = sd) +
+  aes(x = age_grp_rog, y = sd, color = card_type) +
   geom_point() +
-  geom_smooth(method = "lm")
+  geom_smooth(method = "lm") +
+  facet_grid(cols = vars(binoc_monoc)) +
+  ylab("sd (octaves)")
 ```
 
+#### Tabular summaries
 
 ```{r}
 #| label: tbl-typical-group-binoc
@@ -325,7 +398,7 @@ logMAR_to_cyc_per_deg <- function(logMARmin) {
 }
 
 atyp_group_df <- atyp_group_df |>
-  dplyr::mutate(mean_acuity_cyc_deg = if_else(acuity_units == "cyc_deg", mean_acuity, 
+  dplyr::mutate(central_tendency_cyc_deg = if_else(acuity_units == "cyc_deg", mean_acuity, 
                                               logMAR_to_cyc_per_deg(mean_acuity)))
 ```
 
@@ -337,7 +410,7 @@ atyp_group_df |>
   ggplot() +
   aes(
     x = age_mos,
-    y = mean_acuity_cyc_deg,
+    y = central_tendency_cyc_deg,
     color = eye
   ) +
   geom_point() +
@@ -367,7 +440,7 @@ typ_indiv_df |>
   ggplot() +
   aes(
     x = age_mos,
-    y = mean_acuity_cyc_deg,
+    y = central_tendency_cyc_deg,
     color = sub_id
   ) +
   geom_point() +
