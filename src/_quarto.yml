@@ -21,7 +21,10 @@ book:
     - href: dashboard.qmd
     - href: data.qmd
       text: "Cleaning & visualization"
-    - href: vss-2025-submission.qmd
+    - part: "VSS 2025"
+      - chapters:
+        - href: vss-2025-submission.qmd
+        - href: vss-2025-poster.qmd
     - part: "Addenda"
       chapters:
         - href: data-management-plan.qmd
@@ -43,5 +46,6 @@ format:
     date-modified: last-modified
     code-fold: true
     code-tools: true
+    license: "CC BY"
 editor: source
     

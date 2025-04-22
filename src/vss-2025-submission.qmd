@@ -155,30 +155,56 @@ typ_group_df |>
   scale_y_continuous(limits = c(0, 30))
 ```
 
-Let's try a version where we don't highlight the individual studies, but do highlight the group trends.
+Let's try a version where we highlight the individual studies *and* the group trends.
 
 ```{r}
 #| label: fig-typical-group-by-age-paper-group-trend
 #| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by Teller Acuity Cards"
 
 typ_group_df |>
-  dplyr::mutate(author_date = paste0(author_first, "_", pub_year)) |>
+  #dplyr::mutate(author_date = paste0(author_first, "_", pub_year)) |>
   ggplot() +
   aes(
     x = age_grp_rog,
-    y = central_tendency_cyc_deg
+    y = central_tendency_cyc_deg,
+    color = author_year
   ) +
-  #geom_point() +
-  geom_line(aes(group = author_date), se = FALSE) +
+  geom_point() +
+  geom_line(aes(group = author_year)) +
   geom_smooth(aes(group = 1), se = TRUE) +
   facet_grid(cols = vars(binoc_monoc)) +
   xlab("Age (mos)") +
   ylab("Mean acuity (cyc/deg)") +
-  theme(legend.position = "bottom",
-        legend.title = element_blank()) +
   scale_y_continuous(limits = c(0, 30)) +
-  theme_classic()
+  theme(legend.position = "none")
 ```
+
+Generate a comparable figure with the n's.
+
+```{r}
+#| label: fig-typical-group-by-paper-n-subs
+library(forcats)
+library(dplyr)
+typ_group_df |>
+  filter(!is.na(n_participants)) |>
+  group_by(binoc_monoc, author_year) |>
+  summarize(n_subs = sum(n_participants)) |>
+  mutate(author_year = fct_reorder(author_year, n_subs)) |>
+  ggplot() +
+  aes(
+    x = author_year,
+    y = n_subs,
+    fill = author_year
+  ) +
+  geom_col() +
+  facet_grid(cols = vars(binoc_monoc)) +
+  coord_flip() +
+  theme(legend.position = "none") +
+  xlab("Source") +
+  ylab("n observations")
+```
+
+
 
 Here's one with a linear fit, points and no by-study lines.
 
@@ -207,10 +233,12 @@ typ_group_df |>
 Let's limit consideration to children below three.
 
 ```{r}
+#| label: fig-typical-group-LT3y-by-card-type
+#| fig-cap: "Developmental time course of mean grating acuity (in cyc/deg) for typically developing children as assessed by two types of Teller Acuity Cards, TAC-I and TAC-II. *loess* fit added."
+
 typ_group_df |>
-  dplyr::mutate(author_date = paste0(author_first, "_", pub_year)) |>
   dplyr::filter(age_grp_rog <= 36) |>
-  dplyr::arrange(author_date) |>
+  mutate(card_type = toupper(card_type)) |>
   ggplot() +
   aes(
     x = age_grp_rog,
@@ -219,17 +247,14 @@ typ_group_df |>
   ) +
   geom_point() +
   geom_smooth(se = TRUE) +
-  geom_rug() +
   facet_grid(cols = vars(binoc_monoc)) +
   xlab("Age (mos)") +
   ylab("Mean acuity (cyc/deg)") +
   theme(legend.position = "bottom",
         legend.title = element_blank()) +
   scale_y_continuous(limits = c(0, 30)) +
-  theme_classic() +
   theme(legend.position = "bottom", legend.title = element_blank())
 ```
-
 
 ```{r}
 #| label: fig-typical-group-by-age-less-than-3y
@@ -329,19 +354,40 @@ typ_group_df_sd |>
   aes(x = central_tendency_cyc_deg, y = sd) +
   geom_point()
 ```
+Here is one with more styling.
+
+```{r}
+#| label: fig-typical-group-sd-by-threshold
+#| fig-cap: "Relationship between the standard deviation (SD in octaves) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards and the mean or median acuity in cyc/deg."
+
+typ_group_df_sd |>
+  mutate(card_type = toupper(card_type)) |>
+  ggplot() +
+  aes(x = central_tendency_cyc_deg, y = sd, color = card_type) +
+  geom_point() +
+  geom_smooth() +
+  facet_grid(cols = vars(binoc_monoc)) +
+  xlab("Acuity (cyc/deg)") +
+  ylab("sd (octaves)") +
+  theme(legend.position = "bottom", legend.title = element_blank())
+```
 
 ```{r}
 #| label: fig-typical-group-sd-by-age
-#| fig-cap: "Relationship between the standard deviation (SD in octaves) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards as a function of child age in months."
+#| fig-cap: "Relationship between the standard deviation (SD in octaves) of estimated visual acuity (cyc/deg) observed in typically developing children as assessed by Teller Acuity Cards and child age in months."
 
 typ_group_df_sd |>
+  mutate(card_type = toupper(card_type)) |>
   ggplot() +
   aes(x = age_grp_rog, y = sd, color = card_type) +
   geom_point() +
-  geom_smooth(method = "lm") +
+  geom_smooth() +
   facet_grid(cols = vars(binoc_monoc)) +
-  ylab("sd (octaves)")
+  xlab("Age (mos)") +
+  ylab("sd (octaves)") +
+  theme(legend.position = "bottom", legend.title = element_blank())
 ```
+
 
 #### Tabular summaries
 
@@ -440,12 +486,14 @@ typ_indiv_df |>
   ggplot() +
   aes(
     x = age_mos,
-    y = central_tendency_cyc_deg,
+    y = mean_acuity_cyc_deg,
     color = sub_id
   ) +
   geom_point() +
-  geom_smooth() +
+  geom_line() +
+  #geom_smooth() +
   #facet_grid(cols = vars(eye)) +
+  #geom_smooth(group = 1, se = TRUE) +
   xlab("Age (mos)") +
   ylab("Acuity (cyc/deg)") +
   theme(legend.position = "bottom") +
