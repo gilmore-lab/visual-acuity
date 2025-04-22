@@ -22,7 +22,7 @@ book:
     - href: data.qmd
       text: "Cleaning & visualization"
     - part: "VSS 2025"
-      - chapters:
+      chapters:
         - href: vss-2025-submission.qmd
         - href: vss-2025-poster.qmd
     - part: "Addenda"
