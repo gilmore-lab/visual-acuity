@@ -47,5 +47,10 @@ format:
     code-fold: true
     code-tools: true
     license: "CC BY"
+    
 editor: source
+
+knitr:
+  opts_chunk:
+    fig.path: include/figs/
     
